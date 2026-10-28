@@ -24,3 +24,5 @@ Before proposing a change, run the validation sequence appropriate to it from [`
 ## Public-source release and privacy
 
 This release excludes the private development history, hosting identity, and operational task backlog. The included reference playlist and enrichment metadata are the same dataset intentionally published by the live Music project. Visitor playlists and Spotify tokens are not bundled; imported playlists are processed in the visitor’s browser. Spotify authorization uses PKCE and a public Client ID; no client secret is required or included. Do not commit OAuth tokens, `.env` files, or account exports. Third-party track and artist metadata retain their respective rights.
+
+The checked-in `.openai/hosting.json` is a nonsecret local configuration with no project ID or resource bindings, so the Vite import resolves without exposing the original deployment identity. For a hosted fork, register your own deployment and supply its project ID; never reuse the original site’s credentials.
