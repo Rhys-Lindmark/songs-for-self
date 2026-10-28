@@ -1,0 +1,59 @@
+{
+  "otherTracks": 0,
+  "artists": 0,
+  "decisionQueue": {
+    "tracks": 0,
+    "artists": [
+      {
+        "artist": "Bo Burnham",
+        "count": 0,
+        "issue": "musical comedy / comedy rap / theatrical pop",
+        "question": "Should musical comedy map to the nearest sonic family per track, or receive a dedicated presentation outside the top-level music taxonomy?"
+      },
+      {
+        "artist": "Danny Go!",
+        "count": 0,
+        "issue": "children's dance and educational music",
+        "question": "Should the tracks map to Pop/Electronic by sound while retaining a children's-audience label?"
+      },
+      {
+        "artist": "Obscurest Vinyl",
+        "count": 0,
+        "issue": "AI-generated novelty and comedy songs",
+        "question": "Should synthetic novelty tracks map by sonic form, receive an AI-origin facet, or remain outside the main taxonomy?"
+      },
+      {
+        "artist": "Peter Alsop",
+        "count": 0,
+        "issue": "children's and educational music",
+        "question": "Should children's music map by musical form, remain a cross-cutting audience label, or receive a dedicated product treatment?"
+      },
+      {
+        "artist": "Raffi",
+        "count": 0,
+        "issue": "children's folk and pop",
+        "question": "Should children's music map by its underlying folk/pop form while retaining an audience label?"
+      },
+      {
+        "artist": "Rhys Lindmark",
+        "count": 0,
+        "issue": "personal spoken-word and uncataloged recordings",
+        "question": "Should personal or spoken-word recordings be mapped to Experimental, handled as non-music, or classified track by track with user-supplied metadata?"
+      },
+      {
+        "artist": "Tom Cardy",
+        "count": 0,
+        "issue": "musical comedy spanning electronic pop and funk",
+        "question": "Should mixed comedy catalogs be reviewed track by track rather than overridden at artist level?"
+      },
+      {
+        "artist": "Tom Lehrer",
+        "count": 0,
+        "issue": "satirical musical comedy",
+        "question": "Should satire map to Pop or Modern Folk by arrangement, or remain a cross-cutting comedy label?"
+      }
+    ]
+  },
+  "readyForGenreReviewTracks": 0,
+  "rankedArtists": []
+}

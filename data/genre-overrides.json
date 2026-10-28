@@ -1,0 +1,712 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-30",
+  "methodology": "Explicit artist-level decisions approved during the Songs for Self taxonomy review. Overrides outrank broad external tags, remain visible in genre_source and genre_evidence, and must include a rationale and evidence trail.",
+  "artists": {
+    "Iron & Wine": {
+      "family": "Modern Folk",
+      "primary": "indie folk",
+      "confidence": "high",
+      "rationale": "American indie-folk and singer-songwriter work is not World music.",
+      "evidence": ["editorial:user-review/2026-08-30", "wikidata:P136", "playlist:artist-catalog"]
+    },
+    "The Mountain Goats": {
+      "family": "Modern Folk",
+      "primary": "indie folk",
+      "confidence": "high",
+      "rationale": "American indie-folk and folk-rock work is not World music.",
+      "evidence": ["editorial:user-review/2026-08-30", "wikidata:P136", "playlist:artist-catalog"]
+    },
+    "Smash Mouth": {
+      "family": "Rock",
+      "primary": "alternative rock",
+      "confidence": "high",
+      "rationale": "American alternative/ska rock is not World music; a reggae tag alone does not override the artist's rock catalog.",
+      "evidence": ["editorial:user-review/2026-08-30", "wikidata:P136", "playlist:artist-catalog"]
+    },
+    "Old Crow Medicine Show": {
+      "family": "Country",
+      "primary": "americana",
+      "confidence": "high",
+      "rationale": "American bluegrass, old-time, and Americana belong in Country rather than World.",
+      "evidence": ["editorial:user-review/2026-08-30", "wikidata:P136", "playlist:artist-catalog"]
+    },
+    "Josh Ritter": {
+      "family": "Modern Folk",
+      "primary": "singer-songwriter",
+      "confidence": "high",
+      "rationale": "American singer-songwriter and folk-rock work is not World music.",
+      "evidence": ["editorial:user-review/2026-08-30", "wikidata:P136", "playlist:artist-catalog"]
+    },
+    "Streetlight Manifesto": {
+      "family": "Rock",
+      "primary": "ska punk",
+      "confidence": "high",
+      "rationale": "Ska punk and punk rock map to the requested Rock family.",
+      "evidence": ["https://www.allmusic.com/artist/streetlight-manifesto-mn0000940246", "https://www.streetlightmanifesto.com/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Self Esteem": {
+      "family": "Pop",
+      "primary": "alternative pop",
+      "confidence": "high",
+      "rationale": "Self Esteem's pop, art-pop, and electronic-pop catalog maps to the requested Pop family.",
+      "evidence": ["https://www.officialcharts.com/artist/55195/self-esteem/", "https://www.selfesteem.love/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Pogo": {
+      "family": "Electronic",
+      "primary": "plunderphonics",
+      "secondary": "trip hop; glitch hop",
+      "confidence": "high",
+      "rationale": "Pogo's plunderphonics, deep-house, and glitch-hop work maps to Electronic.",
+      "evidence": ["https://en.wikipedia.org/wiki/Pogo_(musician)", "playlist:existing-tags/trip-hop-plunderphonics", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Working for a Nuclear Free City": {
+      "family": "Electronic",
+      "primary": "indietronica",
+      "confidence": "medium",
+      "rationale": "The user's reviewed placement and the artist's electronic/indietronica profile support Electronic.",
+      "evidence": ["editorial:user-review/2026-08-30", "playlist:artist-catalog"]
+    },
+    "Panama Wedding": {
+      "family": "Electronic",
+      "primary": "indietronica",
+      "secondary": "electropop",
+      "confidence": "medium",
+      "rationale": "The user's reviewed placement and indietronica/electropop evidence support Electronic.",
+      "evidence": ["editorial:user-review/2026-08-30", "playlist:track/All-of-the-People"]
+    },
+    "Nico Segal": {
+      "family": "Hip-hop",
+      "primary": "hip hop",
+      "confidence": "high",
+      "rationale": "The user's reviewed placement and the Chance the Rapper collaboration catalog support Hip-hop.",
+      "evidence": ["editorial:user-review/2026-08-30", "playlist:track/Sunday-Candy", "playlist:artist-collaboration/Chance-the-Rapper"]
+    },
+    "Narada Nutcracker Performers": {
+      "family": "Classical", "primary": "ballet", "confidence": "high",
+      "compositionYear": 1892, "historicalPeriod": "Romantic",
+      "rationale": "The catalog entries are arrangements of Tchaikovsky's Nutcracker ballet and map to Classical.",
+      "evidence": ["https://www.allmusic.com/album/the-narada-nutcracker-mw0000310417", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Camille": {
+      "family": "Pop", "primary": "chanson", "confidence": "medium",
+      "rationale": "The catalog's existing chanson evidence maps this contemporary French singer to Pop.",
+      "evidence": ["playlist:existing-tags/chanson", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Yuno Miles": {
+      "family": "Hip-hop", "primary": "comedy hip hop", "confidence": "high",
+      "rationale": "MusicBrainz and Shazam both identify the artist as comedy hip-hop or Hip-Hop/Rap.",
+      "evidence": ["https://musicbrainz.org/artist/ee1be612-25a0-4268-9536-3145f06e7f12", "https://www.shazam.com/en-us/artist/yuno-miles/1501526002"]
+    },
+    "The Weepies": {
+      "family": "Modern Folk", "primary": "indie folk", "secondary": "folk-pop", "confidence": "high",
+      "rationale": "AllMusic identifies the duo as folk-pop, contemporary singer-songwriter, and indie folk.",
+      "evidence": ["https://www.allmusic.com/artist/the-weepies-mn0000450991", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Yeasayer": {
+      "family": "Rock", "primary": "indie rock", "secondary": "alternative rock", "confidence": "high",
+      "rationale": "AllMusic's primary genre and styles place the band in indie and alternative rock.",
+      "evidence": ["https://www.allmusic.com/artist/yeasayer-mn0000643755", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Youth Lagoon": {
+      "family": "Rock", "primary": "dream pop", "secondary": "indie rock; neo-psychedelia", "confidence": "high",
+      "rationale": "AllMusic groups the project under Pop/Rock with dream-pop, indie-rock, and neo-psychedelia styles.",
+      "evidence": ["https://www.allmusic.com/artist/youth-lagoon-mn0002772359", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Adam Green": {
+      "family": "Modern Folk", "primary": "anti-folk", "secondary": "alternative folk", "confidence": "high",
+      "rationale": "AllMusic identifies anti-folk and alternative folk as core styles.",
+      "evidence": ["https://www.allmusic.com/artist/adam-green-mn0000927918", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Mapei": {
+      "family": "Pop", "primary": "left-field pop", "secondary": "alternative R&B; alternative rap", "confidence": "high",
+      "rationale": "AllMusic describes Mapei as a left-field pop artist spanning alternative R&B and rap.",
+      "evidence": ["https://www.allmusic.com/artist/mapei-mn0001476116", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Sungazer": {
+      "family": "Jazz", "primary": "jazz fusion", "secondary": "electro-jazz", "confidence": "high",
+      "rationale": "The band's documented blend is jazz fusion with electronics and progressive rock.",
+      "evidence": ["https://www.musicadalpalco.com/wp-content/uploads/2024/10/jazzmi-programma-extralight.pdf", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Ted Hawkins": {
+      "family": "R&B, Soul & Blues", "primary": "soul-blues", "secondary": "acoustic blues", "confidence": "high",
+      "rationale": "AllMusic identifies Hawkins under Blues and R&B, with soul-blues and acoustic-blues styles.",
+      "evidence": ["https://www.allmusic.com/artist/ted-hawkins-mn0000023982", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Todrick Hall": {
+      "family": "Pop", "primary": "pop", "secondary": "alternative R&B; electronic", "confidence": "medium",
+      "rationale": "The requested taxonomy has no stage-and-screen family; the catalog's songs map best to Pop.",
+      "evidence": ["https://www.allmusic.com/artist/todrick-hall-mn0003528156", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Bag Raiders": {
+      "family": "Electronic", "primary": "alternative dance", "secondary": "house; synth-pop", "confidence": "high",
+      "rationale": "AllMusic identifies Electronic as the primary genre, with alternative dance and house styles.",
+      "evidence": ["https://www.allmusic.com/artist/bag-raiders-mn0001011315", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Dan Deacon": {
+      "family": "Electronic", "primary": "indie electronic", "secondary": "experimental electronic", "confidence": "high",
+      "rationale": "AllMusic identifies Deacon as an electronic musician and experimental composer.",
+      "evidence": ["https://www.allmusic.com/artist/dan-deacon-mn0000107518", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Fanfare Ciocarlia": {
+      "family": "World", "primary": "Balkan brass", "secondary": "Romanian Romani", "confidence": "high",
+      "rationale": "The Romanian Romani brass band is represented in Rough Guide world-music collections and matches the Songlines-oriented World definition.",
+      "evidence": ["https://www.allmusic.com/artist/fanfare-ciocrlia-mn0000170782", "playlist:existing-tags/balkan-brass"]
+    },
+    "Frédéric Chopin": {
+      "family": "Classical", "primary": "Romantic classical", "confidence": "high",
+      "rationale": "Chopin is a canonical Romantic-era classical composer.",
+      "evidence": ["wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Juan Gabriel": {
+      "family": "Pop", "primary": "Latin pop", "secondary": "mariachi", "confidence": "high",
+      "rationale": "AllMusic identifies Latin pop and mariachi as core styles; the broad family is Pop.",
+      "evidence": ["https://www.allmusic.com/artist/juan-gabriel-mn0000240252", "playlist:existing-tags/mariachi"]
+    },
+    "People Under The Stairs": {
+      "family": "Hip-hop", "primary": "underground rap", "secondary": "West Coast rap", "confidence": "high",
+      "rationale": "AllMusic identifies the duo under Rap with underground and West Coast rap styles.",
+      "evidence": ["https://www.allmusic.com/artist/people-under-the-stairs-mn0000836028", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Photay": {
+      "family": "Electronic", "primary": "IDM", "secondary": "experimental electronic; ambient", "confidence": "high",
+      "rationale": "AllMusic identifies Photay as an electronic musician working in IDM and experimental electronic music.",
+      "evidence": ["https://www.allmusic.com/artist/photay-mn0003343881", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Quantic": {
+      "family": "Electronic", "primary": "broken beat", "secondary": "house; jazz-house", "confidence": "high",
+      "rationale": "AllMusic identifies Electronic first and documents broken-beat, house, and jazz-house work.",
+      "evidence": ["https://www.allmusic.com/artist/quantic-mn0000314923", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Shearwater": {
+      "family": "Rock", "primary": "indie rock", "secondary": "art rock", "confidence": "high",
+      "rationale": "AllMusic identifies Shearwater as a Pop/Rock act with indie- and alternative-rock styles.",
+      "evidence": ["https://www.allmusic.com/artist/shearwater-mn0000012473", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Great Big Sea": {
+      "family": "Modern Folk", "primary": "contemporary Celtic", "secondary": "folk-rock; sea shanties", "confidence": "high",
+      "rationale": "The Newfoundland band's contemporary performances blend Celtic and traditional material with modern folk-rock.",
+      "evidence": ["https://www.allmusic.com/album/xx-mw0002442621", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Young Dubliners": {
+      "family": "Rock", "primary": "Celtic rock", "secondary": "folk-rock", "confidence": "high",
+      "rationale": "AllMusic identifies the Los Angeles band as Celtic folk-rock; Rock is the requested broad family.",
+      "evidence": ["https://www.allmusic.com/artist/the-young-dubliners-mn0000583928", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Ennio Morricone": {
+      "family": "Classical", "primary": "film score", "secondary": "orchestral", "confidence": "high",
+      "rationale": "The requested taxonomy has no stage-and-screen family; Morricone's orchestral film scores map best to Classical.",
+      "evidence": ["playlist:existing-tags/film-score-stage-and-screen", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Buck Meek": {
+      "family": "Country", "primary": "alt-country", "secondary": "indie folk", "confidence": "high",
+      "rationale": "AllMusic identifies alt-country and indie folk as core styles and describes the solo work as country-inflected.",
+      "evidence": ["https://www.allmusic.com/artist/buck-meek-mn0003518712", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Carsick Cars": {
+      "family": "Rock", "primary": "indie rock", "secondary": "noise rock", "confidence": "high",
+      "rationale": "The catalog and AllMusic album evidence place the guitar band under Pop/Rock and noise-oriented indie rock.",
+      "evidence": ["https://www.allmusic.com/album/you-can-listen-you-can-talk-mw0001335776", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "J-Zone": {
+      "family": "Hip-hop", "primary": "underground rap", "secondary": "East Coast rap", "confidence": "high",
+      "rationale": "AllMusic identifies J-Zone under Rap with underground, alternative, and East Coast styles.",
+      "evidence": ["https://www.allmusic.com/artist/j-zone-mn0000774640", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Beatrice Dillon": {
+      "family": "Electronic", "primary": "experimental techno", "secondary": "experimental dub", "confidence": "high",
+      "rationale": "AllMusic identifies Dillon under Electronic and Avant-Garde, led by experimental techno.",
+      "evidence": ["https://www.allmusic.com/artist/beatrice-dillon-mn0003441766", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Trent Reznor and Atticus Ross": {
+      "family": "Experimental", "primary": "electronic film score", "secondary": "ambient; industrial", "confidence": "medium",
+      "rationale": "The requested taxonomy lacks stage-and-screen; the duo's electronic and ambient score work maps best to Experimental.",
+      "evidence": ["playlist:existing-tags/stage-and-screen", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Axel Boman": {
+      "family": "Electronic", "primary": "house", "secondary": "tech house", "confidence": "high",
+      "rationale": "The artist catalog and existing metadata consistently identify house and electronic dance music.",
+      "evidence": ["musicbrainz:artist-tags", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Beats Antique": {
+      "family": "Electronic", "primary": "world fusion electronic", "secondary": "downtempo", "confidence": "medium",
+      "rationale": "The modern production-led catalog maps to Electronic, while regional influences remain in the detailed label.",
+      "evidence": ["musicbrainz:artist-tags", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Blue Scholars": {
+      "family": "Hip-hop", "primary": "alternative hip hop", "secondary": "conscious hip hop", "confidence": "high",
+      "rationale": "The duo's rap catalog and artist tags map directly to Hip-hop.",
+      "evidence": ["musicbrainz:artist-tags", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Buraka Som Sistema": {
+      "family": "Electronic", "primary": "kuduro", "secondary": "moombahton", "confidence": "high",
+      "rationale": "The production-led kuduro and moombahton catalog maps to Electronic.",
+      "evidence": ["playlist:existing-tags/moombahton", "musicbrainz:artist-tags", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Compay Segundo": {
+      "family": "World", "primary": "trova", "secondary": "son cubano", "confidence": "high",
+      "rationale": "The Cuban trova and son repertoire is a positive regional World assignment.",
+      "evidence": ["playlist:existing-tags/trova", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Dawn of Midi": {
+      "family": "Jazz", "primary": "experimental jazz", "secondary": "minimalism", "confidence": "high",
+      "rationale": "The acoustic trio's experimental jazz and minimalist catalog maps to Jazz.",
+      "evidence": ["musicbrainz:artist-tags", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Dorothy Masuka": {
+      "family": "World", "primary": "South African jazz", "secondary": "township music", "confidence": "high",
+      "rationale": "The South African regional repertoire is a positive World assignment, retaining jazz in the detailed label.",
+      "evidence": ["wikidata:P136", "musicbrainz:artist-tags", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Emancipator": {
+      "family": "Electronic", "primary": "downtempo", "secondary": "trip hop", "confidence": "high",
+      "rationale": "The instrumental, sample-based downtempo catalog maps directly to Electronic.",
+      "evidence": ["musicbrainz:artist-tags", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Fairuz": {
+      "family": "World", "primary": "Lebanese music", "secondary": "Arabic pop; traditional", "confidence": "high",
+      "rationale": "The Lebanese and Arabic repertoire is a positive regional World assignment.",
+      "evidence": ["wikidata:P136", "musicbrainz:artist-tags", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Frente Cumbiero": {
+      "family": "World", "primary": "cumbia", "secondary": "Colombian music", "confidence": "high",
+      "rationale": "The Colombian cumbia catalog is a positive regional World assignment.",
+      "evidence": ["musicbrainz:artist-tags", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Hans Zimmer": {
+      "family": "Classical", "primary": "film score", "secondary": "orchestral", "confidence": "high",
+      "rationale": "The requested taxonomy has no stage-and-screen family; the orchestral score catalog maps best to Classical.",
+      "evidence": ["playlist:existing-tags/film-score", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Ibibio Sound Machine": {
+      "family": "World", "primary": "Afrobeat", "secondary": "Ibibio; electronic", "confidence": "high",
+      "rationale": "The Nigerian Ibibio-language Afrobeat catalog is a positive regional World assignment.",
+      "evidence": ["musicbrainz:artist-tags", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Moondog": {
+      "family": "Experimental", "primary": "minimalism", "secondary": "avant-garde", "confidence": "high",
+      "rationale": "Existing minimalist evidence and the avant-garde catalog map directly to Experimental.",
+      "evidence": ["playlist:existing-tags/minimalist-music", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Mux Mool": {
+      "family": "Electronic", "primary": "IDM", "secondary": "instrumental hip hop", "confidence": "high",
+      "rationale": "Existing intelligent-dance-music evidence maps directly to Electronic.",
+      "evidence": ["playlist:existing-tags/intelligent-dance-music", "musicbrainz:artist-tags", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Jesse Welles": {
+      "family": "Modern Folk", "primary": "protest folk", "secondary": "singer-songwriter; folk rock", "confidence": "high",
+      "rationale": "The five playlist songs are contemporary American protest songs led by voice and acoustic guitar, mapping to Modern Folk.",
+      "evidence": ["https://music.apple.com/us/artist/jesse-welles/1737507146", "https://jessewelles.bandcamp.com/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "The End of America": {
+      "family": "Modern Folk", "primary": "indie folk", "secondary": "folk-pop", "confidence": "high",
+      "rationale": "The trio's official biography and catalog describe a harmony-led indie-folk and folk-pop band.",
+      "evidence": ["https://www.theendofamericamusic.com/about", "https://theendofamerica.bandcamp.com/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Bitter:Sweet": {
+      "family": "Electronic", "primary": "trip hop", "secondary": "electronica; nu jazz", "confidence": "high",
+      "rationale": "The Los Angeles duo's catalog is consistently described as trip hop and electronica.",
+      "evidence": ["https://www.allmusic.com/artist/bitter-sweet-mn0000908435", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Mabe Fratti": {
+      "family": "Experimental", "primary": "avant-garde", "secondary": "experimental pop; electroacoustic", "confidence": "high",
+      "rationale": "The cello, voice, improvisation, and electronics catalog is explicitly avant-garde and experimental.",
+      "evidence": ["https://music.apple.com/us/artist/mabe-fratti/1163290670", "https://apnews.com/article/6d0ff0df6d723eccd342b72fb778dd31", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Nubya Garcia": {
+      "family": "Jazz", "primary": "contemporary jazz", "secondary": "UK jazz; post-bop", "confidence": "high",
+      "rationale": "Garcia is a jazz saxophonist and bandleader whose wider dub and club influences remain secondary.",
+      "evidence": ["https://concord.com/artist/nubya-garcia/", "https://www.allmusic.com/artist/nubya-garcia-mn0003492190", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Rudresh Mahanthappa": {
+      "family": "Jazz", "primary": "contemporary jazz", "secondary": "Indian jazz fusion", "confidence": "high",
+      "rationale": "The artist's official biography identifies him as a leading contemporary jazz saxophonist and composer.",
+      "evidence": ["https://www.rudreshm.com/about", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Seckou Keita": {
+      "family": "World", "primary": "Senegalese kora", "secondary": "West African traditional; griot music", "confidence": "high",
+      "rationale": "The Senegalese kora repertoire has positive regional evidence and three Songlines Music Awards, satisfying the project's World standard.",
+      "evidence": ["https://www.seckoukeita.com/biog", "https://www.seckoukeita.com/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Penguin Cafe Orchestra": {
+      "family": "Experimental", "primary": "avant-pop", "secondary": "chamber music; minimalism", "confidence": "high",
+      "rationale": "The ensemble's hybrid of avant-pop, chamber music, minimalism, and folk sits best in Experimental.",
+      "evidence": ["https://www.penguincafe.com/", "musicbrainz:artist-tags", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Connor Price": {
+      "family": "Hip-hop", "primary": "hip hop", "secondary": "pop rap", "confidence": "high",
+      "rationale": "The Canadian rapper's official storefront biography and catalog classify the work as Hip-Hop/Rap.",
+      "evidence": ["https://music.apple.com/us/artist/connor-price/494189511", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Wheelchair Sports Camp": {
+      "family": "Hip-hop", "primary": "alternative hip hop", "secondary": "jazz rap", "confidence": "high",
+      "rationale": "The band's own press biography calls it a hip-hop outfit, with live jazz instrumentation retained as a secondary label.",
+      "evidence": ["https://wheelchairsportscamp.co/press", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Robert Schumann": {
+      "family": "Classical", "primary": "Romantic classical", "confidence": "high",
+      "rationale": "Schumann is a canonical Romantic-era classical composer; work-level dates remain separate from this genre decision.",
+      "evidence": ["wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "The Piano Guys": {
+      "family": "Classical", "primary": "classical crossover", "secondary": "instrumental pop", "confidence": "medium",
+      "rationale": "The catalog's existing crossover evidence and instrumental classical arrangements map best to Classical under the requested taxonomy.",
+      "evidence": ["playlist:existing-tags/crossover", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Adrian Crowley": {
+      "family": "Modern Folk", "primary": "singer-songwriter", "secondary": "indie folk", "confidence": "high",
+      "rationale": "Crowley's official biography and catalog center poetic singer-songwriter work rooted in folk traditions.",
+      "evidence": ["https://www.adriancrowley.com/bio", "https://www.allmusic.com/artist/adrian-crowley-mn0000599992", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Andy Akiho": {
+      "family": "Classical", "primary": "contemporary classical", "secondary": "percussion", "confidence": "high",
+      "rationale": "Akiho's official biography identifies his commissioned chamber and orchestral work as contemporary classical composition.",
+      "evidence": ["https://andyakiho.com/pages/about", "https://www.allmusic.com/artist/andy-akiho-mn0000158083", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Ayub Ogada": {
+      "family": "World", "primary": "Kenyan Luo music", "secondary": "traditional African", "confidence": "high",
+      "rationale": "Real World Records documents Ogada's Luo repertoire, indigenous instruments, WOMAD history, and Kenyan traditional sources.",
+      "evidence": ["https://realworldrecords.com/artists/ayub-ogada/", "https://music.apple.com/us/artist/ayub-ogada/466800", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Baaba Maal": {
+      "family": "World", "primary": "Senegalese music", "secondary": "Pulaar; worldbeat", "confidence": "high",
+      "rationale": "Maal's Pulaar-language Senegalese repertoire and documented West African traditional roots provide positive World evidence.",
+      "evidence": ["https://www.rts.sn/actualite/detail/a-la-une/baaba-maal-40-ans-de-passion-musicale-entre-traditions-curiosite-et-defis-internationaux", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Barker": {
+      "family": "Electronic", "primary": "techno", "secondary": "ambient techno", "confidence": "high",
+      "rationale": "The Ostgut Ton catalog places Barker's releases in the Berlin electronic and techno context.",
+      "evidence": ["https://www.ostgut.berlin/en/label/artists/?filter=barker", "playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Bellowhead": {
+      "family": "Traditional Folk", "primary": "English traditional folk", "secondary": "contemporary folk", "confidence": "high",
+      "rationale": "The band's official biography and catalog document an English folk ensemble arranging sea shanties, dance tunes, and traditional repertoire.",
+      "evidence": ["https://bellowhead.co.uk/bio", "https://music.apple.com/us/artist/bellowhead/190719404", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Bill Monroe & His Blue Grass Boys": {
+      "family": "Country", "primary": "bluegrass", "secondary": "traditional country", "confidence": "high",
+      "rationale": "The Bluegrass and Country Music Halls of Fame identify Monroe and the Blue Grass Boys as the defining bluegrass country ensemble.",
+      "evidence": ["https://www.bluegrasshall.org/inductees/bill-monroe/", "https://www.countrymusichalloffame.org/hall-of-fame/bill-monroe", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Blockhead": {
+      "family": "Hip-hop", "primary": "instrumental hip hop", "secondary": "abstract hip hop", "confidence": "high",
+      "rationale": "AllMusic identifies Blockhead as a New York beatmaker producing abstract hip-hop for solo and rap catalogs.",
+      "evidence": ["https://www.allmusic.com/artist/blockhead-mn0000052094", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Emahoy Tsege Mariam Gebru": {
+      "family": "World", "primary": "Ethiopian piano", "secondary": "Ethiopian classical; sacred", "confidence": "medium",
+      "rationale": "The Ethiopian composer's regional piano language and inclusion in Rough Guide Ethiopian collections provide positive World evidence; the detailed label preserves the classical component.",
+      "evidence": ["https://www.emahoy.com/emahoys-life", "https://emahoytsegemariamgebru.bandcamp.com/album/spielt-eigen-kompositionen", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Getatchew Mekurya": {
+      "family": "Jazz", "primary": "Ethio-jazz", "secondary": "Ethiopian shellela", "confidence": "high",
+      "rationale": "AllMusic identifies Mekurya as an Ethiopian jazz saxophonist and an early African-jazz figure.",
+      "evidence": ["https://www.allmusic.com/artist/getatchew-mekurya-mn0000651077", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Hanggai": {
+      "family": "World", "primary": "Mongolian folk", "secondary": "folk rock; throat singing", "confidence": "high",
+      "rationale": "The Inner Mongolian repertoire uses throat singing and traditional instruments alongside rock, providing positive regional World evidence.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Gazapizm": {
+      "family": "Hip-hop", "primary": "Turkish hip hop", "secondary": "rap", "confidence": "high",
+      "rationale": "The artist catalog explicitly classifies Gazapizm as Turkish Hip-Hop/Rap.",
+      "evidence": ["https://music.apple.com/us/artist/gazapizm/717795073", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Alex Gaudino": {
+      "family": "Electronic", "primary": "Italo house", "secondary": "dance", "confidence": "high",
+      "rationale": "The Italian DJ and producer's catalog is documented as Italo-house and dance music.",
+      "evidence": ["https://music.apple.com/us/artist/alex-gaudino/151287518", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Anomalie": {
+      "family": "Electronic", "primary": "jazztronica", "secondary": "electronic jazz; funk", "confidence": "high",
+      "rationale": "Anomalie's production-led project explicitly combines electronic production with jazz and classical harmony.",
+      "evidence": ["https://lecanalauditif.ca/artistes/anomalie/", "https://www.allmusic.com/artist/anomalie-mn0001445442", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "CunninLynguists": {
+      "family": "Hip-hop", "primary": "underground rap", "secondary": "Southern hip hop", "confidence": "high",
+      "rationale": "The group's catalog is explicitly categorized as underground Hip-Hop/Rap.",
+      "evidence": ["https://music.apple.com/us/artist/cunninlynguists/125734495", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Doomtree": {
+      "family": "Hip-hop", "primary": "indie hip hop", "secondary": "Midwest rap", "confidence": "high",
+      "rationale": "Doomtree's official biography and catalog identify the Minneapolis collective as rap and hip-hop.",
+      "evidence": ["https://www.doomtree.net/artists/doomtree/", "https://music.apple.com/us/artist/doomtree/287061952", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Johann Strauss II": {
+      "family": "Classical", "primary": "Romantic classical", "secondary": "waltz; operetta", "confidence": "high",
+      "rationale": "Strauss is a canonical Romantic-era classical composer; work-level dates remain separate from this genre decision.",
+      "evidence": ["wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Johannes Brahms": {
+      "family": "Classical", "primary": "Romantic classical", "confidence": "high",
+      "rationale": "Brahms is a canonical Romantic-era classical composer; work-level dates remain separate from this genre decision.",
+      "evidence": ["wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Jonny Greenwood": {
+      "family": "Classical", "primary": "film score", "secondary": "contemporary classical; experimental", "confidence": "medium",
+      "rationale": "The playlist tracks are score compositions; the requested taxonomy lacks stage-and-screen, so the orchestral and contemporary-classical work maps best to Classical.",
+      "evidence": ["playlist:track-catalog/film-score", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Auntie Flo": {
+      "family": "Electronic", "primary": "global club", "secondary": "house; electroacoustic", "confidence": "high",
+      "rationale": "Brownswood documents an electronic producer fusing field recordings and global influences; production method, not nationality, supports Electronic.",
+      "evidence": ["https://brownswoodrecordings.com/artist/auntie-flo/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Australian Art Orchestra": {
+      "family": "Jazz", "primary": "creative jazz", "secondary": "improvised music; avant-garde", "confidence": "high",
+      "rationale": "The ensemble's official biography explicitly locates its improvisational, cross-cultural practice in the evolving jazz tradition.",
+      "evidence": ["https://www.aao.com.au/about", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "BAYNK": {
+      "family": "Electronic", "primary": "electronic", "secondary": "future bass; tropical house", "confidence": "high",
+      "rationale": "The New Zealand producer's catalog is explicitly electronic, with future-bass and house styles.",
+      "evidence": ["https://music.apple.com/us/artist/baynk/1047672052", "https://www.allmusic.com/artist/baynk-mn0003548057", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Ben Harper And The Innocent Criminals": {
+      "family": "Rock", "primary": "roots rock", "secondary": "blues rock; soul", "confidence": "high",
+      "rationale": "The band catalog centers guitar-led rock while retaining its blues, soul, folk, and reggae influences as detail.",
+      "evidence": ["https://www.benharper.com/band", "https://music.apple.com/us/artist/ben-harper/644708", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Bent Knee": {
+      "family": "Rock", "primary": "art rock", "secondary": "progressive rock; experimental rock", "confidence": "high",
+      "rationale": "The Boston band is consistently documented as art rock with progressive and experimental approaches.",
+      "evidence": ["https://bentknee.bandcamp.com/music", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Big Head Todd and The Monsters": {
+      "family": "Rock", "primary": "blues rock", "secondary": "jam rock", "confidence": "high",
+      "rationale": "The band's official history describes blues-drenched rock and a long rock-radio catalog.",
+      "evidence": ["https://bigheadtodd.com/about/", "https://cmhof.org/inductees/big-head-todd-and-the-monsters/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Casey MQ": {
+      "family": "Electronic", "primary": "electronic pop", "secondary": "hyperpop; ambient pop", "confidence": "high",
+      "rationale": "The producer's official biography and catalog identify electronic pop and production as the center of the project.",
+      "evidence": ["https://caseymq.com/about", "https://music.apple.com/us/artist/casey-mq/973735439", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Chiwoniso": {
+      "family": "World", "primary": "Zimbabwean mbira", "secondary": "Shona music", "confidence": "high",
+      "rationale": "The Zimbabwean mbira repertoire has direct regional and traditional-instrument evidence.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Cory Wong": {
+      "family": "R&B, Soul & Blues", "primary": "funk", "secondary": "soul-jazz; R&B", "confidence": "high",
+      "rationale": "The catalog and AllMusic biography center funk, R&B, and soul-jazz groove rather than broad rock geography.",
+      "evidence": ["https://www.allmusic.com/artist/cory-wong-mn0002124442", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Daniel Johnston": {
+      "family": "Modern Folk", "primary": "lo-fi singer-songwriter", "secondary": "outsider folk", "confidence": "medium",
+      "rationale": "Johnston's voice-led, home-recorded singer-songwriter catalog maps best to Modern Folk while retaining its outsider and lo-fi qualities.",
+      "evidence": ["https://www.storyofanartist.net/about", "https://music.apple.com/us/artist/daniel-johnston/157458", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Deca": {
+      "family": "Hip-hop", "primary": "instrumental hip hop", "secondary": "underground rap", "confidence": "high",
+      "rationale": "The artist and label biographies identify Deca as a rapper and producer working in instrumental hip-hop.",
+      "evidence": ["https://www.defpresse.com/about/deca/", "https://lpr.com/lpr_artists/deca/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "DURRY": {
+      "family": "Rock", "primary": "indie rock", "secondary": "alternative rock", "confidence": "high",
+      "rationale": "The Minneapolis sibling band describes itself as indie rock and presents a guitar-band catalog.",
+      "evidence": ["https://www.durrymusic.com/home", "https://durrymusic.bandcamp.com/music", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Édith Piaf": {
+      "family": "Pop", "primary": "French chanson", "secondary": "chanson réaliste", "confidence": "high",
+      "rationale": "Piaf is a canonical French popular chanson singer; the broad requested family is Pop.",
+      "evidence": ["https://universalmusic.fr/artistes/20000091849", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Foxygen": {
+      "family": "Rock", "primary": "indie rock", "secondary": "psychedelic rock; experimental pop", "confidence": "high",
+      "rationale": "The duo's classic-rock and psychedelic catalog maps to Rock while retaining experimental pop as detail.",
+      "evidence": ["https://music.apple.com/us/artist/foxygen/540112627", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "FORQ": {
+      "family": "Jazz", "primary": "jazz fusion", "secondary": "jazz-funk", "confidence": "high",
+      "rationale": "AllMusic and the band's own material identify an improvising electric jazz-fusion quartet.",
+      "evidence": ["https://www.allmusic.com/artist/forq-mn0003664869", "https://forq.bandcamp.com/", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Jlin": {
+      "family": "Electronic", "primary": "footwork", "secondary": "experimental electronic", "confidence": "high",
+      "rationale": "The Gary producer's official publishing biography and catalog center electronic footwork and experimental composition.",
+      "evidence": ["https://www.deccapublishing.com/roster/jlin/", "https://www.allmusic.com/artist/jlin-mn0002791912", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Hermitude": {
+      "family": "Electronic", "primary": "electronica", "secondary": "future bass; instrumental hip hop", "confidence": "high",
+      "rationale": "The Australian duo's official biography identifies an electronic act with hip-hop roots and electronic soundscapes.",
+      "evidence": ["https://www.hermitude.com/about", "https://music.apple.com/us/artist/hermitude/80183041", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Gyptian": {
+      "family": "World", "primary": "Jamaican reggae", "secondary": "lovers rock; dancehall", "confidence": "high",
+      "rationale": "The Jamaican roots-reggae and dancehall catalog provides positive regional and genre evidence for World.",
+      "evidence": ["https://dancehallmuseum.org/artists/gyptian/", "https://www.allmusic.com/artist/gyptian-mn0000279395", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Indigo De Souza": {
+      "family": "Rock", "primary": "indie rock", "secondary": "alternative rock", "confidence": "high",
+      "rationale": "The North Carolina singer-songwriter's catalog is consistently documented as indie and alternative rock.",
+      "evidence": ["https://www.indigodesouza.com/bio", "https://www.allmusic.com/artist/indigo-de-souza-mn0003536018", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Joe Cuba": {
+      "family": "World", "primary": "Latin boogaloo", "secondary": "salsa; Latin jazz", "confidence": "high",
+      "rationale": "The Puerto Rican New York bandleader's bilingual salsa and Latin-boogaloo catalog provides positive regional genre evidence.",
+      "evidence": ["https://www.govinfo.gov/content/pkg/CREC-2009-02-24/pdf/CREC-2009-02-24-pt1-PgE336.pdf", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Caught A Ghost": {
+      "family": "R&B, Soul & Blues", "primary": "indie soul", "secondary": "electro-soul", "confidence": "medium",
+      "rationale": "The catalog's soul vocals and rhythm-and-blues foundation map best to R&B/Soul/Blues, with electronic production retained as detail.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:best-effort-review/2026-08-30"]
+    },
+    "Indian Calling": {
+      "family": "Traditional Folk", "primary": "Native American flute", "secondary": "traditional instrumental", "confidence": "medium",
+      "rationale": "The playlist recordings are presented as Native American flute and traditional instrumental repertoire.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:best-effort-review/2026-08-30"]
+    },
+    "Londrelle": {
+      "family": "R&B, Soul & Blues", "primary": "spoken-word soul", "secondary": "neo-soul", "confidence": "medium",
+      "rationale": "The catalog combines spoken-word affirmations with neo-soul and R&B production; the requested taxonomy has no spoken-word family.",
+      "evidence": ["playlist:artist-catalog", "editorial:best-effort-review/2026-08-30"]
+    },
+    "2nd South Carolina String Band": {
+      "family": "Traditional Folk", "primary": "American Civil War folk", "secondary": "historical string-band music", "confidence": "high",
+      "rationale": "The ensemble performs documented nineteenth-century American camp, minstrel, and string-band repertoire.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "888": {
+      "family": "Rock", "primary": "alternative rock", "secondary": "indie rock", "confidence": "medium",
+      "rationale": "The Denver trio's guitar-band catalog maps to alternative and indie rock.",
+      "evidence": ["playlist:artist-catalog", "editorial:best-effort-review/2026-08-30"]
+    },
+    "Alexis Harte": {
+      "family": "Modern Folk", "primary": "singer-songwriter", "secondary": "contemporary folk", "confidence": "medium",
+      "rationale": "Harte's acoustic, lyric-led singer-songwriter work maps to Modern Folk.",
+      "evidence": ["playlist:artist-catalog", "editorial:best-effort-review/2026-08-30"]
+    },
+    "Bill Wurtz": {
+      "family": "Pop", "primary": "experimental pop", "secondary": "jazz-pop; comedy music", "confidence": "medium",
+      "rationale": "The melodic song catalog is built from compact pop forms, even though its harmony, editing, and humor are unconventional.",
+      "evidence": ["playlist:artist-catalog", "editorial:best-effort-review/2026-08-30"]
+    },
+    "Boiled In Lead": {
+      "family": "Rock", "primary": "folk rock", "secondary": "Celtic rock; worldbeat", "confidence": "high",
+      "rationale": "The Minneapolis group's electric rhythm section and folk-punk presentation map to Rock while preserving its international folk repertoire as detail.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Dan Reeder": {
+      "family": "Modern Folk", "primary": "singer-songwriter", "secondary": "lo-fi folk", "confidence": "high",
+      "rationale": "Reeder's home-recorded, acoustic, lyric-forward work is contemporary singer-songwriter folk.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Daniel Pemberton": {
+      "family": "Classical", "primary": "film score", "secondary": "orchestral soundtrack; electronic score", "confidence": "medium",
+      "rationale": "The playlist selections are screen scores; without a stage-and-screen family, their composed orchestral function maps best to Classical.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Enter The Haggis": {
+      "family": "Rock", "primary": "Celtic rock", "secondary": "folk rock", "confidence": "high",
+      "rationale": "The Canadian band's amplified Celtic and folk-rock catalog maps to Rock.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Guerilla Toss": {
+      "family": "Rock", "primary": "art rock", "secondary": "dance-punk; experimental rock", "confidence": "high",
+      "rationale": "The group's guitar-band and dance-punk catalog maps to Rock, with experimental practice retained as detail.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "In Love With a Ghost": {
+      "family": "Electronic", "primary": "chillhop", "secondary": "lo-fi electronic", "confidence": "high",
+      "rationale": "The producer-led instrumental catalog uses electronic beat production associated with chillhop and lo-fi electronic music.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Jay Warren": {
+      "family": "R&B, Soul & Blues", "primary": "contemporary R&B", "secondary": "soul", "confidence": "medium",
+      "rationale": "The vocal catalog and production style map to contemporary R&B and soul.",
+      "evidence": ["playlist:artist-catalog", "editorial:best-effort-review/2026-08-30"]
+    },
+    "Julie Andrews": {
+      "family": "Pop", "primary": "traditional pop", "secondary": "show tunes; musical theatre", "confidence": "medium",
+      "rationale": "The requested taxonomy lacks stage-and-screen; Andrews's popular vocal and show-tune recordings map most legibly to Pop.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Julie Feeney": {
+      "family": "Pop", "primary": "art pop", "secondary": "chamber pop", "confidence": "high",
+      "rationale": "Feeney's composed, theatrical vocal catalog is consistently framed as art and chamber pop.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Michael Franti": {
+      "family": "Rock", "primary": "alternative rock", "secondary": "reggae rock; hip hop", "confidence": "medium",
+      "rationale": "Franti's band-led catalog mixes alternative rock with reggae and hip-hop; Rock is the most stable top-level home.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Paper Bird": {
+      "family": "Modern Folk", "primary": "indie folk", "secondary": "Americana", "confidence": "high",
+      "rationale": "The Colorado ensemble's acoustic harmony and Americana repertoire map to Modern Folk.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Phosphorescent": {
+      "family": "Modern Folk", "primary": "indie folk", "secondary": "singer-songwriter; Americana", "confidence": "high",
+      "rationale": "Matthew Houck's lyric-led indie-folk and Americana catalog maps to Modern Folk.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Ruth Pelham": {
+      "family": "Traditional Folk", "primary": "community folk", "secondary": "children's folk; topical song", "confidence": "high",
+      "rationale": "Pelham's community singing and traditional/topical folk practice maps to Traditional Folk.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "SAULT": {
+      "family": "R&B, Soul & Blues", "primary": "neo-soul", "secondary": "funk; contemporary R&B", "confidence": "high",
+      "rationale": "The collective's catalog centers neo-soul, funk, and contemporary R&B.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Sergio Mendes & Brasil '66": {
+      "family": "World", "primary": "Brazilian bossa nova", "secondary": "samba; MPB", "confidence": "high",
+      "rationale": "The Brazilian ensemble's bossa nova and samba repertoire provides positive regional genre evidence for World.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Stan Rogers": {
+      "family": "Modern Folk", "primary": "Canadian folk", "secondary": "singer-songwriter", "confidence": "high",
+      "rationale": "Rogers's original, lyric-led Canadian folk songs map to Modern Folk rather than anonymous traditional repertoire.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "The Bellas": {
+      "family": "Pop", "primary": "vocal pop", "secondary": "a cappella; soundtrack", "confidence": "medium",
+      "rationale": "The Pitch Perfect vocal soundtrack performances use contemporary pop repertoire and arrangements.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "the bird and the bee": {
+      "family": "Pop", "primary": "indie pop", "secondary": "electropop; lounge pop", "confidence": "high",
+      "rationale": "The duo's melodic electronic and lounge-influenced catalog maps to Pop.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "The Felice Brothers": {
+      "family": "Modern Folk", "primary": "Americana", "secondary": "folk rock", "confidence": "high",
+      "rationale": "The Catskills group's roots-oriented Americana and folk-rock songwriting maps to Modern Folk.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "The Hollyfelds": {
+      "family": "Country", "primary": "alt-country", "secondary": "Americana", "confidence": "high",
+      "rationale": "The Denver band's catalog is country and Americana, with twang-forward ensemble arrangements.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "The Saw Doctors": {
+      "family": "Rock", "primary": "Celtic rock", "secondary": "folk rock", "confidence": "high",
+      "rationale": "The Irish guitar band's catalog maps to Celtic and folk rock.",
+      "evidence": ["playlist:artist-catalog", "wikidata:P136", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Tony Exum Jr": {
+      "family": "Jazz", "primary": "smooth jazz", "secondary": "contemporary jazz; R&B", "confidence": "high",
+      "rationale": "Exum's saxophone-led catalog is contemporary and smooth jazz.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Vulfmon": {
+      "family": "R&B, Soul & Blues", "primary": "funk", "secondary": "soul; jazz-funk", "confidence": "high",
+      "rationale": "Jack Stratton's Vulfmon catalog centers funk rhythm, soul, and jazz-funk production.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Youngblood Brass Band": {
+      "family": "Jazz", "primary": "brass-band jazz", "secondary": "hip-hop jazz; New Orleans brass", "confidence": "high",
+      "rationale": "The ensemble's brass-band instrumentation and improvisation map to Jazz, with hip-hop influence retained as detail.",
+      "evidence": ["playlist:artist-catalog", "editorial:taxonomy-review/2026-08-30"]
+    },
+    "Yung Spinach": {
+      "family": "Hip-hop", "primary": "rap", "secondary": "comedy rap", "confidence": "medium",
+      "rationale": "The vocal delivery, beat construction, and catalog context map to Hip-hop, even where the presentation is comic.",
+      "evidence": ["playlist:track-album-artist-context", "editorial:best-effort-review/2026-08-30"]
+    }
+  }
+}

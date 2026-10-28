@@ -1,0 +1,130 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-30",
+  "method": "Track- and album-specific review of the unresolved tail. Decisions use official artist or ensemble pages, public cultural institutions, exact soundtrack identity, and specialist regional references; they apply only while a row is Other or already assigned by this registry.",
+  "albums": {
+    "5dO917ENOex3W1RnneH0wv": {
+      "family": "Traditional Folk", "primary": "Children's traditional songs", "secondary": "Nursery and participatory repertoire", "confidence": "medium",
+      "evidence": ["https://open.spotify.com/artist/2xIaXC0ztnAJkUsZWFVSPV"],
+      "rationale": "The exact album's unresolved playlist tracks are established nursery and participatory songs performed by a documented children's musician; the decision is album-specific so his separately classified catalog is untouched."
+    },
+    "6MKEV97q025Vqq4HEd1mIL": {
+      "family": "Traditional Folk", "primary": "Children's traditional songs", "secondary": "Nursery repertoire", "confidence": "high",
+      "evidence": ["https://www.charliehopemusic.com/about"],
+      "rationale": "Down by the Bay and Old MacDonald are traditional children's repertoire on an album by an award-winning children's singer."
+    },
+    "1ShawDXi5dfwE2fDMM8nwW": {
+      "family": "Jazz", "primary": "Contemporary jazz", "secondary": "Jazz piano ensemble", "confidence": "high",
+      "evidence": ["https://cmhof.org/inductees/eric-gunnison"],
+      "rationale": "Colorado Music Hall of Fame identifies Gunnison as a central Denver jazz pianist and composer; the Voyageur ensemble track is kept separate from an unrelated liturgical compilation credit."
+    },
+    "509mAZteq4QgaCvfDHtEqj": {
+      "family": "World", "primary": "Brazilian siriá", "secondary": "Amazonian regional folk", "confidence": "high",
+      "evidence": ["https://music.apple.com/us/artist/mestre-cupij%C3%B3/375493864", "https://www.discogs.com/release/5984550-Mestre-Cupij%C3%B3-E-Seu-Ritmo-Siri%C3%A1"],
+      "rationale": "The exact Analog Africa album documents Mestre Cupijó's Pará siriá repertoire; the regional style is positive World evidence."
+    },
+    "4IcfkxKC0iJwiyyuUuTS01": {
+      "family": "Classical", "primary": "Film score", "secondary": "Orchestral soundtrack", "confidence": "high",
+      "evidence": ["https://music.apple.com/us/song/1416435525"],
+      "rationale": "The exact album is Nathan Johnson's original motion-picture score for The Brothers Bloom."
+    },
+    "6Tz3M9hEhhXiJl8GRMa8hN": {
+      "family": "Traditional Folk", "primary": "Eastern European traditional folk", "secondary": "Balkan vocal music", "confidence": "high",
+      "evidence": ["https://www.planina.org/about-us"],
+      "rationale": "Planina documents its Albanian, Bosnian, Bulgarian, Croatian, Greek, Macedonian, Romani, and other Eastern European village-song repertoire and traditional instruments."
+    },
+    "7IvdAbaAIemMYVDljaCiEc": {
+      "family": "World", "primary": "Chutney soca", "secondary": "Trinidadian Indo-Caribbean music", "confidence": "high",
+      "evidence": ["https://karmatt.com/biography/"],
+      "rationale": "Karma's official biography identifies Ravi B and the band with award-winning chutney soca, a specific Indo-Caribbean regional genre."
+    },
+    "1bYbeaNGR8CRidL7Ehi1ro": {
+      "family": "World", "primary": "Persian classical and Kurdish music", "secondary": "Sufi vocal music", "confidence": "high",
+      "evidence": ["https://kereshmeh.com/view_album.php?id=KCD-112"],
+      "rationale": "Kereshmeh Records identifies Nazeri as a master of Persian classical, Sufi, and Kurdish repertoires; this exact live album remains separate from his already classified symphonic collaboration."
+    },
+    "2EfVyyjTkeqHkTMEnj2afR": {
+      "family": "Classical", "primary": "Film score", "secondary": "Orchestral soundtrack", "confidence": "high",
+      "evidence": ["https://www.brusselsphilharmonic.be/en/about?lang=BP_EN"],
+      "rationale": "The exact album contains orchestral cues from The Artist performed by the Brussels Philharmonic."
+    },
+    "10T42RCRt9s5yQi18jB2vh": {
+      "family": "Traditional Folk", "primary": "Irish folk", "secondary": "Folk revival balladry", "confidence": "high",
+      "evidence": ["https://www.rte.ie/archives/2019/1127/1095431-folk-singer-liam-clancy-dies/"],
+      "rationale": "RTÉ describes Makem and Clancy as central folk-revival figures who reworked traditional ballads for Irish and international audiences."
+    },
+    "4Zw346Z8cTX74guGKPyMQd": {
+      "family": "Classical", "primary": "Contemporary classical", "secondary": "Chamber ensemble", "confidence": "high",
+      "evidence": ["https://www.ymusicensemble.com/"],
+      "rationale": "yMusic identifies itself as a chamber ensemble working across the classical/popular divide; Ecstatic Science is commissioned chamber music."
+    },
+    "7J1z27LMMTnJN38YfoCZK0": {
+      "family": "Classical", "primary": "Contemporary classical", "secondary": "Chamber ensemble", "confidence": "high",
+      "evidence": ["https://www.ymusicensemble.com/"],
+      "rationale": "yMusic identifies itself as a chamber ensemble, and Beautiful Mechanical was recognized as a contemporary classical record."
+    },
+    "2JwAMKpwk4IolH2KhF6nPn": {
+      "family": "Classical", "primary": "Film score", "secondary": "Ambient chamber soundtrack", "confidence": "high",
+      "evidence": ["https://www.filmikamari.fi/pressit/uploads/text/past_lives_press_notes.pdf"],
+      "rationale": "The film press notes credit Christopher Bear and Daniel Rossen with the original score for Past Lives; the decision is album-specific and does not relabel their rock catalogs."
+    }
+  },
+  "tracks": {
+    "2RAx39CK4v8BWBz2JwfYTb": {
+      "family": "Modern Folk", "primary": "Contemporary hymn", "secondary": "Liturgical folk song", "confidence": "high", "evidence": ["https://hymnary.org/hymn/CH1995/395"],
+      "rationale": "Hymnary identifies Seed, Scattered and Sown as Dan Feiten's 1987 communion hymn and credits Eric Gunnison only as an alternate arranger; it is not evidence for Gunnison's jazz catalog."
+    },
+    "2VDL3zhGqo4SMFwrr8R2pz": {
+      "family": "Jazz", "primary": "Vocal jazz", "secondary": "Jazz standard", "confidence": "high", "evidence": ["https://music.apple.com/us/artist/rose-murphy/79665974"],
+      "rationale": "Rose Murphy's Pennies from Heaven is a licensed vocal-jazz recording on The Artist soundtrack, not part of Ludovic Bource's orchestral score; the track override intentionally outranks the album rule."
+    },
+    "5IvuEjsRWLFLlk6dmykkjb": {
+      "family": "World", "primary": "Senegalese tassu", "secondary": "Mbalax-rooted vocal tradition", "confidence": "high", "evidence": ["https://abynganadiop.bandcamp.com/"],
+      "rationale": "The artist release page identifies Aby Ngana Diop's recording as Senegal's tassu poetic storytelling tradition."
+    },
+    "3JjezPLoWmyEJqKiwfTKMy": {
+      "family": "World", "primary": "South African Zulu vocal music", "secondary": "A cappella folk", "confidence": "high", "evidence": ["https://hdsentertainment.co.za/afrika-mamas/"],
+      "rationale": "The ensemble profile documents South African a cappella performance rooted in Zulu folk storytelling."
+    },
+    "4E0teOQQQwagLVvQ7VfYm1": {
+      "family": "World", "primary": "Afrobeats", "secondary": "Afrowave", "confidence": "high", "evidence": ["https://www.marathonartists.com/afro-b"],
+      "rationale": "The artist's label describes Drogba (Joanna) as Afro B's take on UK Afrobeats and the Afrowave scene."
+    },
+    "50mijthH8crF7XahxaODRH": {
+      "family": "Jazz", "primary": "Jazz fusion", "secondary": "Brazilian percussion", "confidence": "high", "evidence": ["https://www.arts.gov/honors/jazz/airto-moreira"],
+      "rationale": "The National Endowment for the Arts identifies Moreira as a defining jazz percussionist central to the jazz-fusion era."
+    },
+    "5XkDd6xv9yJ48Yp1h7b1H0": {
+      "family": "World", "primary": "Senegalese afro-pop", "secondary": "Afro-jazz", "confidence": "high", "evidence": ["https://wasisdiop.fr/biographie/"],
+      "rationale": "Diop's official biography documents his Senegalese work and African-rooted film and popular music catalog."
+    },
+    "4RybMAgGy55SxtNsztO1aQ": {
+      "family": "World", "primary": "Turkish folk", "secondary": "Anatolian singer-songwriter", "confidence": "medium", "evidence": ["https://www.turkishmusic.org/?p=artists%2Fzulfu-livaneli%2Farticle_en"],
+      "rationale": "The specialist Turkish Music and Voice Library describes Livaneli's synthesis of traditional Turkish folk music and modern composition."
+    },
+    "1VXphS4h87fhnfx5wS69w2": {
+      "family": "Traditional Folk", "primary": "Chinese suona tradition", "secondary": "Northern Chinese wind music", "confidence": "high", "evidence": ["https://chinesemusicworld.com/media/suona-%E5%94%A2%E5%91%90/hundreds-birds-paying-homage-phoenix-%E7%99%BE%E9%B8%9F%E6%9C%9D%E5%87%A4-bai-niao-chao-feng-suona-%E5%94%A2%E5%91%90/amp/"],
+      "rationale": "The exact work is documented as a Chinese suona classic derived from northern indigenous performance tradition."
+    },
+    "6SyKerh44G8BrOgzvfnil4": {
+      "family": "World", "primary": "Hawaiian music", "secondary": "Contemporary Hawaiian", "confidence": "high", "evidence": ["https://williek.com/discography/awihilima/"],
+      "rationale": "Willie K's official discography lists Holoholo Ka'a on Awihilima, and his official biography identifies indigenous acoustic Hawaiian music as a core style."
+    },
+    "2AksaJAZzOxjnJPmIOkqTK": {
+      "family": "World", "primary": "Andalusian Sufi fusion", "secondary": "Celtic / Arabic devotional music", "confidence": "medium", "evidence": ["https://music.apple.com/us/artist/al-firdaus-ensemble/1132633453"],
+      "rationale": "The exact ensemble is a Granada-based Sufi group combining Celtic, flamenco, Arabic, Andalusian, and Turkish traditions; the track title and album context support the regional fusion placement."
+    },
+    "1s4q9uqdkFZSxm0xf72ny8": {
+      "family": "Traditional Folk", "primary": "Japanese traditional", "secondary": "Koto song", "confidence": "high", "evidence": ["https://www.putumayo.com/aikoshimada-elizabethfalconer"],
+      "rationale": "The exact Putumayo artist pairing performs Sakura, Sakura, a Japanese traditional song, with koto specialist Elizabeth Falconer."
+    },
+    "02RV5R3tY0ToCkUGpxkwul": {
+      "family": "Traditional Folk", "primary": "American historical song", "secondary": "Military march", "confidence": "high", "evidence": ["https://www.loc.gov/collections/patriotic-melodies/articles-and-essays/when-johnny-comes-marching-home-again/"],
+      "rationale": "The Library of Congress documents the exact Civil War-era song and its 1863 publication; this performance preserves the historical march repertoire."
+    },
+    "6MpCVzzjDHCcP3jyvxw8BY": {
+      "family": "World", "primary": "Nuevo tango", "secondary": "Acoustic guitar ensemble", "confidence": "medium", "evidence": ["https://www.youtube.com/watch?v=daCUIWGSEsU"],
+      "rationale": "The exact 40 Fingers release is an acoustic-guitar performance of Astor Piazzolla's Libertango; tango is positive regional World evidence."
+    }
+  }
+}

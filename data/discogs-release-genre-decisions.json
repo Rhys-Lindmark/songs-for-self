@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-30",
+  "method": "Album-level editorial review of broad Discogs search matches. Overrides require positive musical-style evidence; a title match can be rejected when the playlist track is absent from the matched release.",
+  "albums": {
+    "4wPytOTUM9zioXrAbqp7mG": {
+      "action": "override",
+      "family": "World",
+      "primary": "Cypriot psychedelic folk",
+      "secondary": "Mediterranean folk rock",
+      "confidence": "medium",
+      "evidence": [
+        "https://antonisantoniou.bandcamp.com/album/throisma",
+        "https://www.discogs.com/release/24500312-Antonis-Antoniou-Throisma"
+      ],
+      "rationale": "The artist release page tags the album world, Mediterranean, and psychedelic folk rock and quotes a four-star Songlines review; Discogs independently matches the album under its broad Folk, World & Country umbrella."
+    },
+    "3aKIvmIRJ32Gr8Fq4mIRiv": {
+      "action": "override",
+      "family": "World",
+      "primary": "Ghanaian regional fusion",
+      "secondary": "Hiplife / traditional Ghanaian",
+      "confidence": "high",
+      "evidence": [
+        "https://www.discogs.com/release/11738184-Ayuune-Sule-We-Have-One-Destiny"
+      ],
+      "rationale": "The exact release notes describe West African music combining northern Ghanaian traditions with southern Ghanaian Azonto and Hiplife; Discogs styles include African and Tribal alongside Hip Hop."
+    },
+    "6ciE9GJFhZntxPoS8OLMZS": {
+      "action": "override",
+      "family": "World",
+      "primary": "Kurdish music",
+      "secondary": "Contemporary traditional fusion",
+      "confidence": "high",
+      "evidence": [
+        "https://nishtimanproject.bandcamp.com/album/kurdistan",
+        "https://www.discogs.com/release/11237979-Nishtiman-Project-Kobane"
+      ],
+      "rationale": "The artist page describes the project as musicians from Iran, Turkey, and Iraq working across Kurdish regional styles and explicitly places it in world music; Discogs exactly matches Kobane."
+    },
+    "6hzZlHtRhz8uRcFiecg3kB": {
+      "action": "override",
+      "family": "World",
+      "primary": "Papua New Guinean stringband",
+      "secondary": "Traditional folk",
+      "confidence": "high",
+      "evidence": [
+        "https://www.discogs.com/release/2996339-Papua-New-Guinea-Stringbands-With-Bob-Brozman-Songs-Of-The-Volcano"
+      ],
+      "rationale": "The exact release is a Papua New Guinea stringband collection issued by Riverboat Records / World Music Network; its track list matches the playlist album."
+    },
+    "4bUk1m4hzKtdlp8knuxPw3": {
+      "action": "override",
+      "family": "World",
+      "primary": "Moroccan Jajouka music",
+      "secondary": "Rhaita ceremonial music",
+      "confidence": "high",
+      "evidence": [
+        "https://open.spotify.com/album/4bUk1m4hzKtdlp8knuxPw3",
+        "https://soundcloud.com/the-master-musicians-of-jajouka/jajouka-black-eyes-rhaitas"
+      ],
+      "rationale": "Spotify's exact album track list contains Jajouka Black Eyes (Rhaitas), and the artist's SoundCloud identifies the track as World Music. The similarly titled Discogs electronic release 831052 has a different track list and is rejected as evidence for this album.",
+      "rejectedDiscogsReleaseId": 831052
+    }
+  }
+}

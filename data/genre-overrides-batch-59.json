@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Exact-track correction for three Ruth Pelham recordings surfaced by the ranked-label review. Authored contemporary children's/community songs belong to Modern Folk rather than Traditional Folk.",
+  "albums": {},
+  "tracks": {
+    "7CX1sZDl8eBmD5p2EF1q2Z": {
+      "action": "correct",
+      "family": "Modern Folk",
+      "primary": "Children's folk",
+      "secondary": "Community folk / topical song",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/7CX1sZDl8eBmD5p2EF1q2Z", "https://music.apple.com/us/artist/ruth-pelham/253001671", "https://everynoise.com/engenremap.html"],
+      "rationale": "Ruth Pelham authored this contemporary children's/community song; it is not anonymous or inherited traditional repertoire."
+    },
+    "313oEiwJWyQHDsXuMncFeY": {
+      "action": "correct",
+      "family": "Modern Folk",
+      "primary": "Children's folk",
+      "secondary": "Community folk / topical song",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/313oEiwJWyQHDsXuMncFeY", "https://music.apple.com/us/artist/ruth-pelham/253001671", "https://everynoise.com/engenremap.html"],
+      "rationale": "Ruth Pelham authored this contemporary children's/community song; it is not anonymous or inherited traditional repertoire."
+    },
+    "7yqRZcNUOGwTJCx8JPHPGx": {
+      "action": "correct",
+      "family": "Modern Folk",
+      "primary": "Children's folk",
+      "secondary": "Community folk / topical song",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/7yqRZcNUOGwTJCx8JPHPGx", "https://music.apple.com/us/artist/ruth-pelham/253001671", "https://everynoise.com/engenremap.html"],
+      "rationale": "Ruth Pelham authored this contemporary children's/community song; it is not anonymous or inherited traditional repertoire."
+    }
+  }
+}

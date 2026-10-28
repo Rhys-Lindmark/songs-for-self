@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Four exact recording corrections from Apple, MusicBrainz, and named reference genres; six exact-product or positive-style retains.",
+  "albums": {},
+  "tracks": {
+    "6TIl8IznVjlHKu1HD596yi": {"action":"correct","family":"Electronic","primary":"Electronica","secondary":"UK club","confidence":"high","evidence":["https://open.spotify.com/track/6TIl8IznVjlHKu1HD596yi","https://music.apple.com/us/album/memory/1622909996?i=1622910344&uo=4","https://musicbrainz.org/artist/704d24f8-257e-41a2-9816-6407993fe2c7"],"rationale":"Apple classifies the exact Icons recording as Electronic, and MusicBrainz supplies the exact artist identity. Direct product evidence replaces the keyword-derived Rock fallback."},
+    "4ymUrXLLm7xzZQ6Rv0ouUK": {"action":"correct","family":"Electronic","primary":"Electropop","secondary":"Electronic pop","confidence":"high","evidence":["https://open.spotify.com/track/4ymUrXLLm7xzZQ6Rv0ouUK","https://music.apple.com/us/album/bellevue-avenue/1108763951?i=1108764090&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Bellevue album recording as Electronic and the reference genre identifies electropop. Electronic is the direct requested parent rather than Pop."},
+    "4cuyvpfIldUaXtftFNfPVu": {"action":"correct","family":"Hip-hop","primary":"Alternative hip-hop","secondary":"Electronic rap","confidence":"medium","evidence":["https://open.spotify.com/track/4cuyvpfIldUaXtftFNfPVu","https://musicbrainz.org/release-group/0ea500df-5bf7-483d-8749-72dccbbaadeb","https://everynoise.com/engenremap.html"],"rationale":"The exact track belongs to the identity-matched Mount Ninji and da Nice Time Kid release group, while the recording reference identifies alternative hip-hop alongside EDM. Hip-hop is the better requested parent for this rap performance; electronic production remains detailed context."},
+    "5GdNfIicmCrLYiBY4Y9Vr3": {"action":"correct","family":"Electronic","primary":"Electronic funk","secondary":"Jazz-funk / glitch funk","confidence":"high","evidence":["https://open.spotify.com/track/5GdNfIicmCrLYiBY4Y9Vr3","https://music.apple.com/us/album/that-summer/1232614793?i=1232614890&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Freedom album recording as Electronic. Jazz-funk and glitch-funk remain detailed influences, but the direct product parent replaces the older R&B fallback."}
+  }
+}

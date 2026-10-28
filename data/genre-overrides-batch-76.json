@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Three exact recording corrections from direct Apple product evidence; eight exact-product crossover retains remain in the reviewed decisions registry.",
+  "albums": {},
+  "tracks": {
+    "268jT4m5ztrceh5qdzpQ68": {"action":"correct","family":"Pop","primary":"Disco pop","secondary":"Eurodisco","confidence":"high","evidence":["https://open.spotify.com/track/268jT4m5ztrceh5qdzpQ68","https://music.apple.com/us/album/yes-sir-i-can-boogie/1714511951?i=1714512203&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the canonical Baccara recording as Pop, while Eurodisco remains the specific style. Pop is the direct requested parent rather than Electronic."},
+    "1Xl6ruZYD2IBuyvOnxCkEJ": {"action":"correct","family":"Rock","primary":"Industrial metal","secondary":"Alternative metal","confidence":"high","evidence":["https://open.spotify.com/track/1Xl6ruZYD2IBuyvOnxCkEJ","https://music.apple.com/us/album/unstable/192500095?i=192500104&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Prison of Decay recording as Alternative and the reviewed recording label identifies industrial metal. Rock is the direct requested parent rather than Experimental."},
+    "2BkWokfWbWNlZ13oRMXYNX": {"action":"correct","family":"Rock","primary":"Nu metal","secondary":"Rap rock","confidence":"high","evidence":["https://open.spotify.com/track/2BkWokfWbWNlZ13oRMXYNX","https://music.apple.com/us/album/rollin-air-raid-vehicle/1440846583?i=1440847024&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Chocolate Starfish recording as Hard Rock and the reviewed recording label identifies nu metal. Rap remains a crossover element, but Rock is the direct product parent."}
+  }
+}

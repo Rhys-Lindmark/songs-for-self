@@ -1,0 +1,95 @@
+{
+  "manifestSchemaVersion": 1,
+  "datasetVersion": "3.9.25",
+  "generatedFrom": {
+    "maxEnrichedAt": "2026-08-31T00:00:00.000Z"
+  },
+  "coverage": {
+    "playlistPositions": 7733,
+    "availableTracks": 7582,
+    "genrePlacements": 7582,
+    "timelinePlacements": 7582,
+    "mapPlacements": 7582,
+    "otherTracks": 0
+  },
+  "taxonomy": {
+    "source": "PLAN.md#wikipedia-derived-top-level-taxonomy",
+    "families": [
+      "Classical",
+      "Experimental",
+      "Country",
+      "Electronic",
+      "Modern Folk",
+      "Hip-hop",
+      "Jazz",
+      "Pop",
+      "R&B, Soul & Blues",
+      "Rock",
+      "World",
+      "Traditional Folk",
+      "Other"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "data/songs-for-self.enriched.csv",
+      "bytes": 7126141,
+      "sha256": "26df65b79b45ca0346ce981232632e971fd6ce55588898475d87527e5fa4385a"
+    },
+    {
+      "path": "data/viz-data.json",
+      "bytes": 3046178,
+      "sha256": "1355ae5752cd78254057f575027a416e1c169ceef7c11287acc495e408dc06a1"
+    },
+    {
+      "path": "data/viz-summary.json",
+      "bytes": 581,
+      "sha256": "5cbbd0c7a0f72f08b46f14a1c792434934a4c45102eaf59a66df65b88ab94bb2"
+    },
+    {
+      "path": "public/timeline-data.json",
+      "bytes": 751027,
+      "sha256": "535441c5d9932038139c444833e5e8ab436493e4fbcbc0274dd6bf71af595e1d"
+    },
+    {
+      "path": "public/geography-data.json",
+      "bytes": 1812697,
+      "sha256": "635b70749db3fb8dda83e28fb76c25aa47ce4b89549c990fd2c953a55f6307b8"
+    },
+    {
+      "path": "public/world-outline.json",
+      "bytes": 161066,
+      "sha256": "eba5a0619770a0aa2e86024d0d4382aaa531804439897aac31e8958a012081d3"
+    },
+    {
+      "path": "public/genre-space-data.json",
+      "bytes": 6600773,
+      "sha256": "52e71322a1bc08e2dada3f06be93f88f7d87acb9d6d557a803b6855522ed15d2"
+    },
+    {
+      "path": "data/every-noise-reference-2023.json",
+      "bytes": 614489,
+      "sha256": "0082c38ee9bd7ed164431b7845d9b89ec1fda787344e90d411aefbe0dc90cf2d"
+    },
+    {
+      "path": "data/every-noise-artist-memberships.json",
+      "bytes": 563062,
+      "sha256": "ec96b232c98b9f7a258272de0a926e6339b5e54d8d42448623a95d777e9100be"
+    },
+    {
+      "path": "data/every-noise-family-review.csv",
+      "bytes": 28865,
+      "sha256": "3eba866be9837c6045d5d682a57359d4fb8a174c70dc0f2e2391549b19b18f42"
+    },
+    {
+      "path": "data/us-state-coordinate-cache.json",
+      "bytes": 213106,
+      "sha256": "b83759446802373282408b2a6d75309c4bf1f210016c6c906ebbe7454b3f3b07"
+    },
+    {
+      "path": "public/upload-lookup.json",
+      "bytes": 5775321,
+      "sha256": "d306d451c1a01d291e26adbf0a2c151b0bfe82726a1cf6056178c60e6cb745bb"
+    }
+  ]
+}

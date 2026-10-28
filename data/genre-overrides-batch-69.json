@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Five exact recording-family corrections from direct Apple product evidence; regional recordings retain World only with named genre or catalog evidence.",
+  "albums": {},
+  "tracks": {
+    "6ol4ZSifr7r3Lb2a9L5ZAB": {"action":"correct","family":"Pop","primary":"Pop","secondary":"Dance-pop / pop rock","confidence":"high","evidence":["https://open.spotify.com/track/6ol4ZSifr7r3Lb2a9L5ZAB","https://music.apple.com/us/album/call-me-maybe/1440873664?i=1440874008"],"rationale":"Apple classifies the exact Kiss recording as Pop. Its electronic production does not displace the direct Pop parent."},
+    "4RrpTNBLLu4vJwr9At7gkI": {"action":"correct","family":"Pop","primary":"Ambient pop","secondary":"Hyperpop / left-field pop","confidence":"high","evidence":["https://open.spotify.com/track/4RrpTNBLLu4vJwr9At7gkI","https://music.apple.com/us/album/celebrity-crush-single/1519065004","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Celebrity Crush single as Pop and Every Noise identifies ambient pop. Hyperpop and electronic production remain detailed styles within the direct Pop parent."},
+    "4m7p2dejJrMiiA1vg8LDPK": {"action":"correct","family":"Pop","primary":"German pop","secondary":"Disco","confidence":"high","evidence":["https://open.spotify.com/track/4m7p2dejJrMiiA1vg8LDPK","https://music.apple.com/us/album/moskau/1357124838?i=1357124994"],"rationale":"Apple classifies the exact Moskau recording as German Pop. Disco production is secondary, so Pop replaces the inherited Electronic parent."},
+    "57NbelD7NoWpb6dXVcOEbM": {"action":"correct","family":"Pop","primary":"Latin pop","secondary":"Colombian psychedelic pop","confidence":"high","evidence":["https://open.spotify.com/track/57NbelD7NoWpb6dXVcOEbM","https://music.apple.com/us/album/alegr%C3%ADa/1712543891?i=1712543895","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact original recording as Pop and Every Noise supplies an exact Latin-pop label. Colombian origin alone does not make this recording World."},
+    "08b1bCjsKjMzhjBm0qhkof": {"action":"correct","family":"Rock","primary":"Dream pop","secondary":"Dub / reggae-influenced rock","confidence":"high","evidence":["https://open.spotify.com/track/08b1bCjsKjMzhjBm0qhkof","https://music.apple.com/us/album/long-season/1416925635?i=1416925644","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Long Season recording as Rock. Dream pop, dub, and reggae describe its crossover sound, but the direct requested parent is Rock rather than World."}
+  }
+}

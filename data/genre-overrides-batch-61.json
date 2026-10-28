@@ -1,0 +1,10 @@
+{
+  "version":"1.0.0",
+  "updatedAt":"2026-08-31",
+  "method":"Exact-track corrections for two Hot Chip recordings from The Warning. Apple classifies the exact album and artist as Electronic; electro-pop remains visible as a secondary style.",
+  "albums":{},
+  "tracks":{
+    "7BR8iLWgruHFVRKMMDnIXD":{"action":"correct","family":"Electronic","primary":"Electropop","secondary":"Synthpop / indie dance","confidence":"high","evidence":["https://open.spotify.com/track/7BR8iLWgruHFVRKMMDnIXD","https://music.apple.com/us/album/the-warning/1250994586","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact The Warning album as Electronic; electro-pop and synthpop are direct detailed labels."},
+    "6m5D7zGVbzAxceDXQTsRSX":{"action":"correct","family":"Electronic","primary":"Electropop","secondary":"Synthpop / indie dance","confidence":"high","evidence":["https://open.spotify.com/track/6m5D7zGVbzAxceDXQTsRSX","https://music.apple.com/us/album/the-warning/1250994586","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact The Warning album as Electronic; electro-pop and synthpop are direct detailed labels."}
+  }
+}

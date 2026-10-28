@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "One exact Pop correction from direct Apple product evidence; nine electronic and regional recordings retain source-backed parents.",
+  "albums": {},
+  "tracks": {
+    "5CCr8msaN3MhgqBoa9yWhH": {"action":"correct","family":"Pop","primary":"Pop","secondary":"UK garage / dance-pop","confidence":"high","evidence":["https://open.spotify.com/track/5CCr8msaN3MhgqBoa9yWhH","https://music.apple.com/us/album/boys-a-liar-pt-2-single/1664929598","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact PinkPantheress and Ice Spice single as Pop. UK garage and drum-and-bass production remain detailed influences within the direct Pop product parent."}
+  }
+}

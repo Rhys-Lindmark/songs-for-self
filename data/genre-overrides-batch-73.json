@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Four exact Pop/Rock corrections from direct Apple product evidence; six recording-level retains from exact catalog and positive named-style evidence.",
+  "albums": {},
+  "tracks": {
+    "5EAbUR2kkfDOCWEcWcb7YG": {"action":"correct","family":"Pop","primary":"Pop","secondary":"Disco / funk","confidence":"high","evidence":["https://open.spotify.com/track/5EAbUR2kkfDOCWEcWcb7YG","https://music.apple.com/us/album/pearls/1668868373?i=1668868380&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact That! Feels Good! recording as Pop. Disco, funk, and contemporary R&B remain detailed influences within the direct Pop product parent."},
+    "4wRbUz7hoMZBZZhGZyV28t": {"action":"correct","family":"Pop","primary":"French pop","secondary":"Chanson / funk rock","confidence":"high","evidence":["https://open.spotify.com/track/4wRbUz7hoMZBZZhGZyV28t","https://music.apple.com/us/album/mama-sam/697669286?i=697669451&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Je dis aime recording as Pop. French rock, chanson, and funk remain detailed influences while the direct product parent is Pop."},
+    "3ZE3wv8V3w2T2f7nOCjV0N": {"action":"correct","family":"Rock","primary":"Art rock","secondary":"Glam rock","confidence":"high","evidence":["https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N","https://music.apple.com/us/album/life-on-mars/1039798000?i=1039798013&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Hunky Dory (2015 Remaster) recording as Rock, and the reference genres identify art rock and glam rock. Direct product evidence replaces the unsupported Jazz fallback."},
+    "0uPbGYrOp7Svg1eyJsE3Hx": {"action":"correct","family":"Rock","primary":"Blues rock","secondary":"Southern rock / roots rock","confidence":"high","evidence":["https://open.spotify.com/track/0uPbGYrOp7Svg1eyJsE3Hx","https://music.apple.com/us/album/ex-con/1673724188?i=1673725388&uo=4","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact Self Made Man recording as Alternative, while the reference genres identify blues rock, southern rock, and roots rock. Rock is the supported requested parent rather than Country."}
+  }
+}

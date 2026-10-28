@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "One exact Pop correction from direct Apple product evidence; nine electronic and Latin/bossa nova recordings retain source-backed parents.",
+  "albums": {},
+  "tracks": {
+    "0ikz6tENMONtK6qGkOrU3c": {
+      "action": "correct",
+      "family": "Pop",
+      "primary": "Pop",
+      "secondary": "Dance-pop / new wave",
+      "confidence": "high",
+      "evidence": [
+        "https://open.spotify.com/track/0ikz6tENMONtK6qGkOrU3c",
+        "https://music.apple.com/us/album/wake-me-up-before-you-go-go/193084944?i=193084947",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies the exact Make It Big recording as Pop. New wave is a detailed influence, while the direct exact-product parent is Pop."
+    }
+  }
+}

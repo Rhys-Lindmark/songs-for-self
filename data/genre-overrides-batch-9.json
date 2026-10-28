@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-30",
+  "artists": {
+    "Barbatuques": {
+      "family": "World",
+      "primary": "Brazilian body percussion",
+      "secondary": "Brazilian rhythms; vocal percussion",
+      "confidence": "high",
+      "rationale": "Official and specialist Brazilian sources describe a São Paulo body-percussion group fusing Brazilian rhythms, vocalization, improvisation, and international sounds; this positive regional evidence overrides remix-driven electronic tags.",
+      "evidence": [
+        "https://barbamusical.com/about/",
+        "https://musicabrasilis.org.br/pt-br/compositores/barbatuques/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Bongeziwe Mabandla": {
+      "family": "World",
+      "primary": "Xhosa Afro-folk",
+      "secondary": "urban traditional African folk; soul",
+      "confidence": "high",
+      "rationale": "The artist's official biography and specialist profiles describe Xhosa-language music rooted in rural Eastern Cape traditions and contemporary Afro-folk; this is positive regional and genre evidence rather than an inference from nationality.",
+      "evidence": [
+        "https://bongeziwe.com/",
+        "https://www.foundsoundnation.org/network/bongeziwe-mabandla",
+        "https://blackmajor.co.za/artist/bongeziwe-mabandla/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Caleb Hawley": {
+      "family": "R&B, Soul & Blues",
+      "primary": "soul",
+      "secondary": "funk; pop soul",
+      "confidence": "high",
+      "rationale": "Official and booking biographies consistently describe Hawley as a soul singer whose work draws on funk, R&B, and pop; this overrides ambient and indie-pop community tags attached to the exact-name MusicBrainz match.",
+      "evidence": [
+        "https://www.calebhawley.com/bio",
+        "https://lpr.com/lpr_artists/caleb-hawley/",
+        "https://www.pivotaltouring.com/caleb-hawley",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Cathedrals": {
+      "family": "Pop",
+      "primary": "electronic pop",
+      "secondary": "dream pop; alternative R&B",
+      "confidence": "high",
+      "rationale": "The playlist artist is the San Francisco electronic-pop duo, not the gospel group returned by the exact-name MusicBrainz match; contemporary reporting and the duo's catalog support electronic pop and dream pop.",
+      "evidence": [
+        "https://www.sfchronicle.com/music/article/Artist-who-should-be-discovered-Sky-s-the-6092919.php",
+        "https://wearecathedrals.bandcamp.com/music",
+        "editorial:identity-disambiguation/2026-08-30"
+      ]
+    },
+    "Frankie Lymon": {
+      "family": "R&B, Soul & Blues",
+      "primary": "doo-wop",
+      "secondary": "early rhythm and blues; vocal group",
+      "confidence": "high",
+      "rationale": "Authoritative artist histories describe Frankie Lymon and the Teenagers as a foundational doo-wop and early R&B vocal group; broad rock tags describe later historical influence rather than the most useful family here.",
+      "evidence": [
+        "https://www.allmusic.com/artist/frankie-lymon-mn0000139933",
+        "https://rockhall.com/inductees/frankie-lymon-and-the-teenagers/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "David Rovics": {
+      "family": "Modern Folk",
+      "primary": "political folk",
+      "secondary": "protest song; singer-songwriter",
+      "confidence": "high",
+      "rationale": "Rovics's official biography documents decades of guitar-led songwriting at folk clubs, protests, and political gatherings.",
+      "evidence": [
+        "https://www.davidrovics.com/media/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Kae Tempest": {
+      "family": "Hip-hop",
+      "primary": "alternative rap",
+      "secondary": "spoken word; poetry",
+      "confidence": "high",
+      "rationale": "Specialist biography and contemporary profiles consistently place Tempest's recording work at the intersection of alternative rap, hip-hop, and spoken-word poetry.",
+      "evidence": [
+        "https://www.allmusic.com/artist/kae-tempest-mn0002585209",
+        "https://www.theguardian.com/culture/2022/mar/12/kae-tempest-i-was-living-with-this-boiling-hot-secret-in-my-heart",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Kizuna AI": {
+      "family": "Pop",
+      "primary": "electropop",
+      "secondary": "J-pop; dance-pop",
+      "confidence": "high",
+      "rationale": "The playlist track is the official Yasutaka Nakata collaboration; Nakata's documented electropop, J-pop, dance-pop, and electronic production makes Pop the clearest requested family.",
+      "evidence": [
+        "https://www.youtube.com/watch?v=S8dmq5YIUoc",
+        "https://en.wikipedia.org/wiki/Yasutaka_Nakata",
+        "editorial:track-context-review/2026-08-30"
+      ]
+    },
+    "Kurt Schwitters": {
+      "family": "Experimental",
+      "primary": "sound poetry",
+      "secondary": "Dada; performance art",
+      "confidence": "high",
+      "rationale": "Museum sources identify Ursonate as a seminal Dada sound poem developed between 1922 and 1932, which belongs in Experimental rather than a visual-art fallback.",
+      "evidence": [
+        "https://www.zpk.org/en/event/ursonate-live-performance",
+        "https://kunsthalle-wilhelmshaven.de/en/exhibitions/kurtschwitters-ursonate",
+        "editorial:track-context-review/2026-08-30"
+      ]
+    },
+    "Leonard Nimoy": {
+      "family": "Pop",
+      "primary": "novelty pop",
+      "secondary": "spoken word; country-pop",
+      "confidence": "high",
+      "rationale": "The playlist track is the 1967 novelty song The Ballad of Bilbo Baggins; the parent album is documented as spanning novelty, spoken word, pop, and country.",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/Highly_Illogical",
+        "https://tolkiengateway.net/wiki/The_Ballad_of_Bilbo_Baggins",
+        "editorial:track-context-review/2026-08-30"
+      ]
+    },
+    "Reggie Watts": {
+      "family": "Experimental",
+      "primary": "improvised musical comedy",
+      "secondary": "spoken word; beatboxing; electronic",
+      "confidence": "high",
+      "rationale": "Watts's official biography and specialist profile describe fully improvised work blending music, comedy, spoken word, beatboxing, and electronic looping; Experimental best preserves that hybrid practice.",
+      "evidence": [
+        "https://www.reggie-watts.com/about",
+        "https://www.allmusic.com/artist/reggie-watts-mn0000460191",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Shel Silverstein": {
+      "family": "Modern Folk",
+      "primary": "novelty folk",
+      "secondary": "country; comedy song",
+      "confidence": "high",
+      "rationale": "Music reference and songwriter-hall sources document Silverstein's own folk recordings and his extensive country and novelty-song catalog; the literary Wikidata label is not a useful musical genre.",
+      "evidence": [
+        "https://www.allmusic.com/artist/shel-silverstein-mn0000020319",
+        "https://nashvillesongwritersfoundation.com/Site/inductee?entry_id=2837",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Stephen Lynch": {
+      "family": "Rock",
+      "primary": "comedy rock",
+      "secondary": "acoustic singer-songwriter; musical comedy",
+      "confidence": "high",
+      "rationale": "Lynch's official biography identifies him as a songwriter and musical comedian, while genre references describe comedy rock and country; Rock is the closest requested family for this catalog.",
+      "evidence": [
+        "https://www.stephenlynch.com/about",
+        "https://www.stephenlynch.com/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Tim Curry": {
+      "family": "Rock",
+      "primary": "glam rock",
+      "secondary": "musical theatre",
+      "confidence": "high",
+      "rationale": "The sole playlist track is Sweet Transvestite, documented as a glam-rock song from The Rocky Horror Show.",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/Sweet_Transvestite",
+        "https://www.capradio.org/news/npr/story?storyid=nx-s1-5334567",
+        "editorial:track-context-review/2026-08-30"
+      ]
+    },
+    "Bo Burnham": {
+      "family": "Pop",
+      "primary": "musical comedy pop",
+      "secondary": "synth-pop; comedy rap; theatrical pop",
+      "confidence": "medium",
+      "rationale": "The catalog crosses comedy rap, piano songs, folk pastiche, and synth-pop; Pop is the most useful top-level home for the dominant Inside material while the cross-cutting comedy label remains explicit.",
+      "evidence": [
+        "https://www.boburnham.com/new-cover-page-1",
+        "https://music.apple.com/us/album/inside/1571419211",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Danny Go!": {
+      "family": "Pop",
+      "primary": "children's dance-pop",
+      "secondary": "educational music; action song",
+      "confidence": "medium",
+      "rationale": "The playlist titles and single-album context consistently identify short-form children's dance and freeze-dance songs; Pop is the nearest requested sonic family.",
+      "evidence": [
+        "playlist:track-album-artist-context",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Obscurest Vinyl": {
+      "family": "Pop",
+      "primary": "AI novelty pop",
+      "secondary": "musical comedy; synthetic media",
+      "confidence": "medium",
+      "rationale": "The playlist contains short, standalone novelty-comedy songs; Pop is the nearest requested family, while AI origin remains an explicit secondary facet rather than a genre claim.",
+      "evidence": [
+        "playlist:track-album-artist-context",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Peter Alsop": {
+      "family": "Modern Folk",
+      "primary": "children's folk",
+      "secondary": "educational song; musical comedy",
+      "confidence": "medium",
+      "rationale": "Alsop's official biography identifies a singer-songwriter, educator, and humorist whose award-winning recordings teach children and families; Modern Folk best captures the song-led form.",
+      "evidence": [
+        "https://peteralsop.com/about-peter",
+        "https://peteralsop.com/",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Raffi": {
+      "family": "Modern Folk",
+      "primary": "children's folk",
+      "secondary": "children's pop; sing-along",
+      "confidence": "high",
+      "rationale": "Raffi's biography documents his start as a folk singer and enduring children's catalog; Modern Folk preserves the musical form while the audience label remains explicit.",
+      "evidence": [
+        "https://raffifoundation.org/",
+        "https://music.apple.com/us/artist/raffi/2477772",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Rhys Lindmark": {
+      "family": "Classical",
+      "primary": "contemporary classical",
+      "secondary": "minimalist piano; instrumental",
+      "historicalPeriod": "Modern classical",
+      "confidence": "medium",
+      "rationale": "All twenty playlist tracks form the 2014 album Music for 18 Pianos; the consistent numbered suite, piano instrumentation, and album context support a contemporary-classical placement without claiming a narrower externally sourced style.",
+      "evidence": [
+        "playlist:album/Music for 18 Pianos",
+        "editorial:user-catalog-context/2026-08-30",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Tom Cardy": {
+      "family": "Pop",
+      "primary": "electronic comedy pop",
+      "secondary": "funk-pop; musical comedy",
+      "confidence": "medium",
+      "rationale": "The Artificial Intelligence album and playlist tracks consistently use electronic-pop and funk-pop song forms; Pop is the most useful requested family while comedy remains explicit.",
+      "evidence": [
+        "playlist:track-album-artist-context",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Tom Lehrer": {
+      "family": "Pop",
+      "primary": "satirical piano pop",
+      "secondary": "musical comedy; cabaret",
+      "confidence": "medium",
+      "rationale": "Lehrer's playlist catalog consists of concise piano-led satirical songs and theatrical comedy numbers; Pop is the closest requested umbrella while satire remains a secondary facet.",
+      "evidence": [
+        "playlist:track-album-artist-context",
+        "editorial:best-effort-family-placement/2026-08-30"
+      ]
+    },
+    "Balkan Beat Box": {
+      "family": "World",
+      "primary": "Balkan electronic fusion",
+      "secondary": "Mediterranean; dancehall; hip-hop",
+      "confidence": "high",
+      "rationale": "The band's official history describes an intentional blend of punk, hip-hop, and dancehall with traditional Balkan and Mediterranean timbres; this positive regional evidence overrides the narrower ethno-jazz P136 label.",
+      "evidence": [
+        "https://www.balkanbeatbox.com/about",
+        "https://www.wikidata.org/wiki/Q805038",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "City Morgue": {
+      "family": "Hip-hop",
+      "primary": "trap metal",
+      "secondary": "alternative hip-hop; hardcore hip-hop",
+      "confidence": "high",
+      "rationale": "The exact Wikidata entity lists alternative hip-hop, hardcore hip-hop, trap metal, and nu metal; Hip-hop better represents the duo's core form than the automatic nu-metal tie-break.",
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q57444866",
+        "editorial:taxonomy-tie-review/2026-08-30"
+      ]
+    },
+    "Manu Katché": {
+      "family": "Jazz",
+      "primary": "jazz",
+      "secondary": "jazz fusion; worldbeat",
+      "confidence": "high",
+      "rationale": "The exact Wikidata entity identifies Katché as a jazz musician and lists jazz, world music, progressive rock, and art rock; Jazz resolves the automatic art-rock scoring collision.",
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q472598",
+        "editorial:taxonomy-tie-review/2026-08-30"
+      ]
+    },
+    "Nadine Shah": {
+      "family": "Rock",
+      "primary": "indie rock",
+      "secondary": "post-punk; alternative singer-songwriter",
+      "confidence": "high",
+      "rationale": "Specialist biography places Shah in alternative and indie rock; Rock resolves the equal-weight jazz/indie-rock Wikidata labels.",
+      "evidence": [
+        "https://www.allmusic.com/artist/nadine-shah-mn0003010387",
+        "https://nadineshah.co.uk/",
+        "editorial:taxonomy-tie-review/2026-08-30"
+      ]
+    },
+    "Naïssam Jalal": {
+      "family": "Jazz",
+      "primary": "contemporary jazz",
+      "secondary": "Arabic traditional music; improvised music",
+      "confidence": "high",
+      "rationale": "Jalal's official and specialist biographies center jazz, improvisation, and Arabic traditions; Jazz resolves the automatic equal-weight hip-hop tie without erasing the regional influences.",
+      "evidence": [
+        "https://naissamjalal.com/?lang=en",
+        "https://www.allaboutjazz.com/musicians/naissam-jalal",
+        "https://www.wikidata.org/wiki/Q28329593",
+        "editorial:taxonomy-tie-review/2026-08-30"
+      ]
+    },
+    "Terakaft": {
+      "family": "World",
+      "primary": "Tuareg desert blues",
+      "secondary": "desert rock; Tamasheq",
+      "confidence": "high",
+      "rationale": "Specialist profiles identify a Malian Tuareg desert-blues/desert-rock band; that positive regional tradition belongs in World rather than the broad blues family.",
+      "evidence": [
+        "https://www.greenbelt.org.uk/artists/terakraft/",
+        "https://www.austinchronicle.com/music/terakaft-11760712/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Tito Paris": {
+      "family": "World",
+      "primary": "Cape Verdean music",
+      "secondary": "morna; coladeira; funaná",
+      "confidence": "high",
+      "rationale": "Specialist and Cape Verdean sources document Paris's blend of Cape Verde's morna, coladeira, and funaná traditions; this positive regional evidence overrides the generic popular-music P136 label.",
+      "evidence": [
+        "https://www.allmusic.com/artist/tito-paris-mn0000608395",
+        "https://worldmusiccentral.org/artist-profiles-tito-paris/",
+        "https://www.caboverdeamusica.online/tito-paris/",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Yma Sumac": {
+      "family": "World",
+      "primary": "Peruvian exotica",
+      "secondary": "Andean song; Inca repertoire",
+      "confidence": "high",
+      "rationale": "The official catalog and historical profiles document Sumac's Peruvian and Andean repertoire and her later exotica framing; World is more useful than the automatic jazz tie-break.",
+      "evidence": [
+        "https://www.yma-sumac.com/music",
+        "https://music.apple.com/us/artist/yma-sumac/518606",
+        "editorial:taxonomy-review/2026-08-30"
+      ]
+    },
+    "Yolanda Be Cool": {
+      "family": "Electronic",
+      "primary": "electronic dance",
+      "secondary": "house; electro swing",
+      "confidence": "high",
+      "rationale": "The exact entity is an Australian electronic duo whose catalog is recognized as dance music; Electronic corrects the substring-based jazz classification of electro swing.",
+      "evidence": [
+        "https://www.wikidata.org/wiki/Q1058926",
+        "editorial:taxonomy-tie-review/2026-08-30"
+      ]
+    }
+  }
+}

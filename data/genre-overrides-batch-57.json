@@ -1,0 +1,12 @@
+{
+  "version":"1.0.0",
+  "updatedAt":"2026-08-31",
+  "method":"Ranked-label conflict correction for four exact Clash playlist releases. The reference genres name punk, reggae, ska, and new wave; punk is the recording-family parent while the regional World gate is not met.",
+  "albums":{
+    "1ZH5g1RDq3GY1OvyD0w0s2":{"action":"correct","family":"Rock","primary":"Punk rock","secondary":"New wave / reggae rock","confidence":"high","evidence":["https://open.spotify.com/album/1ZH5g1RDq3GY1OvyD0w0s2","https://everynoise.com/engenremap.html"],"rationale":"Combat Rock is a punk-rock recording with new-wave and reggae influence. Reggae influence alone does not satisfy the positive-evidence World gate."},
+    "3Zkggi5I9uH5x94DuN6u1S":{"action":"correct","family":"Rock","primary":"Punk rock","secondary":"New wave / reggae rock","confidence":"high","evidence":["https://open.spotify.com/album/3Zkggi5I9uH5x94DuN6u1S","https://everynoise.com/engenremap.html"],"rationale":"The Clash's Hits Back recording is punk rock; the ranked punk label outranks reggae and ska influences and does not support a World placement."},
+    "6xwLLr4kk8C5tqxzjfukuH":{"action":"correct","family":"Rock","primary":"Punk rock","secondary":"New wave / reggae rock","confidence":"high","evidence":["https://open.spotify.com/album/6xwLLr4kk8C5tqxzjfukuH","https://everynoise.com/engenremap.html"],"rationale":"The Essential Clash recording is punk rock with reggae and ska influence, not a positive-evidence World recording."},
+    "6FCzvataOZh68j8OKzOt9a":{"action":"correct","family":"Rock","primary":"Punk rock","secondary":"New wave / reggae rock","confidence":"high","evidence":["https://open.spotify.com/album/6FCzvataOZh68j8OKzOt9a","https://everynoise.com/engenremap.html"],"rationale":"London Calling is a punk-rock album with reggae, ska, and new-wave influences. The specific punk label controls the recording family and prevents an unsupported World placement."}
+  },
+  "tracks":{}
+}

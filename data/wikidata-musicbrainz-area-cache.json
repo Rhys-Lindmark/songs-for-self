@@ -1,0 +1,3609 @@
+{
+  "areas": {
+    "08310658-51eb-3801-80de-5a0739207115": {
+      "musicbrainzAreaId": "08310658-51eb-3801-80de-5a0739207115",
+      "matched": true,
+      "wikidataId": "Q142",
+      "label": "France",
+      "coordinate": "Point(2.0 47.0)",
+      "country": "France"
+    },
+    "312bc5bb-7e43-3e63-81c6-b4d712b37b2c": {
+      "musicbrainzAreaId": "312bc5bb-7e43-3e63-81c6-b4d712b37b2c",
+      "matched": true,
+      "wikidataId": "Q28",
+      "label": "Hungary",
+      "coordinate": "Point(19.0 47.0)",
+      "country": "Hungary"
+    },
+    "489ce91b-6658-3307-9877-795b68554c98": {
+      "musicbrainzAreaId": "489ce91b-6658-3307-9877-795b68554c98",
+      "matched": true,
+      "wikidataId": "Q30",
+      "label": "United States",
+      "coordinate": "Point(-98.5795 39.828175)",
+      "country": "United States"
+    },
+    "39d62198-1e76-4de4-b079-e86e3a393bbc": {
+      "musicbrainzAreaId": "39d62198-1e76-4de4-b079-e86e3a393bbc",
+      "matched": true,
+      "wikidataId": "Q1757",
+      "label": "Helsinki",
+      "coordinate": "Point(24.9375 60.170833333)",
+      "country": "Finland"
+    },
+    "6a264f94-6ff1-30b1-9a81-41f7bfabd616": {
+      "musicbrainzAreaId": "6a264f94-6ff1-30b1-9a81-41f7bfabd616",
+      "matched": true,
+      "wikidataId": "Q33",
+      "label": "Finland",
+      "coordinate": "Point(27.0 65.0)",
+      "country": "Finland"
+    },
+    "10adc6b5-63bf-4b4e-993e-ed83b05c22fc": {
+      "musicbrainzAreaId": "10adc6b5-63bf-4b4e-993e-ed83b05c22fc",
+      "matched": true,
+      "wikidataId": "Q5083",
+      "label": "Seattle",
+      "coordinate": "Point(-122.33 47.605)",
+      "country": "United States"
+    },
+    "6fd7f7a8-a3f0-4b36-a288-60b898a8fad9": {
+      "musicbrainzAreaId": "6fd7f7a8-a3f0-4b36-a288-60b898a8fad9",
+      "matched": true,
+      "wikidataId": "Q597156",
+      "label": "Nurmijärvi",
+      "coordinate": "Point(24.806944444 60.4625)",
+      "country": "Finland"
+    },
+    "2b748d6e-bc1c-4434-9f7b-ecd6332bc557": {
+      "musicbrainzAreaId": "2b748d6e-bc1c-4434-9f7b-ecd6332bc557",
+      "matched": true,
+      "wikidataId": "Q6106",
+      "label": "Portland",
+      "coordinate": "Point(-122.679166666 45.515)",
+      "country": "United States"
+    },
+    "29a709d8-0320-493e-8d0c-f2c386662b7f": {
+      "musicbrainzAreaId": "29a709d8-0320-493e-8d0c-f2c386662b7f",
+      "matched": true,
+      "wikidataId": "Q1297",
+      "label": "Chicago",
+      "coordinate": "Point(-87.627777777 41.881944444)",
+      "country": "United States"
+    },
+    "a050e542-6dbe-4851-baa7-1fff5731c0c3": {
+      "musicbrainzAreaId": "a050e542-6dbe-4851-baa7-1fff5731c0c3",
+      "matched": true,
+      "wikidataId": "Q83813",
+      "label": "Savannah",
+      "coordinate": "Point(-81.103888888 32.050833333)",
+      "country": "United States"
+    },
+    "c3cc624e-b963-49cf-ad0b-e318cb341963": {
+      "musicbrainzAreaId": "c3cc624e-b963-49cf-ad0b-e318cb341963",
+      "matched": true,
+      "wikidataId": "Q340",
+      "label": "Montreal",
+      "coordinate": "Point(-73.5868411 45.5033426)",
+      "country": "Canada"
+    },
+    "c279f805-01f8-46f5-99cf-51f165a1adad": {
+      "musicbrainzAreaId": "c279f805-01f8-46f5-99cf-51f165a1adad",
+      "matched": true,
+      "wikidataId": "Q4093",
+      "label": "Glasgow",
+      "coordinate": "Point(-4.25 55.861111111)",
+      "country": "United Kingdom"
+    },
+    "23d10872-f5ae-3f0c-bf55-332788a16ecb": {
+      "musicbrainzAreaId": "23d10872-f5ae-3f0c-bf55-332788a16ecb",
+      "matched": true,
+      "wikidataId": "Q34",
+      "label": "Sweden",
+      "coordinate": "Point(15.0 61.0)",
+      "country": ""
+    },
+    "852531bf-3410-401f-b432-9c3157a386b9": {
+      "musicbrainzAreaId": "852531bf-3410-401f-b432-9c3157a386b9",
+      "matched": true,
+      "wikidataId": "Q18125",
+      "label": "Manchester",
+      "coordinate": "Point(-2.233333333 53.466666666)",
+      "country": "United Kingdom"
+    },
+    "4114d230-d55b-42d1-8857-e648cf269cdc": {
+      "musicbrainzAreaId": "4114d230-d55b-42d1-8857-e648cf269cdc",
+      "matched": true,
+      "wikidataId": "Q996691",
+      "label": "Tuam",
+      "coordinate": "Point(-8.85 53.5167)",
+      "country": "Ireland"
+    },
+    "390b05d4-11ec-3bce-a343-703a366b34a5": {
+      "musicbrainzAreaId": "390b05d4-11ec-3bce-a343-703a366b34a5",
+      "matched": true,
+      "wikidataId": "Q27",
+      "label": "Ireland",
+      "coordinate": "Point(-8.0 53.0)",
+      "country": "Ireland"
+    },
+    "3e80aaa7-9b71-450f-8147-0ecf101d8f1a": {
+      "musicbrainzAreaId": "3e80aaa7-9b71-450f-8147-0ecf101d8f1a",
+      "matched": true,
+      "wikidataId": "Q36091",
+      "label": "Minneapolis",
+      "coordinate": "Point(-93.269166666 44.981944444)",
+      "country": "United States"
+    },
+    "caac77d1-a5c8-3e6e-8e27-90b44dcc1446": {
+      "musicbrainzAreaId": "caac77d1-a5c8-3e6e-8e27-90b44dcc1446",
+      "matched": true,
+      "wikidataId": "Q40",
+      "label": "Austria",
+      "coordinate": "Point(14.0 48.0)",
+      "country": "Austria"
+    },
+    "bb1efcf5-b030-4928-9e5b-f61dadba0f81": {
+      "musicbrainzAreaId": "bb1efcf5-b030-4928-9e5b-f61dadba0f81",
+      "matched": true,
+      "wikidataId": "Q25579",
+      "label": "Umeå",
+      "coordinate": "Point(20.270566462 63.828453583)",
+      "country": "Sweden"
+    },
+    "6195f381-5711-4655-bf7c-75918c04b201": {
+      "musicbrainzAreaId": "6195f381-5711-4655-bf7c-75918c04b201",
+      "matched": true,
+      "wikidataId": "Q17042",
+      "label": "Oakland",
+      "coordinate": "Point(-122.25 37.8)",
+      "country": "United States"
+    },
+    "a71b0d32-7752-49e9-8594-2247ad6ac12c": {
+      "musicbrainzAreaId": "a71b0d32-7752-49e9-8594-2247ad6ac12c",
+      "matched": true,
+      "wikidataId": "Q18419",
+      "label": "Brooklyn",
+      "coordinate": "Point(-73.949722222 40.650833333)",
+      "country": "United States"
+    },
+    "1f40c6e1-47ba-4e35-996f-fe6ee5840e62": {
+      "musicbrainzAreaId": "1f40c6e1-47ba-4e35-996f-fe6ee5840e62",
+      "matched": true,
+      "wikidataId": "Q65",
+      "label": "Los Angeles",
+      "coordinate": "Point(-118.24368 34.05223)",
+      "country": "United States"
+    },
+    "ca61a254-6d4e-45c1-89d2-a22f5cc158f8": {
+      "musicbrainzAreaId": "ca61a254-6d4e-45c1-89d2-a22f5cc158f8",
+      "matched": true,
+      "wikidataId": "Q671812",
+      "label": "Chapel Hill",
+      "coordinate": "Point(-79.049922222 35.907308333)",
+      "country": "United States"
+    },
+    "48802a32-075a-3805-a183-277c66047693": {
+      "musicbrainzAreaId": "48802a32-075a-3805-a183-277c66047693",
+      "matched": true,
+      "wikidataId": "Q189",
+      "label": "Iceland",
+      "coordinate": "Point(-19.0 65.0)",
+      "country": "Iceland"
+    },
+    "21e8495a-32fa-4a97-8a92-57184e36235a": {
+      "musicbrainzAreaId": "21e8495a-32fa-4a97-8a92-57184e36235a",
+      "matched": true,
+      "wikidataId": "Q3183",
+      "label": "Perth",
+      "coordinate": "Point(115.859722222 -31.955833333)",
+      "country": "Australia"
+    },
+    "45b501e3-0c55-4f24-9fde-a822a9c92350": {
+      "musicbrainzAreaId": "45b501e3-0c55-4f24-9fde-a822a9c92350",
+      "matched": true,
+      "wikidataId": "Q2407244",
+      "label": "Plaistow",
+      "coordinate": "Point(0.0245 51.5243)",
+      "country": "United Kingdom"
+    },
+    "8a754a16-0027-3a29-b6d7-2b40ea0481ed": {
+      "musicbrainzAreaId": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+      "matched": true,
+      "wikidataId": "Q145",
+      "label": "United Kingdom",
+      "coordinate": "Point(-2.0 54.6)",
+      "country": "United Kingdom"
+    },
+    "fc1aee9a-f1a8-45dc-8820-af6b5d7f7450": {
+      "musicbrainzAreaId": "fc1aee9a-f1a8-45dc-8820-af6b5d7f7450",
+      "matched": true,
+      "wikidataId": "Q16554",
+      "label": "Denver",
+      "coordinate": "Point(-104.984722222 39.739166666)",
+      "country": "United States"
+    },
+    "6ccc62d1-bdd8-4f08-8fae-bfaa5310e5ef": {
+      "musicbrainzAreaId": "6ccc62d1-bdd8-4f08-8fae-bfaa5310e5ef",
+      "matched": true,
+      "wikidataId": "Q24639",
+      "label": "Vancouver",
+      "coordinate": "Point(-123.113888888 49.260833333)",
+      "country": "Canada"
+    },
+    "71bbafaa-e825-3e15-8ca9-017dcad1748b": {
+      "musicbrainzAreaId": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+      "matched": true,
+      "wikidataId": "Q16",
+      "label": "Canada",
+      "coordinate": "Point(-109.0 56.0)",
+      "country": "Canada"
+    },
+    "63ee9426-d32f-4593-a262-6401bc85c6ba": {
+      "musicbrainzAreaId": "63ee9426-d32f-4593-a262-6401bc85c6ba",
+      "matched": true,
+      "wikidataId": "Q104231",
+      "label": "Stockholm County",
+      "coordinate": "Point(18.166666666 59.333333333)",
+      "country": "Sweden"
+    },
+    "1fcce45b-d0a6-46c8-ba07-156e75e33870": {
+      "musicbrainzAreaId": "1fcce45b-d0a6-46c8-ba07-156e75e33870",
+      "matched": true,
+      "wikidataId": "Q139473",
+      "label": "Sherbrooke",
+      "coordinate": "Point(-71.9 45.4)",
+      "country": "Canada"
+    },
+    "74e50e58-5deb-4b99-93a2-decbb365c07f": {
+      "musicbrainzAreaId": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+      "matched": true,
+      "wikidataId": "Q60",
+      "label": "New York City",
+      "coordinate": "Point(-74.006111111 40.712777777)",
+      "country": "United States"
+    },
+    "90e4a1af-48bf-495a-be65-90fe5607764e": {
+      "musicbrainzAreaId": "90e4a1af-48bf-495a-be65-90fe5607764e",
+      "matched": true,
+      "wikidataId": "Q755389",
+      "label": "Athenry",
+      "coordinate": "Point(-8.74747 53.302)",
+      "country": "Ireland"
+    },
+    "b984deac-6875-40d3-9d4e-2bf9a3a3b118": {
+      "musicbrainzAreaId": "b984deac-6875-40d3-9d4e-2bf9a3a3b118",
+      "matched": true,
+      "wikidataId": "Q1086351",
+      "label": "East Brunswick",
+      "coordinate": "Point(-74.4182 40.4262)",
+      "country": "United States"
+    },
+    "525d4e18-3d00-31b9-a58b-a146a916de8f": {
+      "musicbrainzAreaId": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+      "matched": true,
+      "wikidataId": "Q13780930",
+      "label": "worldwide",
+      "coordinate": "",
+      "country": ""
+    },
+    "ff1b74fd-054b-4136-b948-bb88fe55d93f": {
+      "musicbrainzAreaId": "ff1b74fd-054b-4136-b948-bb88fe55d93f",
+      "matched": true,
+      "wikidataId": "Q49111",
+      "label": "Cambridge",
+      "coordinate": "Point(-71.106111111 42.375)",
+      "country": "United States"
+    },
+    "83f22bb6-4631-443c-bace-9fae8540362a": {
+      "musicbrainzAreaId": "83f22bb6-4631-443c-bace-9fae8540362a",
+      "matched": true,
+      "wikidataId": "Q62",
+      "label": "San Francisco",
+      "coordinate": "Point(-122.419444444 37.775)",
+      "country": "United States"
+    },
+    "431a085b-9f4c-4fbb-82de-2ca7ce735da8": {
+      "musicbrainzAreaId": "431a085b-9f4c-4fbb-82de-2ca7ce735da8",
+      "matched": true,
+      "wikidataId": "Q18424",
+      "label": "Queens",
+      "coordinate": "Point(-73.828055555 40.713611111)",
+      "country": "United States"
+    },
+    "0cfcc8a4-f9fa-4a9a-a0ba-1babfd21dbbd": {
+      "musicbrainzAreaId": "0cfcc8a4-f9fa-4a9a-a0ba-1babfd21dbbd",
+      "matched": true,
+      "wikidataId": "Q251464",
+      "label": "City of Blue Mountains",
+      "coordinate": "Point(150.3 -33.7)",
+      "country": "Australia"
+    },
+    "106e0bec-b638-3b37-b731-f53d507dc00e": {
+      "musicbrainzAreaId": "106e0bec-b638-3b37-b731-f53d507dc00e",
+      "matched": true,
+      "wikidataId": "Q408",
+      "label": "Australia",
+      "coordinate": "Point(133.0 -25.0)",
+      "country": "Australia"
+    },
+    "b03ff310-d8e2-45cf-9455-769f76641eb2": {
+      "musicbrainzAreaId": "b03ff310-d8e2-45cf-9455-769f76641eb2",
+      "matched": true,
+      "wikidataId": "Q12439",
+      "label": "Detroit",
+      "coordinate": "Point(-83.0475 42.331666666)",
+      "country": "United States"
+    },
+    "c1fc21db-40e9-47f5-af93-f3ebe6581113": {
+      "musicbrainzAreaId": "c1fc21db-40e9-47f5-af93-f3ebe6581113",
+      "matched": true,
+      "wikidataId": "Q41819",
+      "label": "Kansas City",
+      "coordinate": "Point(-94.583333333 39.05)",
+      "country": "United States"
+    },
+    "08adf4fa-7ff7-4a36-9f93-2ecd7570bbce": {
+      "musicbrainzAreaId": "08adf4fa-7ff7-4a36-9f93-2ecd7570bbce",
+      "matched": true,
+      "wikidataId": "Q2082",
+      "label": "St. John's",
+      "coordinate": "Point(-52.711944444 47.561388888)",
+      "country": "Canada"
+    },
+    "aab5b67e-3b98-44a5-8336-1c3d326d9082": {
+      "musicbrainzAreaId": "aab5b67e-3b98-44a5-8336-1c3d326d9082",
+      "matched": true,
+      "wikidataId": "Q128147",
+      "label": "Kingston upon Hull",
+      "coordinate": "Point(-0.3325 53.744444444)",
+      "country": "Kingdom of England"
+    },
+    "c8b4ae14-795b-48b6-8e1e-539859081db3": {
+      "musicbrainzAreaId": "c8b4ae14-795b-48b6-8e1e-539859081db3",
+      "matched": true,
+      "wikidataId": "Q14821",
+      "label": "Coburg",
+      "coordinate": "Point(10.957869444 50.258469444)",
+      "country": "Germany"
+    },
+    "85752fda-13c4-31a3-bee5-0e5cb1f51dad": {
+      "musicbrainzAreaId": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+      "matched": false
+    },
+    "5d668739-7f88-4062-9bc5-11a90e838310": {
+      "musicbrainzAreaId": "5d668739-7f88-4062-9bc5-11a90e838310",
+      "matched": true,
+      "wikidataId": "Q2773",
+      "label": "Brunswick",
+      "coordinate": "Point(10.521111111 52.269166666)",
+      "country": "Germany"
+    },
+    "f03d09b3-39dc-4083-afd6-159e3f0d462f": {
+      "musicbrainzAreaId": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+      "matched": true,
+      "wikidataId": "Q84",
+      "label": "London",
+      "coordinate": "Point(-0.1275 51.507222222)",
+      "country": "United Kingdom"
+    },
+    "dc10c22b-e510-4006-8b7f-fecb4f36436e": {
+      "musicbrainzAreaId": "dc10c22b-e510-4006-8b7f-fecb4f36436e",
+      "matched": true,
+      "wikidataId": "Q90",
+      "label": "Paris",
+      "coordinate": "Point(2.352222222 48.856666666)",
+      "country": "France"
+    },
+    "9d5dd675-3cf4-4296-9e39-67865ebee758": {
+      "musicbrainzAreaId": "9d5dd675-3cf4-4296-9e39-67865ebee758",
+      "matched": true,
+      "wikidataId": "Q21",
+      "label": "England",
+      "coordinate": "Point(-1.0 53.0)",
+      "country": "United Kingdom"
+    },
+    "af59135f-38b5-4ea4-b4e2-dd28c5f0bad7": {
+      "musicbrainzAreaId": "af59135f-38b5-4ea4-b4e2-dd28c5f0bad7",
+      "matched": true,
+      "wikidataId": "Q61",
+      "label": "Washington, D.C.",
+      "coordinate": "Point(-77.036666666 38.895)",
+      "country": "United States"
+    },
+    "373183af-56db-44d7-b06a-5877c02c5f01": {
+      "musicbrainzAreaId": "373183af-56db-44d7-b06a-5877c02c5f01",
+      "matched": true,
+      "wikidataId": "Q1261",
+      "label": "Colorado",
+      "coordinate": "Point(-105.5 39.0)",
+      "country": "United States"
+    },
+    "4a9aeb42-3763-4234-8fb8-1167ac1dfdfe": {
+      "musicbrainzAreaId": "4a9aeb42-3763-4234-8fb8-1167ac1dfdfe",
+      "matched": true,
+      "wikidataId": "Q8652",
+      "label": "Miami",
+      "coordinate": "Point(-80.216666666 25.783333333)",
+      "country": "United States"
+    },
+    "58d2816b-daf9-4fc5-962c-06967f14a5e5": {
+      "musicbrainzAreaId": "58d2816b-daf9-4fc5-962c-06967f14a5e5",
+      "matched": true,
+      "wikidataId": "Q16559",
+      "label": "Austin",
+      "coordinate": "Point(-97.733333333 30.3)",
+      "country": "United States"
+    },
+    "6cd0d62a-12b9-45ba-b4e2-c275d1fabebc": {
+      "musicbrainzAreaId": "6cd0d62a-12b9-45ba-b4e2-c275d1fabebc",
+      "matched": true,
+      "wikidataId": "Q835810",
+      "label": "Broken Arrow",
+      "coordinate": "Point(-95.783611111 36.036388888)",
+      "country": "United States"
+    },
+    "7b2ca1e7-e7f6-4155-881d-c660a45c11e8": {
+      "musicbrainzAreaId": "7b2ca1e7-e7f6-4155-881d-c660a45c11e8",
+      "matched": true,
+      "wikidataId": "Q37320",
+      "label": "Cleveland",
+      "coordinate": "Point(-81.694722222 41.499166666)",
+      "country": "United States"
+    },
+    "29d7853f-28be-4114-8a5b-5dd95d162d69": {
+      "musicbrainzAreaId": "29d7853f-28be-4114-8a5b-5dd95d162d69",
+      "matched": true,
+      "wikidataId": "Q203263",
+      "label": "Athens",
+      "coordinate": "Point(-83.383055555 33.955277777)",
+      "country": "United States"
+    },
+    "5e81fea0-f163-42d4-82d5-4e443a5483af": {
+      "musicbrainzAreaId": "5e81fea0-f163-42d4-82d5-4e443a5483af",
+      "matched": true,
+      "wikidataId": "Q33486",
+      "label": "Hartford",
+      "coordinate": "Point(-72.685 41.763333333)",
+      "country": "United States"
+    },
+    "dccd77b2-bd3d-49eb-a98f-fd58e87f481e": {
+      "musicbrainzAreaId": "dccd77b2-bd3d-49eb-a98f-fd58e87f481e",
+      "matched": true,
+      "wikidataId": "Q220",
+      "label": "Rome",
+      "coordinate": "Point(12.482777777 41.893055555)",
+      "country": "Italy"
+    },
+    "26b6c7c8-6463-4f58-89be-95e079ef6e81": {
+      "musicbrainzAreaId": "26b6c7c8-6463-4f58-89be-95e079ef6e81",
+      "matched": true,
+      "wikidataId": "Q996569",
+      "label": "El Cerrito",
+      "coordinate": "Point(-122.311666666 37.915833333)",
+      "country": "United States"
+    },
+    "226c4dca-ef2a-4d4b-ba25-4118d116557a": {
+      "musicbrainzAreaId": "226c4dca-ef2a-4d4b-ba25-4118d116557a",
+      "matched": true,
+      "wikidataId": "Q2256",
+      "label": "Birmingham",
+      "coordinate": "Point(-1.9025 52.48)",
+      "country": "United Kingdom"
+    },
+    "e331bfdf-b908-429c-a79b-710cf9c06abb": {
+      "musicbrainzAreaId": "e331bfdf-b908-429c-a79b-710cf9c06abb",
+      "matched": true,
+      "wikidataId": "Q100",
+      "label": "Boston",
+      "coordinate": "Point(-71.057777777 42.360277777)",
+      "country": "United States"
+    },
+    "d793f202-faf0-4de8-83e2-9ddfca54a35f": {
+      "musicbrainzAreaId": "d793f202-faf0-4de8-83e2-9ddfca54a35f",
+      "matched": true,
+      "wikidataId": "Q490",
+      "label": "Milan",
+      "coordinate": "Point(9.19 45.466944444)",
+      "country": "Italy"
+    },
+    "410206c1-a828-494d-bea4-40400a4c1dd8": {
+      "musicbrainzAreaId": "410206c1-a828-494d-bea4-40400a4c1dd8",
+      "matched": true,
+      "wikidataId": "Q724638",
+      "label": "Hoogstraten",
+      "coordinate": "Point(4.761111111 51.400833333)",
+      "country": "Belgium"
+    },
+    "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc": {
+      "musicbrainzAreaId": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+      "matched": true,
+      "wikidataId": "Q31",
+      "label": "Belgium",
+      "coordinate": "Point(4.668055555 50.641111111)",
+      "country": "Belgium"
+    },
+    "114c14ad-9776-34e9-81b0-6299507f3771": {
+      "musicbrainzAreaId": "114c14ad-9776-34e9-81b0-6299507f3771",
+      "matched": true,
+      "wikidataId": "Q219",
+      "label": "Bulgaria",
+      "coordinate": "Point(25.5 42.75)",
+      "country": "Bulgaria"
+    },
+    "c5446ccc-24aa-4110-8130-38c97b5d83da": {
+      "musicbrainzAreaId": "c5446ccc-24aa-4110-8130-38c97b5d83da",
+      "matched": true,
+      "wikidataId": "Q2132",
+      "label": "Victoria",
+      "coordinate": "Point(-123.3657 48.422151)",
+      "country": "Canada"
+    },
+    "8f6c316e-9924-48ea-967b-16757dd82399": {
+      "musicbrainzAreaId": "8f6c316e-9924-48ea-967b-16757dd82399",
+      "matched": true,
+      "wikidataId": "Q25287",
+      "label": "Gothenburg",
+      "coordinate": "Point(11.9675 57.7075)",
+      "country": "Sweden"
+    },
+    "f45b47f8-5796-386e-b172-6c31b009a5d8": {
+      "musicbrainzAreaId": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+      "matched": true,
+      "wikidataId": "Q155",
+      "label": "Brazil",
+      "coordinate": "Point(-53.0 -14.0)",
+      "country": "Brazil"
+    },
+    "e3b387f8-4355-4310-8cca-8913dbb07923": {
+      "musicbrainzAreaId": "e3b387f8-4355-4310-8cca-8913dbb07923",
+      "matched": true,
+      "wikidataId": "Q126805",
+      "label": "St. Catharines",
+      "coordinate": "Point(-79.233333333 43.183333333)",
+      "country": "Canada"
+    },
+    "3bb238a4-c2a4-44e5-9843-a63e71b17e83": {
+      "musicbrainzAreaId": "3bb238a4-c2a4-44e5-9843-a63e71b17e83",
+      "matched": true,
+      "wikidataId": "Q6346",
+      "label": "Indianapolis",
+      "coordinate": "Point(-86.158055555 39.768611111)",
+      "country": "United States"
+    },
+    "dc14405c-7534-457a-8672-54593b8805b9": {
+      "musicbrainzAreaId": "dc14405c-7534-457a-8672-54593b8805b9",
+      "matched": true,
+      "wikidataId": "Q42735",
+      "label": "Olympia",
+      "coordinate": "Point(-122.893055555 47.0425)",
+      "country": "United States"
+    },
+    "5184eb01-5033-491a-ae51-dd7c0897aab6": {
+      "musicbrainzAreaId": "5184eb01-5033-491a-ae51-dd7c0897aab6",
+      "matched": true,
+      "wikidataId": "Q5900602",
+      "label": "Hopkins",
+      "coordinate": "Point(-88.2815669 16.856148075)",
+      "country": "Belize"
+    },
+    "6bf45af6-f1bf-357c-91b5-9593a9c32cb0": {
+      "musicbrainzAreaId": "6bf45af6-f1bf-357c-91b5-9593a9c32cb0",
+      "matched": true,
+      "wikidataId": "Q242",
+      "label": "Belize",
+      "coordinate": "Point(-88.7 17.066666666)",
+      "country": "Belize"
+    },
+    "116e3eb1-2b14-42c9-91a1-7a2510dcc4b3": {
+      "musicbrainzAreaId": "116e3eb1-2b14-42c9-91a1-7a2510dcc4b3",
+      "matched": true,
+      "wikidataId": "Q39121",
+      "label": "Leeds",
+      "coordinate": "Point(-1.543611111 53.7975)",
+      "country": "United Kingdom"
+    },
+    "0573177b-9ff9-4643-80bc-ed2513419267": {
+      "musicbrainzAreaId": "0573177b-9ff9-4643-80bc-ed2513419267",
+      "matched": true,
+      "wikidataId": "Q1397",
+      "label": "Ohio",
+      "coordinate": "Point(-82.5 40.5)",
+      "country": "United States"
+    },
+    "471c46a7-afc5-31c4-923c-d0444f5053a4": {
+      "musicbrainzAreaId": "471c46a7-afc5-31c4-923c-d0444f5053a4",
+      "matched": true,
+      "wikidataId": "Q29",
+      "label": "Spain",
+      "coordinate": "Point(-3.5 40.2)",
+      "country": "Spain"
+    },
+    "66ff9bf9-8470-449c-9061-c009fd91d87c": {
+      "musicbrainzAreaId": "66ff9bf9-8470-449c-9061-c009fd91d87c",
+      "matched": true,
+      "wikidataId": "Q1007079",
+      "label": "Stow",
+      "coordinate": "Point(-81.440277777 41.159444444)",
+      "country": "United States"
+    },
+    "3f179da4-83c6-4a28-a627-e46b4a8ff1ed": {
+      "musicbrainzAreaId": "3f179da4-83c6-4a28-a627-e46b4a8ff1ed",
+      "matched": true,
+      "wikidataId": "Q3130",
+      "label": "Sydney",
+      "coordinate": "Point(151.21 -33.867777777)",
+      "country": "Australia"
+    },
+    "17203e02-355a-40db-a524-980192eb9d0f": {
+      "musicbrainzAreaId": "17203e02-355a-40db-a524-980192eb9d0f",
+      "matched": true,
+      "wikidataId": "Q49218",
+      "label": "Rochester",
+      "coordinate": "Point(-77.611388888 43.165555555)",
+      "country": "United States"
+    },
+    "a1bb8b02-0496-4cfa-a771-2482e55451af": {
+      "musicbrainzAreaId": "a1bb8b02-0496-4cfa-a771-2482e55451af",
+      "matched": true,
+      "wikidataId": "Q485172",
+      "label": "Ann Arbor",
+      "coordinate": "Point(-83.748333333 42.281388888)",
+      "country": "United States"
+    },
+    "7285ff09-d6f9-4c91-941a-3a43ad8b6ff4": {
+      "musicbrainzAreaId": "7285ff09-d6f9-4c91-941a-3a43ad8b6ff4",
+      "matched": true,
+      "wikidataId": "Q18655",
+      "label": "Stockport",
+      "coordinate": "Point(-2.149444444 53.408333333)",
+      "country": "United Kingdom"
+    },
+    "afff1a94-a98b-4322-8874-3148139ab6da": {
+      "musicbrainzAreaId": "afff1a94-a98b-4322-8874-3148139ab6da",
+      "matched": true,
+      "wikidataId": "Q1741",
+      "label": "Vienna",
+      "coordinate": "Point(16.3725 48.208333333)",
+      "country": "Austria"
+    },
+    "f988aff4-5221-4b36-9174-befec694f906": {
+      "musicbrainzAreaId": "f988aff4-5221-4b36-9174-befec694f906",
+      "matched": true,
+      "wikidataId": "Q41262",
+      "label": "Nottingham",
+      "coordinate": "Point(-1.149166666 52.955)",
+      "country": "United Kingdom"
+    },
+    "aca96fb2-ce0f-4e79-a574-7a6fc96d99c0": {
+      "musicbrainzAreaId": "aca96fb2-ce0f-4e79-a574-7a6fc96d99c0",
+      "matched": true,
+      "wikidataId": "Q894327",
+      "label": "Borås Municipality",
+      "coordinate": "Point(12.933333333 57.716666666)",
+      "country": "Sweden"
+    },
+    "e3ce85a5-ddf3-4be2-b713-cb1d84610709": {
+      "musicbrainzAreaId": "e3ce85a5-ddf3-4be2-b713-cb1d84610709",
+      "matched": true,
+      "wikidataId": "Q48256",
+      "label": "Dnipro",
+      "coordinate": "Point(35.04 48.4675)",
+      "country": "Ukraine"
+    },
+    "904768d0-61ca-3c40-93ac-93adc36fef4b": {
+      "musicbrainzAreaId": "904768d0-61ca-3c40-93ac-93adc36fef4b",
+      "matched": true,
+      "wikidataId": "Q212",
+      "label": "Ukraine",
+      "coordinate": "Point(32.0 49.0)",
+      "country": "Ukraine"
+    },
+    "016ea329-3f61-469f-95a5-d0f17f939644": {
+      "musicbrainzAreaId": "016ea329-3f61-469f-95a5-d0f17f939644",
+      "matched": true,
+      "wikidataId": "Q47578",
+      "label": "Vittorio Veneto",
+      "coordinate": "Point(12.3 45.983333333)",
+      "country": "Italy"
+    },
+    "1370aa1f-02d4-4d6a-9f2c-5235e016905a": {
+      "musicbrainzAreaId": "1370aa1f-02d4-4d6a-9f2c-5235e016905a",
+      "matched": true,
+      "wikidataId": "Q128306",
+      "label": "Denton",
+      "coordinate": "Point(-97.133333333 33.216666666)",
+      "country": "United States"
+    },
+    "122bb81f-191e-3798-8be2-4b54ffd7ffa4": {
+      "musicbrainzAreaId": "122bb81f-191e-3798-8be2-4b54ffd7ffa4",
+      "matched": true,
+      "wikidataId": "Q1041",
+      "label": "Senegal",
+      "coordinate": "Point(-14.283333 14.366667)",
+      "country": "Senegal"
+    },
+    "573f35c7-34e8-40bd-94f8-87f99b9aee1e": {
+      "musicbrainzAreaId": "573f35c7-34e8-40bd-94f8-87f99b9aee1e",
+      "matched": true,
+      "wikidataId": "Q639408",
+      "label": "Waterloo",
+      "coordinate": "Point(-80.516666666 43.466666666)",
+      "country": "Canada"
+    },
+    "d31a9a15-537f-3669-ad53-25753ddd2772": {
+      "musicbrainzAreaId": "d31a9a15-537f-3669-ad53-25753ddd2772",
+      "matched": true,
+      "wikidataId": "Q668",
+      "label": "India",
+      "coordinate": "Point(83.0 22.8)",
+      "country": "India"
+    },
+    "8270a6f3-3e8d-482d-8cb6-649912ac5a63": {
+      "musicbrainzAreaId": "8270a6f3-3e8d-482d-8cb6-649912ac5a63",
+      "matched": true,
+      "wikidataId": "Q2131",
+      "label": "Santiago Metropolitan Region",
+      "coordinate": "Point(-70.650277777 -33.437777777)",
+      "country": "Chile"
+    },
+    "82d5f4d6-aed4-3ff5-81d1-5363ac6e97a7": {
+      "musicbrainzAreaId": "82d5f4d6-aed4-3ff5-81d1-5363ac6e97a7",
+      "matched": true,
+      "wikidataId": "Q298",
+      "label": "Chile",
+      "coordinate": "Point(-71.0 -33.0)",
+      "country": "Chile"
+    },
+    "4955495c-004d-4c7f-ba17-d9df26388cd0": {
+      "musicbrainzAreaId": "4955495c-004d-4c7f-ba17-d9df26388cd0",
+      "matched": true,
+      "wikidataId": "Q25286",
+      "label": "Uppsala",
+      "coordinate": "Point(17.638946597 59.849760548)",
+      "country": "Sweden"
+    },
+    "0aae418d-8db2-4802-911b-db230839f010": {
+      "musicbrainzAreaId": "0aae418d-8db2-4802-911b-db230839f010",
+      "matched": true,
+      "wikidataId": "Q49243",
+      "label": "Riverside",
+      "coordinate": "Point(-117.3725 33.982222222)",
+      "country": "United States"
+    },
+    "2058a9fc-cf7a-4443-887c-96c57e78d18f": {
+      "musicbrainzAreaId": "2058a9fc-cf7a-4443-887c-96c57e78d18f",
+      "matched": true,
+      "wikidataId": "Q6896",
+      "label": "Rheda-Wiedenbrück",
+      "coordinate": "Point(8.3 51.841666666)",
+      "country": "Germany"
+    },
+    "a5588c02-bd0d-4b05-96bb-f7aaf42854c6": {
+      "musicbrainzAreaId": "a5588c02-bd0d-4b05-96bb-f7aaf42854c6",
+      "matched": true,
+      "wikidataId": "Q589460",
+      "label": "Livingston",
+      "coordinate": "Point(-74.326388888 40.783333333)",
+      "country": "United States"
+    },
+    "96dd7db4-d3ef-4d7f-a1c8-d89c7db89181": {
+      "musicbrainzAreaId": "96dd7db4-d3ef-4d7f-a1c8-d89c7db89181",
+      "matched": true,
+      "wikidataId": "Q956",
+      "label": "Beijing",
+      "coordinate": "Point(116.407526 39.90403)",
+      "country": "People's Republic of China"
+    },
+    "806b9b3b-5daf-4eaa-807d-7a2a29cde0da": {
+      "musicbrainzAreaId": "806b9b3b-5daf-4eaa-807d-7a2a29cde0da",
+      "matched": true,
+      "wikidataId": "Q83065",
+      "label": "Leicester",
+      "coordinate": "Point(-1.133055555 52.636111111)",
+      "country": "United Kingdom"
+    },
+    "93422fd5-1890-46cd-9ea9-3517c32f35b4": {
+      "musicbrainzAreaId": "93422fd5-1890-46cd-9ea9-3517c32f35b4",
+      "matched": true,
+      "wikidataId": "Q192517",
+      "label": "Boulder",
+      "coordinate": "Point(-105.292777777 40.019444444)",
+      "country": "United States"
+    },
+    "03e75281-c3a3-454a-8d78-c85a5415c49e": {
+      "musicbrainzAreaId": "03e75281-c3a3-454a-8d78-c85a5415c49e",
+      "matched": true,
+      "wikidataId": "Q1718",
+      "label": "Düsseldorf",
+      "coordinate": "Point(6.776666666 51.225555555)",
+      "country": "Germany"
+    },
+    "3e08b2cd-69f3-317c-b1e4-e71be581839e": {
+      "musicbrainzAreaId": "3e08b2cd-69f3-317c-b1e4-e71be581839e",
+      "matched": true,
+      "wikidataId": "Q96",
+      "label": "Mexico",
+      "coordinate": "Point(-102.0 23.0)",
+      "country": "Mexico"
+    },
+    "cfd1e529-4ca0-4377-bb35-c1762b653d50": {
+      "musicbrainzAreaId": "cfd1e529-4ca0-4377-bb35-c1762b653d50",
+      "matched": true,
+      "wikidataId": "Q81033",
+      "label": "Monterrey",
+      "coordinate": "Point(-100.318055555 25.684444444)",
+      "country": "Mexico"
+    },
+    "b6bc1b30-dc84-4155-b46d-269454c26897": {
+      "musicbrainzAreaId": "b6bc1b30-dc84-4155-b46d-269454c26897",
+      "matched": true,
+      "wikidataId": "Q1010",
+      "label": "Maribor",
+      "coordinate": "Point(15.633333333 46.55)",
+      "country": "Slovenia"
+    },
+    "5b0b6225-584c-3942-b69d-5efceb9989af": {
+      "musicbrainzAreaId": "5b0b6225-584c-3942-b69d-5efceb9989af",
+      "matched": true,
+      "wikidataId": "Q215",
+      "label": "Slovenia",
+      "coordinate": "Point(15.0 46.0)",
+      "country": "Slovenia"
+    },
+    "34357067-8f7f-4c7a-8d5e-99b6e60f7891": {
+      "musicbrainzAreaId": "34357067-8f7f-4c7a-8d5e-99b6e60f7891",
+      "matched": true,
+      "wikidataId": "Q184116",
+      "label": "Gary",
+      "coordinate": "Point(-87.345555555 41.580833333)",
+      "country": "United States"
+    },
+    "57dcc070-ab3b-4391-8f8d-e4445041efcf": {
+      "musicbrainzAreaId": "57dcc070-ab3b-4391-8f8d-e4445041efcf",
+      "matched": true,
+      "wikidataId": "Q209338",
+      "label": "Oxnard",
+      "coordinate": "Point(-119.1825 34.191388888)",
+      "country": "United States"
+    },
+    "9443d4f5-668c-4f30-96bd-6caf831de30f": {
+      "musicbrainzAreaId": "9443d4f5-668c-4f30-96bd-6caf831de30f",
+      "matched": true,
+      "wikidataId": "Q8678",
+      "label": "Rio de Janeiro",
+      "coordinate": "Point(-43.205555555 -22.911111111)",
+      "country": "Brazil"
+    },
+    "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0": {
+      "musicbrainzAreaId": "7c81bb69-a99b-3487-b6d4-0f76d7a29ca0",
+      "matched": true,
+      "wikidataId": "Q148",
+      "label": "People's Republic of China",
+      "coordinate": "Point(103.451944444 35.844722222)",
+      "country": "People's Republic of China"
+    },
+    "db3634e7-5414-41dd-be0b-68ae71798dcd": {
+      "musicbrainzAreaId": "db3634e7-5414-41dd-be0b-68ae71798dcd",
+      "matched": true,
+      "wikidataId": "Q92561",
+      "label": "London",
+      "coordinate": "Point(-81.2497 42.9837)",
+      "country": "Canada"
+    },
+    "b3cb9848-1440-4c2b-b258-f849f8a9d50a": {
+      "musicbrainzAreaId": "b3cb9848-1440-4c2b-b258-f849f8a9d50a",
+      "matched": true,
+      "wikidataId": "Q10686",
+      "label": "Belfast",
+      "coordinate": "Point(-5.93 54.596666666)",
+      "country": "United Kingdom"
+    },
+    "4757b525-2a60-324a-b060-578765d2c993": {
+      "musicbrainzAreaId": "4757b525-2a60-324a-b060-578765d2c993",
+      "matched": true,
+      "wikidataId": "Q35",
+      "label": "Denmark",
+      "coordinate": "Point(10.0 56.0)",
+      "country": "Kingdom of Denmark"
+    },
+    "d7089183-0ad8-42f1-b6e4-fff99ee6d1bf": {
+      "musicbrainzAreaId": "d7089183-0ad8-42f1-b6e4-fff99ee6d1bf",
+      "matched": true,
+      "wikidataId": "Q1867",
+      "label": "Taipei",
+      "coordinate": "Point(121.5625 25.0375)",
+      "country": "Taiwan"
+    },
+    "06d8645e-5ebd-4f47-83bc-a39670192721": {
+      "musicbrainzAreaId": "06d8645e-5ebd-4f47-83bc-a39670192721",
+      "matched": true,
+      "wikidataId": "Q79389",
+      "label": "Gadsden",
+      "coordinate": "Point(-86.010356 34.010147)",
+      "country": "United States"
+    },
+    "462e7952-4fa9-43cd-bc24-2c5c9cd5dd47": {
+      "musicbrainzAreaId": "462e7952-4fa9-43cd-bc24-2c5c9cd5dd47",
+      "matched": true,
+      "wikidataId": "Q1761",
+      "label": "Dublin",
+      "coordinate": "Point(-6.260277777 53.349722222)",
+      "country": "Ireland"
+    },
+    "7e037c94-d999-4611-a8fd-56e8770f2e3c": {
+      "musicbrainzAreaId": "7e037c94-d999-4611-a8fd-56e8770f2e3c",
+      "matched": true,
+      "wikidataId": "Q189074",
+      "label": "Q189074",
+      "coordinate": "Point(-73.948372222 40.809033333)",
+      "country": "United States"
+    },
+    "c9ac1239-e832-41bc-9930-e252a1fd1105": {
+      "musicbrainzAreaId": "c9ac1239-e832-41bc-9930-e252a1fd1105",
+      "matched": true,
+      "wikidataId": "Q64",
+      "label": "Berlin",
+      "coordinate": "Point(13.383333333 52.516666666)",
+      "country": "Germany"
+    },
+    "b6d574cd-df3f-41c5-9c70-11ffbde21726": {
+      "musicbrainzAreaId": "b6d574cd-df3f-41c5-9c70-11ffbde21726",
+      "matched": true,
+      "wikidataId": "Q79860",
+      "label": "Huntsville",
+      "coordinate": "Point(-86.586111111 34.713611111)",
+      "country": "United States"
+    },
+    "23e0d135-9fe7-48cb-b2c4-93addd3d1e37": {
+      "musicbrainzAreaId": "23e0d135-9fe7-48cb-b2c4-93addd3d1e37",
+      "matched": true,
+      "wikidataId": "Q1473680",
+      "label": "Kingston Parish",
+      "coordinate": "Point(-76.8 17.966666666)",
+      "country": "Jamaica"
+    },
+    "2dd47a64-91d5-3b13-bc94-80043ed063d7": {
+      "musicbrainzAreaId": "2dd47a64-91d5-3b13-bc94-80043ed063d7",
+      "matched": true,
+      "wikidataId": "Q766",
+      "label": "Jamaica",
+      "coordinate": "Point(-77.4 18.18)",
+      "country": ""
+    },
+    "86fbdd3c-aaac-4aed-916a-b361f7e1a8de": {
+      "musicbrainzAreaId": "86fbdd3c-aaac-4aed-916a-b361f7e1a8de",
+      "matched": true,
+      "wikidataId": "Q2634",
+      "label": "Naples",
+      "coordinate": "Point(14.248611111 40.835833333)",
+      "country": "Italy"
+    },
+    "c6500277-9a3d-349b-bf30-41afdbf42add": {
+      "musicbrainzAreaId": "c6500277-9a3d-349b-bf30-41afdbf42add",
+      "matched": true,
+      "wikidataId": "Q38",
+      "label": "Italy",
+      "coordinate": "Point(12.5 42.5)",
+      "country": "Italy"
+    },
+    "58dfe014-b4e2-481a-a780-b88984961369": {
+      "musicbrainzAreaId": "58dfe014-b4e2-481a-a780-b88984961369",
+      "matched": true,
+      "wikidataId": "Q240504",
+      "label": "Makó",
+      "coordinate": "Point(20.478888888 46.22)",
+      "country": "Hungary"
+    },
+    "8524c7d9-f472-3890-a458-f28d5081d9c4": {
+      "musicbrainzAreaId": "8524c7d9-f472-3890-a458-f28d5081d9c4",
+      "matched": true,
+      "wikidataId": "Q664",
+      "label": "New Zealand",
+      "coordinate": "Point(174.0 -41.2)",
+      "country": "New Zealand"
+    },
+    "04e60741-b1ae-4078-80bb-ffe8ae643ea7": {
+      "musicbrainzAreaId": "04e60741-b1ae-4078-80bb-ffe8ae643ea7",
+      "matched": true,
+      "wikidataId": "Q485708",
+      "label": "Duluth",
+      "coordinate": "Point(-92.105277777 46.784444444)",
+      "country": "United States"
+    },
+    "74b24e62-d2fe-42d2-9d96-31f2da756c77": {
+      "musicbrainzAreaId": "74b24e62-d2fe-42d2-9d96-31f2da756c77",
+      "matched": true,
+      "wikidataId": "Q172",
+      "label": "Toronto",
+      "coordinate": "Point(-79.386666666 43.670277777)",
+      "country": "Canada"
+    },
+    "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7": {
+      "musicbrainzAreaId": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+      "matched": true,
+      "wikidataId": "Q55",
+      "label": "Netherlands",
+      "coordinate": "Point(5.55 52.316666666)",
+      "country": "Kingdom of the Netherlands"
+    },
+    "0177eff2-9690-443e-8ef8-159fde506c3e": {
+      "musicbrainzAreaId": "0177eff2-9690-443e-8ef8-159fde506c3e",
+      "matched": true,
+      "wikidataId": "Q2536864",
+      "label": "Pelham",
+      "coordinate": "Point(-72.4037 42.39315)",
+      "country": "United States"
+    },
+    "f0b226db-8e22-40e6-9a53-d839cfec6228": {
+      "musicbrainzAreaId": "f0b226db-8e22-40e6-9a53-d839cfec6228",
+      "matched": true,
+      "wikidataId": "Q10690",
+      "label": "Cardiff",
+      "coordinate": "Point(-3.179166666 51.481666666)",
+      "country": "United Kingdom"
+    },
+    "75e398a3-5f3f-4224-9cd8-0fe44715bc95": {
+      "musicbrainzAreaId": "75e398a3-5f3f-4224-9cd8-0fe44715bc95",
+      "matched": true,
+      "wikidataId": "Q1384",
+      "label": "New York",
+      "coordinate": "Point(-75.0 43.0)",
+      "country": "United States"
+    },
+    "7c87112d-504d-31f1-8147-11ff45fc3bfd": {
+      "musicbrainzAreaId": "7c87112d-504d-31f1-8147-11ff45fc3bfd",
+      "matched": true,
+      "wikidataId": "Q843",
+      "label": "Pakistan",
+      "coordinate": "Point(71.0 30.0)",
+      "country": "Pakistan"
+    },
+    "366f2bf1-52a7-4b91-890d-9d117f53787d": {
+      "musicbrainzAreaId": "366f2bf1-52a7-4b91-890d-9d117f53787d",
+      "matched": true,
+      "wikidataId": "Q115438",
+      "label": "Matanzas Province",
+      "coordinate": "Point(-81.5753 23.0511)",
+      "country": "Cuba"
+    },
+    "b06c4e86-97f7-3419-84a9-a23c60ea0b22": {
+      "musicbrainzAreaId": "b06c4e86-97f7-3419-84a9-a23c60ea0b22",
+      "matched": true,
+      "wikidataId": "Q241",
+      "label": "Cuba",
+      "coordinate": "Point(-79.5 22.0)",
+      "country": "Cuba"
+    },
+    "6de750e8-8280-37cf-bd98-0dd800419a18": {
+      "musicbrainzAreaId": "6de750e8-8280-37cf-bd98-0dd800419a18",
+      "matched": true,
+      "wikidataId": "Q17070",
+      "label": "Réunion",
+      "coordinate": "Point(55.5325 -21.114444444)",
+      "country": "France"
+    },
+    "436f5016-7955-4a96-be64-150a9f66664e": {
+      "musicbrainzAreaId": "436f5016-7955-4a96-be64-150a9f66664e",
+      "matched": true,
+      "wikidataId": "Q2679162",
+      "label": "Seneca",
+      "coordinate": "Point(-82.955833333 34.684166666)",
+      "country": "United States"
+    },
+    "860a21bd-92a4-462f-a000-3eefc57ed793": {
+      "musicbrainzAreaId": "860a21bd-92a4-462f-a000-3eefc57ed793",
+      "matched": true,
+      "wikidataId": "Q462799",
+      "label": "Evanston",
+      "coordinate": "Point(-87.685 42.047222222)",
+      "country": "United States"
+    },
+    "2db42837-c832-3c27-b4a3-08198f75693c": {
+      "musicbrainzAreaId": "2db42837-c832-3c27-b4a3-08198f75693c",
+      "matched": true,
+      "wikidataId": "Q17",
+      "label": "Japan",
+      "coordinate": "Point(136.0 35.0)",
+      "country": "Japan"
+    },
+    "078b476e-99f0-4047-9cef-7694b5112386": {
+      "musicbrainzAreaId": "078b476e-99f0-4047-9cef-7694b5112386",
+      "matched": true,
+      "wikidataId": "Q1869357",
+      "label": "Grosse Pointe",
+      "coordinate": "Point(-82.916666666 42.383333333)",
+      "country": "United States"
+    },
+    "26e0e534-19ea-4645-bfb3-1aa4e83a4046": {
+      "musicbrainzAreaId": "26e0e534-19ea-4645-bfb3-1aa4e83a4046",
+      "matched": true,
+      "wikidataId": "Q23556",
+      "label": "Atlanta",
+      "coordinate": "Point(-84.389722222 33.754444444)",
+      "country": "United States"
+    },
+    "0eeb01c2-6e31-46ad-96b8-319749f731d2": {
+      "musicbrainzAreaId": "0eeb01c2-6e31-46ad-96b8-319749f731d2",
+      "matched": true,
+      "wikidataId": "Q1345",
+      "label": "Philadelphia",
+      "coordinate": "Point(-75.163611111 39.952777777)",
+      "country": "United States"
+    },
+    "e5eea688-ae40-494c-ae1f-20745250f67a": {
+      "musicbrainzAreaId": "e5eea688-ae40-494c-ae1f-20745250f67a",
+      "matched": true,
+      "wikidataId": "Q166304",
+      "label": "Billings",
+      "coordinate": "Point(-108.537222222 45.786666666)",
+      "country": "United States"
+    },
+    "254d6f58-9d07-48d8-add3-852c4ab84daa": {
+      "musicbrainzAreaId": "254d6f58-9d07-48d8-add3-852c4ab84daa",
+      "matched": true,
+      "wikidataId": "Q168648",
+      "label": "Sopron",
+      "coordinate": "Point(16.583333333 47.683333333)",
+      "country": "Hungary"
+    },
+    "264779d6-59a8-4fb6-8c43-5f39ce67ccd1": {
+      "musicbrainzAreaId": "264779d6-59a8-4fb6-8c43-5f39ce67ccd1",
+      "matched": true,
+      "wikidataId": "Q78",
+      "label": "Basel",
+      "coordinate": "Point(7.590555555 47.560555555)",
+      "country": "Switzerland"
+    },
+    "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df": {
+      "musicbrainzAreaId": "1333ff06-8e3d-3c8e-9f3a-13a2a38b41df",
+      "matched": true,
+      "wikidataId": "Q39",
+      "label": "Switzerland",
+      "coordinate": "Point(8.231973 46.798562)",
+      "country": "Switzerland"
+    },
+    "6f02f729-af8b-485f-902a-da3ac6c09de3": {
+      "musicbrainzAreaId": "6f02f729-af8b-485f-902a-da3ac6c09de3",
+      "matched": true,
+      "wikidataId": "Q490385",
+      "label": "Bloomington",
+      "coordinate": "Point(-86.534722222 39.166666666)",
+      "country": "United States"
+    },
+    "f262ff7c-1d14-4997-a9e7-f21f2e0bc680": {
+      "musicbrainzAreaId": "f262ff7c-1d14-4997-a9e7-f21f2e0bc680",
+      "matched": true,
+      "wikidataId": "Q988554",
+      "label": "Hyde Park",
+      "coordinate": "Point(-73.933333333 41.784722222)",
+      "country": "United States"
+    },
+    "f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5": {
+      "musicbrainzAreaId": "f5ffcc03-ebf2-466a-bb11-b38c6c0c84f5",
+      "matched": true,
+      "wikidataId": "Q1527",
+      "label": "Minnesota",
+      "coordinate": "Point(-94.0 46.0)",
+      "country": "United States"
+    },
+    "0931744e-659a-4db0-ad13-daa4d00f9a41": {
+      "musicbrainzAreaId": "0931744e-659a-4db0-ad13-daa4d00f9a41",
+      "matched": true,
+      "wikidataId": "Q490732",
+      "label": "Fort Collins",
+      "coordinate": "Point(-105.083333333 40.566666666)",
+      "country": "United States"
+    },
+    "0c81089f-621b-4c30-acf3-a5d81f07f84b": {
+      "musicbrainzAreaId": "0c81089f-621b-4c30-acf3-a5d81f07f84b",
+      "matched": true,
+      "wikidataId": "Q124739",
+      "label": "Tijuana",
+      "coordinate": "Point(-117.037155 32.536447)",
+      "country": "Mexico"
+    },
+    "2c31712d-b1cb-4581-a989-d9afef510103": {
+      "musicbrainzAreaId": "2c31712d-b1cb-4581-a989-d9afef510103",
+      "matched": true,
+      "wikidataId": "Q25319",
+      "label": "Aarhus",
+      "coordinate": "Point(10.209722222 56.156388888)",
+      "country": "Denmark"
+    },
+    "d5210692-e55c-4111-9517-5d798cf172cd": {
+      "musicbrainzAreaId": "d5210692-e55c-4111-9517-5d798cf172cd",
+      "matched": true,
+      "wikidataId": "Q2141",
+      "label": "Halifax",
+      "coordinate": "Point(-63.571388888 44.647777777)",
+      "country": "Canada"
+    },
+    "dd7f80c8-f017-3d01-8608-2a8c9c32b954": {
+      "musicbrainzAreaId": "dd7f80c8-f017-3d01-8608-2a8c9c32b954",
+      "matched": true,
+      "wikidataId": "Q36",
+      "label": "Poland",
+      "coordinate": "Point(19.0 52.0)",
+      "country": "Poland"
+    },
+    "33e0f86c-d709-448d-a484-d55778913af1": {
+      "musicbrainzAreaId": "33e0f86c-d709-448d-a484-d55778913af1",
+      "matched": true,
+      "wikidataId": "Q174",
+      "label": "São Paulo",
+      "coordinate": "Point(-46.633947222 -23.550394444)",
+      "country": "Brazil"
+    },
+    "3b057757-e74d-4558-9f8a-922cd148f5e5": {
+      "musicbrainzAreaId": "3b057757-e74d-4558-9f8a-922cd148f5e5",
+      "matched": true,
+      "wikidataId": "Q647",
+      "label": "Rennes",
+      "coordinate": "Point(-1.680833333 48.114166666)",
+      "country": "France"
+    },
+    "c1140389-8ef9-41c5-aa1c-f8d8d991bce1": {
+      "musicbrainzAreaId": "c1140389-8ef9-41c5-aa1c-f8d8d991bce1",
+      "matched": true,
+      "wikidataId": "Q51685",
+      "label": "Tempe",
+      "coordinate": "Point(-111.94 33.425555555)",
+      "country": "United States"
+    },
+    "f265b80c-e446-440f-b636-16ba184bf4f4": {
+      "musicbrainzAreaId": "f265b80c-e446-440f-b636-16ba184bf4f4",
+      "matched": true,
+      "wikidataId": "Q989903",
+      "label": "Grand Junction",
+      "coordinate": "Point(-108.567 39.0667)",
+      "country": "United States"
+    },
+    "e8e317a1-268c-4e46-9db1-f10af959ffca": {
+      "musicbrainzAreaId": "e8e317a1-268c-4e46-9db1-f10af959ffca",
+      "matched": true,
+      "wikidataId": "Q727",
+      "label": "Amsterdam",
+      "coordinate": "Point(4.883333333 52.366666666)",
+      "country": "Netherlands"
+    },
+    "bfaddb23-4516-4535-9e9b-0f086eb3f06d": {
+      "musicbrainzAreaId": "bfaddb23-4516-4535-9e9b-0f086eb3f06d",
+      "matched": true,
+      "wikidataId": "Q385825",
+      "label": "Parker",
+      "coordinate": "Point(-104.766 39.5194)",
+      "country": "United States"
+    },
+    "1dc5377f-ddc3-4ee9-8cf1-07896f96cb63": {
+      "musicbrainzAreaId": "1dc5377f-ddc3-4ee9-8cf1-07896f96cb63",
+      "matched": true,
+      "wikidataId": "Q865716",
+      "label": "Redditch",
+      "coordinate": "Point(-1.949166666 52.306944444)",
+      "country": "United Kingdom"
+    },
+    "ece19f40-39c3-4cc2-bb7a-4c89df7968bd": {
+      "musicbrainzAreaId": "ece19f40-39c3-4cc2-bb7a-4c89df7968bd",
+      "matched": true,
+      "wikidataId": "Q846939",
+      "label": "Spanish Town 11.",
+      "coordinate": "Point(-76.954722222 17.996111111)",
+      "country": "Jamaica"
+    },
+    "0df04709-c7d8-3b55-a6ea-f3e5069a947b": {
+      "musicbrainzAreaId": "0df04709-c7d8-3b55-a6ea-f3e5069a947b",
+      "matched": true,
+      "wikidataId": "Q414",
+      "label": "Argentina",
+      "coordinate": "Point(-64.0 -34.0)",
+      "country": "Argentina"
+    },
+    "9d093595-9e75-44f7-8900-3bfaa6da8e3c": {
+      "musicbrainzAreaId": "9d093595-9e75-44f7-8900-3bfaa6da8e3c",
+      "matched": true,
+      "wikidataId": "Q48278",
+      "label": "Medellín",
+      "coordinate": "Point(-75.5675845 6.250200154)",
+      "country": "Colombia"
+    },
+    "02b60d8d-7164-339d-868d-22d147d9f74a": {
+      "musicbrainzAreaId": "02b60d8d-7164-339d-868d-22d147d9f74a",
+      "matched": true,
+      "wikidataId": "Q739",
+      "label": "Colombia",
+      "coordinate": "Point(-73.25 4.0)",
+      "country": "Colombia"
+    },
+    "d13af704-11d8-4d40-b739-12f87c58b701": {
+      "musicbrainzAreaId": "d13af704-11d8-4d40-b739-12f87c58b701",
+      "matched": true,
+      "wikidataId": "Q816420",
+      "label": "Quibdó",
+      "coordinate": "Point(-76.658192 5.692277)",
+      "country": "Colombia"
+    },
+    "6f85c2b6-4250-468b-9bd8-300fd8b451ad": {
+      "musicbrainzAreaId": "6f85c2b6-4250-468b-9bd8-300fd8b451ad",
+      "matched": true,
+      "wikidataId": "Q2841",
+      "label": "Bogotá",
+      "coordinate": "Point(-74.08175 4.60971)",
+      "country": "Colombia"
+    },
+    "1d17f106-1280-4bfa-8809-bb140003f141": {
+      "musicbrainzAreaId": "1d17f106-1280-4bfa-8809-bb140003f141",
+      "matched": true,
+      "wikidataId": "Q81621",
+      "label": "Fort-de-France",
+      "coordinate": "Point(-61.066666666 14.6)",
+      "country": "France"
+    },
+    "c75b683f-3238-4fc8-b5ca-1883ab911561": {
+      "musicbrainzAreaId": "c75b683f-3238-4fc8-b5ca-1883ab911561",
+      "matched": true,
+      "wikidataId": "Q62823",
+      "label": "Barranquilla",
+      "coordinate": "Point(-74.801944444 10.983333333)",
+      "country": "Colombia"
+    },
+    "8e0551f2-95c2-3cc0-a0a9-f2d344f10667": {
+      "musicbrainzAreaId": "8e0551f2-95c2-3cc0-a0a9-f2d344f10667",
+      "matched": true,
+      "wikidataId": "Q79",
+      "label": "Egypt",
+      "coordinate": "Point(29.0 27.0)",
+      "country": "Egypt"
+    },
+    "d9b8719f-d0d2-4e61-bfb1-e3660ad11af9": {
+      "musicbrainzAreaId": "d9b8719f-d0d2-4e61-bfb1-e3660ad11af9",
+      "matched": true,
+      "wikidataId": "Q231331",
+      "label": "Oran Province",
+      "coordinate": "Point(-0.633333333 35.7)",
+      "country": "Algeria"
+    },
+    "9bc4d8b5-baf2-40a5-8335-112ea2343581": {
+      "musicbrainzAreaId": "9bc4d8b5-baf2-40a5-8335-112ea2343581",
+      "matched": true,
+      "wikidataId": "Q129259",
+      "label": "Niš",
+      "coordinate": "Point(21.896111111 43.319166666)",
+      "country": "Serbia"
+    },
+    "424c1b50-57f8-34af-ab97-313e2ad40058": {
+      "musicbrainzAreaId": "424c1b50-57f8-34af-ab97-313e2ad40058",
+      "matched": true,
+      "wikidataId": "Q403",
+      "label": "Serbia",
+      "coordinate": "Point(20.933333333 43.95)",
+      "country": "Serbia"
+    },
+    "f934c8da-e40e-4056-8f8c-212e68fdcaec": {
+      "musicbrainzAreaId": "f934c8da-e40e-4056-8f8c-212e68fdcaec",
+      "matched": true,
+      "wikidataId": "Q1439",
+      "label": "Texas",
+      "coordinate": "Point(-100.0 31.0)",
+      "country": "United States"
+    },
+    "4907f054-6a68-430a-a2d5-3bc86033a90b": {
+      "musicbrainzAreaId": "4907f054-6a68-430a-a2d5-3bc86033a90b",
+      "matched": true,
+      "wikidataId": "Q30906423",
+      "label": "Q30906423",
+      "coordinate": "Point(-75.140555555 10.081388888)",
+      "country": "Colombia"
+    },
+    "311ce77a-605b-4ca6-9b3b-c3f4ddfcbf01": {
+      "musicbrainzAreaId": "311ce77a-605b-4ca6-9b3b-c3f4ddfcbf01",
+      "matched": true,
+      "wikidataId": "Q3718",
+      "label": "Dakar",
+      "coordinate": "Point(-17.432 14.672555555)",
+      "country": "Senegal"
+    },
+    "838e6661-9e03-4765-aad8-158992da2ba1": {
+      "musicbrainzAreaId": "838e6661-9e03-4765-aad8-158992da2ba1",
+      "matched": true,
+      "wikidataId": "Q838112",
+      "label": "Wheeling",
+      "coordinate": "Point(-80.698611111 40.070277777)",
+      "country": "United States"
+    },
+    "8474f16d-03a0-4a09-adf3-df2d1e65ba2f": {
+      "musicbrainzAreaId": "8474f16d-03a0-4a09-adf3-df2d1e65ba2f",
+      "matched": true,
+      "wikidataId": "Q3624",
+      "label": "Addis Ababa",
+      "coordinate": "Point(38.7525 9.035833333)",
+      "country": "Ethiopia"
+    },
+    "96699ab4-4bbf-332e-b037-b0119821f792": {
+      "musicbrainzAreaId": "96699ab4-4bbf-332e-b037-b0119821f792",
+      "matched": true,
+      "wikidataId": "Q115",
+      "label": "Ethiopia",
+      "coordinate": "Point(40.0 9.0)",
+      "country": "Ethiopia"
+    },
+    "6566942e-b773-4496-8029-a8b7b7847b5d": {
+      "musicbrainzAreaId": "6566942e-b773-4496-8029-a8b7b7847b5d",
+      "matched": true,
+      "wikidataId": "Q575315",
+      "label": "Wheaton",
+      "coordinate": "Point(-88.1083648 41.8560731)",
+      "country": "United States"
+    },
+    "f28db098-de95-47e0-a4cb-3b44241d0c7e": {
+      "musicbrainzAreaId": "f28db098-de95-47e0-a4cb-3b44241d0c7e",
+      "matched": true,
+      "wikidataId": "Q147127",
+      "label": "Kingsbury",
+      "coordinate": "Point(-0.2743 51.5826)",
+      "country": "United Kingdom"
+    },
+    "51d34c28-61bf-3d21-849f-7492672a9d44": {
+      "musicbrainzAreaId": "51d34c28-61bf-3d21-849f-7492672a9d44",
+      "matched": true,
+      "wikidataId": "Q213",
+      "label": "Czech Republic",
+      "coordinate": "Point(15.0 50.0)",
+      "country": "Czech Republic"
+    },
+    "2bd8607d-56fe-4fa1-96e3-3badd6a98588": {
+      "musicbrainzAreaId": "2bd8607d-56fe-4fa1-96e3-3badd6a98588",
+      "matched": true,
+      "wikidataId": "Q1486",
+      "label": "Buenos Aires",
+      "coordinate": "Point(-58.381944444 -34.599722222)",
+      "country": "Argentina"
+    },
+    "9c8c3e3a-6d06-4b89-ac76-96aff8687b45": {
+      "musicbrainzAreaId": "9c8c3e3a-6d06-4b89-ac76-96aff8687b45",
+      "matched": true,
+      "wikidataId": "Q133083",
+      "label": "Gauteng",
+      "coordinate": "Point(28.0 -26.0)",
+      "country": "South Africa"
+    },
+    "50cc7852-862e-30ae-aa82-385fe7135b7f": {
+      "musicbrainzAreaId": "50cc7852-862e-30ae-aa82-385fe7135b7f",
+      "matched": true,
+      "wikidataId": "Q258",
+      "label": "South Africa",
+      "coordinate": "Point(24.0 -29.0)",
+      "country": "South Africa"
+    },
+    "eb4a386e-1178-4e3a-a371-30418dd6fd2e": {
+      "musicbrainzAreaId": "eb4a386e-1178-4e3a-a371-30418dd6fd2e",
+      "matched": true,
+      "wikidataId": "Q18426",
+      "label": "The Bronx",
+      "coordinate": "Point(-73.873333333 40.846666666)",
+      "country": "United States"
+    },
+    "ee26e886-87f5-33a2-8e8e-f9591490426d": {
+      "musicbrainzAreaId": "ee26e886-87f5-33a2-8e8e-f9591490426d",
+      "matched": true,
+      "wikidataId": "Q424",
+      "label": "Cambodia",
+      "coordinate": "Point(105.0 12.5)",
+      "country": "Cambodia"
+    },
+    "7c352427-a5b8-4315-9bee-1a76c0184ac7": {
+      "musicbrainzAreaId": "7c352427-a5b8-4315-9bee-1a76c0184ac7",
+      "matched": true,
+      "wikidataId": "Q838791",
+      "label": "Whittier",
+      "coordinate": "Point(-118.024444444 33.965555555)",
+      "country": "United States"
+    },
+    "841c52e6-b273-4cd1-a726-637f99f5ea52": {
+      "musicbrainzAreaId": "841c52e6-b273-4cd1-a726-637f99f5ea52",
+      "matched": true,
+      "wikidataId": "Q167155",
+      "label": "Kalamazoo",
+      "coordinate": "Point(-85.59 42.29)",
+      "country": "United States"
+    },
+    "279c5d9a-0165-493e-bed5-fc691be6a4e4": {
+      "musicbrainzAreaId": "279c5d9a-0165-493e-bed5-fc691be6a4e4",
+      "matched": true,
+      "wikidataId": "Q130191",
+      "label": "Norwich",
+      "coordinate": "Point(1.292777777 52.628611111)",
+      "country": "United Kingdom"
+    },
+    "f9a822ff-adce-434c-9292-a8b6a0a37a8e": {
+      "musicbrainzAreaId": "f9a822ff-adce-434c-9292-a8b6a0a37a8e",
+      "matched": true,
+      "wikidataId": "Q406",
+      "label": "Istanbul",
+      "coordinate": "Point(28.960277777 41.01)",
+      "country": "Turkey"
+    },
+    "d3be28b4-41f7-3752-8a05-ed45e1d1e492": {
+      "musicbrainzAreaId": "d3be28b4-41f7-3752-8a05-ed45e1d1e492",
+      "matched": true,
+      "wikidataId": "Q43",
+      "label": "Turkey",
+      "coordinate": "Point(36.0 39.0)",
+      "country": "Turkey"
+    },
+    "f3a30678-3d23-3f42-8056-d32ebe58c66d": {
+      "musicbrainzAreaId": "f3a30678-3d23-3f42-8056-d32ebe58c66d",
+      "matched": true,
+      "wikidataId": "Q1019",
+      "label": "Madagascar",
+      "coordinate": "Point(47.0 -20.0)",
+      "country": "Madagascar"
+    },
+    "781b0c54-3d54-362d-a941-8a617def4992": {
+      "musicbrainzAreaId": "781b0c54-3d54-362d-a941-8a617def4992",
+      "matched": true,
+      "wikidataId": "Q45",
+      "label": "Portugal",
+      "coordinate": "Point(-9.183333333 38.7)",
+      "country": "Portugal"
+    },
+    "16560d3e-358b-4869-8a6d-727db2ee7b69": {
+      "musicbrainzAreaId": "16560d3e-358b-4869-8a6d-727db2ee7b69",
+      "matched": true,
+      "wikidataId": "Q1794",
+      "label": "Frankfurt",
+      "coordinate": "Point(8.682222222 50.110555555)",
+      "country": "Germany"
+    },
+    "61ed84b8-5a10-30a7-8376-ccd51801d6d1": {
+      "musicbrainzAreaId": "61ed84b8-5a10-30a7-8376-ccd51801d6d1",
+      "matched": true,
+      "wikidataId": "Q218",
+      "label": "Romania",
+      "coordinate": "Point(25.0 46.0)",
+      "country": "Romania"
+    },
+    "691e8ad6-2cc8-3678-8495-1ac96bbede55": {
+      "musicbrainzAreaId": "691e8ad6-2cc8-3678-8495-1ac96bbede55",
+      "matched": true,
+      "wikidataId": "Q954",
+      "label": "Zimbabwe",
+      "coordinate": "Point(30.0 -19.0)",
+      "country": "Zimbabwe"
+    },
+    "818db98d-8d9d-404b-adc1-caccc79652aa": {
+      "musicbrainzAreaId": "818db98d-8d9d-404b-adc1-caccc79652aa",
+      "matched": true,
+      "wikidataId": "Q2449",
+      "label": "Mogadishu",
+      "coordinate": "Point(45.341944444 2.039166666)",
+      "country": "Somalia"
+    },
+    "b84d8617-249a-3a06-849d-fc5c25e2249b": {
+      "musicbrainzAreaId": "b84d8617-249a-3a06-849d-fc5c25e2249b",
+      "matched": true,
+      "wikidataId": "Q1028",
+      "label": "Morocco",
+      "coordinate": "Point(-6.0 32.0)",
+      "country": "Morocco"
+    },
+    "9d10e6ed-6b13-44d8-ba8d-f217094f295b": {
+      "musicbrainzAreaId": "9d10e6ed-6b13-44d8-ba8d-f217094f295b",
+      "matched": true,
+      "wikidataId": "Q1511813",
+      "label": "Lower East Side",
+      "coordinate": "Point(-73.989722 40.717222)",
+      "country": "United States"
+    },
+    "927c394e-4c75-46d7-980f-cd7a6af2ca33": {
+      "musicbrainzAreaId": "927c394e-4c75-46d7-980f-cd7a6af2ca33",
+      "matched": true,
+      "wikidataId": "Q2868",
+      "label": "Lima",
+      "coordinate": "Point(-77.0375 -12.06)",
+      "country": "Peru"
+    },
+    "719f6082-95c7-3dd5-9503-e143010a6cc1": {
+      "musicbrainzAreaId": "719f6082-95c7-3dd5-9503-e143010a6cc1",
+      "matched": true,
+      "wikidataId": "Q419",
+      "label": "Peru",
+      "coordinate": "Point(-76.0 -9.4)",
+      "country": "Peru"
+    },
+    "41d328a3-01da-35c2-b26e-69c56d7121d1": {
+      "musicbrainzAreaId": "41d328a3-01da-35c2-b26e-69c56d7121d1",
+      "matched": true,
+      "wikidataId": "Q1011",
+      "label": "Cape Verde",
+      "coordinate": "Point(-23.7 15.3)",
+      "country": "Cape Verde"
+    },
+    "21e463ed-4726-4e15-bb48-848ca5386486": {
+      "musicbrainzAreaId": "21e463ed-4726-4e15-bb48-848ca5386486",
+      "matched": true,
+      "wikidataId": "Q1012971",
+      "label": "Lahaina",
+      "coordinate": "Point(-156.674722222 20.886111111)",
+      "country": "United States"
+    },
+    "1b420c08-51a5-4bdd-9b0e-cd601703d20b": {
+      "musicbrainzAreaId": "1b420c08-51a5-4bdd-9b0e-cd601703d20b",
+      "matched": true,
+      "wikidataId": "Q782",
+      "label": "Hawaii",
+      "coordinate": "Point(-158.0 21.5)",
+      "country": "United States"
+    },
+    "a6baeb59-8829-4926-82b1-09803dd7bba2": {
+      "musicbrainzAreaId": "a6baeb59-8829-4926-82b1-09803dd7bba2",
+      "matched": true,
+      "wikidataId": "Q646225",
+      "label": "Woking",
+      "coordinate": "Point(-0.561111111 51.316111111)",
+      "country": "United Kingdom"
+    },
+    "8cb8c2c1-bb8f-4317-af27-ae445938f2af": {
+      "musicbrainzAreaId": "8cb8c2c1-bb8f-4317-af27-ae445938f2af",
+      "matched": true,
+      "wikidataId": "Q338988",
+      "label": "Kidal Region",
+      "coordinate": "Point(0.746944444 19.973333333)",
+      "country": "Mali"
+    },
+    "c35e6d5e-9011-32e5-a23f-9e7639b7350c": {
+      "musicbrainzAreaId": "c35e6d5e-9011-32e5-a23f-9e7639b7350c",
+      "matched": true,
+      "wikidataId": "Q912",
+      "label": "Mali",
+      "coordinate": "Point(-4.0 17.0)",
+      "country": "Mali"
+    },
+    "222c38fa-5668-4f67-98c4-f619f0670cf8": {
+      "musicbrainzAreaId": "222c38fa-5668-4f67-98c4-f619f0670cf8",
+      "matched": true,
+      "wikidataId": "Q856306",
+      "label": "Vladičin Han",
+      "coordinate": "Point(22.059166666 42.707777777)",
+      "country": "Serbia"
+    },
+    "c48303a5-857b-4ffb-ad0c-169eee385751": {
+      "musicbrainzAreaId": "c48303a5-857b-4ffb-ad0c-169eee385751",
+      "matched": true,
+      "wikidataId": "Q38545",
+      "label": "Adana",
+      "coordinate": "Point(35.3252861 36.9863599)",
+      "country": "Turkey"
+    },
+    "783981f6-86e6-437e-849a-b95bb9039336": {
+      "musicbrainzAreaId": "783981f6-86e6-437e-849a-b95bb9039336",
+      "matched": true,
+      "wikidataId": "Q170036",
+      "label": "Kyiv Oblast",
+      "coordinate": "Point(30.5 50.25)",
+      "country": "Ukraine"
+    },
+    "9ddf829c-48ee-4457-a80d-f7370f24f2ec": {
+      "musicbrainzAreaId": "9ddf829c-48ee-4457-a80d-f7370f24f2ec",
+      "matched": true,
+      "wikidataId": "Q2807",
+      "label": "Madrid",
+      "coordinate": "Point(-3.703333333 40.416944444)",
+      "country": "Spain"
+    },
+    "74c0ac9d-cda7-38be-a0c9-43611c5779dc": {
+      "musicbrainzAreaId": "74c0ac9d-cda7-38be-a0c9-43611c5779dc",
+      "matched": true,
+      "wikidataId": "Q785",
+      "label": "Jersey",
+      "coordinate": "Point(-2.11 49.19)",
+      "country": "United Kingdom"
+    },
+    "b326c46a-c822-41b2-badc-53b8fcb902a0": {
+      "musicbrainzAreaId": "b326c46a-c822-41b2-badc-53b8fcb902a0",
+      "matched": true,
+      "wikidataId": "Q488912",
+      "label": "Teton County",
+      "coordinate": "Point(-110.57 43.92)",
+      "country": "United States"
+    },
+    "eca79b55-a6c4-4078-a383-8353271ee81e": {
+      "musicbrainzAreaId": "eca79b55-a6c4-4078-a383-8353271ee81e",
+      "matched": true,
+      "wikidataId": "Q1715",
+      "label": "Hanover",
+      "coordinate": "Point(9.738611111 52.374444444)",
+      "country": "Germany"
+    },
+    "3c5a0506-d852-4e96-8d1e-d8126328f3be": {
+      "musicbrainzAreaId": "3c5a0506-d852-4e96-8d1e-d8126328f3be",
+      "matched": true,
+      "wikidataId": "Q34404",
+      "label": "New Orleans",
+      "coordinate": "Point(-90.078333333 29.976111111)",
+      "country": "United States"
+    },
+    "4e08aa8a-2570-4316-8bcd-a3a10488afd2": {
+      "musicbrainzAreaId": "4e08aa8a-2570-4316-8bcd-a3a10488afd2",
+      "matched": true,
+      "wikidataId": "Q5818",
+      "label": "Córdoba",
+      "coordinate": "Point(-4.78 37.89)",
+      "country": "Spain"
+    },
+    "9b9dd8cc-0ed0-4b29-8b50-90c1a61e16ae": {
+      "musicbrainzAreaId": "9b9dd8cc-0ed0-4b29-8b50-90c1a61e16ae",
+      "matched": true,
+      "wikidataId": "Q2090",
+      "label": "Nuremberg",
+      "coordinate": "Point(11.0775 49.453888888)",
+      "country": "Germany"
+    },
+    "c5b7a516-8eab-4a42-86cb-95f7a7e419b0": {
+      "musicbrainzAreaId": "c5b7a516-8eab-4a42-86cb-95f7a7e419b0",
+      "matched": true,
+      "wikidataId": "Q1131523",
+      "label": "Copperbelt Province",
+      "coordinate": "Point(28.0 -13.0)",
+      "country": "Zambia"
+    },
+    "d662dd74-1fc1-3e36-b427-bbbe29684618": {
+      "musicbrainzAreaId": "d662dd74-1fc1-3e36-b427-bbbe29684618",
+      "matched": true,
+      "wikidataId": "Q953",
+      "label": "Zambia",
+      "coordinate": "Point(28.0 -14.0)",
+      "country": "Zambia"
+    },
+    "f9719692-c39a-4d9c-bf8c-dd4035b09534": {
+      "musicbrainzAreaId": "f9719692-c39a-4d9c-bf8c-dd4035b09534",
+      "matched": true,
+      "wikidataId": "Q484678",
+      "label": "Berkeley",
+      "coordinate": "Point(-122.268055555 37.870277777)",
+      "country": "United States"
+    },
+    "09acfaa4-b3a9-4ed1-8de0-a7333fbcce09": {
+      "musicbrainzAreaId": "09acfaa4-b3a9-4ed1-8de0-a7333fbcce09",
+      "matched": true,
+      "wikidataId": "Q631610",
+      "label": "Laâyoune Province",
+      "coordinate": "Point(-13.203592 27.156539)",
+      "country": "Morocco"
+    },
+    "743523d6-c574-454e-9079-de113e30452a": {
+      "musicbrainzAreaId": "743523d6-c574-454e-9079-de113e30452a",
+      "matched": true,
+      "wikidataId": "Q8818",
+      "label": "Valencia",
+      "coordinate": "Point(-0.376388888 39.47)",
+      "country": "Spain"
+    },
+    "a510b9b1-404d-4e23-8db8-0f6585909ed8": {
+      "musicbrainzAreaId": "a510b9b1-404d-4e23-8db8-0f6585909ed8",
+      "matched": true,
+      "wikidataId": "Q176",
+      "label": "Quebec",
+      "coordinate": "Point(-72.0 52.0)",
+      "country": "Canada"
+    },
+    "5643e356-bcd4-42ae-8e68-b75f88c347ec": {
+      "musicbrainzAreaId": "5643e356-bcd4-42ae-8e68-b75f88c347ec",
+      "matched": true,
+      "wikidataId": "Q123766",
+      "label": "Charlottesville",
+      "coordinate": "Point(-78.479 38.0299)",
+      "country": "United States"
+    },
+    "02e01cf9-b0ed-4286-ac6d-16989f92ced6": {
+      "musicbrainzAreaId": "02e01cf9-b0ed-4286-ac6d-16989f92ced6",
+      "matched": true,
+      "wikidataId": "Q1370",
+      "label": "Virginia",
+      "coordinate": "Point(-79.0 37.5)",
+      "country": "United States"
+    },
+    "8dc97297-ac95-4d33-82bc-e07fab26fb5f": {
+      "musicbrainzAreaId": "8dc97297-ac95-4d33-82bc-e07fab26fb5f",
+      "matched": true,
+      "wikidataId": "Q1490",
+      "label": "Tokyo",
+      "coordinate": "Point(139.691666666 35.689444444)",
+      "country": "Japan"
+    },
+    "e68879f9-bd95-41ff-96ba-c082ff37cc74": {
+      "musicbrainzAreaId": "e68879f9-bd95-41ff-96ba-c082ff37cc74",
+      "matched": true,
+      "wikidataId": "Q23197",
+      "label": "Nashville",
+      "coordinate": "Point(-86.774444444 36.162222222)",
+      "country": "United States"
+    },
+    "8c2196d9-b7be-4051-90d1-ac81895355f1": {
+      "musicbrainzAreaId": "8c2196d9-b7be-4051-90d1-ac81895355f1",
+      "matched": true,
+      "wikidataId": "Q1204",
+      "label": "Illinois",
+      "coordinate": "Point(-89.250277777 40.000277777)",
+      "country": "United States"
+    },
+    "c6b4c765-3cbf-4919-9de7-c3891099e756": {
+      "musicbrainzAreaId": "c6b4c765-3cbf-4919-9de7-c3891099e756",
+      "matched": true,
+      "wikidataId": "Q34109",
+      "label": "Fargo",
+      "coordinate": "Point(-96.789444444 46.877222222)",
+      "country": "United States"
+    },
+    "a647136e-1680-4456-bd3a-750752331141": {
+      "musicbrainzAreaId": "a647136e-1680-4456-bd3a-750752331141",
+      "matched": true,
+      "wikidataId": "Q16565",
+      "label": "Charlotte",
+      "coordinate": "Point(-80.843333333 35.226944444)",
+      "country": "United States"
+    },
+    "e0343b8e-1eff-47ee-a64f-2e3df0d8e8e8": {
+      "musicbrainzAreaId": "e0343b8e-1eff-47ee-a64f-2e3df0d8e8e8",
+      "matched": true,
+      "wikidataId": "Q171224",
+      "label": "Eugene",
+      "coordinate": "Point(-123.0925 44.052222222)",
+      "country": "United States"
+    },
+    "c0e87f93-f541-480a-b6d2-991f6ea90ee2": {
+      "musicbrainzAreaId": "c0e87f93-f541-480a-b6d2-991f6ea90ee2",
+      "matched": true,
+      "wikidataId": "Q49147",
+      "label": "New Bedford",
+      "coordinate": "Point(-70.934722222 41.636111111)",
+      "country": "United States"
+    },
+    "759f9567-9107-40ef-a825-e57824a62e70": {
+      "musicbrainzAreaId": "759f9567-9107-40ef-a825-e57824a62e70",
+      "matched": true,
+      "wikidataId": "Q38022",
+      "label": "St. Louis",
+      "coordinate": "Point(-90.199444444 38.626388888)",
+      "country": "United States"
+    },
+    "ce04f12a-971a-4242-be9e-c3c6f5cf58ea": {
+      "musicbrainzAreaId": "ce04f12a-971a-4242-be9e-c3c6f5cf58ea",
+      "matched": true,
+      "wikidataId": "Q16183",
+      "label": "Province of Genoa",
+      "coordinate": "Point(8.932661111 44.411155555)",
+      "country": "Italy"
+    },
+    "b68684c2-6cc9-4d81-bed4-553407a5b6c1": {
+      "musicbrainzAreaId": "b68684c2-6cc9-4d81-bed4-553407a5b6c1",
+      "matched": true,
+      "wikidataId": "Q332113",
+      "label": "Kayes Region",
+      "coordinate": "Point(-10.568611111 14.115)",
+      "country": "Mali"
+    },
+    "7dc47ab9-c7ff-4282-97e0-bd53db80ff9d": {
+      "musicbrainzAreaId": "7dc47ab9-c7ff-4282-97e0-bd53db80ff9d",
+      "matched": true,
+      "wikidataId": "Q5112",
+      "label": "Adelaide",
+      "coordinate": "Point(138.6 -34.9275)",
+      "country": "Australia"
+    },
+    "1c4af475-ac4e-435c-b27e-1a8e91977a97": {
+      "musicbrainzAreaId": "1c4af475-ac4e-435c-b27e-1a8e91977a97",
+      "matched": true,
+      "wikidataId": "Q40209",
+      "label": "Long Beach",
+      "coordinate": "Point(-73.66775 40.58605)",
+      "country": "United States"
+    },
+    "a36544c1-cb40-4f44-9e0e-7a5a69e403a8": {
+      "musicbrainzAreaId": "a36544c1-cb40-4f44-9e0e-7a5a69e403a8",
+      "matched": true,
+      "wikidataId": "Q1408",
+      "label": "New Jersey",
+      "coordinate": "Point(-74.5 40.0)",
+      "country": "United States"
+    },
+    "93e36643-acf7-4fb4-8760-de9d6bebfe4c": {
+      "musicbrainzAreaId": "93e36643-acf7-4fb4-8760-de9d6bebfe4c",
+      "matched": true,
+      "wikidataId": "Q9681",
+      "label": "Hertford",
+      "coordinate": "Point(-0.078 51.795)",
+      "country": "United Kingdom"
+    },
+    "0032e6f0-a578-4836-91dd-a734158392f8": {
+      "musicbrainzAreaId": "0032e6f0-a578-4836-91dd-a734158392f8",
+      "matched": true,
+      "wikidataId": "Q161176",
+      "label": "Fukushima",
+      "coordinate": "Point(140.474722222 37.760805555)",
+      "country": "Japan"
+    },
+    "b4e9352c-8edf-4911-8fa3-e852afa30501": {
+      "musicbrainzAreaId": "b4e9352c-8edf-4911-8fa3-e852afa30501",
+      "matched": true,
+      "wikidataId": "Q3141",
+      "label": "Melbourne",
+      "coordinate": "Point(144.963055555 -37.814166666)",
+      "country": "Australia"
+    },
+    "d19c003c-190e-4219-bebc-5bb1bc4ca4f9": {
+      "musicbrainzAreaId": "d19c003c-190e-4219-bebc-5bb1bc4ca4f9",
+      "matched": true,
+      "wikidataId": "Q2725722",
+      "label": "Walterboro",
+      "coordinate": "Point(-80.666111111 32.904166666)",
+      "country": "United States"
+    },
+    "b21e4552-050d-4c0c-ac5a-031108eb0c47": {
+      "musicbrainzAreaId": "b21e4552-050d-4c0c-ac5a-031108eb0c47",
+      "matched": true,
+      "wikidataId": "Q43668",
+      "label": "Louisville",
+      "coordinate": "Point(-85.751388888 38.256111111)",
+      "country": "United States"
+    },
+    "aa03e165-4c73-4959-91c0-a99f9fa8ecab": {
+      "musicbrainzAreaId": "aa03e165-4c73-4959-91c0-a99f9fa8ecab",
+      "matched": true,
+      "wikidataId": "Q8684",
+      "label": "Seoul",
+      "coordinate": "Point(126.99 37.56)",
+      "country": "South Korea"
+    },
+    "b9f7d640-46e8-313e-b158-ded6d18593b3": {
+      "musicbrainzAreaId": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+      "matched": true,
+      "wikidataId": "Q884",
+      "label": "South Korea",
+      "coordinate": "Point(128.0 36.0)",
+      "country": "South Korea"
+    },
+    "8775329a-73e1-4770-8c4c-95d0430cf4d2": {
+      "musicbrainzAreaId": "8775329a-73e1-4770-8c4c-95d0430cf4d2",
+      "matched": true,
+      "wikidataId": "Q1164",
+      "label": "Assam",
+      "coordinate": "Point(93.0 26.0)",
+      "country": "India"
+    },
+    "afaa40c1-2e11-4a9b-9a33-ff0603e3e312": {
+      "musicbrainzAreaId": "afaa40c1-2e11-4a9b-9a33-ff0603e3e312",
+      "matched": true,
+      "wikidataId": "Q43421",
+      "label": "Richmond",
+      "coordinate": "Point(-77.436666666 37.540833333)",
+      "country": "United States"
+    },
+    "40d758a4-b7c2-40f3-b439-5efbd2a3b038": {
+      "musicbrainzAreaId": "40d758a4-b7c2-40f3-b439-5efbd2a3b038",
+      "matched": true,
+      "wikidataId": "Q23154",
+      "label": "Bristol",
+      "coordinate": "Point(-2.5975 51.453611111)",
+      "country": "United Kingdom"
+    },
+    "148f3952-2151-4a4c-a859-eb850acf248f": {
+      "musicbrainzAreaId": "148f3952-2151-4a4c-a859-eb850acf248f",
+      "matched": true,
+      "wikidataId": "Q648501",
+      "label": "Asheville",
+      "coordinate": "Point(-82.551944444 35.595555555)",
+      "country": "United States"
+    },
+    "6db294a7-1e8d-4d2f-956a-3158aa0a7afa": {
+      "musicbrainzAreaId": "6db294a7-1e8d-4d2f-956a-3158aa0a7afa",
+      "matched": true,
+      "wikidataId": "Q328615",
+      "label": "Okinawa",
+      "coordinate": "Point(127.805722222 26.334277777)",
+      "country": "Japan"
+    },
+    "3c7e5164-3ec0-4c65-bf31-2f3040b63c10": {
+      "musicbrainzAreaId": "3c7e5164-3ec0-4c65-bf31-2f3040b63c10",
+      "matched": true,
+      "wikidataId": "Q12429",
+      "label": "Houghton",
+      "coordinate": "Point(-88.569444444 47.121111111)",
+      "country": "United States"
+    },
+    "9db474c6-44bb-4de8-b3e6-6b8bde8100f5": {
+      "musicbrainzAreaId": "9db474c6-44bb-4de8-b3e6-6b8bde8100f5",
+      "matched": true,
+      "wikidataId": "Q1952253",
+      "label": "Mullumbimby",
+      "coordinate": "Point(153.5 -28.55)",
+      "country": "Australia"
+    },
+    "02f88e92-1be2-48e7-b77b-7864cda644a6": {
+      "musicbrainzAreaId": "02f88e92-1be2-48e7-b77b-7864cda644a6",
+      "matched": true,
+      "wikidataId": "Q105037",
+      "label": "Callao",
+      "coordinate": "Point(-77.139166666 -12.052222222)",
+      "country": "Peru"
+    },
+    "75d8fdcf-03e9-43d9-9399-131b8e118b0b": {
+      "musicbrainzAreaId": "75d8fdcf-03e9-43d9-9399-131b8e118b0b",
+      "matched": true,
+      "wikidataId": "Q1400",
+      "label": "Pennsylvania",
+      "coordinate": "Point(-77.5 41.0)",
+      "country": "United States"
+    },
+    "6c0adac7-8e77-4104-9eaa-ff6359a9ee6b": {
+      "musicbrainzAreaId": "6c0adac7-8e77-4104-9eaa-ff6359a9ee6b",
+      "matched": true,
+      "wikidataId": "Q3926",
+      "label": "Pretoria",
+      "coordinate": "Point(28.188055555 -25.746388888)",
+      "country": "South Africa"
+    },
+    "76325eca-c006-429f-93bb-d499ae80916c": {
+      "musicbrainzAreaId": "76325eca-c006-429f-93bb-d499ae80916c",
+      "matched": true,
+      "wikidataId": "Q205679",
+      "label": "London Borough of Hackney",
+      "coordinate": "Point(-0.0575 51.544722222)",
+      "country": "United Kingdom"
+    },
+    "f95f42b0-59a6-410d-a08e-3db77f4aea8a": {
+      "musicbrainzAreaId": "f95f42b0-59a6-410d-a08e-3db77f4aea8a",
+      "matched": true,
+      "wikidataId": "Q16553",
+      "label": "San Jose",
+      "coordinate": "Point(-121.872777777 37.304166666)",
+      "country": "United States"
+    },
+    "cf48f4b4-28f0-39ab-9104-650324a1d1c8": {
+      "musicbrainzAreaId": "cf48f4b4-28f0-39ab-9104-650324a1d1c8",
+      "matched": true,
+      "wikidataId": "Q117",
+      "label": "Ghana",
+      "coordinate": "Point(-1.0232 7.9465)",
+      "country": "Ghana"
+    },
+    "c2d96f61-75a4-4375-aed5-6aacb0b6326a": {
+      "musicbrainzAreaId": "c2d96f61-75a4-4375-aed5-6aacb0b6326a",
+      "matched": true,
+      "wikidataId": "Q16563",
+      "label": "Memphis",
+      "coordinate": "Point(-90.051944444 35.146111111)",
+      "country": "United States"
+    },
+    "fce9c7ad-fedb-45d8-83c7-236865aaf0b5": {
+      "musicbrainzAreaId": "fce9c7ad-fedb-45d8-83c7-236865aaf0b5",
+      "matched": false
+    },
+    "856cef35-bde5-403d-88ed-ef179c158d5f": {
+      "musicbrainzAreaId": "856cef35-bde5-403d-88ed-ef179c158d5f",
+      "matched": true,
+      "wikidataId": "Q202973",
+      "label": "Kingston",
+      "coordinate": "Point(-76.481111111 44.230555555)",
+      "country": "Canada"
+    },
+    "14ec3f2c-71e6-420f-bba9-0c3825a70530": {
+      "musicbrainzAreaId": "14ec3f2c-71e6-420f-bba9-0c3825a70530",
+      "matched": true,
+      "wikidataId": "Q7849843",
+      "label": "Tsolo",
+      "coordinate": "Point(28.75 -31.3167)",
+      "country": "South Africa"
+    },
+    "4ce9cd1c-aaef-48a7-ab3d-d57b7f43d349": {
+      "musicbrainzAreaId": "4ce9cd1c-aaef-48a7-ab3d-d57b7f43d349",
+      "matched": true,
+      "wikidataId": "Q994457",
+      "label": "Castle Rock",
+      "coordinate": "Point(-104.856 39.3722)",
+      "country": "United States"
+    },
+    "c920948b-83e3-40b7-8fe9-9ab5abaac55b": {
+      "musicbrainzAreaId": "c920948b-83e3-40b7-8fe9-9ab5abaac55b",
+      "matched": true,
+      "wikidataId": "Q16555",
+      "label": "Houston",
+      "coordinate": "Point(-95.383055555 29.762777777)",
+      "country": "United States"
+    },
+    "e03bf3ef-3e0b-4f51-9600-a161cbd5fb75": {
+      "musicbrainzAreaId": "e03bf3ef-3e0b-4f51-9600-a161cbd5fb75",
+      "matched": true,
+      "wikidataId": "Q70",
+      "label": "Bern",
+      "coordinate": "Point(7.44743 46.94798)",
+      "country": "Switzerland"
+    },
+    "20592ccf-e4f1-41f9-bd36-3e2e3961b1a1": {
+      "musicbrainzAreaId": "20592ccf-e4f1-41f9-bd36-3e2e3961b1a1",
+      "matched": true,
+      "wikidataId": "Q1622565",
+      "label": "Lanús",
+      "coordinate": "Point(-58.4 -34.7)",
+      "country": "Argentina"
+    },
+    "fa7e93b2-26da-4b56-a751-b17ac88021bd": {
+      "musicbrainzAreaId": "fa7e93b2-26da-4b56-a751-b17ac88021bd",
+      "matched": true,
+      "wikidataId": "Q623765",
+      "label": "Rugby",
+      "coordinate": "Point(-1.26 52.37)",
+      "country": "United Kingdom"
+    },
+    "06f2f76c-f409-4b89-bacf-4d7a5d75941b": {
+      "musicbrainzAreaId": "06f2f76c-f409-4b89-bacf-4d7a5d75941b",
+      "matched": true,
+      "wikidataId": "Q569676",
+      "label": "Sankt Wendel",
+      "coordinate": "Point(7.166666666 49.466666666)",
+      "country": "Germany"
+    },
+    "66ae1ad4-d9df-4213-9447-14eb1298700d": {
+      "musicbrainzAreaId": "66ae1ad4-d9df-4213-9447-14eb1298700d",
+      "matched": true,
+      "wikidataId": "Q8810",
+      "label": "Granada",
+      "coordinate": "Point(-3.6 37.175)",
+      "country": "Spain"
+    },
+    "454b917f-9b5f-4892-b313-47153495b690": {
+      "musicbrainzAreaId": "454b917f-9b5f-4892-b313-47153495b690",
+      "matched": true,
+      "wikidataId": "Q654308",
+      "label": "Arvika",
+      "coordinate": "Point(12.592916666 59.658)",
+      "country": "Sweden"
+    },
+    "bcb6ca5f-9f42-4de1-ab06-57d29f526a6f": {
+      "musicbrainzAreaId": "bcb6ca5f-9f42-4de1-ab06-57d29f526a6f",
+      "matched": true,
+      "wikidataId": "Q3876",
+      "label": "Lilongwe",
+      "coordinate": "Point(33.768055555 -13.986388888)",
+      "country": "Malawi"
+    },
+    "5c201332-16b1-415f-af5a-b32cc12dc3cf": {
+      "musicbrainzAreaId": "5c201332-16b1-415f-af5a-b32cc12dc3cf",
+      "matched": true,
+      "wikidataId": "Q211907",
+      "label": "Slough",
+      "coordinate": "Point(-0.593055555 51.509722222)",
+      "country": "United Kingdom"
+    },
+    "aab979a4-b106-4baa-a4a3-fc45f775cff9": {
+      "musicbrainzAreaId": "aab979a4-b106-4baa-a4a3-fc45f775cff9",
+      "matched": true,
+      "wikidataId": "Q6225",
+      "label": "Coventry",
+      "coordinate": "Point(-1.516666666 52.416666666)",
+      "country": "United Kingdom"
+    },
+    "b37e9d2b-c1c8-431b-a260-3a3ca21fcb1b": {
+      "musicbrainzAreaId": "b37e9d2b-c1c8-431b-a260-3a3ca21fcb1b",
+      "matched": true,
+      "wikidataId": "Q33935",
+      "label": "Tel Aviv",
+      "coordinate": "Point(34.78 32.08)",
+      "country": "Israel"
+    },
+    "03691455-bb46-37e3-91d2-cb064a35ffcc": {
+      "musicbrainzAreaId": "03691455-bb46-37e3-91d2-cb064a35ffcc",
+      "matched": true,
+      "wikidataId": "Q801",
+      "label": "Israel",
+      "coordinate": "Point(35.0 31.0)",
+      "country": "Israel"
+    },
+    "6658f787-692d-417f-852c-dcca728d5849": {
+      "musicbrainzAreaId": "6658f787-692d-417f-852c-dcca728d5849",
+      "matched": true,
+      "wikidataId": "Q23436",
+      "label": "Edinburgh",
+      "coordinate": "Point(-3.189166666 55.953333333)",
+      "country": "United Kingdom"
+    },
+    "8138206e-5786-3f86-a53b-19a7303e7419": {
+      "musicbrainzAreaId": "8138206e-5786-3f86-a53b-19a7303e7419",
+      "matched": true,
+      "wikidataId": "Q822",
+      "label": "Lebanon",
+      "coordinate": "Point(35.766667 33.833333)",
+      "country": "Lebanon"
+    },
+    "6d26cbd7-ae74-45b9-b0ec-fcb92f9d4a5b": {
+      "musicbrainzAreaId": "6d26cbd7-ae74-45b9-b0ec-fcb92f9d4a5b",
+      "matched": true,
+      "wikidataId": "Q42824",
+      "label": "Mato Grosso",
+      "coordinate": "Point(-56.316666666 -12.833333333)",
+      "country": "Brazil"
+    },
+    "8293dc49-e4e1-4d29-8395-14fe2500c7ae": {
+      "musicbrainzAreaId": "8293dc49-e4e1-4d29-8395-14fe2500c7ae",
+      "matched": true,
+      "wikidataId": "Q43301",
+      "label": "Fresno",
+      "coordinate": "Point(-119.792222222 36.781666666)",
+      "country": "United States"
+    },
+    "8ec207ef-cfdd-416e-86a6-cfc597eadd0c": {
+      "musicbrainzAreaId": "8ec207ef-cfdd-416e-86a6-cfc597eadd0c",
+      "matched": true,
+      "wikidataId": "Q1510465",
+      "label": "Norwich",
+      "coordinate": "Point(-72.30787 43.71535)",
+      "country": "United States"
+    },
+    "f80d529e-f242-46ef-a090-d193ed23075f": {
+      "musicbrainzAreaId": "f80d529e-f242-46ef-a090-d193ed23075f",
+      "matched": true,
+      "wikidataId": "Q585",
+      "label": "Oslo",
+      "coordinate": "Point(10.738888888 59.913333333)",
+      "country": "Norway"
+    },
+    "6743d351-6f37-3049-9724-5041161fff4d": {
+      "musicbrainzAreaId": "6743d351-6f37-3049-9724-5041161fff4d",
+      "matched": true,
+      "wikidataId": "Q20",
+      "label": "Norway",
+      "coordinate": "Point(10.683333333 59.933333333)",
+      "country": "Norway"
+    },
+    "e5936529-76b1-449e-a2e9-6ed98fe8d0d9": {
+      "musicbrainzAreaId": "e5936529-76b1-449e-a2e9-6ed98fe8d0d9",
+      "matched": true,
+      "wikidataId": "Q23337",
+      "label": "Salt Lake City",
+      "coordinate": "Point(-111.883333333 40.75)",
+      "country": "United States"
+    },
+    "03a6d664-6d79-42e3-bb8a-c48aef1dcc2b": {
+      "musicbrainzAreaId": "03a6d664-6d79-42e3-bb8a-c48aef1dcc2b",
+      "matched": true,
+      "wikidataId": "Q1479",
+      "label": "Bordeaux",
+      "coordinate": "Point(-0.579444444 44.837777777)",
+      "country": "France"
+    },
+    "d719f370-8e55-40e9-b11b-9aaee6b6e709": {
+      "musicbrainzAreaId": "d719f370-8e55-40e9-b11b-9aaee6b6e709",
+      "matched": true,
+      "wikidataId": "Q6723262",
+      "label": "Maces Spring",
+      "coordinate": "Point(-82.4028 36.6722)",
+      "country": "United States"
+    },
+    "a1411661-be21-4290-8dc1-50f3d8e3ea67": {
+      "musicbrainzAreaId": "a1411661-be21-4290-8dc1-50f3d8e3ea67",
+      "matched": true,
+      "wikidataId": "Q18094",
+      "label": "Honolulu",
+      "coordinate": "Point(-157.857222222 21.304722222)",
+      "country": "United States"
+    },
+    "bed193ed-f886-4041-877a-2c9e64f9ab88": {
+      "musicbrainzAreaId": "bed193ed-f886-4041-877a-2c9e64f9ab88",
+      "matched": true,
+      "wikidataId": "Q744948",
+      "label": "New Rochelle",
+      "coordinate": "Point(-73.781944444 40.908611111)",
+      "country": "United States"
+    },
+    "e1c1215f-dcc0-35b4-b840-d2ca2151593b": {
+      "musicbrainzAreaId": "e1c1215f-dcc0-35b4-b840-d2ca2151593b",
+      "matched": true,
+      "wikidataId": "Q191",
+      "label": "Estonia",
+      "coordinate": "Point(26.0 59.0)",
+      "country": "Estonia"
+    },
+    "a40df4f9-0d3a-46aa-adcb-0bd16aaef22a": {
+      "musicbrainzAreaId": "a40df4f9-0d3a-46aa-adcb-0bd16aaef22a",
+      "matched": true,
+      "wikidataId": "Q49156",
+      "label": "Gloucester",
+      "coordinate": "Point(-70.666666666 42.616666666)",
+      "country": "United States"
+    },
+    "1cb54808-d67d-4c67-9926-44ac0f7e3361": {
+      "musicbrainzAreaId": "1cb54808-d67d-4c67-9926-44ac0f7e3361",
+      "matched": true,
+      "wikidataId": "Q1020317",
+      "label": "Port Isaac",
+      "coordinate": "Point(-4.8312 50.5935)",
+      "country": "United Kingdom"
+    },
+    "03d7eb23-c924-4e46-af72-a45f6ee04c8b": {
+      "musicbrainzAreaId": "03d7eb23-c924-4e46-af72-a45f6ee04c8b",
+      "matched": true,
+      "wikidataId": "Q23148",
+      "label": "Q23148",
+      "coordinate": "Point(-4.9 50.3)",
+      "country": "United Kingdom"
+    },
+    "00ed07a5-acd7-4217-a37a-72ebf08349b6": {
+      "musicbrainzAreaId": "00ed07a5-acd7-4217-a37a-72ebf08349b6",
+      "matched": true,
+      "wikidataId": "Q1721",
+      "label": "Wiesbaden",
+      "coordinate": "Point(8.24 50.0825)",
+      "country": "Germany"
+    },
+    "6833b340-b82b-4ce6-9434-dad8da899c28": {
+      "musicbrainzAreaId": "6833b340-b82b-4ce6-9434-dad8da899c28",
+      "matched": true,
+      "wikidataId": "Q49258",
+      "label": "Colorado Springs",
+      "coordinate": "Point(-104.791944444 38.863333333)",
+      "country": "United States"
+    },
+    "ae0110b6-13d4-4998-9116-5b926287aa23": {
+      "musicbrainzAreaId": "ae0110b6-13d4-4998-9116-5b926287aa23",
+      "matched": true,
+      "wikidataId": "Q99",
+      "label": "California",
+      "coordinate": "Point(-120.0 37.0)",
+      "country": "United States"
+    },
+    "23b82a5a-5a5e-4b62-ab84-5222a8e443cd": {
+      "musicbrainzAreaId": "23b82a5a-5a5e-4b62-ab84-5222a8e443cd",
+      "matched": true,
+      "wikidataId": "Q50816",
+      "label": "Mississauga",
+      "coordinate": "Point(-79.65 43.6)",
+      "country": "Canada"
+    },
+    "bfca2ef9-4ecc-40a0-b544-7dce3f648148": {
+      "musicbrainzAreaId": "bfca2ef9-4ecc-40a0-b544-7dce3f648148",
+      "matched": true,
+      "wikidataId": "Q1800",
+      "label": "Kochi",
+      "coordinate": "Point(76.283333333 9.966666666)",
+      "country": "India"
+    },
+    "311cd57a-5b37-4660-a496-218e976b9293": {
+      "musicbrainzAreaId": "311cd57a-5b37-4660-a496-218e976b9293",
+      "matched": true,
+      "wikidataId": "Q1355",
+      "label": "Bengaluru",
+      "coordinate": "Point(77.5912997 12.9791198)",
+      "country": "India"
+    },
+    "44e5e20e-8fbc-4b07-b3f2-22f2199186fd": {
+      "musicbrainzAreaId": "44e5e20e-8fbc-4b07-b3f2-22f2199186fd",
+      "matched": true,
+      "wikidataId": "Q23169",
+      "label": "Oxfordshire",
+      "coordinate": "Point(-1.28 51.75)",
+      "country": "United Kingdom"
+    },
+    "3f8828b9-ba93-4604-9b92-1f616fa1abd1": {
+      "musicbrainzAreaId": "3f8828b9-ba93-4604-9b92-1f616fa1abd1",
+      "matched": true,
+      "wikidataId": "Q41087",
+      "label": "Raleigh",
+      "coordinate": "Point(-78.64 35.78)",
+      "country": "United States"
+    },
+    "4e29322e-bb08-45d2-98bc-7d2ce1286b59": {
+      "musicbrainzAreaId": "4e29322e-bb08-45d2-98bc-7d2ce1286b59",
+      "matched": true,
+      "wikidataId": "Q1874",
+      "label": "Odesa",
+      "coordinate": "Point(30.73262 46.47747)",
+      "country": "Ukraine"
+    },
+    "e815db74-f1aa-4fbc-a78c-f3e76f53409e": {
+      "musicbrainzAreaId": "e815db74-f1aa-4fbc-a78c-f3e76f53409e",
+      "matched": true,
+      "wikidataId": "Q23482",
+      "label": "Marseille",
+      "coordinate": "Point(5.376388888 43.296666666)",
+      "country": "France"
+    },
+    "a4b63fba-cba0-4fdb-841b-a7d310f90ca9": {
+      "musicbrainzAreaId": "a4b63fba-cba0-4fdb-841b-a7d310f90ca9",
+      "matched": true,
+      "wikidataId": "Q80092",
+      "label": "Center Point",
+      "coordinate": "Point(-86.680437 33.639302)",
+      "country": "United States"
+    },
+    "261962ea-d8c2-4eaf-a80c-f14376ffadb0": {
+      "musicbrainzAreaId": "261962ea-d8c2-4eaf-a80c-f14376ffadb0",
+      "matched": true,
+      "wikidataId": "Q11299",
+      "label": "Manhattan",
+      "coordinate": "Point(-73.994166666 40.728333333)",
+      "country": "United States"
+    },
+    "0683f430-dd77-4b5a-a55b-0a0339c812d5": {
+      "musicbrainzAreaId": "0683f430-dd77-4b5a-a55b-0a0339c812d5",
+      "matched": true,
+      "wikidataId": "Q271730",
+      "label": "Abbotsford",
+      "coordinate": "Point(-122.328888888 49.051666666)",
+      "country": "Canada"
+    },
+    "88772016-5866-496a-8de7-4340e922d663": {
+      "musicbrainzAreaId": "88772016-5866-496a-8de7-4340e922d663",
+      "matched": true,
+      "wikidataId": "Q779",
+      "label": "Connecticut",
+      "coordinate": "Point(-72.7 41.6)",
+      "country": "United States"
+    },
+    "46ee1b80-0ede-4ea5-8088-9854ebf92736": {
+      "musicbrainzAreaId": "46ee1b80-0ede-4ea5-8088-9854ebf92736",
+      "matched": true,
+      "wikidataId": "Q963138",
+      "label": "McLean",
+      "coordinate": "Point(-77.175277777 38.928333333)",
+      "country": "United States"
+    },
+    "05f68b4c-10f3-49b5-b28c-260a1b707043": {
+      "musicbrainzAreaId": "05f68b4c-10f3-49b5-b28c-260a1b707043",
+      "matched": true,
+      "wikidataId": "Q771",
+      "label": "Massachusetts",
+      "coordinate": "Point(-71.8 42.3)",
+      "country": "United States"
+    },
+    "dc77e481-d5da-4398-a951-d55e8ac4c430": {
+      "musicbrainzAreaId": "dc77e481-d5da-4398-a951-d55e8ac4c430",
+      "matched": true,
+      "wikidataId": "Q237253",
+      "label": "Great Yarmouth",
+      "coordinate": "Point(1.733055555 52.607777777)",
+      "country": "United Kingdom"
+    },
+    "10d01282-4b05-49f5-8586-7c30b640f2c5": {
+      "musicbrainzAreaId": "10d01282-4b05-49f5-8586-7c30b640f2c5",
+      "matched": true,
+      "wikidataId": "Q899813",
+      "label": "Brattleboro",
+      "coordinate": "Point(-72.614444444 42.861944444)",
+      "country": "United States"
+    },
+    "5a7fcd10-ef7a-4188-a495-5b8a63beb6ed": {
+      "musicbrainzAreaId": "5a7fcd10-ef7a-4188-a495-5b8a63beb6ed",
+      "matched": true,
+      "wikidataId": "Q2739754",
+      "label": "Trenton",
+      "coordinate": "Point(-77.5806 44.1)",
+      "country": "Canada"
+    },
+    "bcc9a4d7-0edb-47da-8304-ce177954c4ba": {
+      "musicbrainzAreaId": "bcc9a4d7-0edb-47da-8304-ce177954c4ba",
+      "matched": true,
+      "wikidataId": "Q597842",
+      "label": "Florence",
+      "coordinate": "Point(-79.774166666 34.183888888)",
+      "country": "United States"
+    },
+    "43508b57-576c-4aab-9f8c-05e242005968": {
+      "musicbrainzAreaId": "43508b57-576c-4aab-9f8c-05e242005968",
+      "matched": true,
+      "wikidataId": "Q810998",
+      "label": "Battle Creek",
+      "coordinate": "Point(-85.204166666 42.312222222)",
+      "country": "United States"
+    },
+    "696cb3e0-5084-30ab-9916-65ece70adbf6": {
+      "musicbrainzAreaId": "696cb3e0-5084-30ab-9916-65ece70adbf6",
+      "matched": true,
+      "wikidataId": "Q786",
+      "label": "Dominican Republic",
+      "coordinate": "Point(-70.2 18.8)",
+      "country": "Dominican Republic"
+    },
+    "a0ee368c-eb28-41d5-8c28-7c56fc9ad5c3": {
+      "musicbrainzAreaId": "a0ee368c-eb28-41d5-8c28-7c56fc9ad5c3",
+      "matched": true,
+      "wikidataId": "Q5045",
+      "label": "Lajas",
+      "coordinate": "Point(-80.290555555 22.416388888)",
+      "country": "Cuba"
+    },
+    "68d8f243-fd55-4ca1-b511-48fa93575476": {
+      "musicbrainzAreaId": "68d8f243-fd55-4ca1-b511-48fa93575476",
+      "matched": true,
+      "wikidataId": "Q217346",
+      "label": "Ithaca",
+      "coordinate": "Point(-76.5 42.443333333)",
+      "country": "United States"
+    },
+    "a6f7157a-bfab-49e8-a22b-240ade4552ca": {
+      "musicbrainzAreaId": "a6f7157a-bfab-49e8-a22b-240ade4552ca",
+      "matched": true,
+      "wikidataId": "Q975",
+      "label": "San Antonio",
+      "coordinate": "Point(-98.493888888 29.425)",
+      "country": "United States"
+    },
+    "817de950-b8cb-41fc-a337-ceae6f2b507f": {
+      "musicbrainzAreaId": "817de950-b8cb-41fc-a337-ceae6f2b507f",
+      "matched": true,
+      "wikidataId": "Q23047",
+      "label": "Cahors",
+      "coordinate": "Point(1.440555555 44.4475)",
+      "country": "France"
+    },
+    "dfe4efed-8cc2-4f1d-87e2-b70f5f7d3836": {
+      "musicbrainzAreaId": "dfe4efed-8cc2-4f1d-87e2-b70f5f7d3836",
+      "matched": true,
+      "wikidataId": "Q1010528",
+      "label": "Nederland",
+      "coordinate": "Point(-105.510556 39.961944)",
+      "country": "United States"
+    },
+    "d117de1f-6816-4ff0-b56b-d1e94165782a": {
+      "musicbrainzAreaId": "d117de1f-6816-4ff0-b56b-d1e94165782a",
+      "matched": true,
+      "wikidataId": "Q25280",
+      "label": "Harrisburg",
+      "coordinate": "Point(-76.883381676 40.264554871)",
+      "country": "United States"
+    },
+    "f2f169a6-ce0e-44f7-9fb2-155ad895d4ce": {
+      "musicbrainzAreaId": "f2f169a6-ce0e-44f7-9fb2-155ad895d4ce",
+      "matched": true,
+      "wikidataId": "Q1583523",
+      "label": "Emporia",
+      "coordinate": "Point(-96.1869 38.4081)",
+      "country": "United States"
+    },
+    "1e23d84b-202e-3fc8-8c49-debc71e9eb16": {
+      "musicbrainzAreaId": "1e23d84b-202e-3fc8-8c49-debc71e9eb16",
+      "matched": true,
+      "wikidataId": "Q1033",
+      "label": "Nigeria",
+      "coordinate": "Point(8.0 9.0)",
+      "country": "Nigeria"
+    },
+    "8e6d774f-482e-4c57-b852-3d9696498ae6": {
+      "musicbrainzAreaId": "8e6d774f-482e-4c57-b852-3d9696498ae6",
+      "matched": true,
+      "wikidataId": "Q1711",
+      "label": "Potsdam",
+      "coordinate": "Point(13.0591397 52.4009309)",
+      "country": "Germany"
+    },
+    "cb6abdb8-7064-413a-9d8d-51b085fe17a9": {
+      "musicbrainzAreaId": "cb6abdb8-7064-413a-9d8d-51b085fe17a9",
+      "matched": true,
+      "wikidataId": "Q489197",
+      "label": "Torrance",
+      "coordinate": "Point(-118.3406288 33.8358492)",
+      "country": "United States"
+    },
+    "2747553f-b44d-44c4-a7c3-b67412b6f10b": {
+      "musicbrainzAreaId": "2747553f-b44d-44c4-a7c3-b67412b6f10b",
+      "matched": true,
+      "wikidataId": "Q1904",
+      "label": "Ontario",
+      "coordinate": "Point(-85.0 50.0)",
+      "country": "Canada"
+    },
+    "e53e377e-581d-4aa0-8d58-7a411c2897d1": {
+      "musicbrainzAreaId": "e53e377e-581d-4aa0-8d58-7a411c2897d1",
+      "matched": true,
+      "wikidataId": "Q493079",
+      "label": "Fannin County",
+      "coordinate": "Point(-84.32 34.86)",
+      "country": "United States"
+    },
+    "1c596525-f2bb-42a3-ae40-7239cbfb9134": {
+      "musicbrainzAreaId": "1c596525-f2bb-42a3-ae40-7239cbfb9134",
+      "matched": true,
+      "wikidataId": "Q48215",
+      "label": "Dover",
+      "coordinate": "Point(-70.875 43.195277777)",
+      "country": "United States"
+    },
+    "bb73699b-c21d-4d65-afc1-c6f3f001e0c2": {
+      "musicbrainzAreaId": "bb73699b-c21d-4d65-afc1-c6f3f001e0c2",
+      "matched": false
+    },
+    "1127ddc2-eab3-4662-8718-6adbdeea3b10": {
+      "musicbrainzAreaId": "1127ddc2-eab3-4662-8718-6adbdeea3b10",
+      "matched": true,
+      "wikidataId": "Q1754",
+      "label": "Stockholm",
+      "coordinate": "Point(18.068611111 59.329444444)",
+      "country": "Sweden"
+    },
+    "52641fae-20e3-3698-9fa9-1849f2c79ab8": {
+      "musicbrainzAreaId": "52641fae-20e3-3698-9fa9-1849f2c79ab8",
+      "matched": true,
+      "wikidataId": "Q1005",
+      "label": "The Gambia",
+      "coordinate": "Point(-15.5 13.5)",
+      "country": "The Gambia"
+    },
+    "a727c39a-8d76-4a1a-9033-696ada9bedda": {
+      "musicbrainzAreaId": "a727c39a-8d76-4a1a-9033-696ada9bedda",
+      "matched": true,
+      "wikidataId": "Q803",
+      "label": "Utrecht",
+      "coordinate": "Point(5.121666666 52.090833333)",
+      "country": "Netherlands"
+    },
+    "cd477d81-c775-4dc4-a624-534edadb2cb2": {
+      "musicbrainzAreaId": "cd477d81-c775-4dc4-a624-534edadb2cb2",
+      "matched": true,
+      "wikidataId": "Q51111",
+      "label": "Pereira",
+      "coordinate": "Point(-75.694722222 4.814444444)",
+      "country": "Colombia"
+    },
+    "f5e2257b-8dc3-4ee8-91e4-b449df71cb84": {
+      "musicbrainzAreaId": "f5e2257b-8dc3-4ee8-91e4-b449df71cb84",
+      "matched": true,
+      "wikidataId": "Q1515",
+      "label": "Abidjan",
+      "coordinate": "Point(-4.026666666 5.336388888)",
+      "country": "Ivory Coast"
+    },
+    "e56e3d7a-4b90-3546-8450-49548050924a": {
+      "musicbrainzAreaId": "e56e3d7a-4b90-3546-8450-49548050924a",
+      "matched": true,
+      "wikidataId": "Q1008",
+      "label": "Ivory Coast",
+      "coordinate": "Point(-6.0 8.0)",
+      "country": "Ivory Coast"
+    },
+    "9f3cd9d4-5517-49a4-9404-b35777bbba3e": {
+      "musicbrainzAreaId": "9f3cd9d4-5517-49a4-9404-b35777bbba3e",
+      "matched": true,
+      "wikidataId": "Q230597",
+      "label": "Bolívar Department",
+      "coordinate": "Point(-74.316666666 8.883333333)",
+      "country": "Colombia"
+    },
+    "bdb3b221-93b3-4380-99e2-f862a142e71d": {
+      "musicbrainzAreaId": "bdb3b221-93b3-4380-99e2-f862a142e71d",
+      "matched": true,
+      "wikidataId": "Q11698548",
+      "label": "Foxton",
+      "coordinate": "Point(0.0586 52.115)",
+      "country": "United Kingdom"
+    },
+    "79889efc-f389-47d4-9ec9-ef4d3e52b22e": {
+      "musicbrainzAreaId": "79889efc-f389-47d4-9ec9-ef4d3e52b22e",
+      "matched": true,
+      "wikidataId": "Q338009",
+      "label": "Shima",
+      "coordinate": "Point(136.829666666 34.328194444)",
+      "country": "Japan"
+    },
+    "0a77f0b2-60ff-4349-bf55-8e3ed0f378f1": {
+      "musicbrainzAreaId": "0a77f0b2-60ff-4349-bf55-8e3ed0f378f1",
+      "matched": true,
+      "wikidataId": "Q878284",
+      "label": "Kaduna State",
+      "coordinate": "Point(7.75 10.333333333)",
+      "country": "Nigeria"
+    },
+    "cb7b4803-4b48-48ba-9a11-b0b7302ba577": {
+      "musicbrainzAreaId": "cb7b4803-4b48-48ba-9a11-b0b7302ba577",
+      "matched": true,
+      "wikidataId": "Q142107",
+      "label": "Cowansville",
+      "coordinate": "Point(-72.75 45.2)",
+      "country": "Canada"
+    },
+    "1f0589e3-fee4-41a5-8497-3f523f718862": {
+      "musicbrainzAreaId": "1f0589e3-fee4-41a5-8497-3f523f718862",
+      "matched": true,
+      "wikidataId": "Q321079",
+      "label": "Jos",
+      "coordinate": "Point(8.883333333 9.933333333)",
+      "country": "Nigeria"
+    },
+    "82134e1f-a265-4522-a008-d40ed84379e8": {
+      "musicbrainzAreaId": "82134e1f-a265-4522-a008-d40ed84379e8",
+      "matched": true,
+      "wikidataId": "Q245023",
+      "label": "Taichung",
+      "coordinate": "Point(120.679444444 24.143888888)",
+      "country": "Taiwan"
+    },
+    "41637cec-9a4f-389c-86d2-fc6abf3357b5": {
+      "musicbrainzAreaId": "41637cec-9a4f-389c-86d2-fc6abf3357b5",
+      "matched": true,
+      "wikidataId": "Q865",
+      "label": "Taiwan",
+      "coordinate": "Point(121.0 24.0)",
+      "country": "Taiwan"
+    },
+    "573b5f56-5763-4a99-9d2a-931819882aa3": {
+      "musicbrainzAreaId": "573b5f56-5763-4a99-9d2a-931819882aa3",
+      "matched": true,
+      "wikidataId": "Q112499",
+      "label": "Carroll County",
+      "coordinate": "Point(-89.92 33.45)",
+      "country": "United States"
+    },
+    "e3e1ef8b-43b3-45ad-b92e-08151296aa37": {
+      "musicbrainzAreaId": "e3e1ef8b-43b3-45ad-b92e-08151296aa37",
+      "matched": true,
+      "wikidataId": "Q529165",
+      "label": "Royal Oak",
+      "coordinate": "Point(-83.142777777 42.488888888)",
+      "country": "United States"
+    },
+    "1d9b2b8d-824b-406f-b6c0-02a9ccd312b8": {
+      "musicbrainzAreaId": "1d9b2b8d-824b-406f-b6c0-02a9ccd312b8",
+      "matched": true,
+      "wikidataId": "Q3820",
+      "label": "Beirut",
+      "coordinate": "Point(35.513055555 33.886944444)",
+      "country": "Lebanon"
+    },
+    "4033e068-1d57-4aa3-87b5-0f3bfe8a8167": {
+      "musicbrainzAreaId": "4033e068-1d57-4aa3-87b5-0f3bfe8a8167",
+      "matched": true,
+      "wikidataId": "Q25331",
+      "label": "Odense",
+      "coordinate": "Point(10.383333333 55.4)",
+      "country": "Denmark"
+    },
+    "2fb5445d-3987-49fe-957a-f730a7acc4a2": {
+      "musicbrainzAreaId": "2fb5445d-3987-49fe-957a-f730a7acc4a2",
+      "matched": true,
+      "wikidataId": "Q5092",
+      "label": "Baltimore",
+      "coordinate": "Point(-76.615 39.286388888)",
+      "country": "United States"
+    },
+    "9d5ae15a-f1d4-4b84-8a89-b8e1cf3a1aec": {
+      "musicbrainzAreaId": "9d5ae15a-f1d4-4b84-8a89-b8e1cf3a1aec",
+      "matched": true,
+      "wikidataId": "Q187805",
+      "label": "Spokane",
+      "coordinate": "Point(-117.4235 47.657194444)",
+      "country": "United States"
+    },
+    "1f1fc3a4-9500-39b8-9f10-f0a465557eef": {
+      "musicbrainzAreaId": "1f1fc3a4-9500-39b8-9f10-f0a465557eef",
+      "matched": true,
+      "wikidataId": "Q159",
+      "label": "Russia",
+      "coordinate": "Point(94.25 66.416666666)",
+      "country": "Russia"
+    },
+    "68c5b2bc-9a07-475c-bf04-918a40267b77": {
+      "musicbrainzAreaId": "68c5b2bc-9a07-475c-bf04-918a40267b77",
+      "matched": true,
+      "wikidataId": "Q487929",
+      "label": "Milazzo",
+      "coordinate": "Point(15.237 38.217)",
+      "country": "Italy"
+    },
+    "16fe6dbc-b7aa-4935-a150-5d90660af8a5": {
+      "musicbrainzAreaId": "16fe6dbc-b7aa-4935-a150-5d90660af8a5",
+      "matched": true,
+      "wikidataId": "Q131491",
+      "label": "Brighton",
+      "coordinate": "Point(-0.1375 50.820833333)",
+      "country": "United Kingdom"
+    },
+    "f04ce170-cf01-4fa8-9667-b5bb8de6752f": {
+      "musicbrainzAreaId": "f04ce170-cf01-4fa8-9667-b5bb8de6752f",
+      "matched": true,
+      "wikidataId": "Q10950572",
+      "label": "Goshen",
+      "coordinate": "Point(-74.326944444 41.401666666)",
+      "country": "United States"
+    },
+    "e4c36270-d906-45d9-bd30-ec8221a9d079": {
+      "musicbrainzAreaId": "e4c36270-d906-45d9-bd30-ec8221a9d079",
+      "matched": true,
+      "wikidataId": "Q7973947",
+      "label": "Waterdown",
+      "coordinate": "Point(-79.8833 43.3333)",
+      "country": "Canada"
+    },
+    "b8e624c3-e851-4356-8995-5adea9d8e2a8": {
+      "musicbrainzAreaId": "b8e624c3-e851-4356-8995-5adea9d8e2a8",
+      "matched": true,
+      "wikidataId": "Q695411",
+      "label": "Palm Beach",
+      "coordinate": "Point(-80.036388888 26.705555555)",
+      "country": "United States"
+    },
+    "8ba9ac5a-5b4e-4ecc-b24a-e730920fc12b": {
+      "musicbrainzAreaId": "8ba9ac5a-5b4e-4ecc-b24a-e730920fc12b",
+      "matched": true,
+      "wikidataId": "Q5925",
+      "label": "Orange County",
+      "coordinate": "Point(-117.78 33.67)",
+      "country": "United States"
+    },
+    "348dcc25-7bb6-3f75-8739-97eabc84a330": {
+      "musicbrainzAreaId": "348dcc25-7bb6-3f75-8739-97eabc84a330",
+      "matched": true,
+      "wikidataId": "Q846",
+      "label": "Qatar",
+      "coordinate": "Point(51.212767 25.269535)",
+      "country": "Qatar"
+    },
+    "7bda5d46-4809-41dc-a0b8-e889ff818f2e": {
+      "musicbrainzAreaId": "7bda5d46-4809-41dc-a0b8-e889ff818f2e",
+      "matched": true,
+      "wikidataId": "Q240",
+      "label": "Brussels-Capital Region",
+      "coordinate": "Point(4.3525 50.846666666)",
+      "country": "Belgium"
+    },
+    "103d2eb0-d702-4235-ac02-350a9c8470bb": {
+      "musicbrainzAreaId": "103d2eb0-d702-4235-ac02-350a9c8470bb",
+      "matched": true,
+      "wikidataId": "Q34366",
+      "label": "Tasmania",
+      "coordinate": "Point(147.0 -42.0)",
+      "country": "Australia"
+    },
+    "e90327ab-d772-499e-a007-d298a509979c": {
+      "musicbrainzAreaId": "e90327ab-d772-499e-a007-d298a509979c",
+      "matched": true,
+      "wikidataId": "Q559514",
+      "label": "Wittlich",
+      "coordinate": "Point(6.889722222 49.986944444)",
+      "country": "Germany"
+    },
+    "184969d8-461e-43be-8728-288358ebe487": {
+      "musicbrainzAreaId": "184969d8-461e-43be-8728-288358ebe487",
+      "matched": true,
+      "wikidataId": "Q18288160",
+      "label": "Metropolitan City of Rome",
+      "coordinate": "Point(12.482777777 41.893055555)",
+      "country": "Italy"
+    },
+    "725210c4-3f89-4f49-a508-794e92f700ef": {
+      "musicbrainzAreaId": "725210c4-3f89-4f49-a508-794e92f700ef",
+      "matched": true,
+      "wikidataId": "Q3766",
+      "label": "Damascus",
+      "coordinate": "Point(36.291944444 33.513055555)",
+      "country": "Syria"
+    },
+    "4551ede8-589a-4776-8120-bf43e53c927b": {
+      "musicbrainzAreaId": "4551ede8-589a-4776-8120-bf43e53c927b",
+      "matched": true,
+      "wikidataId": "Q49241",
+      "label": "Lexington",
+      "coordinate": "Point(-84.458611111 38.049722222)",
+      "country": "United States"
+    },
+    "eda4805a-9022-4fd8-84e3-e51b85e0b75a": {
+      "musicbrainzAreaId": "eda4805a-9022-4fd8-84e3-e51b85e0b75a",
+      "matched": true,
+      "wikidataId": "Q79679",
+      "label": "Gardendale",
+      "coordinate": "Point(-86.811648 33.660492)",
+      "country": "United States"
+    },
+    "34f02dc4-3173-4c68-86d1-c82504759342": {
+      "musicbrainzAreaId": "34f02dc4-3173-4c68-86d1-c82504759342",
+      "matched": true,
+      "wikidataId": "Q28218",
+      "label": "Baton Rouge",
+      "coordinate": "Point(-91.178611111 30.4475)",
+      "country": "United States"
+    },
+    "12c3b82e-fcab-4219-9bd5-792089d8280e": {
+      "musicbrainzAreaId": "12c3b82e-fcab-4219-9bd5-792089d8280e",
+      "matched": true,
+      "wikidataId": "Q1492",
+      "label": "Barcelona",
+      "coordinate": "Point(2.176944444 41.3825)",
+      "country": "Spain"
+    },
+    "050c94f7-1413-3a34-bb90-4a94f3bb2084": {
+      "musicbrainzAreaId": "050c94f7-1413-3a34-bb90-4a94f3bb2084",
+      "matched": true,
+      "wikidataId": "Q233",
+      "label": "Malta",
+      "coordinate": "Point(14.4 35.9)",
+      "country": "Malta"
+    },
+    "049474c1-b631-481b-8b59-129214f4ded3": {
+      "musicbrainzAreaId": "049474c1-b631-481b-8b59-129214f4ded3",
+      "matched": true,
+      "wikidataId": "Q1364541",
+      "label": "Bolton",
+      "coordinate": "Point(-2.43 53.5775)",
+      "country": "United Kingdom"
+    },
+    "53bee476-b339-44ab-b1e0-b20a4c0e46cc": {
+      "musicbrainzAreaId": "53bee476-b339-44ab-b1e0-b20a4c0e46cc",
+      "matched": true,
+      "wikidataId": "Q25457",
+      "label": "Karlstad",
+      "coordinate": "Point(13.509980287 59.387470608)",
+      "country": "Sweden"
+    },
+    "bf51dede-2c6c-4908-abaa-3d6b491d0cf5": {
+      "musicbrainzAreaId": "bf51dede-2c6c-4908-abaa-3d6b491d0cf5",
+      "matched": true,
+      "wikidataId": "Q491350",
+      "label": "Orange",
+      "coordinate": "Point(-117.8325 33.803055555)",
+      "country": "United States"
+    },
+    "2af06f5b-d524-44e5-a7fc-05a81d342485": {
+      "musicbrainzAreaId": "2af06f5b-d524-44e5-a7fc-05a81d342485",
+      "matched": true,
+      "wikidataId": "Q1555",
+      "label": "Guatemala City",
+      "coordinate": "Point(-90.513333333 14.641666666)",
+      "country": "Guatemala"
+    },
+    "3c810219-baf2-4fff-b98c-46b425eea1f5": {
+      "musicbrainzAreaId": "3c810219-baf2-4fff-b98c-46b425eea1f5",
+      "matched": true,
+      "wikidataId": "Q1489",
+      "label": "Mexico City",
+      "coordinate": "Point(-99.13589 19.353773)",
+      "country": "Mexico"
+    },
+    "c3503bb7-f32d-4536-a1af-b2623f54ab4f": {
+      "musicbrainzAreaId": "c3503bb7-f32d-4536-a1af-b2623f54ab4f",
+      "matched": true,
+      "wikidataId": "Q41211",
+      "label": "San Juan",
+      "coordinate": "Point(-66.116666666 18.465277777)",
+      "country": "United States"
+    },
+    "384cbb52-1daf-467c-910f-758279483dfd": {
+      "musicbrainzAreaId": "384cbb52-1daf-467c-910f-758279483dfd",
+      "matched": true,
+      "wikidataId": "Q38380",
+      "label": "Angers",
+      "coordinate": "Point(-0.555555555 47.472777777)",
+      "country": "France"
+    },
+    "9a4a20b1-eff0-364a-a157-dc709b07eadc": {
+      "musicbrainzAreaId": "9a4a20b1-eff0-364a-a157-dc709b07eadc",
+      "matched": true,
+      "wikidataId": "Q945",
+      "label": "Togo",
+      "coordinate": "Point(1.183333 8.25)",
+      "country": "Togo"
+    },
+    "b2cf490f-a8a7-4875-a1b7-addede3b327f": {
+      "musicbrainzAreaId": "b2cf490f-a8a7-4875-a1b7-addede3b327f",
+      "matched": true,
+      "wikidataId": "Q43196",
+      "label": "Cincinnati",
+      "coordinate": "Point(-84.5125 39.1)",
+      "country": "United States"
+    },
+    "b4d3ff41-ead2-300f-9c11-f73f8ad39678": {
+      "musicbrainzAreaId": "b4d3ff41-ead2-300f-9c11-f73f8ad39678",
+      "matched": true,
+      "wikidataId": "Q1020",
+      "label": "Malawi",
+      "coordinate": "Point(34.0 -13.0)",
+      "country": "Malawi"
+    },
+    "7f1c8f3f-69a9-454a-8633-c3d3a628858b": {
+      "musicbrainzAreaId": "7f1c8f3f-69a9-454a-8633-c3d3a628858b",
+      "matched": true,
+      "wikidataId": "Q16556",
+      "label": "Phoenix",
+      "coordinate": "Point(-112.073888888 33.448333333)",
+      "country": "United States"
+    },
+    "33957ca3-f2cd-4b08-b667-c933eff5c1a7": {
+      "musicbrainzAreaId": "33957ca3-f2cd-4b08-b667-c933eff5c1a7",
+      "matched": true,
+      "wikidataId": "Q28260",
+      "label": "Lincoln",
+      "coordinate": "Point(-96.678055555 40.809166666)",
+      "country": "United States"
+    },
+    "11a44e18-a2e5-43a9-bee9-aa4f7c83f967": {
+      "musicbrainzAreaId": "11a44e18-a2e5-43a9-bee9-aa4f7c83f967",
+      "matched": true,
+      "wikidataId": "Q1055",
+      "label": "Hamburg",
+      "coordinate": "Point(10.0 53.55)",
+      "country": "Germany"
+    },
+    "b45c0575-ad12-469a-9b53-4d478b43016d": {
+      "musicbrainzAreaId": "b45c0575-ad12-469a-9b53-4d478b43016d",
+      "matched": true,
+      "wikidataId": "Q54231",
+      "label": "Fairfield County",
+      "coordinate": "Point(-73.37 41.23)",
+      "country": "United States"
+    },
+    "ba992c1b-3ea0-4cfd-902e-1c4a20decc26": {
+      "musicbrainzAreaId": "ba992c1b-3ea0-4cfd-902e-1c4a20decc26",
+      "matched": true,
+      "wikidataId": "Q490441",
+      "label": "Concord",
+      "coordinate": "Point(-122.031111111 37.978055555)",
+      "country": "United States"
+    },
+    "ca61e235-0f31-4c0e-8963-8232222ef6a8": {
+      "musicbrainzAreaId": "ca61e235-0f31-4c0e-8963-8232222ef6a8",
+      "matched": true,
+      "wikidataId": "Q34863",
+      "label": "Oklahoma City",
+      "coordinate": "Point(-97.535277777 35.482222222)",
+      "country": "United States"
+    },
+    "9cb34398-63c4-453e-91eb-0d52b36d62f7": {
+      "musicbrainzAreaId": "9cb34398-63c4-453e-91eb-0d52b36d62f7",
+      "matched": true,
+      "wikidataId": "Q3761",
+      "label": "Accra",
+      "coordinate": "Point(-0.1969 5.55602)",
+      "country": "Ghana"
+    },
+    "6db2e45d-d7f3-43da-ac0b-7ba5ca627373": {
+      "musicbrainzAreaId": "6db2e45d-d7f3-43da-ac0b-7ba5ca627373",
+      "matched": true,
+      "wikidataId": "Q485716",
+      "label": "Glendale",
+      "coordinate": "Point(-118.25 34.170833333)",
+      "country": "United States"
+    },
+    "10dbc6fb-4fc8-4e87-83ac-e82af9ef082f": {
+      "musicbrainzAreaId": "10dbc6fb-4fc8-4e87-83ac-e82af9ef082f",
+      "matched": true,
+      "wikidataId": "Q231554",
+      "label": "La Ciotat",
+      "coordinate": "Point(5.608055555 43.176111111)",
+      "country": "France"
+    },
+    "d65e525b-eac9-493c-bc78-0204c7285670": {
+      "musicbrainzAreaId": "d65e525b-eac9-493c-bc78-0204c7285670",
+      "matched": true,
+      "wikidataId": "Q1348",
+      "label": "Kolkata",
+      "coordinate": "Point(88.37 22.5675)",
+      "country": "India"
+    },
+    "1ed51cbe-4272-4df9-9b18-44b0d4714086": {
+      "musicbrainzAreaId": "1ed51cbe-4272-4df9-9b18-44b0d4714086",
+      "matched": true,
+      "wikidataId": "Q1391",
+      "label": "Maryland",
+      "coordinate": "Point(-76.7 39.0)",
+      "country": "United States"
+    },
+    "755982fa-fbbe-4049-9939-ecfd7fda430b": {
+      "musicbrainzAreaId": "755982fa-fbbe-4049-9939-ecfd7fda430b",
+      "matched": true,
+      "wikidataId": "Q34370",
+      "label": "Rotterdam",
+      "coordinate": "Point(4.48 51.92)",
+      "country": "Netherlands"
+    },
+    "e4a40ec5-8f68-4d12-a2b8-9cf9328756f4": {
+      "musicbrainzAreaId": "e4a40ec5-8f68-4d12-a2b8-9cf9328756f4",
+      "matched": true,
+      "wikidataId": "Q54955",
+      "label": "Teruel Province",
+      "coordinate": "Point(-0.666666666 40.666666666)",
+      "country": "Spain"
+    },
+    "b8a2776a-eedf-48ea-a6f3-1a9070f0b823": {
+      "musicbrainzAreaId": "b8a2776a-eedf-48ea-a6f3-1a9070f0b823",
+      "matched": true,
+      "wikidataId": "Q365",
+      "label": "Cologne",
+      "coordinate": "Point(6.957777777 50.942222222)",
+      "country": "Germany"
+    },
+    "20619e36-fca8-4499-bcc8-be01a3ea3e41": {
+      "musicbrainzAreaId": "20619e36-fca8-4499-bcc8-be01a3ea3e41",
+      "matched": true,
+      "wikidataId": "Q2079",
+      "label": "Leipzig",
+      "coordinate": "Point(12.3747329 51.3406321)",
+      "country": "Germany"
+    },
+    "6f9a378d-32c0-4107-ab3c-4d904a0b5bc6": {
+      "musicbrainzAreaId": "6f9a378d-32c0-4107-ab3c-4d904a0b5bc6",
+      "matched": true,
+      "wikidataId": "Q1646181",
+      "label": "Worcester",
+      "coordinate": "Point(-2.220555555 52.191111111)",
+      "country": "United Kingdom"
+    },
+    "28de1cc8-89e1-4b6f-99ea-57bdd4f8bf81": {
+      "musicbrainzAreaId": "28de1cc8-89e1-4b6f-99ea-57bdd4f8bf81",
+      "matched": true,
+      "wikidataId": "Q741765",
+      "label": "San Fernando",
+      "coordinate": "Point(-6.2009666 36.4666072)",
+      "country": "Spain"
+    },
+    "9f3f9afa-8f50-4767-bce1-bdd8d8309f69": {
+      "musicbrainzAreaId": "9f3f9afa-8f50-4767-bce1-bdd8d8309f69",
+      "matched": true,
+      "wikidataId": "Q855324",
+      "label": "Nanortalik",
+      "coordinate": "Point(-45.243055555 60.141666666)",
+      "country": "Greenland"
+    },
+    "e9bf9b1c-5cb4-3487-88e1-19da70caa9c9": {
+      "musicbrainzAreaId": "e9bf9b1c-5cb4-3487-88e1-19da70caa9c9",
+      "matched": true,
+      "wikidataId": "Q223",
+      "label": "Greenland",
+      "coordinate": "Point(-40.0 72.0)",
+      "country": "Kingdom of Denmark"
+    },
+    "cae770b2-685b-4db7-8bad-bf64da54188b": {
+      "musicbrainzAreaId": "cae770b2-685b-4db7-8bad-bf64da54188b",
+      "matched": true,
+      "wikidataId": "Q234178",
+      "label": "Bangor",
+      "coordinate": "Point(-4.128 53.228)",
+      "country": "United Kingdom"
+    },
+    "185bc3c4-4c5a-3f69-9384-7c280dfdf072": {
+      "musicbrainzAreaId": "185bc3c4-4c5a-3f69-9384-7c280dfdf072",
+      "matched": true,
+      "wikidataId": "Q971",
+      "label": "Republic of the Congo",
+      "coordinate": "Point(15.383330555 -0.75)",
+      "country": "Republic of the Congo"
+    },
+    "fbf4cf03-0697-4f06-87da-9d5e6fedfc50": {
+      "musicbrainzAreaId": "fbf4cf03-0697-4f06-87da-9d5e6fedfc50",
+      "matched": true,
+      "wikidataId": "Q183539",
+      "label": "County Louth",
+      "coordinate": "Point(-6.5 53.833333333)",
+      "country": "Ireland"
+    },
+    "ae800d43-a492-4d15-b7cd-32f0015ecf38": {
+      "musicbrainzAreaId": "ae800d43-a492-4d15-b7cd-32f0015ecf38",
+      "matched": true,
+      "wikidataId": "Q1987082",
+      "label": "St. Martinville",
+      "coordinate": "Point(-91.8306 30.125)",
+      "country": "United States"
+    },
+    "fc68ecf5-507e-4012-b60b-d93747a3cfa7": {
+      "musicbrainzAreaId": "fc68ecf5-507e-4012-b60b-d93747a3cfa7",
+      "matched": true,
+      "wikidataId": "Q1588",
+      "label": "Louisiana",
+      "coordinate": "Point(-92.0 31.0)",
+      "country": "United States"
+    },
+    "29a9890e-e14e-40e3-8a19-467413222a9c": {
+      "musicbrainzAreaId": "29a9890e-e14e-40e3-8a19-467413222a9c",
+      "matched": true,
+      "wikidataId": "Q179570",
+      "label": "Kairouan",
+      "coordinate": "Point(10.1 35.683333333)",
+      "country": "Tunisia"
+    },
+    "22c10271-daf7-4cb3-8056-5c6bc2786fd2": {
+      "musicbrainzAreaId": "22c10271-daf7-4cb3-8056-5c6bc2786fd2",
+      "matched": true,
+      "wikidataId": "Q883",
+      "label": "Novosibirsk",
+      "coordinate": "Point(82.916666666 55.033333333)",
+      "country": "Russia"
+    },
+    "aaa9511b-3355-4d6c-b6b9-365616fce90d": {
+      "musicbrainzAreaId": "aaa9511b-3355-4d6c-b6b9-365616fce90d",
+      "matched": true,
+      "wikidataId": "Q5815",
+      "label": "Tyumen",
+      "coordinate": "Point(65.533333333 57.15)",
+      "country": "Russia"
+    },
+    "eb52ca74-dd11-37a1-a3fa-154430bf2df2": {
+      "musicbrainzAreaId": "eb52ca74-dd11-37a1-a3fa-154430bf2df2",
+      "matched": true,
+      "wikidataId": "Q214",
+      "label": "Slovakia",
+      "coordinate": "Point(19.7 48.7)",
+      "country": "Slovakia"
+    },
+    "f5f1d03e-cc93-4429-8578-39e68266e277": {
+      "musicbrainzAreaId": "f5f1d03e-cc93-4429-8578-39e68266e277",
+      "matched": true,
+      "wikidataId": "Q48958",
+      "label": "Neuilly-sur-Seine",
+      "coordinate": "Point(2.2675 48.887222222)",
+      "country": "France"
+    },
+    "b9516e0b-4223-47a6-a64a-8750450c8c05": {
+      "musicbrainzAreaId": "b9516e0b-4223-47a6-a64a-8750450c8c05",
+      "matched": true,
+      "wikidataId": "Q1865",
+      "label": "Kuala Lumpur",
+      "coordinate": "Point(101.695277777 3.147777777)",
+      "country": "Malaysia"
+    },
+    "863f49fc-16d0-3fa8-beae-242fc8ab114b": {
+      "musicbrainzAreaId": "863f49fc-16d0-3fa8-beae-242fc8ab114b",
+      "matched": true,
+      "wikidataId": "Q929",
+      "label": "Central African Republic",
+      "coordinate": "Point(20.9 6.7)",
+      "country": "Central African Republic"
+    },
+    "e1804252-7413-4a4d-a34d-d21a8e8e752b": {
+      "musicbrainzAreaId": "e1804252-7413-4a4d-a34d-d21a8e8e752b",
+      "matched": true,
+      "wikidataId": "Q2145",
+      "label": "Quebec City",
+      "coordinate": "Point(-71.224167 46.816111)",
+      "country": "Canada"
+    },
+    "d139b081-dbc7-4d3f-9c4e-bdde3bf413b5": {
+      "musicbrainzAreaId": "d139b081-dbc7-4d3f-9c4e-bdde3bf413b5",
+      "matched": true,
+      "wikidataId": "Q836948",
+      "label": "Toro",
+      "coordinate": "Point(-5.394722222 41.52)",
+      "country": "Spain"
+    },
+    "1bc1aeec-9eab-4517-aa23-1f59248590c1": {
+      "musicbrainzAreaId": "1bc1aeec-9eab-4517-aa23-1f59248590c1",
+      "matched": true,
+      "wikidataId": "Q574192",
+      "label": "Greenville",
+      "coordinate": "Point(-82.385555555 34.844444444)",
+      "country": "United States"
+    },
+    "07abbcd5-89eb-42f6-b44e-6de8912b05a9": {
+      "musicbrainzAreaId": "07abbcd5-89eb-42f6-b44e-6de8912b05a9",
+      "matched": true,
+      "wikidataId": "Q986109",
+      "label": "Manteca",
+      "coordinate": "Point(-121.220833333 37.802777777)",
+      "country": "United States"
+    },
+    "1c69b790-b46b-3e92-b6b4-93b4364badbc": {
+      "musicbrainzAreaId": "1c69b790-b46b-3e92-b6b4-93b4364badbc",
+      "matched": true,
+      "wikidataId": "Q222",
+      "label": "Albania",
+      "coordinate": "Point(20.0 41.0)",
+      "country": "Albania"
+    },
+    "156d1886-7314-4dce-afbd-a723f61f1f81": {
+      "musicbrainzAreaId": "156d1886-7314-4dce-afbd-a723f61f1f81",
+      "matched": true,
+      "wikidataId": "Q736586",
+      "label": "Burnsville",
+      "coordinate": "Point(-93.2775 44.767777777)",
+      "country": "United States"
+    },
+    "0dd9f772-7cd1-402f-8627-5121eed4f8ad": {
+      "musicbrainzAreaId": "0dd9f772-7cd1-402f-8627-5121eed4f8ad",
+      "matched": true,
+      "wikidataId": "Q18438",
+      "label": "Long Island",
+      "coordinate": "Point(-73.23349 40.78886)",
+      "country": "United States"
+    },
+    "a1905709-b710-4028-a1c2-f35b8c671299": {
+      "musicbrainzAreaId": "a1905709-b710-4028-a1c2-f35b8c671299",
+      "matched": true,
+      "wikidataId": "Q514179",
+      "label": "Sankt Andrä",
+      "coordinate": "Point(14.816666666 46.766666666)",
+      "country": "Austria"
+    },
+    "55f3682e-ff80-4f11-9ec9-8923608a6ee1": {
+      "musicbrainzAreaId": "55f3682e-ff80-4f11-9ec9-8923608a6ee1",
+      "matched": true,
+      "wikidataId": "Q1435",
+      "label": "Zagreb",
+      "coordinate": "Point(15.977222222 45.813055555)",
+      "country": "Croatia"
+    },
+    "7d30afff-e425-356a-873e-17ae9745b31d": {
+      "musicbrainzAreaId": "7d30afff-e425-356a-873e-17ae9745b31d",
+      "matched": true,
+      "wikidataId": "Q224",
+      "label": "Croatia",
+      "coordinate": "Point(15.466667 45.25)",
+      "country": "Croatia"
+    },
+    "33f49521-f754-43cf-8d7a-d9e336fe56e6": {
+      "musicbrainzAreaId": "33f49521-f754-43cf-8d7a-d9e336fe56e6",
+      "matched": true,
+      "wikidataId": "Q807",
+      "label": "Lausanne",
+      "coordinate": "Point(6.633333333 46.533333333)",
+      "country": "Switzerland"
+    },
+    "f1ac379f-8cd3-45c3-8da0-80c429b36c5e": {
+      "musicbrainzAreaId": "f1ac379f-8cd3-45c3-8da0-80c429b36c5e",
+      "matched": true,
+      "wikidataId": "Q1781",
+      "label": "Budapest",
+      "coordinate": "Point(19.040833333 47.498333333)",
+      "country": "Hungary"
+    },
+    "a3ed30dc-6e11-4813-b63c-c7220ffa7d88": {
+      "musicbrainzAreaId": "a3ed30dc-6e11-4813-b63c-c7220ffa7d88",
+      "matched": true,
+      "wikidataId": "Q10313",
+      "label": "San Sebastián",
+      "coordinate": "Point(-1.98 43.32)",
+      "country": "Spain"
+    },
+    "04de2627-fe45-411a-8ad4-78da39420ec6": {
+      "musicbrainzAreaId": "04de2627-fe45-411a-8ad4-78da39420ec6",
+      "matched": true,
+      "wikidataId": "Q145002",
+      "label": "Trenčín",
+      "coordinate": "Point(18.040555555 48.894166666)",
+      "country": "Slovakia"
+    },
+    "ed091849-62dd-4d10-9d40-50594afb1b15": {
+      "musicbrainzAreaId": "ed091849-62dd-4d10-9d40-50594afb1b15",
+      "matched": true,
+      "wikidataId": "Q1780",
+      "label": "Bratislava",
+      "coordinate": "Point(17.1093063 48.1516988)",
+      "country": "Slovakia"
+    },
+    "c2676abd-2ac7-351a-94a9-a802b3434737": {
+      "musicbrainzAreaId": "c2676abd-2ac7-351a-94a9-a802b3434737",
+      "matched": true,
+      "wikidataId": "Q924",
+      "label": "Tanzania",
+      "coordinate": "Point(34.853888888 -6.306944444)",
+      "country": "Tanzania"
+    },
+    "a27ad636-0a28-43ee-a9fd-4dc4ec1c23e5": {
+      "musicbrainzAreaId": "a27ad636-0a28-43ee-a9fd-4dc4ec1c23e5",
+      "matched": true,
+      "wikidataId": "Q28271",
+      "label": "Annapolis",
+      "coordinate": "Point(-76.491944444 38.978611111)",
+      "country": "United States"
+    },
+    "6fa1c7da-6689-4cec-85f9-680f853e8a08": {
+      "musicbrainzAreaId": "6fa1c7da-6689-4cec-85f9-680f853e8a08",
+      "matched": true,
+      "wikidataId": "Q22",
+      "label": "Scotland",
+      "coordinate": "Point(-5.0 57.0)",
+      "country": "United Kingdom"
+    },
+    "36eeafda-c557-483e-a7fd-7842c9a892e3": {
+      "musicbrainzAreaId": "36eeafda-c557-483e-a7fd-7842c9a892e3",
+      "matched": true,
+      "wikidataId": "Q736742",
+      "label": "Wimbledon",
+      "coordinate": "Point(-0.2171 51.4235)",
+      "country": "United Kingdom"
+    },
+    "e82975d0-7258-4e4c-9c56-6e1deea8ad4c": {
+      "musicbrainzAreaId": "e82975d0-7258-4e4c-9c56-6e1deea8ad4c",
+      "matched": true,
+      "wikidataId": "Q31487",
+      "label": "Kraków",
+      "coordinate": "Point(19.937222222 50.061388888)",
+      "country": "Poland"
+    },
+    "842ce4dd-4e61-420d-aabf-f3005487ce60": {
+      "musicbrainzAreaId": "842ce4dd-4e61-420d-aabf-f3005487ce60",
+      "matched": true,
+      "wikidataId": "Q1498",
+      "label": "Uttar Pradesh",
+      "coordinate": "Point(80.91 26.85)",
+      "country": "India"
+    },
+    "e24de96f-81de-4021-8af3-1b656b6b1e42": {
+      "musicbrainzAreaId": "e24de96f-81de-4021-8af3-1b656b6b1e42",
+      "matched": true,
+      "wikidataId": "Q1156",
+      "label": "Mumbai",
+      "coordinate": "Point(72.8775 19.075833333)",
+      "country": "India"
+    },
+    "0373cdff-eac8-3fbc-92dc-36a607da06d1": {
+      "musicbrainzAreaId": "0373cdff-eac8-3fbc-92dc-36a607da06d1",
+      "matched": true,
+      "wikidataId": "Q8646",
+      "label": "Hong Kong",
+      "coordinate": "Point(114.158611111 22.278333333)",
+      "country": "People's Republic of China"
+    },
+    "b5751917-29d5-4b51-9ae7-9c4c6868f96e": {
+      "musicbrainzAreaId": "b5751917-29d5-4b51-9ae7-9c4c6868f96e",
+      "matched": true,
+      "wikidataId": "Q936730",
+      "label": "Eagan",
+      "coordinate": "Point(-93.166944444 44.817777777)",
+      "country": "United States"
+    },
+    "2db9a0a5-3eb7-418a-8cd4-6a8bda9bebb3": {
+      "musicbrainzAreaId": "2db9a0a5-3eb7-418a-8cd4-6a8bda9bebb3",
+      "matched": true,
+      "wikidataId": "Q49227",
+      "label": "Winston-Salem",
+      "coordinate": "Point(-80.260555555 36.1025)",
+      "country": "United States"
+    },
+    "898f4b4a-937c-4a34-834d-a8fb4b368034": {
+      "musicbrainzAreaId": "898f4b4a-937c-4a34-834d-a8fb4b368034",
+      "matched": true,
+      "wikidataId": "Q62212",
+      "label": "Hollis",
+      "coordinate": "Point(-73.762486111 40.711191666)",
+      "country": "United States"
+    },
+    "6f34ea39-ca6c-4982-9731-3a5c7a0edf36": {
+      "musicbrainzAreaId": "6f34ea39-ca6c-4982-9731-3a5c7a0edf36",
+      "matched": true,
+      "wikidataId": "Q202059",
+      "label": "London Borough of Lambeth",
+      "coordinate": "Point(-0.116388888 51.460833333)",
+      "country": "United Kingdom"
+    },
+    "db3656d5-d6d8-4c6a-9677-5182161da630": {
+      "musicbrainzAreaId": "db3656d5-d6d8-4c6a-9677-5182161da630",
+      "matched": true,
+      "wikidataId": "Q3289522",
+      "label": "Bearden",
+      "coordinate": "Point(-96.388333333 35.358055555)",
+      "country": "United States"
+    },
+    "b4c55385-d2ef-45bb-ba47-86adbecaeb01": {
+      "musicbrainzAreaId": "b4c55385-d2ef-45bb-ba47-86adbecaeb01",
+      "matched": true,
+      "wikidataId": "Q21197",
+      "label": "Chișinău",
+      "coordinate": "Point(28.835277777 47.022777777)",
+      "country": "Moldova"
+    },
+    "560ddb6d-4304-3938-8407-c96605226fad": {
+      "musicbrainzAreaId": "560ddb6d-4304-3938-8407-c96605226fad",
+      "matched": true,
+      "wikidataId": "Q217",
+      "label": "Moldova",
+      "coordinate": "Point(28.516667 47.25)",
+      "country": "Moldova"
+    },
+    "7e4475a3-56a0-4a79-9e0d-c19881e14631": {
+      "musicbrainzAreaId": "7e4475a3-56a0-4a79-9e0d-c19881e14631",
+      "matched": true,
+      "wikidataId": "Q455587",
+      "label": "Upper East Side",
+      "coordinate": "Point(-73.965555555 40.769166666)",
+      "country": "United States"
+    },
+    "c02ebe2f-ecf0-4671-9f09-d997c0effb9a": {
+      "musicbrainzAreaId": "c02ebe2f-ecf0-4671-9f09-d997c0effb9a",
+      "matched": true,
+      "wikidataId": "Q12892",
+      "label": "Antwerp",
+      "coordinate": "Point(4.399722222 51.221111111)",
+      "country": "Belgium"
+    },
+    "77ec97c2-5377-4ac7-b156-620470e71940": {
+      "musicbrainzAreaId": "77ec97c2-5377-4ac7-b156-620470e71940",
+      "matched": true,
+      "wikidataId": "Q2887",
+      "label": "Santiago",
+      "coordinate": "Point(-70.65 -33.4375)",
+      "country": "Chile"
+    },
+    "94183dad-d5dc-4542-b640-77fb5fe61881": {
+      "musicbrainzAreaId": "94183dad-d5dc-4542-b640-77fb5fe61881",
+      "matched": true,
+      "wikidataId": "Q82128",
+      "label": "Temuco",
+      "coordinate": "Point(-72.5901 -38.7399)",
+      "country": "Chile"
+    },
+    "bfe0632f-1c78-4f81-931b-f191b660c803": {
+      "musicbrainzAreaId": "bfe0632f-1c78-4f81-931b-f191b660c803",
+      "matched": true,
+      "wikidataId": "Q948281",
+      "label": "Rydułtowy",
+      "coordinate": "Point(18.4173 50.0578)",
+      "country": "Poland"
+    },
+    "400bdd75-a3a0-48e2-a6ae-c4733366aff3": {
+      "musicbrainzAreaId": "400bdd75-a3a0-48e2-a6ae-c4733366aff3",
+      "matched": true,
+      "wikidataId": "Q774015",
+      "label": "Leeds",
+      "coordinate": "Point(-1.549166666 53.799166666)",
+      "country": "United Kingdom"
+    },
+    "e96f1c0d-721b-470d-a9c4-0aa2d89cf9e7": {
+      "musicbrainzAreaId": "e96f1c0d-721b-470d-a9c4-0aa2d89cf9e7",
+      "matched": true,
+      "wikidataId": "Q16557",
+      "label": "Dallas",
+      "coordinate": "Point(-96.808888888 32.779166666)",
+      "country": "United States"
+    },
+    "c249c30e-88ab-4b2f-a745-96a25bd7afee": {
+      "musicbrainzAreaId": "c249c30e-88ab-4b2f-a745-96a25bd7afee",
+      "matched": true,
+      "wikidataId": "Q24826",
+      "label": "Liverpool",
+      "coordinate": "Point(-2.991666666 53.407222222)",
+      "country": "United Kingdom"
+    },
+    "f4524357-871a-4c23-9043-1a785978ad4f": {
+      "musicbrainzAreaId": "f4524357-871a-4c23-9043-1a785978ad4f",
+      "matched": true,
+      "wikidataId": "Q4191",
+      "label": "Lucerne",
+      "coordinate": "Point(8.3059 47.0523)",
+      "country": "Switzerland"
+    },
+    "bca5a4aa-b2b3-4561-bec9-6577fe789d77": {
+      "musicbrainzAreaId": "bca5a4aa-b2b3-4561-bec9-6577fe789d77",
+      "matched": true,
+      "wikidataId": "Q208445",
+      "label": "Vallejo",
+      "coordinate": "Point(-122.256638 38.104088)",
+      "country": "United States"
+    },
+    "1240a736-eef8-4607-9a34-10a39d0a26bb": {
+      "musicbrainzAreaId": "1240a736-eef8-4607-9a34-10a39d0a26bb",
+      "matched": true,
+      "wikidataId": "Q773",
+      "label": "Overijssel",
+      "coordinate": "Point(6.5 52.5)",
+      "country": "Netherlands"
+    },
+    "0b6fac79-1eca-4ea2-aa51-e069b97d691f": {
+      "musicbrainzAreaId": "0b6fac79-1eca-4ea2-aa51-e069b97d691f",
+      "matched": true,
+      "wikidataId": "Q273442",
+      "label": "Aarschot",
+      "coordinate": "Point(4.8333 50.9842)",
+      "country": "Belgium"
+    },
+    "ae96202a-e993-45de-adfe-a8c6b66a781d": {
+      "musicbrainzAreaId": "ae96202a-e993-45de-adfe-a8c6b66a781d",
+      "matched": true,
+      "wikidataId": "Q16558",
+      "label": "Fort Worth",
+      "coordinate": "Point(-97.3325 32.756388888)",
+      "country": "United States"
+    },
+    "61941444-5a83-43e2-ba48-4db7438e0f26": {
+      "musicbrainzAreaId": "61941444-5a83-43e2-ba48-4db7438e0f26",
+      "matched": true,
+      "wikidataId": "Q146690",
+      "label": "Brixton",
+      "coordinate": "Point(-0.1175 51.4575)",
+      "country": "United Kingdom"
+    },
+    "8b0c3b31-c1fd-48f4-b13d-86a8c8477e3e": {
+      "musicbrainzAreaId": "8b0c3b31-c1fd-48f4-b13d-86a8c8477e3e",
+      "matched": true,
+      "wikidataId": "Q1040",
+      "label": "Karlsruhe",
+      "coordinate": "Point(8.4 49.016666666)",
+      "country": "Germany"
+    }
+  },
+  "updatedAt": "2026-08-30T16:31:52.996Z"
+}

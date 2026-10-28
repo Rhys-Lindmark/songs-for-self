@@ -1,0 +1,31 @@
+{
+  "playlists": [
+    {
+      "name": "Songlines sample",
+      "lastModifiedDate": "2026-08-31",
+      "items": [
+        {
+          "track": {
+            "trackName": "Sunday Candy",
+            "artistName": "Nico Segal; Chance the Rapper",
+            "albumName": "Surf",
+            "trackUri": "spotify:track:1234567890123456789012"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Second sample",
+      "lastModifiedDate": "2026-08-30",
+      "items": [
+        {
+          "localTrack": {
+            "trackName": "Local song",
+            "artistName": "Local artist",
+            "albumName": "Local album"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "generatedFromMaxEnrichedAt": "2026-08-31T00:00:00.000Z",
+  "method": "Review queue only. Candidate families come solely from already classified rows sharing the exact album or credited artist. They are not applied to the dataset and require exact evidence.",
+  "unresolvedTracks": 0,
+  "strictSingletonTracks": 0,
+  "candidateCounts": {},
+  "queue": []
+}

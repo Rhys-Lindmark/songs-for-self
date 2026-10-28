@@ -1,0 +1,1342 @@
+{
+  "version": "1.18.0",
+  "updatedAt": "2026-08-31",
+  "method": "Manual review of exact Spotify recordings in the high-priority ranked-label queue. A retain decision records why a specific crossover label does not displace the canonical top-level family; a correct decision is also applied through an exact track-scoped override.",
+  "groups": {
+    "buck-meek-country": {
+      "action": "retain",
+      "currentFamily": "Country",
+      "candidateFamily": "Modern Folk",
+      "evidence": [
+        "https://music.apple.com/us/album/haunted-mountain/1685969663",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple's exact Haunted Mountain release notes describe indie Americana with explicit cowboy-country lineage. Indie folk is a genuine adjacent influence, but Country remains the better parent for these recordings."
+    },
+    "mapei-pop": {
+      "action": "retain",
+      "currentFamily": "Pop",
+      "candidateFamily": "R&B, Soul & Blues",
+      "evidence": [
+        "https://music.apple.com/us/artist/mapei/196611758",
+        "https://music.apple.com/fr/album/dont-wait/1030717796?l=en-GB",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies Mapei and the exact Don't Wait release as Pop. Alternative R&B describes a crossover edge, not a reason to replace the requested recording-family parent."
+    },
+    "old-crow-country": {
+      "action": "retain",
+      "currentFamily": "Country",
+      "candidateFamily": "Rock",
+      "evidence": [
+        "https://music.apple.com/us/artist/old-crow-medicine-show/5253595",
+        "https://music.apple.com/us/album/remedy/1206643370",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies both the artist and exact Remedy release as Country. Roots rock is an adjacent style and does not displace that recording-family parent."
+    },
+    "dan-deacon-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": [
+        "https://music.apple.com/us/artist/dan-deacon/251740762",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies Dan Deacon as Electronic. Experimental electronic is a useful detailed neighborhood, but Electronic remains the requested top-level recording family."
+    },
+    "einaudi-classical": {
+      "action": "retain",
+      "currentFamily": "Classical",
+      "candidateFamily": "Pop",
+      "evidence": [
+        "https://music.apple.com/us/album/divenire/1452504769",
+        "https://classical.music.apple.com/us/artist/7420827",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies the exact Divenire album as Classical and maintains a dedicated Apple Music Classical artist catalog. The broad operatic-pop tag does not describe these instrumental modern-classical recordings."
+    },
+    "shaggs-experimental": {
+      "action": "retain",
+      "currentFamily": "Experimental",
+      "candidateFamily": "Rock",
+      "evidence": [
+        "https://music.apple.com/us/artist/the-shaggs/240233",
+        "https://www.allmusic.com/artist/the-shaggs-mn0000418794",
+        "https://musicbrainz.org/artist/57a3905f-9a3b-40fb-aa35-70cf174b69a1"
+      ],
+      "rationale": "Apple calls the Shaggs poster children for outsider music, AllMusic lists Experimental Rock, and MusicBrainz identifies an outsider-music band. Rock is present, but Experimental is the more informative requested parent for these canonical outsider recordings."
+    },
+    "mux-mool-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Hip-hop",
+      "evidence": [
+        "https://music.apple.com/us/artist/mux-mool/161063179",
+        "https://music.apple.com/us/album/planet-high-school/679248117",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies both Mux Mool and the exact Planet High School release as Electronic. Instrumental hip-hop is a production lineage, while Electronic remains the stronger parent."
+    },
+    "dorothy-masuka-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Jazz",
+      "evidence": [
+        "https://sahistory.org.za/people/dorothy-masuka",
+        "https://sahistory.org.za/dated-event/jazz-veteran-dorothy-masuka-dies",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "South African History Online establishes Masuka's African-jazz and township-music context. South African jazz is positive regional genre evidence under the project's Songlines-style World gate, so World remains the intended atlas parent while jazz stays visible as a detailed style."
+    },
+    "ruth-pelham-modern-folk": {
+      "action": "correct",
+      "currentFamily": "Traditional Folk",
+      "candidateFamily": "Modern Folk",
+      "family": "Modern Folk",
+      "evidence": [
+        "https://music.apple.com/us/artist/ruth-pelham/253001671",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "These are authored contemporary community and children's songs, not anonymous or inherited traditional repertoire. Children's folk is therefore placed under Modern Folk."
+    },
+    "hollyfelds-country": {
+      "action": "retain",
+      "currentFamily": "Country",
+      "candidateFamily": "Rock",
+      "evidence": [
+        "https://music.apple.com/gb/artist/the-hollyfelds/274699326",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies the Hollyfelds as Country. Roots rock is adjacent evidence, but it does not outweigh the direct catalog family."
+    },
+    "die-antwoord-hip-hop": {
+      "action": "correct",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Hip-hop",
+      "family": "Hip-hop",
+      "evidence": [
+        "https://music.apple.com/us/album/ten%24ion/1585907857",
+        "https://music.apple.com/us/artist/die-antwoord/380615226",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies the exact Ten$ion release as Hip-Hop/Rap and describes Die Antwoord as a hip-hop and electronic group. The exact release classification controls these rap recordings while electronic remains a secondary style."
+    },
+    "ondatropica-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Jazz",
+      "evidence": [
+        "https://music.apple.com/us/artist/ondatr%C3%B3pica/531742450",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies Ondatrópica as música tropical and documents its Colombian and Caribbean regional-folklore synthesis. Latin jazz is a real component, but the positive regional genre evidence satisfies the atlas's World gate."
+    },
+    "santigold-pop": {
+      "action": "correct",
+      "currentFamily": "Hip-hop",
+      "candidateFamily": "Pop",
+      "family": "Pop",
+      "evidence": [
+        "https://music.apple.com/us/album/santigold/278671865",
+        "https://music.apple.com/us/album/master-of-my-make-believe/513472738",
+        "https://music.apple.com/us/artist/santigold/271500846",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies both exact albums as Alternative and documents their pop and dance crossover. The reference model supplies direct pop support; Pop is a better requested parent than Hip-hop for these lead-artist recordings."
+    },
+    "sugar-ray-rock": {
+      "action": "correct",
+      "currentFamily": "R&B, Soul & Blues",
+      "candidateFamily": "Rock",
+      "family": "Rock",
+      "evidence": [
+        "https://music.apple.com/us/album/the-best-of-sugar-ray/72792999",
+        "https://music.apple.com/us/artist/sugar-ray/146311",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies the exact Best of Sugar Ray release and the band as Rock, while describing funk metal as part of its earlier sound. Rock therefore replaces the unsupported R&B parent for these recordings."
+    },
+    "shel-silverstein-modern-folk": {
+      "action": "retain",
+      "currentFamily": "Modern Folk",
+      "candidateFamily": "Country",
+      "evidence": ["https://music.apple.com/us/artist/shel-silverstein/468503", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies Silverstein as Singer/Songwriter and documents his authored songs and stories. Country is a significant catalog influence, but Modern Folk remains the better parent for these lead-artist authored recordings."
+    },
+    "hot-chip-electronic": {
+      "action": "correct",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "family": "Electronic",
+      "evidence": ["https://music.apple.com/us/album/the-warning/1250994586", "https://music.apple.com/us/artist/hot-chip/24375409", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact The Warning album and Hot Chip as Electronic and describes the group as electro-pop. Electronic therefore replaces Pop as the requested parent while pop remains a secondary style."
+    },
+    "vacationer-pop": {
+      "action": "retain",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "evidence": ["https://music.apple.com/us/artist/vacationer/479128071", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple describes Vacationer's exact musical center as dreamy indie pop with sample-based production. Electropop is an adjacent production label, but Pop remains the stronger requested parent for these songs."
+    },
+    "jlin-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/dark-energy/972835488", "https://music.apple.com/us/album/black-origami/1213453132", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies both exact Jlin albums as Electronic. Experimental electronic accurately describes their detailed neighborhood, but Electronic remains the direct release-level parent."
+    },
+    "photay-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/photay/911094595", "https://music.apple.com/us/artist/photay/827786979", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Photay release and artist as Electronic. Experimental electronic describes the organic and synthetic techniques without displacing the requested parent."
+    },
+    "rosalia-motomami-pop": {
+      "action": "correct",
+      "currentFamily": "World",
+      "candidateFamily": "Experimental",
+      "family": "Pop",
+      "evidence": ["https://music.apple.com/us/album/motomami/1607918350", "https://music.apple.com/us/artist/rosal%C3%ADa/313845115", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact MOTOMAMI album as Pop Latino and ROSALÍA as Pop. Flamenco, reggaetón, and avant-garde methods remain visible styles, but neither nationality nor influence supports the current World parent."
+    },
+    "joe-cuba-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Jazz",
+      "evidence": ["https://music.apple.com/us/artist/joe-cuba/14888735", "https://music.apple.com/us/album/anthology/1466120985", "https://fania.com/record/joe-cuba-greatest-hits/"],
+      "rationale": "Apple and Fania identify Joe Cuba with música tropical, salsa, and Latin boogaloo. Latin jazz is a component, but named Afro-Caribbean/Nuyorican genres provide positive World evidence under the atlas contract."
+    },
+    "bellowhead-traditional-folk": {
+      "action": "retain",
+      "currentFamily": "Traditional Folk",
+      "candidateFamily": "Modern Folk",
+      "evidence": ["https://bellowhead.co.uk/music", "https://mainlynorfolk.info/bellowhead/records/burlesque.html", "https://mainlynorfolk.info/wyndham-read/songs/acrosstheline.html"],
+      "rationale": "Bellowhead's official catalog describes its source material as traditional songs, and the specialist Roud index identifies Across the Line as Roud 8239. Contemporary arrangement does not make the underlying repertoire authored modern folk."
+    },
+    "hanggai-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/artist/hanggai/281982368", "https://music.apple.com/us/song/437558317", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies Xiger Xiger as a Mongolian folk song, while the reference model supplies Mongolian folk, folk rock, and throat singing. Those named regional genres positively satisfy the World gate."
+    },
+    "makem-clancy-modern-folk": {
+      "action": "correct",
+      "currentFamily": "Traditional Folk",
+      "candidateFamily": "Modern Folk",
+      "family": "Modern Folk",
+      "evidence": ["https://music.apple.com/ie/song/1647838002", "https://www.rte.ie/archives/2019/1127/1095431-folk-singer-liam-clancy-dies/", "https://everynoise.com/engenremap.html"],
+      "rationale": "The Garden Song is credited by Apple to modern songwriter David Mallett, and Willie McBride is an authored Eric Bogle composition. These exact performances are folk-revival recordings of authored songs, not anonymous inherited repertoire."
+    },
+    "las-ketchup-pop": {
+      "action": "correct",
+      "currentFamily": "World",
+      "candidateFamily": "Pop",
+      "family": "Pop",
+      "evidence": ["https://music.apple.com/us/artist/las-ketchup/525316", "https://music.apple.com/us/song/1387977051", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple describes Las Ketchup as a Spanish pop act mixing rhumba, Latin pop, and reggae and identifies Aserejé as the breakthrough single. Latin pop is the direct recording family; Spanish identity and flamenco influence do not independently justify World."
+    },
+    "marc-anthony-salsa-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Pop",
+      "evidence": ["https://music.apple.com/us/album/3-0/668743163", "https://music.apple.com/us/playlist/la-salsa-de-marc-anthony/pl.0af7409949744d9e96a21eff29014940", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies 3.0 as música tropical and straight-ahead salsa and includes both Vivir Mi Vida and Ahora Quién in its Marc Anthony salsa catalog. Their crossover reach does not displace the named Afro-Caribbean recording genre."
+    },
+    "salvatore-adamo-pop": {
+      "action": "correct",
+      "currentFamily": "Modern Folk",
+      "candidateFamily": "Pop",
+      "family": "Pop",
+      "evidence": ["https://music.apple.com/us/artist/salvatore-adamo/13073996", "https://music.apple.com/us/song/1451371089", "https://universalmusic.fr/artistes/20000029889"],
+      "rationale": "Apple classifies Salvatore Adamo as French Pop and lists Tombe la neige among his defining recordings. Chanson and singer-songwriter authorship are retained as detail, but the direct catalog family is Pop rather than Modern Folk."
+    },
+    "toto-momposina-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Pop",
+      "evidence": ["https://realworldrecords.com/artists/toto-la-momposina/", "https://realworldrecords.com/releases/la-candela-viva/", "https://everynoise.com/engenremap.html"],
+      "rationale": "Real World identifies Totó's repertoire as Colombian ancestral tradition and names tambores, sextetos, gaitas, and cumbia. Those positive regional and traditional genres support World despite a broad Latin-pop classifier label."
+    },
+    "vicente-fernandez-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Pop",
+      "evidence": ["https://music.apple.com/us/artist/vicente-fern%C3%A1ndez/6742830", "https://music.apple.com/tm/playlist/vicente-fern%C3%A1ndez-next-steps/pl.c0169e796cfb4581b371f8b436a23f4b", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies Vicente Fernández as the defining ranchera singer, explicitly names Hermoso Cariño as Jalisciense-style bolero, and places Volver Volver in his ranchera canon. Named Mexican regional genres satisfy the World positive-evidence gate."
+    },
+    "bone-orchard-modern-folk": {
+      "action": "retain",
+      "currentFamily": "Modern Folk",
+      "candidateFamily": "Rock",
+      "evidence": ["https://music.apple.com/us/song/468285528", "https://folkways.si.edu/back-roads-to-cold-mountain/american-folk/music/album/smithsonian", "https://everynoise.com/engenremap.html"],
+      "rationale": "The exact catalog recording is a contemporary roots revival of inherited American folk repertoire; roots-rock texture does not outweigh the recording's folk-revival center."
+    },
+    "dave-mcgraw-modern-folk": {
+      "action": "retain",
+      "currentFamily": "Modern Folk",
+      "candidateFamily": "Rock",
+      "evidence": ["https://music.apple.com/us/artist/dave-mcgraw-and-crow-wing/326664073", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple keeps both exact tracks within the Coyotes Came Around singer-songwriter catalog; Americana and roots rock remain secondary to the authored contemporary-folk placement."
+    },
+    "forest-sun-country": {
+      "action": "retain",
+      "currentFamily": "Country",
+      "candidateFamily": "Rock",
+      "evidence": ["https://music.apple.com/us/artist/forest-sun/5080743", "https://forestsun.com/", "https://everynoise.com/engenremap.html"],
+      "rationale": "Forest Sun's own biography and Apple describe a catalog moving through folk, country, reggae, rock, and soul. Lay Me Down's Americana placement remains the best parent; roots rock is a neighboring influence."
+    },
+    "forest-sun-reggae-world": {
+      "action": "correct",
+      "currentFamily": "Country",
+      "candidateFamily": "Rock",
+      "family": "World",
+      "evidence": ["https://music.apple.com/us/artist/forest-sun/5080743", "https://music.apple.com/gd/album/so-nice/277403151", "https://forestsun.com/"],
+      "rationale": "Apple classifies the exact So Nice release as Reggae, positive named recording evidence for World rather than a generic artist-level Rock placement."
+    },
+    "gyptian-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Rock",
+      "evidence": ["https://music.apple.com/us/song/479654283", "https://soundcloud.com/gyptian-official/nah-let-go", "https://m.soundcloud.com/gyptian-official/wine-slow-3"],
+      "rationale": "The exact artist and label pages classify these recordings as Jamaican reggae and dancehall. Lovers rock is a reggae substyle and therefore reinforces rather than displaces the World parent."
+    },
+    "nerd-run-to-sun-hip-hop": {
+      "action": "correct",
+      "currentFamily": "World",
+      "candidateFamily": "Rock",
+      "family": "Hip-hop",
+      "evidence": ["https://music.apple.com/us/album/in-search-of/1475690530", "https://music.apple.com/us/song/1475686470", "https://music.apple.com/us/artist/n-e-r-d/626510"],
+      "rationale": "The current World parent is unsupported. Apple classifies Run To the Sun's exact In Search Of... release as Hip-Hop/Rap; funk-rock texture remains secondary."
+    },
+    "nerd-hypnotize-u-pop": {
+      "action": "correct",
+      "currentFamily": "World",
+      "candidateFamily": "Rock",
+      "family": "Pop",
+      "evidence": ["https://music.apple.com/ke/album/hypnotize-u/1443231164", "https://music.apple.com/us/song/1443231171", "https://music.apple.com/us/artist/n-e-r-d/626510"],
+      "rationale": "The current World parent is unsupported. Apple classifies Hypnotize U's exact Nothing release as Pop and describes its R&B/electronic crossover, so the direct album family outranks a generic artist-level Rock label."
+    },
+    "skydyed-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Rock",
+      "evidence": ["https://music.apple.com/us/artist/skydyed/890505476", "https://music.apple.com/us/album/high-enough/924084988?i=924085005", "https://music.apple.com/us/album/i-dont-know/1450867668?i=1450867672"],
+      "rationale": "Apple classifies Skydyed and the original High Enough single as Electronic and classifies I Don't Know as Breakbeat. Electronic rock describes the live-instrument crossover without displacing the direct electronic recording family."
+    },
+    "yann-tiersen-classical": {
+      "action": "retain",
+      "currentFamily": "Classical",
+      "candidateFamily": "Rock",
+      "evidence": ["https://www.wikidata.org/wiki/Q157256", "https://music.apple.com/us/album/comptine-dun-autre-%C3%A9t%C3%A9-lapr%C3%A8s-midi/1575400412?i=1575400467", "https://music.apple.com/us/album/tabarly/1678973206?i=1678973271"],
+      "rationale": "The source-backed artist record identifies neoclassicism and minimalist music, while the exact recordings are instrumental film-score compositions. Rock is an artist-level crossover label; Classical remains the more specific requested parent for these works."
+    },
+    "hillmen-country": {
+      "action": "correct",
+      "currentFamily": "Traditional Folk",
+      "candidateFamily": "Country",
+      "family": "Country",
+      "evidence": ["https://music.apple.com/us/album/copper-kettle/712194517?i=712197883", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Hillmen album and Copper Kettle recording as Country. Traditional bluegrass therefore maps to Country while the inherited song remains repertoire detail."
+    },
+    "cut-copy-electronic": {
+      "action": "correct",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "family": "Electronic",
+      "evidence": ["https://music.apple.com/us/artist/cut-copy/7432761", "https://music.apple.com/us/album/where-im-going/1442988113?i=1442988126", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies Cut Copy as Electronic, and the recording's specific reference labels are electropop and synth-pop. The broad product-level Pop category remains a crossover signal, but Electronic is the more specific requested parent."
+    },
+    "elohim-group-therapy-pop": {
+      "action": "retain",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "evidence": ["https://music.apple.com/us/album/group-therapy/1525724596?i=1525724597", "https://music.apple.com/us/artist/elohim/1013984396", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Group Therapy single as Pop while classifying Elohim's broader catalog as Electronic. The exact recording controls this crossover call, so Pop remains the parent and electropop remains a detailed style."
+    },
+    "joli-lego-pop": {
+      "action": "retain",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "evidence": ["https://music.apple.com/us/album/everything-is-awesome/1455294723?i=1455295028", "https://www.jolimusic.com/about/"],
+      "rationale": "Apple identifies the exact recording within The Lego Movie soundtrack, and the artist's official page identifies the exact theme performance. Its synth-pop production remains detail; the soundtrack-pop parent remains the better atlas placement."
+    },
+    "makadem-nyako-electronic": {
+      "action": "correct",
+      "currentFamily": "World",
+      "candidateFamily": "Electronic",
+      "family": "Electronic",
+      "evidence": ["https://music.apple.com/us/album/nyako-daisho-remix/1439099620?i=1439100016", "https://www.traxsource.com/track/4514171/nyako-daisho-remix"],
+      "rationale": "Apple classifies the exact Daisho remix as House and Traxsource places the same mix in its Afro/Latin/Brazilian dance catalog. Kenyan benga is source context, but the remixed recording belongs under Electronic."
+    },
+    "omd-electricity-electronic": {
+      "action": "correct",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "family": "Electronic",
+      "evidence": ["https://music.apple.com/us/artist/orchestral-manoeuvres-in-the-dark/74157865", "https://music.apple.com/us/album/electricity/714551637?i=714551809", "https://music.apple.com/us/album/electricity-remastered-2019/1475850622?i=1475851436"],
+      "rationale": "Apple classifies OMD as Electronic and classifies both its canonical Best Of Electricity recording and the later remaster as Electronic. Synth-pop and electropop therefore support Electronic over the broader Pop parent."
+    },
+    "parcels-lightenup-remix-electronic": {
+      "action": "correct",
+      "currentFamily": "Pop",
+      "candidateFamily": "Electronic",
+      "family": "Electronic",
+      "evidence": ["https://www.beatport.com/track/lightenup/15799609", "https://music.apple.com/us/album/lightenup-alex-metric-remix/1620415509?i=1620415528", "https://everynoise.com/engenremap.html"],
+      "rationale": "Beatport classifies the exact Alex Metric remix as Nu Disco / Disco, while Every Noise identifies electropop and synth-pop. The exact remix belongs under Electronic despite Apple's broader Alternative product category."
+    },
+    "reggie-watts-future-experimental": {
+      "action": "retain",
+      "currentFamily": "Experimental",
+      "candidateFamily": "Electronic",
+      "evidence": ["https://www.qobuz.com/dk-en/album/why-s-so-crazy-reggie-watts/s3g5a8lsjqiw3", "https://musicbrainz.org/artist/cf6a0510-b08c-4452-b28e-979fb57ff035/recordings"],
+      "rationale": "The exact release is cataloged as humour and described as an unclassifiable blend of comedy, performance art, layered voice, loops, and samplers. Electronic is a component, but Experimental remains the closest requested parent for this hybrid performance recording."
+    },
+    "aao-star-song-jazz": {
+      "action": "retain",
+      "currentFamily": "Jazz",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/star-song-feat-daniel-wilfred-david-wilfred-sunny-kim/1580655509?i=1580655513", "https://www.aao.com.au/project/hand-to-earth"],
+      "rationale": "Apple classifies the exact Hand to Earth recording as Jazz. The Australian Art Orchestra describes its minimalist electronic soundscapes and ancient-contemporary fusion, so avant-garde remains useful detail without displacing the direct Jazz parent."
+    },
+    "aao-ngarrindjeri-woman-jazz": {
+      "action": "retain",
+      "currentFamily": "Jazz",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://australianartorchestra.bandcamp.com/track/ngarrindjeri-woman", "https://music.apple.com/us/album/ngarrindjeri-woman/125463622?i=125463984"],
+      "rationale": "The Australian Art Orchestra's exact track page tags the Ruby recording experimental jazz, contemporary, and new jazz. Jazz remains the requested parent while the avant-garde candidate remains detailed style evidence."
+    },
+    "ayya-second-mistake-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/second-mistake/1501421531?i=1501421548", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Mono No Aware recording as Electronic. Experimental electronic is a specific style inside that requested parent, not a reason to move the recording to the broader Experimental family."
+    },
+    "hallucinogenius-downtempo-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/wearing-clothes-must-be-a-new-experience-for-you/1444942230?i=1444942234", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact High-Wasted recording as Downtempo, a direct electronic style. Experimental electronic remains useful detail, while Electronic remains the better requested parent."
+    },
+    "ideasforconversations-ambient-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/14c4/1869545206?i=1869545207", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact 14c4 single as Ambient. Experimental ambient is the detailed style, while Electronic remains the requested top-level parent for the recording."
+    },
+    "mooryc-saint-saens-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/saint-sa%C3%ABns/1868390930?i=1868391436", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact soundtrack recording as Electronic. Experimental electronic is a detailed label within that parent, so no top-level correction is warranted."
+    },
+    "photay-outre-lux-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/outr%C3%A9-lux-feat-madison-mcferrin/1254524399?i=1254524923", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Onism recording as Electronic. Experimental electronic and ambient describe its style without displacing the direct Electronic parent."
+    },
+    "sarathy-korwar-photay-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Experimental",
+      "evidence": ["https://music.apple.com/us/album/remember-begum-rokheya-feat-photay/1636083139?i=1636083148", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Kalak recording as Electronic. Experimental electronic and ambient remain detailed crossover labels, while Electronic remains the direct requested parent."
+    },
+    "balkan-beat-box-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Hip-hop",
+      "evidence": ["https://www.balkanbeatbox.com/about", "https://music.apple.com/us/album/dancing-with-the-moon/1478671401?i=1478671639", "https://everynoise.com/engenremap.html"],
+      "rationale": "The reviewed artist evidence identifies Balkan and Mediterranean electronic fusion, and Apple gives the exact album a regional Israeli category. Hip-hop and dancehall are audible components, but positive regional/style evidence keeps World as the requested parent."
+    },
+    "kabin-crew-spark-electronic": {
+      "action": "retain",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Hip-hop",
+      "evidence": ["https://music.apple.com/us/album/the-spark-feat-lisdoonvarna-crew/1750776444?i=1750776462", "https://www.qobuz.com/us-en/album/the-spark-kabin-crew/kbycjz605evjb"],
+      "rationale": "Apple classifies the exact single as Electronic and Qobuz identifies its drum-and-bass production. Irish hip-hop describes the vocals, while the production-led recording parent remains Electronic."
+    },
+    "snoop-pitch-perfect-holiday-pop": {
+      "action": "correct",
+      "currentFamily": "R&B, Soul & Blues",
+      "candidateFamily": "Hip-hop",
+      "family": "Pop",
+      "evidence": ["https://www.beatport.com/track/winter-wonderland-here-comes-santa-claus/28385476", "https://music.apple.com/us/album/winter-wonderland-here-comes-santa-claus-from-pitch/1440661601?i=1440661622"],
+      "rationale": "Beatport classifies the exact Pitch Perfect 2 mashup as Pop / Holiday and Apple identifies the exact soundtrack cut. Neither Snoop's artist-level R&B fallback nor the generic rap candidate should override this recording-level evidence."
+    },
+    "snoop-gz-hustlas-hip-hop": {
+      "action": "correct",
+      "currentFamily": "R&B, Soul & Blues",
+      "candidateFamily": "Hip-hop",
+      "family": "Hip-hop",
+      "evidence": ["https://www.beatport.com/track/gz-and-hustlas/22270148", "https://music.apple.com/us/song/1676306194"],
+      "rationale": "Beatport classifies the exact Doggystyle recording as Hip-Hop and Apple identifies its original release. G-funk and West Coast hip-hop directly map to Hip-hop."
+    },
+    "snoop-drop-instrumental-hip-hop": {
+      "action": "correct",
+      "currentFamily": "R&B, Soul & Blues",
+      "candidateFamily": "Hip-hop",
+      "family": "Hip-hop",
+      "evidence": ["https://open.spotify.com/track/6agO9tPEXgoXeh0p2wTD5U", "https://music.apple.com/us/album/drop-it-like-its-hot-instrumental/1445287603?i=1445287613"],
+      "rationale": "Apple classifies the exact instrumental EP recording as Hip-Hop/Rap. Its funk elements and instrumental form do not make the recording R&B."
+    },
+    "snoop-wiz-young-wild-free-hip-hop": {
+      "action": "correct",
+      "currentFamily": "R&B, Soul & Blues",
+      "candidateFamily": "Hip-hop",
+      "family": "Hip-hop",
+      "evidence": ["https://www.qobuz.com/us-en/album/young-wild-free-feat-bruno-mars-snoop-dogg-wiz-khalifa/0075679965738", "https://www.wikidata.org/wiki/Q2696997"],
+      "rationale": "Qobuz classifies the exact single as Hip-Hop/Rap and the work record identifies pop rap. Bruno Mars's pop chorus is crossover detail within the Hip-hop recording parent."
+    },
+    "wiley-too-many-man-hip-hop": {
+      "action": "correct",
+      "currentFamily": "Electronic",
+      "candidateFamily": "Hip-hop",
+      "family": "Hip-hop",
+      "evidence": ["https://music.apple.com/us/album/too-many-man/1684377067?i=1684379074", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Boy Better Know recording as Hip-Hop/Rap and Every Noise identifies grime. UK garage and drum-and-bass remain crossover context, but Hip-hop is the direct requested parent."
+    },
+    "girl-from-ipanema-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Jazz",
+      "evidence": ["https://open.spotify.com/track/0TU5tjEaLsQVxp1vrmO6UW", "https://everynoise.com/engenremap.html"],
+      "rationale": "The exact playlist recording is a 6:35 Astrud Gilberto and Antônio Carlos Jobim compilation cut rather than the canonical Getz/Gilberto single. Its direct bossa nova and samba evidence positively supports World; jazz and samba-jazz remain crossover styles without an exact-release Jazz match."
+    },
+    "maite-hontele-salsa-world": {
+      "action": "retain",
+      "currentFamily": "World",
+      "candidateFamily": "Jazz",
+      "evidence": ["https://music.apple.com/us/album/soy-de-lo-peor-feat-gilberto-santa-rosa/1439580145?i=1439580151", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Cuba Linda recording as Música tropical, while the direct labels identify salsa and son cubano. Latin jazz is a real crossover, but positive regional/style evidence keeps World as the requested parent."
+    },
+    "nine-sparks-riots-funk-rnb": {
+      "action": "retain",
+      "currentFamily": "R&B, Soul & Blues",
+      "candidateFamily": "Jazz",
+      "evidence": ["https://music.apple.com/us/album/this-too-shall-pass-feat-avatar-horns/1610162845?i=1610162852", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact recording as Funk, which maps to the requested R&B, Soul & Blues parent. Jazz-funk remains the detailed crossover style rather than displacing the direct funk parent."
+    },
+    "tokyo-ska-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Jazz",
+      "evidence": ["https://music.apple.com/us/album/tategakino-ame-feat-nakanoyoshie/592440625?i=592440755", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple gives the exact Tokyo Ska Paradise Orchestra album a regional Japan category and Every Noise identifies ska and Japanese ska. Jazz is part of the orchestra's crossover sound, but positive regional and named-style evidence keeps World as the requested parent."
+    },
+    "a-tergo-lupi-modern-folk": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/hear-me/1649650717?i=1649650906", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Hide recording as Folk and Every Noise identifies dark folk. Dark ambient is production detail; Modern Folk is the direct requested parent."
+    },
+    "lenker-meek-angels-modern-folk": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/angels/1852542218?i=1852542481", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies the exact Adrianne Lenker and Buck Meek recording and Every Noise gives it an exact indie-folk label. No direct country-style evidence supports the fallback Country parent, so Modern Folk controls."
+    },
+    "dick-hogan-traditional-folk": {
+      "action": "retain", "currentFamily": "Traditional Folk", "candidateFamily": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/the-rich-man-and-the-poor-man/866991354?i=866991376", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies multiple exact Dick Hogan releases of The Rich Man and the Poor Man as Traditional Folk. The broad Irish-folk candidate therefore does not displace the source-backed traditional-repertoire parent."
+    },
+    "esma-caje-sukarije-world": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Modern Folk", "family": "World",
+      "evidence": ["https://music.apple.com/us/album/%C4%8Daje-%C5%A1ukarije/589142281?i=589142352", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact recording as Worldwide/Folk and Every Noise identifies traditional folk and folk-pop. Positive Romani and Macedonian repertoire evidence supports World, while Electronic has no recording-level support."
+    },
+    "harper-bloom-modern-folk": {
+      "action": "correct", "currentFamily": "Rock", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/walk-my-way/1823609334?i=1823609780", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact EP recording as Alternative Folk and Every Noise supplies an exact indie singer-songwriter label. Modern Folk is more specific than the inherited Rock parent."
+    },
+    "kardes-turkuler-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/newroz/172375892?i=172376479", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Newroz recording as Worldwide and Every Noise identifies Kurdish folk. Positive regional and named-style evidence keeps World as the requested parent rather than treating all living folk practice as Modern Folk."
+    },
+    "koutev-bulgarian-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/bre-petrunko-ho-dear-petroona/276114500?i=276114684", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Bulgarian National Ensemble recording as Worldwide and Every Noise identifies Bulgarian folk. Positive regional and traditional-ensemble evidence keeps World as the requested parent."
+    },
+    "mikaela-song-for-you-modern-folk": {
+      "action": "correct", "currentFamily": "Rock", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://music.apple.com/us/album/a-song-for-you/775338751?i=775338812", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies the exact alternative single and Every Noise gives the exact recording a singer-songwriter label. With no direct rock-style evidence, Modern Folk is the better requested parent at medium confidence."
+    },
+    "alfredo-de-la-fe-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://music.apple.com/us/album/pa-que-lo-bailes/481818161?i=481818166", "https://music.apple.com/us/album/pa-que-lo-bailes/1487175247?i=1487175432"],
+      "rationale": "Apple classifies exact releases of Pa' Que lo Bailes as Latin and Música tropical. The broad Latin-pop candidate does not displace positive tropical-Latin and charanga recording evidence, so World remains the requested parent."
+    },
+    "arpex-tierra-caliente-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4Uua3lZKDwKeX0Amw6PoRD", "https://music.apple.com/us/album/el-perro-the-dog/280344009?i=280344131"],
+      "rationale": "Apple classifies the exact recording as Música Mexicana. Positive Tierra Caliente and regional Mexican evidence keeps World as the requested parent rather than promoting the broad Latin-pop candidate."
+    },
+    "avenida-b-salsa-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/1Hp47zODYJvAKF8kYCy3s7", "https://music.apple.com/us/album/la-rosa-de-mi-vida/916554994?i=916554999"],
+      "rationale": "Apple classifies the exact recording as Latin and its salsa arrangement supplies positive named-style evidence. World remains the requested parent despite an adjacent Latin-pop label."
+    },
+    "bad-bunny-otro-atardecer-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/0E0DRHf5PfMeor0ZCwB3oT", "https://music.apple.com/us/album/otro-atardecer/1622045624?i=1622046222"],
+      "rationale": "Apple classifies the exact Un Verano Sin Ti recording as Latin, and the recording has direct reggaeton and cumbia evidence. Those named regional styles satisfy the current positive-evidence gate for World."
+    },
+    "beny-more-mambo-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/5J6JxUSQPyeNPp1yCyBecd", "https://music.apple.com/us/album/babarabatiri/559554620?i=559554629"],
+      "rationale": "Apple classifies the exact recording as Música tropical/Worldwide. Direct mambo and Cuban bolero evidence keeps World as the requested parent rather than the broad Pop candidate."
+    },
+    "carly-call-me-maybe-pop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/6ol4ZSifr7r3Lb2a9L5ZAB", "https://music.apple.com/us/album/call-me-maybe/1440873664?i=1440874008"],
+      "rationale": "Apple classifies the exact Kiss recording as Pop. Electronic production is secondary and does not displace the direct Pop parent."
+    },
+    "casey-mq-celebrity-crush-pop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/4RrpTNBLLu4vJwr9At7gkI", "https://music.apple.com/us/album/celebrity-crush-single/1519065004", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact single as Pop and Every Noise identifies ambient pop. Hyperpop and electronic production remain detailed styles within the direct Pop parent."
+    },
+    "dschinghis-khan-moskau-pop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/4m7p2dejJrMiiA1vg8LDPK", "https://music.apple.com/us/album/moskau/1357124838?i=1357124994"],
+      "rationale": "Apple classifies the exact recording as German Pop. Disco production is secondary, so Pop replaces the inherited Electronic parent."
+    },
+    "elia-elizabeth-alegria-pop": {
+      "action": "correct", "currentFamily": "World", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/57NbelD7NoWpb6dXVcOEbM", "https://music.apple.com/us/album/alegr%C3%ADa/1712543891?i=1712543895", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact original recording as Pop and Every Noise supplies a Latin-pop label. Colombian origin alone does not make this recording World."
+    },
+    "luttrell-snoop-dawk-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/409BC24PyUgRLQdGGdyGwT", "https://music.apple.com/us/album/snoop-dawk-mixed/1594229895?i=1594229901"],
+      "rationale": "Apple classifies the exact DJ-mix recording as Dance. The direct club-electronic evidence keeps Electronic as the requested parent rather than Pop."
+    },
+    "fishmans-long-season-rock": {
+      "action": "correct", "currentFamily": "World", "candidateFamily": "Pop", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/08b1bCjsKjMzhjBm0qhkof", "https://music.apple.com/us/album/long-season/1416925635?i=1416925644", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact recording as Rock. Dream pop, dub, and reggae describe its crossover sound, but direct evidence supports Rock rather than World."
+    },
+    "gladiator-fable-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/0kBM8wIxlqbKL97cKbYpNC", "https://music.apple.com/us/album/fable/1810311700?i=1810311704"],
+      "rationale": "Apple classifies the exact Fable recording as Electronic. The generic dance-pop candidate does not displace direct product evidence."
+    },
+    "grupo-sonador-cumbia-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4Q4ZrHlqrfFQPeZ0yubmYG", "https://music.apple.com/us/album/los-fantasmas/128804468?i=128804479"],
+      "rationale": "Apple classifies the exact recording as Música tropical and another exact issue as Música Mexicana; direct cumbia evidence keeps World as the requested parent."
+    },
+    "gulseren-sinanay-pop": {
+      "action": "correct", "currentFamily": "World", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/6QAmlRQ9whFYW2PfcjsZ3d", "https://music.apple.com/us/album/sinanay/159693704?i=159693807", "https://everynoise.com/engenremap.html"],
+      "rationale": "Every Noise identifies the exact recording as Turkish pop. Apple's broad Worldwide shelf does not displace the more specific recording-level Pop label."
+    },
+    "javier-solis-bolero-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4leHHwUSR0Vm5rjYvHhBEU", "https://music.apple.com/us/album/en-tu-pelo/1308496794?i=1308497632"],
+      "rationale": "Apple classifies the exact recording as Baladas y Boleros and the reference labels include mariachi. Positive bolero and mariachi evidence keeps World as the requested parent."
+    },
+    "juanes-camisa-negra-pop": {
+      "action": "correct", "currentFamily": "World", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/2EM9zpAc7PVeoAydmbfVIL", "https://music.apple.com/us/album/la-camisa-negra/1440652099?i=1440652265", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact recording as Latin and Every Noise identifies Latin pop. Cumbia is an influence, but direct recording evidence supports Pop rather than World."
+    },
+    "julion-alvarez-mexicana-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4mzUXLXB7bP39K7CCJzouR", "https://music.apple.com/us/album/y-as%C3%AD-fue/1631011564?i=1631011737"],
+      "rationale": "Apple classifies the exact recording as Música Mexicana and the performing group is explicitly norteño banda. Positive named regional-style evidence keeps World as the requested parent."
+    },
+    "kuchi-falling-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/34aSv8AVL6LfngS7JE7oeA", "https://music.apple.com/us/album/falling/1462123235?i=1462123236"],
+      "rationale": "Apple classifies the exact Falling single as Dance. The direct club-product evidence keeps Electronic as the requested parent."
+    },
+    "corraleros-cumbia-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/2nRyzdeN1Q3tFidJ4WdHuZ", "https://music.apple.com/us/album/tres-punta/276678998?i=276679071"],
+      "rationale": "Apple classifies the exact recording as Música tropical and the reference labels include cumbia and vallenato. Positive named Colombian styles keep World as the requested parent."
+    },
+    "miticos-cumbia-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/62y1Hmyio3Pj8ZBi2Ds3MI", "https://music.apple.com/us/album/no-pares-hasta-tener-lo-suficiente-dont-stop-til-you/1612406777?i=1612406786"],
+      "rationale": "Apple classifies the exact recording as Latin and the source arrangement has direct cumbia evidence. Its source composition is Pop, but the playlist recording's performed style keeps World as the requested parent."
+    },
+    "einaudi-durante-taranta-classical": {
+      "action": "retain", "currentFamily": "Classical", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/7wM1166obCm9BA4wxtCPGg", "https://music.apple.com/us/album/taranta-remastered-2020/1524493579?i=1524495045"],
+      "rationale": "Apple classifies the exact Taranta recording as Classical. The operatic-pop candidate does not displace direct exact-product evidence."
+    },
+    "manufactured-superstars-au5-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/1orUgs2nNTHIVoqTbpO9dm", "https://music.apple.com/us/album/stay-feat-jarvis-church-au5-remix/896621234?i=896621238"],
+      "rationale": "Apple classifies the exact Au5 remix as Dance and another exact issue as House. Direct remix-product evidence keeps Electronic as the requested parent."
+    },
+    "nick-leon-casey-mq-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/6rWPWP8A3c78e1UBXY0QSO", "https://music.apple.com/us/album/ocean-apart/1807352711?i=1807352840"],
+      "rationale": "Apple classifies the exact Ocean Apart recording as Electronic. Ambient-pop and hyperpop are adjacent labels, but the direct product parent remains Electronic."
+    },
+    "niko-night-of-fire-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/6pRfPC3TZvGie6emFW53xC", "https://music.apple.com/us/album/night-of-fire-extended-mix/1448822844?i=1448822849"],
+      "rationale": "Apple classifies exact Night of Fire mixes as Dance and the reference genres identify Eurobeat. Direct electronic dance evidence keeps Electronic as the requested parent."
+    },
+    "oana-chitu-romanian-tango-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/7gyuH6v1Pj2BlZWKumuW8n", "https://oanactlinachiu.bandcamp.com/album/bucharest-tango"],
+      "rationale": "The artist and label's exact Bucharest Tango page lists Marie si Marioara and documents a restored Romanian tango and folk-ballad repertoire with World, folk, roots, Balkan, and tango tags. Positive repertoire evidence keeps World."
+    },
+    "orquesta-aragon-tropical-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/1UipKFYbqCb3jc0DEW7h93", "https://music.apple.com/us/album/el-bodeg%C3%BCero/298325858?i=298325895"],
+      "rationale": "Apple classifies the exact El Bodegüero recording as Música tropical. Positive Cuban tropical and charanga recording evidence keeps World as the requested parent."
+    },
+    "petrona-rebuscona-bullerengue-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/5aCfaR4jZ6SvKcn6fTikS8", "https://enciclopedia.banrepcultural.org/Petrona_Mart%C3%ADnez", "https://everynoise.com/engenremap.html"],
+      "rationale": "Colombia's Banco de la República cultural encyclopedia documents Petrona Martínez's traditional Caribbean bullerengue repertoire and folk recognition; the recording reference also supplies cumbia. Positive genre evidence keeps World."
+    },
+    "pinkpantheress-boys-liar-pop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/5CCr8msaN3MhgqBoa9yWhH", "https://music.apple.com/us/album/boys-a-liar-pt-2-single/1664929598", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact PinkPantheress and Ice Spice single as Pop. UK garage and drum-and-bass production remain detailed influences within the direct product parent."
+    },
+    "samthing-soweto-afropop-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/5nYpzwdaQTf8WcesC8gizD", "https://music.apple.com/us/album/isphithiphithi/1478000814"],
+      "rationale": "Apple classifies the exact Isphithiphithi album as Afro-Pop and addresses Omama Bomthandazo directly in its artist notes. Positive named South African genre evidence keeps World as the requested parent."
+    },
+    "hey-penne-tamil-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/2FGZDrcHRf9jGMHGPI8cjx", "https://music.apple.com/us/album/hey-penne-from-kattappava-kanom/1153601046?i=1153601126", "https://noteverynoise.com/tamilindie.html"],
+      "rationale": "Apple classifies the exact film recording as Tamil and the reference memberships identify Kollywood and Tamil pop. Positive named regional-film evidence keeps World rather than relying on nationality alone."
+    },
+    "skrillex-right-in-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/1LV5G400jD3Ytvyv6Dlkym", "https://music.apple.com/us/album/right-in/491596645?i=491596646"],
+      "rationale": "Apple classifies the exact Right In recording as Dance and the reference genres identify dubstep and brostep. Direct electronic product evidence keeps Electronic as the requested parent."
+    },
+    "skrillex-right-on-time-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/11ZJb66Ag7gjTmLBKF8ZuZ", "https://music.apple.com/us/album/right-on-time/491596645?i=491596730&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Right on Time recording as Dance and the reference genres identify dubstep, brostep, and moombahton. Direct electronic product evidence keeps Electronic as the requested parent."
+    },
+    "skrillex-recess-flux-pavilion-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4RJHa0uZqGV4bGyKQe2wcM", "https://music.apple.com/us/album/recess-feat-fatman-scoop-and-michael-angelakos-flux/893889791?i=893889810&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Flux Pavilion remix as Dance. The featured artists' Pop membership does not displace the remix recording's direct Electronic parent."
+    },
+    "skrillex-kyoto-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/3FUZpoj9VV0sgc8RqbS3xQ", "https://music.apple.com/us/album/kyoto-feat-sirah/491596645?i=491596731&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Kyoto recording as Dance and the reference genres identify dubstep and brostep. Direct electronic product evidence keeps Electronic as the requested parent."
+    },
+    "skrillex-breakn-a-sweat-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/1ShWHEgisDGPl9G3g85ANu", "https://music.apple.com/us/album/breakn-a-sweat/491596645?i=491596648&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Breakn' a Sweat recording as Dance. The Doors sample and crossover labels do not displace direct Electronic product evidence."
+    },
+    "slackcircus-heyyeyaa-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/0trTpNYmHAK3EihaZBd2h6", "https://music.apple.com/us/album/heyyeyaaeyaaaeyaeyaa-fabulous-secret-powers/804980712?i=804980772&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Fabulous Secret Powers single as Dance. Dance-pop is a useful detailed label, while the direct product parent remains Electronic in the requested taxonomy."
+    },
+    "sol-althea-aluna-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/0ityftvFzPVMrY1xqyrooH", "https://music.apple.com/us/album/aluna/1520031403?i=1520031409&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Aluna single as Dance. Dance-pop is adjacent, but direct exact-product evidence keeps Electronic as the requested parent."
+    },
+    "immortals-mortal-kombat-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/7210gUfSMVJ7ngS65IBR7g", "https://music.apple.com/us/album/mortal-kombat/1418657419?i=1418657421&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Mortal Kombat single as Dance. Its soundtrack context and dance-pop crossover do not displace the direct Electronic product parent."
+    },
+    "una-mas-clear-as-water-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/3465azIEw57PcmownJb6ly", "https://music.apple.com/us/album/clear-as-water-mo-horizons-remix/586031120?i=586031121&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Mo' Horizons remix as Latin, while the reference genres identify Latin pop and bossa nova. Positive named Latin and bossa nova evidence keeps World rather than relying on artist geography."
+    },
+    "vital-elements-omega-point-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4Wpwt4qpxrZ7aJNQzAA4l5", "https://music.apple.com/us/album/omega-point/399836757?i=399836813&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Omega Point recording as Dance. Dance-pop is an adjacent label, while direct exact-product evidence keeps Electronic as the requested parent."
+    },
+    "wham-wake-me-up-pop": {
+      "action": "correct", "currentFamily": "Rock", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/0ikz6tENMONtK6qGkOrU3c", "https://music.apple.com/us/album/wake-me-up-before-you-go-go/193084944?i=193084947&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Make It Big recording as Pop. New wave is a detailed influence, while the direct exact-product parent is Pop."
+    },
+    "yung-spielburg-wet-your-beak-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/5N4h1zMpCg3mfvHctvQfuU", "https://music.apple.com/us/album/wet-your-beak-the-all-in-podcast-theme/1549547086?i=1549547087&uo=4"],
+      "rationale": "Apple classifies the exact Wet Your Beak theme single as Dance. Dance-pop is a detailed label, while Electronic remains the supported requested parent."
+    },
+    "boney-m-rivers-babylon-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "R&B, Soul & Blues",
+      "evidence": ["https://open.spotify.com/track/78His8pbKjbDQF7aX5asgv", "https://music.apple.com/us/album/rivers-of-babylon-2007-remastered-version/250727571?i=250727833&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "The exact Nightflight to Venus recording has direct reggae evidence alongside Eurodisco and R&B/Soul catalog context. Positive named reggae evidence keeps World as the requested parent rather than changing the recording from a broad crossover label."
+    },
+    "bongeziwe-intro-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "R&B, Soul & Blues",
+      "evidence": ["https://open.spotify.com/track/1pmnRWyl6HdWtraKmMe3gz", "https://music.apple.com/us/album/intro/1443137543?i=1443137547&uo=4", "https://bongeziwe.com/"],
+      "rationale": "Apple classifies the exact Mangaliso recording as Worldwide, and the reviewed artist evidence identifies Xhosa Afro-folk and urban traditional African folk. Positive named repertoire evidence keeps World while soul remains an influence."
+    },
+    "jessie-ware-pearls-pop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "R&B, Soul & Blues", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/5EAbUR2kkfDOCWEcWcb7YG", "https://music.apple.com/us/album/pearls/1668868373?i=1668868380&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact That! Feels Good! recording as Pop. Disco, funk, and contemporary R&B remain detailed influences within the direct Pop product parent."
+    },
+    "terakaft-amazzagh-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "R&B, Soul & Blues",
+      "evidence": ["https://open.spotify.com/track/7foxbfQu0yEXFOrqGl0VIw", "https://music.apple.com/us/album/amazzagh/666839448?i=666839509&uo=4", "https://www.wikidata.org/wiki/Q3518278"],
+      "rationale": "Apple classifies the exact Amazzagh recording as Worldwide and the reviewed references identify Tuareg desert blues, desert rock, and Tamasheq repertoire. Positive named desert blues evidence keeps World."
+    },
+    "m-mama-sam-pop": {
+      "action": "correct", "currentFamily": "R&B, Soul & Blues", "candidateFamily": "Rock", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/4wRbUz7hoMZBZZhGZyV28t", "https://music.apple.com/us/album/mama-sam/697669286?i=697669451&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Je dis aime recording as Pop. French rock, chanson, and funk remain detailed influences while the direct product parent is Pop."
+    },
+    "bowie-life-on-mars-rock": {
+      "action": "correct", "currentFamily": "Jazz", "candidateFamily": "Rock", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N", "https://music.apple.com/us/album/life-on-mars/1039798000?i=1039798013&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Hunky Dory (2015 Remaster) recording as Rock, and the reference genres identify art rock and glam rock. Direct product evidence replaces the unsupported Jazz fallback."
+    },
+    "larkin-poe-ex-con-rock": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Rock", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/0uPbGYrOp7Svg1eyJsE3Hx", "https://music.apple.com/us/album/ex-con/1673724188?i=1673725388&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Self Made Man recording as Alternative, while the reference genres identify blues rock, southern rock, and roots rock. Rock is the supported requested parent rather than Country."
+    },
+    "matt-rouch-black-noon-country": {
+      "action": "retain", "currentFamily": "Country", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/7tj8DG5zoZE1doGtkseEdy", "https://music.apple.com/us/album/black-noon-dawn/1414485594?i=1414485599&uo=4"],
+      "rationale": "Apple classifies the exact Black Noon Dawn recording on The Beautiful and the Damned as Country. Roots rock remains a detailed influence, but the direct product parent retains Country."
+    },
+    "monty-python-galaxy-song-pop": {
+      "action": "retain", "currentFamily": "Pop", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/34yg9VNqMh8WLKCAipKXgO", "https://musicbrainz.org/release-group/58be1496-a075-30d7-8601-0f3ffb827689", "https://music.apple.com/us/album/galaxy-song/1445296644?i=1445296658&uo=4"],
+      "rationale": "The exact Monty Python Sings release group is led by Comedy tags with comedy rock as a minor influence, while Apple's catalog places Galaxy Song in Pop. Because Comedy is not a requested top-level family, Pop remains the best supported parent."
+    },
+    "porlolo-for-emily-country": {
+      "action": "retain", "currentFamily": "Country", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/70Ct1sCesOWW1hqvjYqwBg", "https://music.apple.com/us/album/for-emily/219338340?i=219338723&uo=4"],
+      "rationale": "Apple classifies the exact For Emily recording on Storm and Season as Country. Roots rock remains an adjacent label, but the direct product parent retains Country."
+    },
+    "samantha-crain-never-going-back-modern-folk": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Rock", "family": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/1SGcSxVxrsub49OZ6nHVKH", "https://music.apple.com/us/album/never-going-back/601575468?i=601575550&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Kid Face recording as Singer/Songwriter. Americana and roots rock remain adjacent labels; Modern Folk is the direct requested parent for this authored singer-songwriter recording."
+    },
+    "shakey-graves-dearly-departed-modern-folk": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Rock", "family": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/6iGojU5pISv3JaJf2AHiCf", "https://music.apple.com/us/album/dearly-departed-feat-esm%C3%A9-patterson/1752543285?i=1752543387&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact And the War Came recording as Folk. Americana and roots rock remain adjacent labels; Modern Folk is the supported requested parent for this authored contemporary song."
+    },
+    "sumo-crua-chan-rock": {
+      "action": "correct", "currentFamily": "World", "candidateFamily": "Rock", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/6weZWR2OyNDvoOZlsPCIPf", "https://music.apple.com/us/album/crua-chan/321567831?i=321567840&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Crua Chan recording as Rock y Alternativo and the reference genres identify post-punk. Reggae remains a musical influence, but direct recording evidence replaces the unsupported World parent."
+    },
+    "lone-bellow-green-eyes-rock": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Rock", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/5jQQSl7Uae4S8mlRkR4W8j", "https://music.apple.com/us/album/green-eyes-and-a-heart-of-gold/586750119?i=586750377&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Lone Bellow studio recording as Alternative and the reference genre identifies roots rock. Rock is the supported requested parent rather than an artist-level Country fallback."
+    },
+    "western-front-orygun-country": {
+      "action": "retain", "currentFamily": "Country", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/373lax965JHGRtIOFjVI3s", "https://music.apple.com/us/album/orygun/664632283?i=664632461&uo=4"],
+      "rationale": "Apple classifies the exact Orygun recording as Americana. Country is the requested parent for this American roots product, while roots rock remains a detailed adjacent label."
+    },
+    "tiny-tim-tip-toe-pop": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Rock", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/1Vchex0xowRj9k59RLvRfo", "https://music.apple.com/us/album/tip-toe-thru-the-tulips-with-me/140786257?i=140785376&uo=4"],
+      "rationale": "Apple classifies the exact God Bless Tiny Tim recording as Pop. The novelty vocal presentation does not support the artist-level Country fallback."
+    },
+    "lords-of-acid-i-sit-electronic": {
+      "action": "correct", "currentFamily": "Experimental", "candidateFamily": "Electronic", "family": "Electronic",
+      "evidence": ["https://open.spotify.com/track/2bUUMb6Xo8G1hhBjzXlb5b", "https://music.apple.com/us/album/i-sit-on-acid-live-american-tour-mix/717096135?i=717096280&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact recording family as Dance and the reference genres identify acid house and industrial. Electronic is the direct requested parent rather than Experimental."
+    },
+    "patric-catani-battleblock-electronic": {
+      "action": "correct", "currentFamily": "Rock", "candidateFamily": "Electronic", "family": "Electronic",
+      "evidence": ["https://open.spotify.com/track/2Qwp9Gjnwq7wnMTQKrWXWD", "https://music.apple.com/us/album/battleblock-theater-laidback-thrills/799400833?i=799400838&uo=4", "https://music.apple.com/us/album/laidback-thrills-battleblock-theater-megamix-edit/1518895111?i=1518895460&uo=4"],
+      "rationale": "Apple identifies the exact track as a video-game soundtrack and its directly related Laidback Thrills edit as Electronic; the artist evidence names techno and digital hardcore. Electronic replaces the unsupported Rock fallback."
+    },
+    "sara-landry-shlomo-play-electronic": {
+      "action": "correct", "currentFamily": "Experimental", "candidateFamily": "Electronic", "family": "Electronic",
+      "evidence": ["https://open.spotify.com/track/6PrPWf02VxGUd2jJLs9z1M", "https://music.apple.com/us/album/play-with-me-mixed/1763297456?i=1763297540&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Sara Landry and Shlømo recording as Techno and the reference genre identifies industrial techno. Electronic is the direct requested parent rather than Experimental."
+    },
+    "sophie-faceshopping-pop": {
+      "action": "retain", "currentFamily": "Pop", "candidateFamily": "Electronic",
+      "evidence": ["https://open.spotify.com/track/5Phe35xgdkRSxTdM4MAVIk", "https://music.apple.com/us/album/faceshopping/1709023350?i=1709023357&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact OIL OF EVERY PEARL'S UN-INSIDES recording as Pop. Electronica, avant-pop, and hyperpop remain detailed production and style labels within the direct album product parent."
+    },
+    "two-shell-memory-electronic": {
+      "action": "correct", "currentFamily": "Rock", "candidateFamily": "Electronic", "family": "Electronic",
+      "evidence": ["https://open.spotify.com/track/6TIl8IznVjlHKu1HD596yi", "https://music.apple.com/us/album/memory/1622909996?i=1622910344&uo=4", "https://musicbrainz.org/artist/704d24f8-257e-41a2-9816-6407993fe2c7"],
+      "rationale": "Apple classifies the exact Icons recording as Electronic, and MusicBrainz supplies the exact artist identity. Direct product evidence replaces the keyword-derived Rock fallback."
+    },
+    "valaire-bellevue-electronic": {
+      "action": "correct", "currentFamily": "Pop", "candidateFamily": "Electronic", "family": "Electronic",
+      "evidence": ["https://open.spotify.com/track/4ymUrXLLm7xzZQ6Rv0ouUK", "https://music.apple.com/us/album/bellevue-avenue/1108763951?i=1108764090&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Bellevue album recording as Electronic and the reference genre identifies electropop. Electronic is the direct requested parent rather than Pop."
+    },
+    "die-antwoord-boobies-hip-hop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Hip-hop", "family": "Hip-hop",
+      "evidence": ["https://open.spotify.com/track/4cuyvpfIldUaXtftFNfPVu", "https://musicbrainz.org/release-group/0ea500df-5bf7-483d-8749-72dccbbaadeb", "https://everynoise.com/engenremap.html"],
+      "rationale": "The exact track belongs to the identity-matched Mount Ninji and da Nice Time Kid release group, while the recording reference identifies alternative hip-hop alongside EDM. Hip-hop is the better requested parent for this rap performance; electronic production remains detailed context."
+    },
+    "baden-powell-canto-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Jazz",
+      "evidence": ["https://open.spotify.com/track/1ZHfMFfKdpFmAIAXIWK9LH", "https://music.apple.com/us/album/canto-de-ossanha/917426815?i=917426878&uo=4", "https://noteverynoise.com/bossanova.html"],
+      "rationale": "Apple classifies the exact Os Afro-Sambas recording as Pagode, while the recording and reference context identifies Afro-samba, samba, and bossa nova alongside Brazilian jazz. Positive named regional styles keep World."
+    },
+    "basement-freaks-that-summer-electronic": {
+      "action": "correct", "currentFamily": "R&B, Soul & Blues", "candidateFamily": "Jazz", "family": "Electronic",
+      "evidence": ["https://open.spotify.com/track/5GdNfIicmCrLYiBY4Y9Vr3", "https://music.apple.com/us/album/that-summer/1232614793?i=1232614890&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Freedom album recording as Electronic. Jazz-funk and glitch-funk remain detailed influences, but the direct product parent replaces the older R&B fallback."
+    },
+    "johnny-colon-boogaloo-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Jazz",
+      "evidence": ["https://open.spotify.com/track/4UJsdwu3pF77BPFoc0q2RE", "https://music.apple.com/us/album/boogaloo-blues/1464273424?i=1464273632&uo=4", "https://noteverynoise.com/chachacha.html"],
+      "rationale": "Apple classifies the exact Boogaloo Blues product as Música tropical, and the reviewed recording evidence identifies Latin boogaloo, salsa, cha-cha-cha, and Latin jazz. Positive named tropical and boogaloo evidence keeps World."
+    },
+    "new-swing-boogaloo-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Jazz",
+      "evidence": ["https://open.spotify.com/track/1D6WYzXle2Mq1k9I3AUQQv", "https://music.apple.com/us/album/boogaloo-madness-a-tribute-to-the-boogaloo-era/1447412554?i=1447412777&uo=4", "https://noteverynoise.com/chachacha.html"],
+      "rationale": "Apple classifies the exact Boogaloo Madness recording as Música tropical, while the title and reviewed references directly identify boogaloo, salsa, mambo, and cha-cha-cha. Positive named regional styles keep World."
+    },
+    "ray-barretto-acid-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Jazz",
+      "evidence": ["https://open.spotify.com/track/2hspCATOKb9llyIeMik89G", "https://music.apple.com/us/album/acid/1464286898?i=1464286904&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Acid recording as Música tropical, and the reviewed artist evidence names salsa and Latin jazz. Positive salsa and tropical product evidence keeps World rather than narrowing the crossover to Jazz."
+    },
+    "quantic-babarabatiri-rnb": {
+      "action": "retain", "currentFamily": "R&B, Soul & Blues", "candidateFamily": "Jazz",
+      "evidence": ["https://open.spotify.com/track/3zPRPxatgm9m86wIRw6lut", "https://music.apple.com/us/album/babarabatiri/1363447122?i=1363447134&uo=4", "https://noteverynoise.com/jazzfunk.html"],
+      "rationale": "Apple classifies the exact Stampede recording as R&B/Soul. Acid jazz, jazz-funk, nu jazz, and funk remain detailed crossover labels, while the direct product parent retains R&B, Soul & Blues."
+    },
+    "taka-remix-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/0tdHittlEah9GOXVRx3CHu", "https://music.apple.com/us/album/taka-taiki-nulight-remix/1749961473?i=1749961910&uo=4"],
+      "rationale": "Apple classifies the exact Taiki Nulight remix as Dance. Pop is one ingredient in the artist neighborhood, but the remix product directly retains Electronic."
+    },
+    "baccara-boogie-pop": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Pop", "family": "Pop",
+      "evidence": ["https://open.spotify.com/track/268jT4m5ztrceh5qdzpQ68", "https://music.apple.com/us/album/yes-sir-i-can-boogie/1714511951?i=1714512203&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the canonical Baccara recording as Pop. Eurodisco remains the detailed style, while Pop replaces the artist-tag-derived Electronic parent."
+    },
+    "den-twisted-fate-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/2SKY9fnLJvVeumhID9wOk7", "https://music.apple.com/us/album/twisted-fate/1625984346?i=1625984347&uo=4", "https://music.apple.com/us/album/twisted-fate-d-hawk-remix/1640097887?i=1640097888&uo=4"],
+      "rationale": "Apple identifies the exact original product as Vocal and the directly credited remix as Dance. The dance-pop neighborhood does not provide stronger exact evidence than the recording's existing medium-confidence Electronic placement."
+    },
+    "kina-dear-river-modern-folk": {
+      "action": "retain", "currentFamily": "Modern Folk", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4xUsNE1QeUxuFyk4z8g8TE", "https://music.apple.com/us/album/dear-river/849318884?i=849318886&uo=4"],
+      "rationale": "Apple classifies the exact Elements recording as Singer/Songwriter. Acoustic pop is a valid adjacent label, but Modern Folk is the direct requested parent for this authored singer-songwriter recording."
+    },
+    "midnight-magic-beam-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/75SS50WWBZINsZgccsSnGs", "https://music.apple.com/us/album/beam-me-up/1563014011?i=1563014013&uo=4", "https://music.apple.com/us/album/beam-me-up/1674244817?i=1674244823&uo=4"],
+      "rationale": "Apple classifies the exact Walking the Midnight Streets recording as Electronic and the original single product as Disco. Dance-pop and funk remain adjacent styles; Electronic retains the direct product parent."
+    },
+    "ozone-dragostea-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/6YkHLUPBUttfwepwFgNNGX", "https://music.apple.com/us/album/dragostea-din-tei-original-romanian-version/1711807169?i=1711807176&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Original Romanian Version as Dance. Pop and Eurodance are both present in the recording evidence, but the exact version retains Electronic as its direct requested parent."
+    },
+    "said-sky-darling-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/5CrxyHP494lmFlLCOdiva8", "https://music.apple.com/us/album/darling-feat-missio-darling-feat-missio/1040794964?i=1040794975&uo=4"],
+      "rationale": "Apple classifies the exact Said the Sky and Missio single as Electronic. The dance-pop neighborhood does not displace the direct product family."
+    },
+    "halluci-electric-powwow-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/1qHeVLeFeMrpbkR9yaNsd5", "https://music.apple.com/us/album/electric-pow-wow-drum/981906469?i=981906474&uo=4"],
+      "rationale": "Apple classifies the exact A Tribe Called Red recording as Electronic. Indigenous powwow source material is central to the work, but the production-led recording remains Electronic rather than generic Pop."
+    },
+    "barnes-fish-heads-pop": {
+      "action": "retain", "currentFamily": "Pop", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/5E16OQaCqgzjtyC7EHNBgy", "https://music.apple.com/us/album/fish-heads/110420659?i=110420432&uo=4", "https://music.apple.com/us/album/fish-heads/1351400389?i=1351400397&uo=4"],
+      "rationale": "Apple classifies the exact single as Comedy and a canonical compilation recording as Pop. Comedy rock remains the detailed style; under the requested taxonomy the novelty/comedy product retains Pop."
+    },
+    "chaotica-unstable-rock": {
+      "action": "correct", "currentFamily": "Experimental", "candidateFamily": "Rock", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/1Xl6ruZYD2IBuyvOnxCkEJ", "https://music.apple.com/us/album/unstable/192500095?i=192500104&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Prison of Decay recording as Alternative and the reviewed recording label identifies industrial metal. Rock replaces the broad Experimental parent."
+    },
+    "limp-rollin-rock": {
+      "action": "correct", "currentFamily": "Hip-hop", "candidateFamily": "Rock", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/2BkWokfWbWNlZ13oRMXYNX", "https://music.apple.com/us/album/rollin-air-raid-vehicle/1440846583?i=1440847024&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Chocolate Starfish recording as Hard Rock and the reviewed recording label identifies nu metal. Rap is a real crossover element, but Rock is the direct product parent."
+    },
+    "andy-irvine-dwyer-modern-folk": {
+      "action": "correct", "currentFamily": "Traditional Folk", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/1AQSmN6Qe7SLi11VzCsTPJ", "https://music.apple.com/us/album/michael-dwyers-escape/266310729?i=266312922&uo=4", "https://dwyerclan.com/O_Dwyer_Poetry_and_Song.htm"],
+      "rationale": "The repertoire source identifies Michael Dwyer's Escape as a recent Andy Irvine composition. Modern Folk replaces Traditional Folk for this authored recording."
+    },
+    "danu-county-down-modern-folk": {
+      "action": "correct", "currentFamily": "R&B, Soul & Blues", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/3H6E08h1mTs0CfkeuwnGs9", "https://music.apple.com/us/album/county-down/1566959325?i=1566959329&uo=4", "https://calperformances.org/learn/program_notes/2011/pn_danu.pdf"],
+      "rationale": "Danú's program notes identify County Down as a Tommy Sands composition arranged by the band. Modern Folk replaces the false R&B keyword placement."
+    },
+    "danu-fiach-traditional-folk": {
+      "action": "retain", "currentFamily": "Traditional Folk", "candidateFamily": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/2i3DEACw0TzM2oYO03RQtf", "https://music.apple.com/us/album/fiach-an-mhadra-rua/1616985483?i=1616985704&uo=4"],
+      "rationale": "Apple classifies the exact Ten Thousand Miles recording as Traditional Folk. The broader Irish-folk label does not displace its direct repertoire parent."
+    },
+    "lunasa-merry-sisters-traditional-folk": {
+      "action": "retain", "currentFamily": "Traditional Folk", "candidateFamily": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/56DERpWhpQqFRGs1o2lMeO", "https://music.apple.com/us/album/the-merry-sisters-of-fate/264302333?i=264303091&uo=4", "https://music.apple.com/us/artist/l%C3%BAnasa/129169614"],
+      "rationale": "Apple's exact product and artist notes identify an Irish ensemble and an album mostly composed of traditional music. Traditional Folk retains the repertoire parent."
+    },
+    "sharon-blackbird-traditional-folk": {
+      "action": "retain", "currentFamily": "Traditional Folk", "candidateFamily": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/22XHcea6uhw7nzohxrpROn", "https://music.apple.com/us/album/blackbird/1679519573?i=1679519586&uo=4", "https://www.wikidata.org/wiki/Q457684"],
+      "rationale": "Apple identifies the exact Sharon Shannon collection recording as Worldwide and the existing direct evidence identifies music of Ireland. The inherited Blackbird tune retains Traditional Folk rather than generic Modern Folk."
+    },
+    "sharon-anachie-traditional-folk": {
+      "action": "retain", "currentFamily": "Traditional Folk", "candidateFamily": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/4drSb27rNzeRhTB7oREnB7", "https://music.apple.com/us/album/anachie-gordon-feat-sin%C3%A9ad-oconnor/1679519573?i=1679519844&uo=4", "https://www.ibiblio.org/folkindex/sp05.htm"],
+      "rationale": "Apple and the specialist folk index identify the exact Sharon Shannon and Sinéad O'Connor recording within traditional folk catalog context. Traditional Folk remains the repertoire parent."
+    },
+    "wardruna-helvegen-modern-folk": {
+      "action": "correct", "currentFamily": "Electronic", "candidateFamily": "Modern Folk", "family": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/3gc1kR9Y98HRIEwGGH8SKh", "https://music.apple.com/us/album/helvegen/1749834108?i=1749834599&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "The reviewed recording model identifies Nordic folk and neofolk; Apple records its Rock crossover. Modern Folk is the closest requested parent, with ambient and rock retained as detail."
+    },
+    "livaneli-yigidim-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/4RybMAgGy55SxtNsztO1aQ", "https://music.apple.com/us/album/yi%C4%9Fidim-aslan%C4%B1m-live/1802230997?i=1802231757&uo=4", "https://www.turkishmusic.org/?p=artists%2Fzulfu-livaneli%2Farticle_en"],
+      "rationale": "The specialist source positively identifies Livaneli's Turkish folk and modern-composition synthesis. That named regional evidence retains World; Modern Folk remains a valid adjacent lens."
+    },
+    "carminho-chuva-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/2CjGCepEkmxYIKt4onadvo", "https://music.apple.com/us/album/chuva-no-mar-feat-marisa-monte/1866556597?i=1866557095&uo=4"],
+      "rationale": "Apple classifies the exact Canto recording as Fado. Pop crossover does not displace the positive named Portuguese genre, so World remains the requested parent."
+    },
+    "adams-durante-talassa-rock": {
+      "action": "correct", "currentFamily": "Classical", "candidateFamily": "Pop", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/60dBEoiKKDY47OIrhqfGeo", "https://music.apple.com/us/album/talassa/1579863388?i=1579863521&uo=4"],
+      "rationale": "Apple classifies the exact Still Moving recording as Folk-Rock. Rock replaces the unrelated artist-catalog Classical fallback; operatic pop is not exact-track evidence."
+    },
+    "la33-que-rico-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/4s4QmVmK4Zj3Mdj8F5GEM8", "https://music.apple.com/us/album/que-rico-boogaloo/733394953?i=733395334&uo=4"],
+      "rationale": "Apple classifies the exact recording as Música tropical and the existing evidence names salsa and boogaloo. Positive named regional evidence retains World rather than generic Latin Pop."
+    },
+    "accordone-pizzica-classical": {
+      "action": "retain", "currentFamily": "Classical", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/2PHoztbskHG3MtRyTqSibw", "https://music.apple.com/us/album/pizzica-di-san-vito/1572100064?i=1572100085&uo=4"],
+      "rationale": "Apple classifies the exact Fra' Diavolo product as Classical. Pizzica source repertoire remains visible in the title, but the operatic-pop candidate is an unrelated artist-catalog collision."
+    },
+    "sanmera-fragilidad-jazz": {
+      "action": "correct", "currentFamily": "World", "candidateFamily": "Pop", "family": "Jazz",
+      "evidence": ["https://open.spotify.com/track/23w07u3kp1Q2UmDKOKgOnC", "https://music.apple.com/us/album/fragilidad/291783625?i=291783682&uo=4", "https://www.discogs.com/release/22397983-Milagros-Pi%C3%B1era-Sanmera-Leche-Condensada"],
+      "rationale": "Apple classifies the exact recording as Jazz, while the matched release supplies Latin, salsa, and Afro-Cuban detail. Jazz replaces the broad World parent."
+    },
+    "perez-prado-mambo-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/0ZPHNHNrvCmNRtzCexm9Vu", "https://music.apple.com/us/album/mambo-no-5/1113725834?i=1113726070&uo=4"],
+      "rationale": "Apple classifies the exact recording family as Mambo. Traditional-pop crossover does not displace the positive named Cuban/Mexican regional genre, so World remains the requested parent."
+    },
+    "ripe-little-lighter-rock": {
+      "action": "correct", "currentFamily": "R&B, Soul & Blues", "candidateFamily": "Pop", "family": "Rock",
+      "evidence": ["https://open.spotify.com/track/5lN4zYDwWMTAtBvQRFtCSF", "https://music.apple.com/us/album/little-lighter/1362666596?i=1362667661&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Joy in the Wild Unknown recording as Alternative. Funk and alternative-pop remain crossover details; Rock replaces the artist-tag-derived R&B parent."
+    },
+    "waldemar-sofrimento-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Pop",
+      "evidence": ["https://open.spotify.com/track/7DNmrjsWPEN9lrpyq7upp1", "https://music.apple.com/us/album/sofrimento/564952453?i=564952455&uo=4", "https://www.wikidata.org/wiki/Q2541308"],
+      "rationale": "Apple classifies the exact Pretaluz recording as Worldwide and the direct genre evidence names African popular music and fado. Positive named regional evidence retains World."
+    },
+    "santaolalla-melting-pot-experimental": {
+      "action": "retain", "currentFamily": "Experimental", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/3qMjQLoHFTceSQKMxInHrD", "https://music.apple.com/us/album/the-melting-pot/1162988948?i=1162990723&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies the exact Before the Flood recording as Soundtrack, while the reviewed evidence spans ambient, post-rock, film score, and post-industrial. Experimental remains the least misleading requested parent for the hybrid cue."
+    },
+    "fullbright-jericho-modern-folk": {
+      "action": "correct", "currentFamily": "Country", "candidateFamily": "Rock", "family": "Modern Folk",
+      "evidence": ["https://open.spotify.com/track/5ABKdZH1X4GRH7J0f1L7Vm", "https://music.apple.com/us/album/jericho/517785258?i=517785265&uo=4"],
+      "rationale": "Apple classifies the exact From the Ground Up recording as Singer/Songwriter. Americana and roots rock remain adjacent labels; Modern Folk is the direct requested parent."
+    },
+    "marcia-feel-jumping-world": {
+      "action": "retain", "currentFamily": "World", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/4R8rtLIPQcrjnYvKOlqUON", "https://music.apple.com/us/album/feel-like-jumping/1564283251?i=1564283564&uo=4"],
+      "rationale": "Apple classifies the exact Naturally recording as Reggae. Lovers rock is a reggae substyle, not generic Rock evidence; positive named reggae evidence retains World."
+    },
+    "milton-cravo-world": {
+      "action": "correct", "currentFamily": "Pop", "candidateFamily": "Rock", "family": "World",
+      "evidence": ["https://open.spotify.com/track/3FBt52I3lgpZRA5MdYHQ16", "https://music.apple.com/us/album/cravo-e-canela/1473446573?i=1473446824&uo=4", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Clube da Esquina recording as MPB, a positive named Brazilian genre. World replaces generic Pop; rock remains a crossover element rather than the sole family evidence."
+    },
+    "nortec-tengo-electronic": {
+      "action": "retain", "currentFamily": "Electronic", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/174jKEXkYC32L6nTxFdWAr", "https://noteverynoise.com/latinalternative.html", "https://noteverynoise.com/mexicanrock.html"],
+      "rationale": "The existing exact-track review identifies Nortec's electronic norteño/techno hybrid. Latin-alternative and Mexican-rock neighborhoods remain crossover context; Electronic retains the production-led parent."
+    },
+    "axis-four-chords-pop": {
+      "action": "retain", "currentFamily": "Pop", "candidateFamily": "Rock",
+      "evidence": ["https://open.spotify.com/track/1cu5PHumWAqQf9M6BHQ8b7", "https://music.apple.com/us/album/animal-vehicle/456108706", "https://www.wikidata.org/wiki/Q2119764"],
+      "rationale": "Apple classifies the exact album as Comedy and the direct genre evidence names comedy rock. Under the requested taxonomy, the novelty/comedy product retains Pop while rock remains the detailed style."
+    },
+    "fiddlin-carson-farmer-country": {
+      "action": "retain", "currentFamily": "Country", "candidateFamily": "Traditional Folk",
+      "evidence": ["https://open.spotify.com/track/3X52M9KgW9IPpiIO5Ic20g", "https://music.apple.com/us/album/the-farmer-is-the-man-that-feeds-them-all/78092588?i=78092507&uo=4"],
+      "rationale": "Apple classifies the exact archival Fiddlin John Carson recording as Country. Old-time is the specific style, but the direct product retains Country rather than the broader Traditional Folk parent."
+    },
+    "black-brothers-storm-modern-folk": {
+      "action": "retain", "currentFamily": "Modern Folk", "candidateFamily": "Traditional Folk",
+      "evidence": ["https://open.spotify.com/track/6O7DiDhXicGVAFB2uyIMBO", "https://music.apple.com/us/album/the-great-storm-is-over/818366075?i=818366567&uo=4", "https://www.riseupsinging.org/songs/great-storm-over"],
+      "rationale": "The repertoire source identifies The Great Storm Is Over as a Bob Franke composition first released in 1983. The Black Brothers' Celtic performance retains Modern Folk because the underlying work is authored, not anonymous traditional repertoire."
+    }
+  },
+  "tracks": {
+    "3usxfn6u1M15bWZ1RaiMuo": "buck-meek-country",
+    "11fZuWSoXy1VvqFUnhT2KD": "buck-meek-country",
+    "10DdThCoROsMPrKprE1XWq": "buck-meek-country",
+    "2DNLgI084V0h5zTHvnQRzv": "buck-meek-country",
+    "2orb25sCTLqepAnPskEfJJ": "buck-meek-country",
+    "2iFI5EslxJFXqF8VdXklnu": "mapei-pop",
+    "59bPGztD3UG3FFrOGjZNPV": "mapei-pop",
+    "6vUCmMUjWtBugdgxG1hiX1": "mapei-pop",
+    "4xK4PwcYVKlnhdIdWj52Dp": "mapei-pop",
+    "4g2tfLesYn95776JVddwMQ": "mapei-pop",
+    "1KYQoFEiIqPYHLeuXWwUmX": "old-crow-country",
+    "7HiGQqah3hqltpZIJarOxw": "old-crow-country",
+    "3kp1DqoICwe4Vhf2zVzpUW": "old-crow-country",
+    "7xFHYX3qX4n64aCu1yjts7": "old-crow-country",
+    "5aAHai9OzUlkYPk2TJ4LLp": "old-crow-country",
+    "5UKKQVjIyCg6F57gulETXr": "dan-deacon-electronic",
+    "7tvHJ3UIPGFCsD8VAgLI6V": "dan-deacon-electronic",
+    "7mXRbgPvpEgCtvs26cbOxc": "dan-deacon-electronic",
+    "69L4d5HlE0YOCwWFYVFGoW": "dan-deacon-electronic",
+    "4O0Yww5OIWyfBvWn6xN3CM": "einaudi-classical",
+    "0UdTjf1Bhw6zJOG86GrbiJ": "einaudi-classical",
+    "2lTcudVnztm9oWC4qJla7H": "einaudi-classical",
+    "1GstcZ4ooGDwEFlB9a66H6": "einaudi-classical",
+    "64xg647L4ucSBqzee1hY3H": "shaggs-experimental",
+    "5r4sIOsyHwBUPMg01DGtsE": "shaggs-experimental",
+    "34j7B3fWb2aF8BtbTNTwtT": "shaggs-experimental",
+    "1SoN26fEnVM6NJUSxA69yJ": "shaggs-experimental",
+    "5fLZuNSgxfmwz2E2uDarIj": "mux-mool-electronic",
+    "4tW0L891TKtYnTKhd9URN9": "mux-mool-electronic",
+    "0zDx80J7Tu1li6oKFK27bQ": "mux-mool-electronic",
+    "2glk00N7myGnTjXQ8CQdxp": "dorothy-masuka-world",
+    "6i5HzDO4LpAt2v4hF68Dfc": "dorothy-masuka-world",
+    "63xC4Y0AgPkNrhpLT3Jayh": "dorothy-masuka-world",
+    "7CX1sZDl8eBmD5p2EF1q2Z": "ruth-pelham-modern-folk",
+    "313oEiwJWyQHDsXuMncFeY": "ruth-pelham-modern-folk",
+    "7yqRZcNUOGwTJCx8JPHPGx": "ruth-pelham-modern-folk",
+    "09uiAHs15xgb4qPueWrVkv": "hollyfelds-country",
+    "3Aqo9U8PpDBvsLie8E20QL": "hollyfelds-country",
+    "4hhi0CSnNCk66Fj696M3EP": "hollyfelds-country",
+    "2Ts1UxZn53VkDdbkngfdGV": "die-antwoord-hip-hop",
+    "3ckwU0TBQ0NUJ1elmDLMtZ": "die-antwoord-hip-hop",
+    "6yDu6UVWQ820sn3nkh1sag": "die-antwoord-hip-hop",
+    "7Jq0pQrsJqNiYUMD3MfOxy": "ondatropica-world",
+    "0TEgK2OCQibruKMkHRkB4q": "ondatropica-world",
+    "6Ax5UCbftxzcjJ8cg3WtFT": "ondatropica-world",
+    "4dmCLAZbWYT0qtcG7GVMdb": "santigold-pop",
+    "4yK3xXuNrkSq0OVjKUaCkY": "santigold-pop",
+    "1BaVwEV5FogbZuCzpSc7Jl": "santigold-pop",
+    "6Neq7tjnknt4URNI8txFL4": "sugar-ray-rock",
+    "5fuGP7Dze9tkadS9WoPbar": "sugar-ray-rock",
+    "6NcHJ23mLQKnVxQcOmT7JW": "sugar-ray-rock",
+    "4L39GqFUUdSZoj0PlZFGUO": "shel-silverstein-modern-folk",
+    "1nOqFDZ69Rn2qulp0Hxq8k": "shel-silverstein-modern-folk",
+    "7BR8iLWgruHFVRKMMDnIXD": "hot-chip-electronic",
+    "6m5D7zGVbzAxceDXQTsRSX": "hot-chip-electronic",
+    "1UDyVWm95oTMyDlbLIy30A": "vacationer-pop",
+    "0XIHRIerpIPFLCjlgeLHbN": "vacationer-pop",
+    "2vw4PTkqXpdFeSl9YchxnA": "jlin-electronic",
+    "0dcZGdle3E5O4qwURGHv9E": "jlin-electronic",
+    "6gqJJwkvzyXXj8SUEJgP4g": "photay-electronic",
+    "3r2CpMRlTWexGhZhQeJtAo": "photay-electronic",
+    "6hH6QJ9ZAO0Z6m7PfvLoXW": "rosalia-motomami-pop",
+    "3BQPPsoxlhuSIEPlNRHHZt": "rosalia-motomami-pop",
+    "3PDGbCcg4vX8Jb2upTWkCJ": "joe-cuba-world",
+    "2Aq96s8J9ut4j5DZenNdJ8": "joe-cuba-world",
+    "2ObXoMxUPDgIWtKDDkhYqz": "bellowhead-traditional-folk",
+    "0YFfboy2zZtPPaKsLyEHnd": "bellowhead-traditional-folk",
+    "10UdGlPNDTpFUQlKn2E9DZ": "hanggai-world",
+    "6HxPYOtbNu4kIhWLeHJ3fP": "hanggai-world",
+    "7CcKXKJb8GuyBkTQw1ogny": "makem-clancy-modern-folk",
+    "54eEaPP6sXPgsa1upfOqy1": "makem-clancy-modern-folk",
+    "3TWFVp2w3O2RexDTLCybDQ": "las-ketchup-pop",
+    "49sMsFUxaaGDlaKZNBfVSd": "las-ketchup-pop",
+    "5A32KQZznC2HSqr9qzTl2N": "marc-anthony-salsa-world",
+    "3QHMxEOAGD51PDlbFPHLyJ": "marc-anthony-salsa-world",
+    "3em1RbbyrkC6gHABM1GotM": "salvatore-adamo-pop",
+    "1EMNrP8rjPC5bl5snp09k9": "salvatore-adamo-pop",
+    "0WFVkJD7uSzfvALjVCSBcn": "toto-momposina-world",
+    "5BZUBru6V1SlfoxBsAZwZG": "toto-momposina-world",
+    "6UN6W5tj0qrMYV8N9MQMJC": "vicente-fernandez-world",
+    "2T843kQT0bYF8fa5J9vOB4": "vicente-fernandez-world",
+    "0yLrVTHEVgzheu4zRVqmls": "bone-orchard-modern-folk",
+    "1hcLOIbNWTw227ozhWWXLL": "bone-orchard-modern-folk",
+    "0OXw4G15BE3KkRnxtnDzJd": "dave-mcgraw-modern-folk",
+    "6Lmci7qMty7X9VmfhV6RhK": "dave-mcgraw-modern-folk",
+    "4vC4e7XGcjzg5o30YGrwxm": "forest-sun-country",
+    "6UO9zXHT5dOrxOLr5yReBk": "forest-sun-reggae-world",
+    "0cJiOFuB3zftGKDRE0UhYf": "gyptian-world",
+    "7iR5sSLTH2ACtcbLpntsdR": "gyptian-world",
+    "6Kb4IQedEdCPMJzh1GloXQ": "nerd-run-to-sun-hip-hop",
+    "5JmrXXEpuOwQHhUyGF67O0": "nerd-hypnotize-u-pop",
+    "0gJUOnzOjv52vJgkpM25XF": "skydyed-electronic",
+    "0LbsURPGsQP92MjI3rbgBc": "skydyed-electronic",
+    "2AkcjsKlRbIBYGAgpQVFii": "yann-tiersen-classical",
+    "0EO0VktcHvLqRM7T36aM3D": "yann-tiersen-classical",
+    "2za4bmJGxNpMUkNAYp3SCs": "hillmen-country",
+    "4N3IdbJr2NmIZTDDRIgojA": "cut-copy-electronic",
+    "68hDQBzV6t3O97PiaHkJ0b": "elohim-group-therapy-pop",
+    "3EtEphYu9bikCNRRvk7PLH": "joli-lego-pop",
+    "4kAkohiTAshEC8dZt8IDWp": "makadem-nyako-electronic",
+    "60TmG8cFPMBo7kTTFOLiAB": "omd-electricity-electronic",
+    "0qlYPfEfpOG0DcqdKBvOBF": "parcels-lightenup-remix-electronic",
+    "1bUGTs7EkTJKjyKKdhlYy8": "reggie-watts-future-experimental",
+    "0u04X3Czw2Z6bLeSVogNVl": "aao-star-song-jazz",
+    "74Btnf4popVsOrFCdpqUgf": "aao-ngarrindjeri-woman-jazz",
+    "69yQ3cbo6zf8kzpYrlU5nE": "ayya-second-mistake-electronic",
+    "2dJerArfA2AzccXWflnw9G": "hallucinogenius-downtempo-electronic",
+    "2WwYvc2MpU5hFSvSZfT96C": "ideasforconversations-ambient-electronic",
+    "6kBik3sxfEP0iCtuuG2PdX": "mooryc-saint-saens-electronic",
+    "0WAKFcVVPkZboGEZcT4r73": "photay-outre-lux-electronic",
+    "1DgdS4TH8eyWSJNz8yR7vT": "sarathy-korwar-photay-electronic",
+    "27R1T1eeGS42YwsaIW6O0D": "balkan-beat-box-world",
+    "0bhnFakmRioZbuQcmhVwoH": "kabin-crew-spark-electronic",
+    "59D9kPGmylqVmHnz1GsL8m": "snoop-pitch-perfect-holiday-pop",
+    "1dizvxctg9dHEyaYTFufVi": "snoop-gz-hustlas-hip-hop",
+    "6agO9tPEXgoXeh0p2wTD5U": "snoop-drop-instrumental-hip-hop",
+    "5HQVUIKwCEXpe7JIHyY734": "snoop-wiz-young-wild-free-hip-hop",
+    "2pucr6x078XuZbNLy8N8PA": "wiley-too-many-man-hip-hop",
+    "0TU5tjEaLsQVxp1vrmO6UW": "girl-from-ipanema-world",
+    "74GBtgq1XjVrNdp5Lv1jbM": "maite-hontele-salsa-world",
+    "5q9E3jb5rjHBcDtDWFxtbM": "nine-sparks-riots-funk-rnb",
+    "2zKcfO2Z1RfBmxPRUX4D9L": "tokyo-ska-world",
+    "47rqnVdDSquLFE67RuvYui": "a-tergo-lupi-modern-folk",
+    "1Pe4hdraYdTG44U0ZPrI7n": "lenker-meek-angels-modern-folk",
+    "1YlSbH3aLrOTfsKV8tNa26": "dick-hogan-traditional-folk",
+    "5yys2BX9PfccpPfRP4XOHR": "esma-caje-sukarije-world",
+    "2GaNZedsPuffC39LiKwGau": "harper-bloom-modern-folk",
+    "3uo09WQ1gXXiB8icYbuI2b": "kardes-turkuler-world",
+    "3ZMkCOpMO9EFk5gpakn2Ss": "koutev-bulgarian-world",
+    "0mRLSzS6ugu1mUxJPCCPjl": "mikaela-song-for-you-modern-folk",
+    "4aO1N5EqsMdV1T3OThjCFc": "alfredo-de-la-fe-world",
+    "4Uua3lZKDwKeX0Amw6PoRD": "arpex-tierra-caliente-world",
+    "1Hp47zODYJvAKF8kYCy3s7": "avenida-b-salsa-world",
+    "0E0DRHf5PfMeor0ZCwB3oT": "bad-bunny-otro-atardecer-world",
+    "5J6JxUSQPyeNPp1yCyBecd": "beny-more-mambo-world",
+    "6ol4ZSifr7r3Lb2a9L5ZAB": "carly-call-me-maybe-pop",
+    "4RrpTNBLLu4vJwr9At7gkI": "casey-mq-celebrity-crush-pop",
+    "4m7p2dejJrMiiA1vg8LDPK": "dschinghis-khan-moskau-pop",
+    "57NbelD7NoWpb6dXVcOEbM": "elia-elizabeth-alegria-pop",
+    "409BC24PyUgRLQdGGdyGwT": "luttrell-snoop-dawk-electronic",
+    "08b1bCjsKjMzhjBm0qhkof": "fishmans-long-season-rock",
+    "0kBM8wIxlqbKL97cKbYpNC": "gladiator-fable-electronic",
+    "4Q4ZrHlqrfFQPeZ0yubmYG": "grupo-sonador-cumbia-world",
+    "6QAmlRQ9whFYW2PfcjsZ3d": "gulseren-sinanay-pop",
+    "4leHHwUSR0Vm5rjYvHhBEU": "javier-solis-bolero-world",
+    "2EM9zpAc7PVeoAydmbfVIL": "juanes-camisa-negra-pop",
+    "4mzUXLXB7bP39K7CCJzouR": "julion-alvarez-mexicana-world",
+    "34aSv8AVL6LfngS7JE7oeA": "kuchi-falling-electronic",
+    "2nRyzdeN1Q3tFidJ4WdHuZ": "corraleros-cumbia-world",
+    "62y1Hmyio3Pj8ZBi2Ds3MI": "miticos-cumbia-world",
+    "7wM1166obCm9BA4wxtCPGg": "einaudi-durante-taranta-classical",
+    "1orUgs2nNTHIVoqTbpO9dm": "manufactured-superstars-au5-electronic",
+    "6rWPWP8A3c78e1UBXY0QSO": "nick-leon-casey-mq-electronic",
+    "6pRfPC3TZvGie6emFW53xC": "niko-night-of-fire-electronic",
+    "7gyuH6v1Pj2BlZWKumuW8n": "oana-chitu-romanian-tango-world",
+    "1UipKFYbqCb3jc0DEW7h93": "orquesta-aragon-tropical-world",
+    "5aCfaR4jZ6SvKcn6fTikS8": "petrona-rebuscona-bullerengue-world",
+    "5CCr8msaN3MhgqBoa9yWhH": "pinkpantheress-boys-liar-pop",
+    "5nYpzwdaQTf8WcesC8gizD": "samthing-soweto-afropop-world",
+    "2FGZDrcHRf9jGMHGPI8cjx": "hey-penne-tamil-world",
+    "1LV5G400jD3Ytvyv6Dlkym": "skrillex-right-in-electronic",
+    "11ZJb66Ag7gjTmLBKF8ZuZ": "skrillex-right-on-time-electronic",
+    "4RJHa0uZqGV4bGyKQe2wcM": "skrillex-recess-flux-pavilion-electronic",
+    "3FUZpoj9VV0sgc8RqbS3xQ": "skrillex-kyoto-electronic",
+    "1ShWHEgisDGPl9G3g85ANu": "skrillex-breakn-a-sweat-electronic",
+    "0trTpNYmHAK3EihaZBd2h6": "slackcircus-heyyeyaa-electronic",
+    "0ityftvFzPVMrY1xqyrooH": "sol-althea-aluna-electronic",
+    "7210gUfSMVJ7ngS65IBR7g": "immortals-mortal-kombat-electronic",
+    "3465azIEw57PcmownJb6ly": "una-mas-clear-as-water-world",
+    "4Wpwt4qpxrZ7aJNQzAA4l5": "vital-elements-omega-point-electronic",
+    "0ikz6tENMONtK6qGkOrU3c": "wham-wake-me-up-pop",
+    "5N4h1zMpCg3mfvHctvQfuU": "yung-spielburg-wet-your-beak-electronic",
+    "78His8pbKjbDQF7aX5asgv": "boney-m-rivers-babylon-world",
+    "1pmnRWyl6HdWtraKmMe3gz": "bongeziwe-intro-world",
+    "5EAbUR2kkfDOCWEcWcb7YG": "jessie-ware-pearls-pop",
+    "7foxbfQu0yEXFOrqGl0VIw": "terakaft-amazzagh-world",
+    "4wRbUz7hoMZBZZhGZyV28t": "m-mama-sam-pop",
+    "3ZE3wv8V3w2T2f7nOCjV0N": "bowie-life-on-mars-rock",
+    "0uPbGYrOp7Svg1eyJsE3Hx": "larkin-poe-ex-con-rock",
+    "7tj8DG5zoZE1doGtkseEdy": "matt-rouch-black-noon-country",
+    "34yg9VNqMh8WLKCAipKXgO": "monty-python-galaxy-song-pop",
+    "70Ct1sCesOWW1hqvjYqwBg": "porlolo-for-emily-country",
+    "1SGcSxVxrsub49OZ6nHVKH": "samantha-crain-never-going-back-modern-folk",
+    "6iGojU5pISv3JaJf2AHiCf": "shakey-graves-dearly-departed-modern-folk",
+    "6weZWR2OyNDvoOZlsPCIPf": "sumo-crua-chan-rock",
+    "5jQQSl7Uae4S8mlRkR4W8j": "lone-bellow-green-eyes-rock",
+    "373lax965JHGRtIOFjVI3s": "western-front-orygun-country",
+    "1Vchex0xowRj9k59RLvRfo": "tiny-tim-tip-toe-pop",
+    "2bUUMb6Xo8G1hhBjzXlb5b": "lords-of-acid-i-sit-electronic",
+    "2Qwp9Gjnwq7wnMTQKrWXWD": "patric-catani-battleblock-electronic",
+    "6PrPWf02VxGUd2jJLs9z1M": "sara-landry-shlomo-play-electronic",
+    "5Phe35xgdkRSxTdM4MAVIk": "sophie-faceshopping-pop",
+    "6TIl8IznVjlHKu1HD596yi": "two-shell-memory-electronic",
+    "4ymUrXLLm7xzZQ6Rv0ouUK": "valaire-bellevue-electronic",
+    "4cuyvpfIldUaXtftFNfPVu": "die-antwoord-boobies-hip-hop",
+    "1ZHfMFfKdpFmAIAXIWK9LH": "baden-powell-canto-world",
+    "5GdNfIicmCrLYiBY4Y9Vr3": "basement-freaks-that-summer-electronic",
+    "4UJsdwu3pF77BPFoc0q2RE": "johnny-colon-boogaloo-world",
+    "1D6WYzXle2Mq1k9I3AUQQv": "new-swing-boogaloo-world",
+    "2hspCATOKb9llyIeMik89G": "ray-barretto-acid-world",
+    "3zPRPxatgm9m86wIRw6lut": "quantic-babarabatiri-rnb",
+    "0tdHittlEah9GOXVRx3CHu": "taka-remix-electronic",
+    "268jT4m5ztrceh5qdzpQ68": "baccara-boogie-pop",
+    "2SKY9fnLJvVeumhID9wOk7": "den-twisted-fate-electronic",
+    "4xUsNE1QeUxuFyk4z8g8TE": "kina-dear-river-modern-folk",
+    "75SS50WWBZINsZgccsSnGs": "midnight-magic-beam-electronic",
+    "6YkHLUPBUttfwepwFgNNGX": "ozone-dragostea-electronic",
+    "5CrxyHP494lmFlLCOdiva8": "said-sky-darling-electronic",
+    "1qHeVLeFeMrpbkR9yaNsd5": "halluci-electric-powwow-electronic",
+    "5E16OQaCqgzjtyC7EHNBgy": "barnes-fish-heads-pop",
+    "1Xl6ruZYD2IBuyvOnxCkEJ": "chaotica-unstable-rock",
+    "2BkWokfWbWNlZ13oRMXYNX": "limp-rollin-rock",
+    "1AQSmN6Qe7SLi11VzCsTPJ": "andy-irvine-dwyer-modern-folk",
+    "3H6E08h1mTs0CfkeuwnGs9": "danu-county-down-modern-folk",
+    "2i3DEACw0TzM2oYO03RQtf": "danu-fiach-traditional-folk",
+    "56DERpWhpQqFRGs1o2lMeO": "lunasa-merry-sisters-traditional-folk",
+    "22XHcea6uhw7nzohxrpROn": "sharon-blackbird-traditional-folk",
+    "4drSb27rNzeRhTB7oREnB7": "sharon-anachie-traditional-folk",
+    "3gc1kR9Y98HRIEwGGH8SKh": "wardruna-helvegen-modern-folk",
+    "4RybMAgGy55SxtNsztO1aQ": "livaneli-yigidim-world",
+    "2CjGCepEkmxYIKt4onadvo": "carminho-chuva-world",
+    "60dBEoiKKDY47OIrhqfGeo": "adams-durante-talassa-rock",
+    "4s4QmVmK4Zj3Mdj8F5GEM8": "la33-que-rico-world",
+    "2PHoztbskHG3MtRyTqSibw": "accordone-pizzica-classical",
+    "23w07u3kp1Q2UmDKOKgOnC": "sanmera-fragilidad-jazz",
+    "0ZPHNHNrvCmNRtzCexm9Vu": "perez-prado-mambo-world",
+    "5lN4zYDwWMTAtBvQRFtCSF": "ripe-little-lighter-rock",
+    "7DNmrjsWPEN9lrpyq7upp1": "waldemar-sofrimento-world",
+    "3qMjQLoHFTceSQKMxInHrD": "santaolalla-melting-pot-experimental",
+    "5ABKdZH1X4GRH7J0f1L7Vm": "fullbright-jericho-modern-folk",
+    "4R8rtLIPQcrjnYvKOlqUON": "marcia-feel-jumping-world",
+    "3FBt52I3lgpZRA5MdYHQ16": "milton-cravo-world",
+    "174jKEXkYC32L6nTxFdWAr": "nortec-tengo-electronic",
+    "1cu5PHumWAqQf9M6BHQ8b7": "axis-four-chords-pop",
+    "3X52M9KgW9IPpiIO5Ic20g": "fiddlin-carson-farmer-country",
+    "6O7DiDhXicGVAFB2uyIMBO": "black-brothers-storm-modern-folk"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Four exact recording-family corrections from direct Apple catalog evidence plus source-addressable Every Noise labels. Broad product categories remain secondary when a more specific recording style is available.",
+  "albums": {},
+  "tracks": {
+    "2za4bmJGxNpMUkNAYp3SCs": {
+      "action": "correct",
+      "family": "Country",
+      "primary": "Traditional bluegrass",
+      "secondary": "American traditional song",
+      "confidence": "high",
+      "evidence": [
+        "https://open.spotify.com/track/2za4bmJGxNpMUkNAYp3SCs",
+        "https://music.apple.com/us/album/copper-kettle/712194517?i=712197883"
+      ],
+      "rationale": "Apple classifies the exact Hillmen album and Copper Kettle recording as Country. Traditional bluegrass therefore maps to the requested Country parent while the inherited song remains visible as repertoire detail."
+    },
+    "4N3IdbJr2NmIZTDDRIgojA": {
+      "action": "correct",
+      "family": "Electronic",
+      "primary": "Electropop",
+      "secondary": "Synth-pop / psychedelic pop",
+      "confidence": "medium",
+      "evidence": [
+        "https://open.spotify.com/track/4N3IdbJr2NmIZTDDRIgojA",
+        "https://music.apple.com/us/artist/cut-copy/7432761",
+        "https://music.apple.com/us/album/where-im-going/1442988113?i=1442988126",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Apple classifies Cut Copy as Electronic, and the reference evidence specifically identifies electropop and synth-pop for this recording. The exact product's broad Pop category remains a crossover signal, but Electronic is the more specific requested parent."
+    },
+    "4kAkohiTAshEC8dZt8IDWp": {
+      "action": "correct",
+      "family": "Electronic",
+      "primary": "Afro house",
+      "secondary": "Kenyan benga remix",
+      "confidence": "high",
+      "evidence": [
+        "https://open.spotify.com/track/4kAkohiTAshEC8dZt8IDWp",
+        "https://music.apple.com/us/album/nyako-daisho-remix/1439099620?i=1439100016",
+        "https://www.traxsource.com/track/4514171/nyako-daisho-remix"
+      ],
+      "rationale": "Apple classifies the exact Daisho remix as House and Traxsource classifies the same mix in its Afro/Latin/Brazilian dance catalog. The underlying Kenyan benga context remains visible, but the remixed recording belongs under Electronic."
+    },
+    "60TmG8cFPMBo7kTTFOLiAB": {
+      "action": "correct",
+      "family": "Electronic",
+      "primary": "Synth-pop",
+      "secondary": "Electropop / new wave",
+      "confidence": "medium",
+      "evidence": [
+        "https://open.spotify.com/track/60TmG8cFPMBo7kTTFOLiAB",
+        "https://music.apple.com/us/artist/orchestral-manoeuvres-in-the-dark/74157865",
+        "https://music.apple.com/us/album/electricity/714551637?i=714551809",
+        "https://music.apple.com/us/album/electricity-remastered-2019/1475850622?i=1475851436"
+      ],
+      "rationale": "Apple classifies OMD as Electronic and classifies both its canonical Best Of Electricity recording and the later remaster as Electronic. Synth-pop and electropop are the specific recording styles, so Electronic replaces the broader Pop parent."
+    }
+  }
+}

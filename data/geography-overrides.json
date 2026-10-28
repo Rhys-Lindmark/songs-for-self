@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "updatedAt": "2026-08-31",
+  "artists": {
+    "The Knife": { "country": "Sweden", "latitude": 61, "longitude": 15, "scope": "country", "source": "editorial:country-promotion/2026-08-30" },
+    "A Camp": { "country": "Sweden", "latitude": 61, "longitude": 15, "scope": "country", "source": "editorial:country-promotion/2026-08-30" },
+    "Rednex": { "country": "Sweden", "latitude": 61, "longitude": 15, "scope": "country", "source": "editorial:country-promotion/2026-08-30" },
+    "Maskinen": { "country": "Sweden", "latitude": 61, "longitude": 15, "scope": "country", "source": "editorial:country-promotion/2026-08-30" },
+    "Anton Maiden": { "country": "Sweden", "latitude": 61, "longitude": 15, "scope": "country", "source": "editorial:country-promotion/2026-08-30" },
+    "Toots & The Maytals": { "country": "Jamaica", "latitude": 18.18, "longitude": -77.4, "scope": "country", "source": "editorial:country-promotion/2026-08-30" },
+    "Vulfpeck": { "city": "Ann Arbor", "region": "Michigan", "country": "United States", "latitude": 42.2808, "longitude": -83.743, "scope": "artist", "confidence": "high", "estimated": false, "source": "https://alumni.umich.edu/michigan-alum/no-label-no-problem/" },
+    "DISPATCH": { "city": "Middlebury", "region": "Vermont", "country": "United States", "latitude": 44.0153, "longitude": -73.1673, "scope": "artist", "confidence": "high", "estimated": false, "source": "https://www.middlebury.edu/alumni-and-families/ways-engage/reunion/highlights" },
+    "People Under The Stairs": { "city": "Los Angeles", "region": "California", "country": "United States", "latitude": 34.0522, "longitude": -118.2437, "scope": "artist", "confidence": "high", "estimated": false, "source": "https://music.apple.com/us/artist/people-under-the-stairs/434933975" },
+    "Kishi Bashi": { "city": "Seattle", "region": "Washington", "country": "United States", "latitude": 47.6062, "longitude": -122.3321, "scope": "artist", "confidence": "high", "estimated": false, "source": "https://www.kishibashi.com/about" },
+    "Firewater": { "city": "New York City", "region": "New York", "country": "United States", "latitude": 40.7128, "longitude": -74.006, "scope": "artist", "confidence": "high", "estimated": false, "source": "https://www.checkeredpast.com/collections/firewater" },
+    "J-Zone": { "city": "Queens", "region": "New York", "country": "United States", "latitude": 40.7282, "longitude": -73.7949, "scope": "artist", "confidence": "medium", "estimated": false, "source": "https://music.apple.com/us/artist/j-zone/19625765" }
+  }
+}

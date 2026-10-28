@@ -1,0 +1,12 @@
+{
+  "version":"1.0.0",
+  "updatedAt":"2026-08-31",
+  "method":"High-priority ranked-label corrections for six exact Spotify release rows. Official ABBA history and exact Apple/Universal release classifications establish Pop as the requested parent; disco and dance production remain visible secondary styles.",
+  "albums":{
+    "3G2E1pEwxFBOnjsrpgy39f":{"action":"correct","family":"Pop","primary":"Pop","secondary":"Disco / dance-pop","confidence":"high","evidence":["https://open.spotify.com/album/3G2E1pEwxFBOnjsrpgy39f","https://abbasite.com/story/"],"rationale":"ABBA's official history calls the act a pop group and describes Dancing Queen among its signature pop hits. Disco and dance production do not make the recording's requested parent Electronic."},
+    "0C36RlW2Fa0C7n1JnWBBMP":{"action":"correct","family":"Pop","primary":"Pop","secondary":"Europop / glam pop","confidence":"high","evidence":["https://open.spotify.com/album/0C36RlW2Fa0C7n1JnWBBMP","https://abbasite.com/story/"],"rationale":"ABBA's official history treats Mamma Mia and the ABBA album as international pop; dance music is a secondary influence, not the requested parent."},
+    "5GwbPSgiTECzQiE6u7s0ZN":{"action":"correct","family":"Pop","primary":"Pop","secondary":"Europop / disco","confidence":"high","evidence":["https://open.spotify.com/album/5GwbPSgiTECzQiE6u7s0ZN","https://abbasite.com/story/"],"rationale":"ABBA's official history places Take A Chance On Me in the group's pop canon. Disco and dance styling remain secondary rather than forcing Electronic."},
+    "1CTm3ARqDETSm7GfvNYNJp":{"action":"correct","family":"Pop","primary":"Pop","secondary":"Disco / soul","confidence":"high","evidence":["https://open.spotify.com/album/1CTm3ARqDETSm7GfvNYNJp","https://music.apple.com/us/album/whats-your-pleasure/1498945382","https://www.universalmusic.it/popular-music/album/whats-your-pleasure-_33810009436/"],"rationale":"Apple and Universal classify What's Your Pleasure? as Pop and describe its soul- and disco-inspired sound. Those production styles do not make the requested parent Electronic."}
+  },
+  "tracks":{}
+}

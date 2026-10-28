@@ -1,0 +1,12 @@
+{
+  "version":"1.0.0",
+  "updatedAt":"2026-08-31",
+  "method":"Four exact-track corrections: two MOTOMAMI recordings use Apple's exact Pop Latino classification, while two Makem and Clancy performances use work-level modern-songwriter evidence.",
+  "albums":{},
+  "tracks":{
+    "6hH6QJ9ZAO0Z6m7PfvLoXW":{"action":"correct","family":"Pop","primary":"Latin pop","secondary":"Experimental pop / reggaetón","confidence":"high","evidence":["https://open.spotify.com/track/6hH6QJ9ZAO0Z6m7PfvLoXW","https://music.apple.com/us/album/motomami/1607918350","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact MOTOMAMI album as Pop Latino; experimental and flamenco influences remain secondary rather than forcing World."},
+    "3BQPPsoxlhuSIEPlNRHHZt":{"action":"correct","family":"Pop","primary":"Latin pop","secondary":"Experimental pop / reggaetón","confidence":"high","evidence":["https://open.spotify.com/track/3BQPPsoxlhuSIEPlNRHHZt","https://music.apple.com/us/album/motomami/1607918350","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact MOTOMAMI album as Pop Latino; experimental and flamenco influences remain secondary rather than forcing World."},
+    "7CcKXKJb8GuyBkTQw1ogny":{"action":"correct","family":"Modern Folk","primary":"Contemporary folk","secondary":"Irish folk-revival performance","confidence":"high","evidence":["https://open.spotify.com/track/7CcKXKJb8GuyBkTQw1ogny","https://music.apple.com/ie/song/1647838002","https://www.rte.ie/archives/2019/1127/1095431-folk-singer-liam-clancy-dies/"],"rationale":"Apple credits The Garden Song to modern songwriter David Mallett; the exact folk-revival performance is authored repertoire rather than traditional folk."},
+    "54eEaPP6sXPgsa1upfOqy1":{"action":"correct","family":"Modern Folk","primary":"Contemporary folk","secondary":"Irish folk-revival performance","confidence":"high","evidence":["https://open.spotify.com/track/54eEaPP6sXPgsa1upfOqy1","https://www.rte.ie/archives/2019/1127/1095431-folk-singer-liam-clancy-dies/","https://everynoise.com/engenremap.html"],"rationale":"Willie McBride is an authored Eric Bogle composition performed within the Irish folk revival, not anonymous or inherited traditional repertoire."}
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-30",
+  "status": "resolved",
+  "methodology": "Historical product-decision queue for artists whose work did not cleanly map to the requested music-only top-level taxonomy. The user directed that every track receive a best-effort requested-family placement, so all entries were resolved in genre-overrides-batch-9.json on 2026-08-30. The former issue and question remain here as an audit trail; queue membership no longer leaves a track in Other.",
+  "artists": {
+    "Bo Burnham": {
+      "issue": "musical comedy / comedy rap / theatrical pop",
+      "question": "Should musical comedy map to the nearest sonic family per track, or receive a dedicated presentation outside the top-level music taxonomy?"
+    },
+    "Rhys Lindmark": {
+      "issue": "personal spoken-word and uncataloged recordings",
+      "question": "Should personal or spoken-word recordings be mapped to Experimental, handled as non-music, or classified track by track with user-supplied metadata?"
+    },
+    "Peter Alsop": {
+      "issue": "children's and educational music",
+      "question": "Should children's music map by musical form, remain a cross-cutting audience label, or receive a dedicated product treatment?"
+    },
+    "Tom Lehrer": {
+      "issue": "satirical musical comedy",
+      "question": "Should satire map to Pop or Modern Folk by arrangement, or remain a cross-cutting comedy label?"
+    },
+    "Raffi": {
+      "issue": "children's folk and pop",
+      "question": "Should children's music map by its underlying folk/pop form while retaining an audience label?"
+    },
+    "Danny Go!": {
+      "issue": "children's dance and educational music",
+      "question": "Should the tracks map to Pop/Electronic by sound while retaining a children's-audience label?"
+    },
+    "Tom Cardy": {
+      "issue": "musical comedy spanning electronic pop and funk",
+      "question": "Should mixed comedy catalogs be reviewed track by track rather than overridden at artist level?"
+    },
+    "Obscurest Vinyl": {
+      "issue": "AI-generated novelty and comedy songs",
+      "question": "Should synthetic novelty tracks map by sonic form, receive an AI-origin facet, or remain outside the main taxonomy?"
+    }
+  }
+}

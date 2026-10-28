@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Five exact recording-family corrections from direct Apple, Beatport, and Qobuz product evidence; no artist-wide propagation.",
+  "albums": {},
+  "tracks": {
+    "59D9kPGmylqVmHnz1GsL8m": {
+      "action": "correct",
+      "family": "Pop",
+      "primary": "Holiday pop",
+      "secondary": "Soundtrack mashup",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/59D9kPGmylqVmHnz1GsL8m", "https://www.beatport.com/track/winter-wonderland-here-comes-santa-claus/28385476", "https://music.apple.com/us/album/winter-wonderland-here-comes-santa-claus-from-pitch/1440661601?i=1440661622"],
+      "rationale": "Beatport classifies the exact Pitch Perfect 2 mashup as Pop / Holiday and Apple identifies the exact soundtrack recording. The Snoop artist profile does not make this Anna Kendrick holiday mashup R&B or Hip-hop."
+    },
+    "1dizvxctg9dHEyaYTFufVi": {
+      "action": "correct",
+      "family": "Hip-hop",
+      "primary": "G-funk",
+      "secondary": "West Coast hip-hop / gangsta rap",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/1dizvxctg9dHEyaYTFufVi", "https://www.beatport.com/track/gz-and-hustlas/22270148", "https://music.apple.com/us/song/1676306194"],
+      "rationale": "Beatport classifies the exact Gz and Hustlas recording as Hip-Hop and Apple identifies it on Doggystyle. G-funk and West Coast hip-hop map directly to Hip-hop rather than the inherited artist-level R&B parent."
+    },
+    "6agO9tPEXgoXeh0p2wTD5U": {
+      "action": "correct",
+      "family": "Hip-hop",
+      "primary": "Hip-hop instrumental",
+      "secondary": "Minimalist hip-hop / funk",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/6agO9tPEXgoXeh0p2wTD5U", "https://music.apple.com/us/album/drop-it-like-its-hot-instrumental/1445287603?i=1445287613"],
+      "rationale": "Apple classifies the exact Drop It Like It's Hot instrumental EP recording as Hip-Hop/Rap. The absence of vocals does not move the production into R&B."
+    },
+    "5HQVUIKwCEXpe7JIHyY734": {
+      "action": "correct",
+      "family": "Hip-hop",
+      "primary": "Pop rap",
+      "secondary": "West Coast hip-hop",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/5HQVUIKwCEXpe7JIHyY734", "https://www.qobuz.com/us-en/album/young-wild-free-feat-bruno-mars-snoop-dogg-wiz-khalifa/0075679965738", "https://www.wikidata.org/wiki/Q2696997"],
+      "rationale": "Qobuz classifies the exact single as Hip-Hop/Rap and the work record identifies pop rap. The Bruno Mars chorus is crossover detail; the requested parent is Hip-hop."
+    },
+    "2pucr6x078XuZbNLy8N8PA": {
+      "action": "correct",
+      "family": "Hip-hop",
+      "primary": "Grime",
+      "secondary": "UK hip-hop / garage crossover",
+      "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/2pucr6x078XuZbNLy8N8PA", "https://music.apple.com/us/album/too-many-man/1684377067?i=1684379074", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Boy Better Know recording as Hip-Hop/Rap and Every Noise identifies grime. UK garage and drum-and-bass production remain crossover context, while Hip-hop is the direct requested parent."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Two exact Latin- and Turkish-pop corrections from direct Apple product evidence; eight electronic, classical, and regional recordings retain their source-backed parents.",
+  "albums": {},
+  "tracks": {
+    "6QAmlRQ9whFYW2PfcjsZ3d": {"action":"correct","family":"Pop","primary":"Turkish pop","secondary":"Ethnopop","confidence":"high","evidence":["https://open.spotify.com/track/6QAmlRQ9whFYW2PfcjsZ3d","https://music.apple.com/us/album/sinanay/159693704?i=159693807","https://everynoise.com/engenremap.html"],"rationale":"Every Noise identifies the exact recording as Turkish pop. Apple's broad Worldwide shelf does not displace that more specific recording-level Pop label."},
+    "2EM9zpAc7PVeoAydmbfVIL": {"action":"correct","family":"Pop","primary":"Latin pop","secondary":"Pop rock / cumbia-influenced","confidence":"high","evidence":["https://open.spotify.com/track/2EM9zpAc7PVeoAydmbfVIL","https://music.apple.com/us/album/la-camisa-negra/1440652099?i=1440652265","https://everynoise.com/engenremap.html"],"rationale":"Apple classifies the exact recording as Latin and Every Noise identifies Latin pop. Cumbia is an audible influence, but direct recording evidence supports Pop rather than the inherited World parent."}
+  }
+}

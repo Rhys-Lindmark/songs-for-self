@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Four exact-track corrections: two Las Ketchup recordings use direct Latin-pop evidence, while two Salvatore Adamo recordings use Apple's French Pop catalog classification.",
+  "albums": {},
+  "tracks": {
+    "3TWFVp2w3O2RexDTLCybDQ": {"action":"correct","family":"Pop","primary":"Latin pop","secondary":"Spanish rhumba / flamenco influence","confidence":"high","evidence":["https://open.spotify.com/track/3TWFVp2w3O2RexDTLCybDQ","https://music.apple.com/us/artist/las-ketchup/525316","https://music.apple.com/us/song/1387977051"],"rationale":"Apple identifies Las Ketchup as a Spanish pop act mixing rhumba, Latin pop, and reggae and lists Aserejé as its breakthrough single."},
+    "49sMsFUxaaGDlaKZNBfVSd": {"action":"correct","family":"Pop","primary":"Latin pop","secondary":"Spanish rhumba / flamenco influence","confidence":"high","evidence":["https://open.spotify.com/track/49sMsFUxaaGDlaKZNBfVSd","https://music.apple.com/us/artist/las-ketchup/525316","https://music.apple.com/us/song/1387977051"],"rationale":"Apple identifies the exact Spanish Version and classifies Las Ketchup's recording style as Latin pop mixed with Spanish rhumba and reggae."},
+    "3em1RbbyrkC6gHABM1GotM": {"action":"correct","family":"Pop","primary":"French pop / chanson","secondary":"Singer-songwriter","confidence":"high","evidence":["https://open.spotify.com/track/3em1RbbyrkC6gHABM1GotM","https://music.apple.com/us/artist/salvatore-adamo/13073996","https://universalmusic.fr/artistes/20000029889"],"rationale":"Apple classifies Adamo as French Pop and Universal identifies Inch'Allah among his signature chanson catalog."},
+    "1EMNrP8rjPC5bl5snp09k9": {"action":"correct","family":"Pop","primary":"French pop / chanson","secondary":"Singer-songwriter","confidence":"high","evidence":["https://open.spotify.com/track/1EMNrP8rjPC5bl5snp09k9","https://music.apple.com/us/song/1451371089","https://music.apple.com/us/artist/salvatore-adamo/13073996"],"rationale":"Apple identifies the exact Tombe la neige recording and classifies Adamo's catalog directly as French Pop."}
+  }
+}

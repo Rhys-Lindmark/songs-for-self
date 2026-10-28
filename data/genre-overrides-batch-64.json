@@ -1,0 +1,11 @@
+{
+  "version":"1.0.0",
+  "updatedAt":"2026-08-31",
+  "method":"Three exact recording corrections from direct album classification: Forest Sun's So Nice to reggae/World, N.E.R.D's Run To the Sun to Hip-hop, and Hypnotize U to Pop.",
+  "albums":{},
+  "tracks":{
+    "6UO9zXHT5dOrxOLr5yReBk":{"action":"correct","family":"World","primary":"Reggae","secondary":"Americana / soul crossover","confidence":"high","evidence":["https://open.spotify.com/track/6UO9zXHT5dOrxOLr5yReBk","https://music.apple.com/gd/album/so-nice/277403151","https://forestsun.com/"],"rationale":"Apple classifies the exact So Nice album as Reggae; the artist's own biography confirms reggae within a broader folk/country/soul catalog."},
+    "6Kb4IQedEdCPMJzh1GloXQ":{"action":"correct","family":"Hip-hop","primary":"Alternative hip-hop","secondary":"Funk rock","confidence":"high","evidence":["https://open.spotify.com/track/6Kb4IQedEdCPMJzh1GloXQ","https://music.apple.com/us/album/in-search-of/1475690530","https://music.apple.com/us/song/1475686470"],"rationale":"Apple classifies the exact In Search Of... release as Hip-Hop/Rap and identifies Run To the Sun within its funk-heavy recording context."},
+    "5JmrXXEpuOwQHhUyGF67O0":{"action":"correct","family":"Pop","primary":"Alternative pop","secondary":"R&B / electronic funk","confidence":"high","evidence":["https://open.spotify.com/track/5JmrXXEpuOwQHhUyGF67O0","https://music.apple.com/ke/album/hypnotize-u/1443231164","https://music.apple.com/us/song/1443231171"],"rationale":"Apple classifies the exact Nothing release as Pop and describes Hypnotize U as an '80s-themed R&B/electronic crossover."}
+  }
+}

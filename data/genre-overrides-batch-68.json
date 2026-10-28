@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "Five exact recording-family corrections from direct Apple product evidence plus source-addressable Every Noise labels; regional repertoire requires positive named-style evidence.",
+  "albums": {},
+  "tracks": {
+    "47rqnVdDSquLFE67RuvYui": {
+      "action": "correct", "family": "Modern Folk", "primary": "Dark folk", "secondary": "Dark ambient", "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/47rqnVdDSquLFE67RuvYui", "https://music.apple.com/us/album/hear-me/1649650717?i=1649650906", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact Hide recording as Folk and Every Noise identifies dark folk. Dark ambient is a production influence; the requested recording parent is Modern Folk."
+    },
+    "1Pe4hdraYdTG44U0ZPrI7n": {
+      "action": "correct", "family": "Modern Folk", "primary": "Indie folk", "secondary": "Singer-songwriter", "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/1Pe4hdraYdTG44U0ZPrI7n", "https://music.apple.com/us/album/angels/1852542218?i=1852542481", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies the exact Adrianne Lenker and Buck Meek recording and Every Noise gives it an exact indie-folk label. There is no direct country-style evidence for this recording, so Modern Folk replaces the fallback Country parent."
+    },
+    "5yys2BX9PfccpPfRP4XOHR": {
+      "action": "correct", "family": "World", "primary": "Romani folk", "secondary": "Macedonian traditional folk", "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/5yys2BX9PfccpPfRP4XOHR", "https://music.apple.com/us/album/%C4%8Daje-%C5%A1ukarije/589142281?i=589142352", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact recording as Worldwide/Folk and Every Noise identifies traditional folk and folk-pop. Positive Romani and Macedonian repertoire evidence supports World; the inherited Electronic parent is unsupported."
+    },
+    "2GaNZedsPuffC39LiKwGau": {
+      "action": "correct", "family": "Modern Folk", "primary": "Indie singer-songwriter", "secondary": "Alternative folk", "confidence": "high",
+      "evidence": ["https://open.spotify.com/track/2GaNZedsPuffC39LiKwGau", "https://music.apple.com/us/album/walk-my-way/1823609334?i=1823609780", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple classifies the exact EP recording as Alternative Folk and Every Noise supplies an exact indie singer-songwriter label. Modern Folk is more specific than the fallback Rock parent."
+    },
+    "0mRLSzS6ugu1mUxJPCCPjl": {
+      "action": "correct", "family": "Modern Folk", "primary": "Singer-songwriter", "secondary": "Alternative folk", "confidence": "medium",
+      "evidence": ["https://open.spotify.com/track/0mRLSzS6ugu1mUxJPCCPjl", "https://music.apple.com/us/album/a-song-for-you/775338751?i=775338812", "https://everynoise.com/engenremap.html"],
+      "rationale": "Apple identifies the exact alternative single and Every Noise gives the exact recording a singer-songwriter label. With no direct rock-style evidence, Modern Folk is the better requested parent; medium confidence preserves the broad-product ambiguity."
+    }
+  }
+}

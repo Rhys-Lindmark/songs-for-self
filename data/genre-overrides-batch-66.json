@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-31",
+  "method": "One exact remix correction from Beatport's recording-level catalog classification, with the Every Noise candidate retained as corroborating style evidence.",
+  "albums": {},
+  "tracks": {
+    "0qlYPfEfpOG0DcqdKBvOBF": {
+      "action": "correct",
+      "family": "Electronic",
+      "primary": "Nu-disco",
+      "secondary": "Electropop / synth-pop remix",
+      "confidence": "high",
+      "evidence": [
+        "https://open.spotify.com/track/0qlYPfEfpOG0DcqdKBvOBF",
+        "https://www.beatport.com/track/lightenup/15799609",
+        "https://music.apple.com/us/album/lightenup-alex-metric-remix/1620415509?i=1620415528",
+        "https://everynoise.com/engenremap.html"
+      ],
+      "rationale": "Beatport classifies the exact Alex Metric remix as Nu Disco / Disco, and Every Noise supplies electropop and synth-pop labels. Apple's broader Alternative product category describes the source catalog, but the exact remix belongs under Electronic."
+    }
+  }
+}
