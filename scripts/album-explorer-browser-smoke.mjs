@@ -33,6 +33,7 @@ try {
     assert.equal(await page.getByRole('button', { name: 'Albums', exact: true }).getAttribute('aria-pressed'), 'true');
     const collection = page.getByRole('region', { name: /Your album collection/ });
     assert.equal(await collection.getByRole('button').count(), 8, 'Albums should group repeated tracks without losing missing covers');
+    await collection.scrollIntoViewIfNeeded();
     await page.waitForFunction(() => [...document.querySelectorAll('[aria-label^="Your album collection"] img')].filter((image) => image.complete && image.naturalWidth > 0).length >= 4);
     const named = collection.getByRole('button', { name: new RegExp(rows[0][2].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) });
     await named.click();

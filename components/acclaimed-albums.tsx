@@ -60,9 +60,9 @@ export function AcclaimedAlbums({ tracks }: { tracks: AnalyzedTrack[] }) {
   }
   if (error) return <div className="my-7 border-y border-[#17221e]/15 py-5"><output className="block text-sm">{error}</output><button type="button" onClick={retry} className="mt-2 min-h-11 rounded-full border border-[#17221e]/25 px-4 text-sm">Retry acclaimed albums</button></div>;
   if (!sources || !result) return <output className="my-7 block text-center text-sm text-[#17221e]/60">Checking your playlist against the 500-album list…</output>;
-  return <section aria-label="Acclaimed album exploration" className="my-7 border-y border-[#17221e]/15 py-6">
+  return <section aria-label="Acclaimed album exploration" className="my-5 border-y border-[#17221e]/15 py-4">
     <div className="text-center" aria-live="polite">
-      <h3 className="font-serif text-2xl sm:text-3xl">You&apos;ve explored {result.covered.toLocaleString()}/{result.total.toLocaleString()} critically acclaimed albums</h3>
+      <h3 className="font-serif text-xl sm:text-2xl">You&apos;ve explored {result.covered.toLocaleString()}/{result.total.toLocaleString()} critically acclaimed albums</h3>
       <p className="mt-2 text-sm text-[#17221e]/65">{result.percent.toFixed(1)}% · {result.matches.length.toLocaleString()} matching playlist tracks</p>
       <progress aria-label="Acclaimed album coverage" value={result.covered} max={result.total} className="mt-3 h-1.5 w-full max-w-sm accent-[#346753]" />
       <p className="mt-2 text-xs text-[#17221e]/55">One matching song covers an album once. Counted from songs in your playlist.</p>
@@ -91,8 +91,8 @@ export function AcclaimedAlbums({ tracks }: { tracks: AnalyzedTrack[] }) {
         <ul className="mt-3 grid gap-1">{selected.sources.map((source) => <li key={`${source.name}|${source.url}`} className="text-xs"><a href={source.url} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center underline underline-offset-2">{source.name}</a>{source.detail && <span className="text-[#17221e]/55"> · {source.detail}</span>}</li>)}</ul>
         <a href={`https://open.spotify.com/search/${encodeURIComponent(`${selected.artist} ${selected.title}`)}`} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center text-xs underline underline-offset-2">Find this album</a>
       </aside>}
-    </details>
     {!!result.unmatched.length && <details className="mt-2"><summary className="min-h-11 cursor-pointer py-3 text-sm">{result.unmatched.length.toLocaleString()} tracks earned no album credit</summary><p className="text-xs leading-relaxed text-[#17221e]/60">Tracks outside this list or without a supported album match remain uncredited.</p><ul className="mt-3 grid gap-3">{result.unmatched.slice(0, 16).map((item) => <li key={item.trackIndex} className="break-words text-xs"><strong className="font-medium">{tracks[item.trackIndex].track}</strong> · {tracks[item.trackIndex].artist}<span className="mt-1 block text-[#17221e]/55">{item.reason}</span></li>)}</ul>{result.unmatched.length > 16 && <p className="mt-3 text-xs">Plus {result.unmatched.length - 16} more tracks.</p>}</details>}
     <details className="mt-1"><summary className="min-h-11 cursor-pointer py-3 text-xs text-[#17221e]/60">How these 500 were selected</summary><p className="text-xs leading-relaxed text-[#17221e]/65">{sources.catalog.description || 'A fixed editorial blend of classic album canon and modern critic selections. Each album retains its source links.'}</p><p className="mt-2 text-xs leading-relaxed text-[#17221e]/65">Album identity uses supported album IDs or album title and artist, including recognized editions. The same song or album appearing repeatedly adds no extra credit. This records playlist representation; listening to a whole album is a separate experience.</p><a href={publicAssetUrl('acclaimed-albums.json')} className="mt-1 inline-flex min-h-11 items-center break-all text-xs underline underline-offset-2">Inspect album list {sources.catalog.version}</a></details>
+    </details>
   </section>;
 }
