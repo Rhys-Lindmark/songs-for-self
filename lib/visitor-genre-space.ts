@@ -34,7 +34,7 @@ export function buildVisitorGenreSpace(tracks: AnalyzedTrack[], atlas: GenreSpac
     const visitorId = `visitor-${index}-${stableHash(`${track.track}|${track.artist}`)}`;
     if (exact) {
       exactTracks += 1;
-      visitorPoints.push({ ...exact, id: visitorId, spotifyTrackId: exact.id, method: `visitor exact match · ${exact.method}` });
+      visitorPoints.push({ ...exact, ...(track.album ? { album: track.album } : {}), ...(track.spotifyAlbumId ? { spotifyAlbumId: track.spotifyAlbumId } : {}), ...(track.coverUrl ? { coverUrl: track.coverUrl } : {}), id: visitorId, spotifyTrackId: exact.id, method: `visitor exact match · ${exact.method}` });
       placements.push({ index, family: exact.family, primary: exact.primary, x: exact.referenceX ?? exact.x, y: exact.referenceY ?? exact.y, method: `visitor exact match · ${exact.method}`, confidence: exact.confidence, source: exact.source, referenceGenres: exact.referenceGenres ?? [] });
       return;
     }
@@ -51,8 +51,9 @@ export function buildVisitorGenreSpace(tracks: AnalyzedTrack[], atlas: GenreSpac
         title: track.track,
         artists: track.artist,
         spotifyArtistIds: artist.spotifyArtistId ? [artist.spotifyArtistId] : [],
-        album: '',
-        spotifyAlbumId: null,
+        album: track.album || '',
+        spotifyAlbumId: track.spotifyAlbumId || null,
+        ...(track.coverUrl ? { coverUrl: track.coverUrl } : {}),
         family: artist.family,
         primary: representative?.primary ?? `${artist.family} artist neighborhood`,
         secondary: representative?.secondary ?? '',
@@ -76,8 +77,9 @@ export function buildVisitorGenreSpace(tracks: AnalyzedTrack[], atlas: GenreSpac
         title: track.track,
         artists: track.artist,
         spotifyArtistIds: [],
-        album: '',
-        spotifyAlbumId: null,
+        album: track.album || '',
+        spotifyAlbumId: track.spotifyAlbumId || null,
+        ...(track.coverUrl ? { coverUrl: track.coverUrl } : {}),
         family: track.genre,
         primary: track.genreSpacePrimary || `${track.genre} artist neighborhood`,
         secondary: (track.genreSpaceGenres ?? []).filter((genre) => genre !== track.genreSpacePrimary).slice(0, 3).join('; '),
@@ -102,8 +104,9 @@ export function buildVisitorGenreSpace(tracks: AnalyzedTrack[], atlas: GenreSpac
         title: track.track,
         artists: track.artist,
         spotifyArtistIds: [],
-        album: '',
-        spotifyAlbumId: null,
+        album: track.album || '',
+        spotifyAlbumId: track.spotifyAlbumId || null,
+        ...(track.coverUrl ? { coverUrl: track.coverUrl } : {}),
         family: family.family,
         primary: `${family.family} · uploaded genre fallback`,
         secondary: '',

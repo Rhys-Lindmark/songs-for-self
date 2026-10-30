@@ -31,6 +31,21 @@ const globalGenreIndex = {
   artists: [{ id: 'abcdefghijklmnopqrstUV', key: 'efren lopez', name: 'Efrén López', family: 'World', primary: 'spanish folk', genres: ['spanish folk', 'medieval folk'], x: 0.31, y: 0.62, method: 'every-noise-membership + taxonomy label', sourceUrl: 'https://noteverynoise.com/engenremap-spanishfolk.html' }],
 };
 
+await test('preserves imported album artwork alongside exact genre evidence and unknown tracks', () => {
+  const metadata = { 'Album Name': 'Surf', 'Album ID': 'ABCDEFGHIJKLMNOPQRSTUV', 'Image URL': 'https://i.scdn.co/image/test-cover' };
+  const [exact, unknown] = analyzePlaylistRows([
+    { ...metadata, 'Track URI': 'spotify:track:1234567890123456789012' },
+    { ...metadata, 'Track Name': 'New song', Artist: 'New artist' },
+  ], lookup);
+  for (const track of [exact, unknown]) {
+    assert.equal(track.album, 'Surf');
+    assert.equal(track.spotifyAlbumId, 'ABCDEFGHIJKLMNOPQRSTUV');
+    assert.equal(track.coverUrl, metadata['Image URL']);
+  }
+  assert.equal(exact.genre, 'Hip-hop');
+  assert.equal(unknown.genre, 'Other');
+});
+
 await test('parses BOM, CRLF, quoted commas, embedded newlines, and escaped quotes', () => {
   const rows = parseCsv('\uFEFFTrack Name,Artist Name,Notes\r\n"Song, One","Artist ""A""","line one\nline two"\r\n');
   assert.deepEqual(rows, [{ 'Track Name': 'Song, One', 'Artist Name': 'Artist "A"', Notes: 'line one\nline two' }]);

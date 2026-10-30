@@ -2,9 +2,12 @@
 
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import { LocateFixed, Minus, Plus } from 'lucide-react';
+import { AlbumArtwork } from '@/components/album-artwork';
+import { artworkKey, loadArtworkImage, peekArtworkImage, type ArtworkSource } from '@/lib/album-artwork';
 import { pinchTransform } from '@/lib/genre-space-transform';
 
 export type GenreSpacePoint = {
+  coverUrl?: string | null;
   id: string; spotifyTrackId?: string | null; title: string; artists: string; spotifyArtistIds: string[]; album: string; spotifyAlbumId: string | null;
   family: string; primary: string; secondary: string; x: number; y: number;
   referenceX?: number; referenceY?: number; referenceGenres?: string[]; referenceMatchCount?: number; referenceConfidence?: string; referenceSource?: string[];
@@ -28,6 +31,7 @@ const plotCoordinate = (value: number) => 0.055 + value * 0.89;
 export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: { data: GenreSpacePayload; query: string; scopeLabel?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef<HTMLDivElement>(null);
+  const renderedPointsRef = useRef<GenreSpacePoint[]>([]);
   const dragRef = useRef<{ pointerId: number; x: number; y: number; moved: boolean } | null>(null);
   const pointersRef = useRef(new Map<number, { x: number; y: number }>());
   const pinchRef = useRef<{ distance: number; startScale: number; startOffset: { x: number; y: number }; center: { x: number; y: number } } | null>(null);
@@ -46,6 +50,11 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
     const frame = frameRef.current;
     const canvas = canvasRef.current;
     if (!frame || !canvas) return;
+    let cancelled = false;
+    let inView = false;
+    let repaint = 0;
+    const requested = new Set<string>();
+    const sourceFor = (point: GenreSpacePoint): ArtworkSource => ({ coverUrl: point.coverUrl || (point.spotifyAlbumId ? data.albums[point.spotifyAlbumId]?.coverUrl : null), spotifyAlbumId: point.spotifyAlbumId, spotifyTrackId: point.spotifyTrackId || point.id });
     const draw = () => {
       const width = Math.max(1, frame.clientWidth);
       const height = Math.max(1, frame.clientHeight);
@@ -58,28 +67,53 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
       if (!context) return;
       context.scale(ratio, ratio);
       context.clearRect(0, 0, width, height);
-      context.fillStyle = '#e5e0d5';
+      context.fillStyle = '#f3efe4';
       context.fillRect(0, 0, width, height);
       const familyColors = new Map(data.families.map((family) => [family.family, family.color]));
       const matchIds = normalizedQuery ? new Set(matches.map((point) => point.id)) : null;
       const project = (x: number, y: number) => ({ x: ((plotCoordinate(x) - 0.5) * scale + 0.5 + offset.x) * width, y: ((plotCoordinate(y) - 0.5) * scale + 0.5 + offset.y) * height });
 
-      for (const point of visiblePoints) {
+      const size = Math.min(38, Math.max(20, width / 42) * Math.sqrt(scale));
+      const occupied = new Set<string>();
+      const plotted: GenreSpacePoint[] = [];
+      const candidates = selected ? [...visiblePoints.filter((point) => point.id !== selected.id), selected] : visiblePoints;
+      for (const point of candidates) {
         const position = project(point.x, point.y);
-        if (position.x < -8 || position.x > width + 8 || position.y < -8 || position.y > height + 8) continue;
+        if (position.x < -size || position.x > width + size || position.y < -size || position.y > height + size) continue;
+        const cell = `${Math.floor(position.x / (size * .8))}|${Math.floor(position.y / (size * .8))}`;
+        if (occupied.has(cell) && selected?.id !== point.id) continue;
+        occupied.add(cell);
+        plotted.push(point);
         const highlighted = !matchIds || matchIds.has(point.id);
-        context.globalAlpha = highlighted ? (point.estimated ? 0.38 : 0.62) : 0.035;
-        context.fillStyle = familyColors.get(point.family) ?? '#66706b';
-        context.beginPath();
-        context.arc(position.x, position.y, selected?.id === point.id ? 4.8 : Math.min(2.25, 1.05 + scale * 0.35), 0, Math.PI * 2);
-        context.fill();
+        context.globalAlpha = highlighted ? 1 : .12;
+        const source = sourceFor(point);
+        const image = peekArtworkImage(source);
+        if (image) context.drawImage(image, position.x - size / 2, position.y - size / 2, size, size);
+        else {
+          context.fillStyle = familyColors.get(point.family) ?? '#66706b';
+          context.globalAlpha = highlighted ? .3 : .06;
+          context.fillRect(position.x - size / 2, position.y - size / 2, size, size);
+          context.globalAlpha = highlighted ? .85 : .1;
+          context.fillStyle = '#17221e';
+          context.font = '10px ui-serif, serif';
+          context.textAlign = 'center';
+          context.fillText((point.album || point.title).slice(0, 2).toUpperCase(), position.x, position.y + 3);
+          const key = artworkKey(source);
+          if (inView && key && !requested.has(key) && requested.size < 220) {
+            requested.add(key);
+            void loadArtworkImage(source).then(() => {
+              if (!cancelled && !repaint) repaint = requestAnimationFrame(() => { repaint = 0; draw(); });
+            });
+          }
+        }
         if (selected?.id === point.id) {
           context.globalAlpha = 1;
-          context.strokeStyle = '#17221e';
-          context.lineWidth = 1.5;
-          context.stroke();
+          context.strokeStyle = '#b45238';
+          context.lineWidth = 2;
+          context.strokeRect(position.x - size / 2 - 3, position.y - size / 2 - 3, size + 6, size + 6);
         }
       }
+      renderedPointsRef.current = plotted;
 
       context.globalAlpha = 0.82;
       context.textAlign = 'center';
@@ -120,7 +154,9 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
     draw();
     const observer = new ResizeObserver(draw);
     observer.observe(frame);
-    return () => observer.disconnect();
+    const visibility = new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; if (inView) draw(); }, { rootMargin: '80px' });
+    visibility.observe(frame);
+    return () => { cancelled = true; observer.disconnect(); visibility.disconnect(); cancelAnimationFrame(repaint); };
   }, [activeFamily, data, matches, normalizedQuery, offset, scale, selected, visiblePoints]);
 
   function zoomBy(multiplier: number) {
@@ -199,7 +235,7 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
     const y = (clientY - bounds.top) / bounds.height;
     let nearest: GenreSpacePoint | null = null;
     let distance = Infinity;
-    for (const point of normalizedQuery ? matches : visiblePoints) {
+    for (const point of renderedPointsRef.current.filter((point) => !normalizedQuery || matches.includes(point))) {
       const px = (plotCoordinate(point.x) - 0.5) * scale + 0.5 + offset.x;
       const py = (plotCoordinate(point.y) - 0.5) * scale + 0.5 + offset.y;
       const candidate = Math.hypot((px - x) * bounds.width, (py - y) * bounds.height);
@@ -241,7 +277,7 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
       <button aria-pressed={!activeFamily} onClick={() => { setActiveFamily(''); setSelectedId(''); reset(); }} className={`min-h-11 shrink-0 rounded-full border px-4 text-xs font-medium ${!activeFamily ? 'border-[#17221e] bg-[#17221e] text-[#f3efe4]' : 'border-[#17221e]/20'}`}>All · {data.summary.tracks.toLocaleString()}</button>
       {data.families.map((family) => <button key={family.family} aria-pressed={activeFamily === family.family} onClick={() => { setActiveFamily(family.family); setSelectedId(''); reset(); }} className={`min-h-11 shrink-0 rounded-full border px-4 text-xs font-medium ${activeFamily === family.family ? 'border-transparent text-white' : 'border-[#17221e]/20'}`} style={activeFamily === family.family ? { background: family.color } : undefined}>{family.family} · {family.count.toLocaleString()}</button>)}
     </div>
-    <div className="grid overflow-clip border border-[#17221e]/20 bg-[#e5e0d5] lg:grid-cols-[minmax(0,1fr)_300px]">
+    <div className="grid overflow-clip border border-[#17221e]/20 bg-[#f3efe4] lg:grid-cols-[minmax(0,1fr)_300px]">
     <div ref={frameRef} className="relative min-h-[440px] min-w-0 touch-none border-b border-[#17221e]/15 lg:min-h-[620px] lg:border-b-0 lg:border-r">
       <canvas ref={canvasRef} tabIndex={0} aria-label={`Genre-space map with ${visiblePoints.length.toLocaleString()} ${scopeLabel}. Use arrow keys to move between songs and Home to select the first visible song.`} className="absolute inset-0 h-full w-full cursor-grab focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#b45238] active:cursor-grabbing" onClick={(event) => { if (suppressClickRef.current) { suppressClickRef.current = false; return; } selectNearest(event.clientX, event.clientY); }} onKeyDown={moveSelection} onPointerDown={startPan} onPointerMove={movePan} onPointerLeave={() => setHoveredId('')} onPointerUp={endPan} onPointerCancel={endPan} onWheel={(event) => { event.preventDefault(); zoomBy(event.deltaY < 0 ? 1.18 : 0.85); }} />
       <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-[#f3efe4]/92 p-1 shadow-sm">
@@ -250,12 +286,12 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
         <button onClick={reset} className="grid size-11 place-items-center rounded-full hover:bg-[#17221e]/8"><span className="sr-only">Reset genre-space view</span><LocateFixed className="size-4" /></button>
         <span className="pr-3 font-mono text-[9px] uppercase tracking-[0.1em]">{scale.toFixed(1)}×</span>
       </div>
-      <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-[#f3efe4]/92 px-3 py-2 font-mono text-[9px] uppercase tracking-[0.08em] text-[#17221e]/65 sm:left-auto sm:max-w-md">Drag to pan · wheel or pinch to zoom · {scale < 2.1 ? 'families' : scale < 4 ? 'detailed genres' : 'artists'} · select a dot</div>
+      <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-[#f3efe4]/92 px-3 py-2 font-mono text-[9px] uppercase tracking-[0.08em] text-[#17221e]/65 sm:left-auto sm:max-w-md">Drag to pan · wheel or pinch to zoom · {scale < 2.1 ? 'families' : scale < 4 ? 'detailed genres' : 'artists'} · select a cover</div>
     </div>
     <aside className="flex min-h-64 min-w-0 flex-col p-5">
       <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#a64831]">{normalizedQuery ? `${matches.length.toLocaleString()} search matches` : `${activeFamily || 'All families'} · ${visiblePoints.length.toLocaleString()} tracks`}</p>
       {selected ? <div className="mt-3">
-        {scale >= 2 && selected.spotifyAlbumId && data.albums[selected.spotifyAlbumId] && <GenreSpaceAlbumCover album={selected.album} cover={data.albums[selected.spotifyAlbumId]} />}
+        <div className="mb-4"><AlbumArtwork album={selected.album || selected.title} artist={selected.artists} coverUrl={selected.coverUrl || (selected.spotifyAlbumId ? data.albums[selected.spotifyAlbumId]?.coverUrl : null)} spotifyAlbumId={selected.spotifyAlbumId} spotifyTrackId={selected.spotifyTrackId || selected.id} className="w-full max-w-60" /></div>
         <h3 className="font-serif text-3xl leading-tight">{selected.title}</h3>
         <p className="mt-1 text-sm text-[#17221e]/65">{selected.artists}</p>
         {selected.album && <p className="mt-1 text-xs text-[#17221e]/50">{selected.album}</p>}
@@ -264,7 +300,7 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
         <p className="mt-2 text-xs leading-relaxed text-[#17221e]/55">{selected.confidence} genre confidence · {referenceMethodLabel(selected.method)}</p>
         <p className="mt-2 break-words font-mono text-[9px] leading-relaxed uppercase tracking-[0.06em] text-[#17221e]/45">Genre source · {selected.source}</p>
         {(selected.spotifyTrackId || /^[A-Za-z0-9]{22}$/.test(selected.id)) && <a href={`https://open.spotify.com/track/${selected.spotifyTrackId ?? selected.id}`} className="mt-5 inline-flex min-h-11 items-center rounded-full border border-[#17221e]/20 px-4 text-xs font-medium">Open track in Spotify</a>}
-      </div> : <p className="mt-3 text-sm text-[#17221e]/60">Select a dot to inspect a track, or search above for an artist, album, song, family, or detailed genre.</p>}
+      </div> : <p className="mt-3 text-sm text-[#17221e]/60">Select a cover to inspect a track, or search above for an artist, album, song, family, or detailed genre.</p>}
       {normalizedQuery && <div className="mt-6 border-t border-[#17221e]/15 pt-4"><p className="mb-2 font-mono text-[9px] uppercase tracking-[0.12em] text-[#17221e]/45">Top matches</p><ul className="grid gap-1">{matches.slice(0, 8).map((point) => <li key={point.id}><button onClick={() => setSelectedId(point.id)} className="min-h-11 w-full rounded-lg px-2 py-2 text-left text-xs hover:bg-[#17221e]/6"><strong className="block truncate font-medium">{point.title}</strong><span className="block truncate text-[#17221e]/50">{point.artists} · {point.primary}</span></button></li>)}</ul></div>}
       <p className="mt-auto pt-6 font-mono text-[9px] leading-relaxed uppercase tracking-[0.08em] text-[#17221e]/45">Left → right: denser / atmospheric → spikier / bouncier. Top → bottom: mechanical / electric → organic. Reference: Every Noise at Once, 2023-12-04.</p>
     </aside>
@@ -277,15 +313,4 @@ function referenceMethodLabel(method: string) {
   if (method.includes('artist-membership')) return 'artist-membership reference placement';
   if (method.includes('family')) return 'family reference fallback';
   return 'direct-label reference placement';
-}
-
-function GenreSpaceAlbumCover({ album, cover }: { album: string; cover: GenreSpaceAlbum }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) return null;
-  return <figure className="mb-4">
-    {/* Cover Art Archive provides a stable, source-addressable thumbnail. */}
-    {/* oxlint-disable-next-line next/no-img-element */}
-    <img src={cover.coverUrl} alt={`Cover of ${album}`} loading="lazy" onError={() => setFailed(true)} className="aspect-square w-full rounded-sm border border-[#17221e]/10 object-cover" />
-    <figcaption className="mt-1 font-mono text-[8px] uppercase tracking-[0.06em] text-[#17221e]/40">{cover.coverSource}</figcaption>
-  </figure>;
 }

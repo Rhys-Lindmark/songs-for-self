@@ -1,28 +1,52 @@
 # Songs for Self
 
-Songs for Self is a source-traceable atlas of one 7,733-position Spotify playlist. The published dataset keeps all 151 unavailable positions, and gives each of the 7,582 available tracks an explicit genre, musical-time, and geography placement with source, method, confidence, and estimate status.
+[Music explorer](https://ai.rhyslindmark.com/music) · [GitHub](https://github.com/Rhys-Lindmark/songs-for-self)
 
-- Live site: <https://ai.rhyslindmark.com/music>
-- Full data and release workflow: [`RUNBOOK.md`](RUNBOOK.md)
-- Spotify authorization and import contract: [`SPOTIFY_IMPORT.md`](SPOTIFY_IMPORT.md)
-- Dataset compatibility and migration notes: [`DATA_VERSIONING.md`](DATA_VERSIONING.md)
-- Responsive checks: [`RESPONSIVE_TESTING.md`](RESPONSIVE_TESTING.md)
+A music atlas with album covers, genre timelines, geography, and browser-local Spotify/CSV imports.
 
-## Local start
+## Start locally
 
-Use Node 22.13 or newer.
+Use Node 24.
 
 ```sh
-npm install
+git clone https://github.com/Rhys-Lindmark/songs-for-self.git
+cd songs-for-self
+npm ci
 npm run dev
 ```
 
-The canonical source is `data/songs-for-self.enriched.csv`. Browser-local visitor analysis uses generated public lookup data and does not upload playlist contents to a server.
+CSV and Spotify account-data imports work without credentials. Spotify authorization uses a public Client ID and PKCE; no client secret is needed. Optional local configuration is documented in `.env.example`.
 
-Before proposing a change, run the validation sequence appropriate to it from [`RUNBOOK.md`](RUNBOOK.md). Do not run the raw enrichment chain casually: its first stage rebuilds the canonical enriched CSV from `data/songs-for-self.raw.csv`, so a partial run can temporarily replace later reviewed fields until the complete pipeline is reapplied.
+## Working together
 
-## Public-source release and privacy
+Rhys and John can commit and push directly to `main`. Pull requests and reviews are optional.
 
-This release excludes the private development history, hosting identity, and operational task backlog. The included reference playlist and enrichment metadata are the same dataset intentionally published by the live Music project. Visitor playlists and Spotify tokens are not bundled; imported playlists are processed in the visitor’s browser. Spotify authorization uses PKCE and a public Client ID; no client secret is required or included. Do not commit OAuth tokens, `.env` files, or account exports. Third-party track and artist metadata retain their respective rights.
+```sh
+git pull --rebase
+# Make your changes.
+git add .
+git commit -m "Describe the change"
+git push
+```
 
-The checked-in `.openai/hosting.json` is a nonsecret local configuration with no project ID or resource bindings, so the Vite import resolves without exposing the original deployment identity. For a hosted fork, register your own deployment and supply its project ID; never reuse the original site’s credentials.
+If someone pushed first, run `git pull --rebase`, resolve any conflicts while preserving both changes, then `git push` again. Keep changes small. GitHub Issues are available for ideas or larger work; opening an issue is optional.
+
+## Publishing
+
+Pushing `main` triggers Cloudflare Workers Builds, which runs `npm run check` and `npm run build`, then `npm run deploy`. A failed check or build leaves the previous deployment live. Both collaborators can publish through Git; Cloudflare credentials stay in Cloudflare.
+
+- Worker: `songs-for-self`
+- Worker origin: <https://songs-for-self.rhyslindmark.workers.dev>
+- Public URL: <https://ai.rhyslindmark.com/music>
+- Build/deployment history: Cloudflare → Workers & Pages → songs-for-self → Builds
+- GitHub Actions also checks each push; direct pushes remain allowed.
+
+The main website repository routes `/music` to this Worker. Routine music changes only need a push to this repository. See [RUNBOOK.md](RUNBOOK.md) for verification and rollback.
+
+## Data and corrections
+
+The canonical reference playlist is `data/songs-for-self.enriched.csv`. Generated browser files live in `public/`. All 7,582 available tracks retain genre, time, and geography placements; the source preserves 151 unavailable positions separately.
+
+Use `data/genre-overrides.json` and `data/geography-overrides.json` for reviewed corrections, with source evidence. Do not edit generated files or rerun raw enrichment casually. See [DATA_VERSIONING.md](DATA_VERSIONING.md) and the [runbook](RUNBOOK.md).
+
+Visitor playlists and OAuth tokens are never committed. Imports and saved analyses remain in the visitor's browser. The reference playlist and public enrichment metadata are intentionally published; third-party metadata and artwork retain their respective rights.

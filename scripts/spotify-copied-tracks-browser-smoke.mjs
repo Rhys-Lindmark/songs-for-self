@@ -35,6 +35,8 @@ try {
     `https://open.spotify.com/track/${first}?si=duplicate`,
   ].join('\n'));
   await page.getByRole('button', { name: 'Import 3 copied playlist positions' }).click();
+  await page.getByRole('heading', { name: 'Explore your music' }).waitFor();
+  await page.getByText('Change playlist', { exact: true }).click();
   await page.getByText('Imported 3 copied playlist positions', { exact: false }).waitFor();
   await page.getByText('spotify-copied-3-tracks.csv', { exact: true }).waitFor();
   assert.deepEqual(requested.sort((left, right) => left.localeCompare(right)), [first, second].sort((left, right) => left.localeCompare(right)));

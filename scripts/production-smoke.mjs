@@ -15,12 +15,12 @@ assert.equal(
 const html = await pageResponse.text();
 const manifest = JSON.parse(fs.readFileSync(new URL('../public/dataset-manifest.json', import.meta.url), 'utf8'));
 const expectedOther = manifest.coverage.otherTracks.toLocaleString('en-US');
-for (const expected of ['<title>Songs for Self — A personal atlas of listening</title>', '7,582', 'available songs', expectedOther, 'zoomable map of musical neighborhoods', 'Spotify playlist link', `${assetBase}/og.png`, `${assetBase}/favicon.svg`]) {
+for (const expected of ['<title>Songs for Self — A personal atlas of listening</title>', '7,582', expectedOther, 'Spotify playlist link', `${assetBase}/og.png`, `${assetBase}/favicon.svg`]) {
   assert.ok(html.includes(expected), `Missing production marker: ${expected}`);
 }
 assert.match(html, /Import the full copied playlist/, 'Missing complete-playlist import action');
-for (const removed of ['AVAILABLE PLAYLIST TRACKS', 'TRACKS PLACED IN TIME']) {
-  assert.ok(!html.includes(removed), `Removed coverage card returned: ${removed}`);
+for (const removed of ['AVAILABLE PLAYLIST TRACKS', 'TRACKS PLACED IN TIME', 'available songs arranged across musical time', 'zoomable map of musical neighborhoods', 'A personal atlas of listening</p>', 'Download V3 CSV', 'Open playlist']) {
+  assert.ok(!html.includes(removed), `Removed UI returned: ${removed}`);
 }
 
 const assets = [
@@ -40,4 +40,4 @@ const assetResults = await Promise.all(assets.map(async (pathname) => {
   return { pathname, contentType: response.headers.get('content-type'), contentLength: response.headers.get('content-length') };
 }));
 
-console.log(JSON.stringify({ page: pageResponse.url, status: pageResponse.status, markers: 9, removedCards: 2, assets: assetResults }, null, 2));
+console.log(JSON.stringify({ page: pageResponse.url, status: pageResponse.status, markers: 6, removedMarkers: 7, assets: assetResults }, null, 2));

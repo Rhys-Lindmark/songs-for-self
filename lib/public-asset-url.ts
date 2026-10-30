@@ -4,10 +4,10 @@ export function publicAssetUrl(fileName: string, pathname = window.location.path
   return `${basePath}${normalizedFile}`;
 }
 
-export const SITES_API_ORIGIN = 'https://songs-for-self.rhyslindmark.chatgpt.site';
+export const MUSIC_API_ORIGIN = 'https://songs-for-self.rhyslindmark.workers.dev';
 
 export function publicApiUrl(route: string, location = window.location) {
   const normalizedRoute = route.replace(/^\/+/, '').replace(/^api\//, '');
-  const origin = location.hostname === 'ai.rhyslindmark.com' ? SITES_API_ORIGIN : location.origin;
+  const origin = location.hostname === 'ai.rhyslindmark.com' ? MUSIC_API_ORIGIN : location.origin;
   return `${origin}/api/${normalizedRoute}`;
 }

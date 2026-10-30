@@ -1,32 +1,17 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { Headphones, Map, Music2, Search, Sparkles } from 'lucide-react';
+import { Map, Music2, Search, Sparkles } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlaylistUploadAnalyzer } from '@/components/playlist-upload-analyzer';
 import { PublicAssetDownload } from '@/components/public-asset-download';
 import { GenreSpaceMap, type GenreSpacePayload } from '@/components/genre-space-map';
 import { GeographyMap, type GeographyPayload } from '@/components/geography-map';
 import { publicAssetUrl } from '@/lib/public-asset-url';
-import { timelineLeft } from '@/lib/timeline-scale';
+import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import summary from '@/data/viz-summary.json';
 
 const genreOrder = ['Classical', 'Experimental', 'Country', 'Electronic', 'Modern Folk', 'Hip-hop', 'Jazz', 'Pop', 'R&B, Soul & Blues', 'Rock', 'World', 'Traditional Folk', 'Other'] as const;
-const colors: Record<string, string> = {
-  Classical: '#d39a00',
-  Experimental: '#8d5f99',
-  Country: '#ad712f',
-  Jazz: '#d85643',
-  Rock: '#6c60dc',
-  Electronic: '#168e80',
-  'Modern Folk': '#7b8d4a',
-  'Hip-hop': '#df7625',
-  Pop: '#c53b8d',
-  'R&B, Soul & Blues': '#a84c63',
-  World: '#548b46',
-  'Traditional Folk': '#907b45',
-  Other: '#66706b',
-};
 const timelineRanges = [
   { label: 'All musical time', min: 1200, max: 2026, ticks: [1200, 1400, 1600, 1800, 1900, 2000, 2026] },
   { label: 'Recorded era', min: 1900, max: 2026, ticks: [1900, 1925, 1950, 1975, 2000, 2026] },
@@ -51,7 +36,7 @@ type TimelinePoint = {
   albums: TimelineAlbum[];
 };
 type TimelinePayload = { timeline: TimelinePoint[]; historicalPeriods: { period: string; count: number }[] };
-type SelectedTimeline = { point: TimelinePoint };
+type SelectedTimeline = { point: TimelinePoint; markId?: string };
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('genre');
@@ -113,7 +98,7 @@ export default function Home() {
 
 
   const visibleGenres = useMemo(
-    () => genreOrder.filter((genre) => genre.toLowerCase().includes(query.toLowerCase())),
+    () => genreOrder.filter((genre) => summary.genreCounts[genre] > 0 && genre.toLowerCase().includes(query.toLowerCase())),
     [query],
   );
   const timelineMoments = useMemo(
@@ -124,21 +109,7 @@ export default function Home() {
   return (
     <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f3efe4] text-[#17221e] focus:outline-none">
       <a href="#your-playlist" className="skip-link">Skip to playlist tools</a>
-      <header className="flex min-h-16 items-center justify-between gap-3 border-b border-[#17221e]/15 px-4 py-2 sm:px-5 md:px-10">
-        <a href="https://ai.rhyslindmark.com" className="inline-flex min-h-11 items-center font-mono text-[10px] uppercase tracking-[0.16em] text-[#17221e]/65 sm:text-[11px] sm:tracking-[0.22em]"><span className="sm:hidden">AI / Rhys</span><span className="hidden sm:inline">ai.rhyslindmark.com</span></a>
-        <div className="flex shrink-0 items-center gap-2 sm:gap-4">
-          <PublicAssetDownload fileName="songs-for-self-v3.csv" className="hidden text-sm font-medium hover:opacity-65 sm:inline">Download V3 CSV</PublicAssetDownload>
-          <a href="https://open.spotify.com/playlist/3QNxR8qUDQd8e5KyNsOZgx" className="flex min-h-11 items-center gap-2 rounded-full px-2 text-xs font-medium hover:bg-[#17221e]/5 hover:opacity-65 sm:px-3 sm:text-sm"><Headphones className="size-4" /> <span className="hidden min-[350px]:inline">Open playlist</span><span className="min-[350px]:hidden">Spotify</span></a>
-        </div>
-      </header>
-
-      <section className="border-b border-[#17221e]/15">
-        <div className="px-4 py-9 sm:px-5 sm:py-10 md:px-10 md:py-14">
-          <p className="mb-4 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-[#a64831]"><Sparkles className="size-3.5" /> A personal atlas of listening</p>
-          <h1 className="max-w-4xl font-serif text-[3rem] leading-[0.84] tracking-[-0.05em] min-[375px]:text-[3.5rem] sm:text-[clamp(3.8rem,8vw,7.8rem)]">Songs<br /><em className="font-normal">for Self</em></h1>
-          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-[#17221e]/70 sm:mt-8 sm:text-base md:text-lg">{summary.activeTracks.toLocaleString()} available songs arranged across musical time, geography, and a zoomable map of musical neighborhoods. The archive preserves {summary.unavailableTracks.toLocaleString()} unavailable playlist positions separately.</p>
-        </div>
-      </section>
+      <h1 className="sr-only">Songs for Self</h1>
 
       <PlaylistUploadAnalyzer spotifyClientId={process.env.SPOTIFY_CLIENT_ID ?? process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID ?? ''} />
 
@@ -186,34 +157,13 @@ export default function Home() {
               </label>
             </div>
 
-            <p className="mb-3 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.1em] text-[#17221e]/50 sm:hidden"><span>Genre stays pinned</span><span>Swipe through time →</span></p>
-            {/* A focusable overflow region lets keyboard users pan the timeline with arrow keys. */}
-            {/* oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-            <section tabIndex={0} aria-label="Genre timeline. Swipe or scroll horizontally to move through musical time." className="touch-pan-x overflow-x-auto overscroll-x-contain border-y border-[#17221e]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b45238]">
-              <div className="min-w-[780px] sm:min-w-[900px]">
-                <div className="grid grid-cols-[120px_1fr] border-b border-[#17221e]/15 py-3 sm:grid-cols-[180px_1fr]">
-                  <span className="sticky left-0 z-20 bg-[#f3efe4] pr-3 font-mono text-[9px] uppercase tracking-[0.12em] text-[#17221e]/45 sm:text-[10px] sm:tracking-[0.15em]">Genre family</span>
-                  <div className="relative h-4 font-mono text-[10px] text-[#17221e]/45">{range.ticks.map((year) => <span key={year} className="absolute -translate-x-1/2 first:translate-x-0 last:-translate-x-full" style={{ left: timelineLeft(year, range) }}>{year}</span>)}</div>
-                </div>
-                {visibleGenres.map((genre) => {
-                  const points = (timelineData?.timeline ?? []).filter((point) => point.genre === genre && point.year >= range.min && point.year <= range.max);
-                  return <div key={genre} className="grid grid-cols-[120px_1fr] border-b border-[#17221e]/10 py-4 last:border-b-0 sm:grid-cols-[180px_1fr] sm:py-5">
-                    <div className="sticky left-0 z-20 bg-[#f3efe4] pr-3">
-                      <h3 className="font-serif text-base leading-tight sm:text-xl">{genre}</h3>
-                      <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.1em] text-[#17221e]/45">{summary.genreCounts[genre].toLocaleString()} classified</p>
-                    </div>
-                    <div className="relative h-20 overflow-hidden rounded-sm bg-[#17221e]/[0.035] sm:h-16">
-                      <div className="absolute inset-0">{range.ticks.map((year) => <i key={year} className="absolute h-full w-px bg-[#17221e]/10" style={{ left: timelineLeft(year, range) }} />)}</div>
-                      {points.map((point) => {
-                        const size = Math.min(26, 6 + Math.sqrt(point.count) * 2.8);
-                        const label = `${genre}, ${point.year}: ${point.count} track${point.count === 1 ? '' : 's'}\n${point.tracks.join('\n')}`;
-                        return <button key={`${genre}-${point.year}`} aria-label={label} aria-pressed={selectedTimeline?.point.genre === genre && selectedTimeline.point.year === point.year} title={label} onClick={() => setSelectedTimeline({ point })} className="group pointer-events-none absolute top-1/2 z-[1] grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17221e]" style={{ left: timelineLeft(point.year, range) }}><span aria-hidden="true" className="pointer-events-auto block rounded-full border border-white/55 shadow-sm transition-transform group-hover:scale-150" style={{ width: size, height: size, background: colors[genre], opacity: 0.84 }} /></button>;
-                      })}
-                    </div>
-                  </div>;
-                })}
-              </div>
-            </section>
+            <AlbumTimeline marks={(timelineData?.timeline ?? []).flatMap((point) => point.albums.map((album, index): AlbumMark => ({
+              id: `${point.genre}|${point.year}|${index}`, title: album.name, album: album.name, artists: album.artists,
+              genre: point.genre, year: point.year, count: album.count, spotifyAlbumId: album.spotifyAlbumId, coverUrl: album.coverUrl,
+            })))} genres={visibleGenres} counts={summary.genreCounts} range={range} selectedId={selectedTimeline?.markId} label="Genre timeline. Swipe or scroll horizontally to move through musical time." onSelect={(mark) => {
+              const point = timelineData?.timeline.find((point) => point.genre === mark.genre && point.year === mark.year);
+              if (point) setSelectedTimeline({ point, markId: mark.id });
+            }} />
             {selectedTimeline && <TimelineDetail selection={selectedTimeline} />}
           </section>
         </TabsContent>
@@ -255,7 +205,7 @@ function SourcesDisclosure() {
         <details className="border-b border-[#f3efe4]/20 md:border-r md:border-b-0">
           <summary className="flex min-h-12 cursor-pointer items-center py-3 pr-4 font-medium">Sources &amp; licenses</summary>
           <div className="pb-5 pr-5 text-xs leading-relaxed text-[#f3efe4]/65">
-            <p>Playlist identity comes from the public <a className="underline underline-offset-2" href="https://open.spotify.com/playlist/3QNxR8qUDQd8e5KyNsOZgx" target="_blank" rel="noreferrer">Songs for Self playlist</a>. Dates, work identities, artist genres, and origins use source-addressable records from <a className="underline underline-offset-2" href="https://musicbrainz.org/" target="_blank" rel="noreferrer">MusicBrainz</a> and <a className="underline underline-offset-2" href="https://www.wikidata.org/" target="_blank" rel="noreferrer">Wikidata</a>. Album thumbnails come from the <a className="underline underline-offset-2" href="https://coverartarchive.org/" target="_blank" rel="noreferrer">Cover Art Archive</a>.</p>
+            <p>Playlist identity comes from the public <a className="underline underline-offset-2" href="https://open.spotify.com/playlist/3QNxR8qUDQd8e5KyNsOZgx" target="_blank" rel="noreferrer">Songs for Self playlist</a>. Dates, work identities, artist genres, and origins use source-addressable records from <a className="underline underline-offset-2" href="https://musicbrainz.org/" target="_blank" rel="noreferrer">MusicBrainz</a> and <a className="underline underline-offset-2" href="https://www.wikidata.org/" target="_blank" rel="noreferrer">Wikidata</a>. Album artwork uses public Spotify thumbnails and the <a className="underline underline-offset-2" href="https://coverartarchive.org/" target="_blank" rel="noreferrer">Cover Art Archive</a>.</p>
             <p className="mt-3">Genre-space coordinates are extracted from a commit-pinned public mirror of the December 2023 <a className="underline underline-offset-2" href="https://www.furia.com/everynoise_public/" target="_blank" rel="noreferrer">Every Noise at Once public map</a>. This project republishes factual labels and coordinates—not source HTML or audio previews. Current artist memberships are a separately labeled bridge and never replace the pinned geometry.</p>
           </div>
         </details>

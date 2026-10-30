@@ -54,8 +54,12 @@
     "test:spotify-copied-resume-browser": "node scripts/spotify-copied-import-resume-browser-smoke.mjs",
     "test:spotify-account-data-browser": "node scripts/spotify-account-data-browser-smoke.mjs",
     "test:progressive-layers-browser": "node scripts/playlist-progressive-layers-browser-smoke.mjs",
+    "test:album-explorer-browser": "node scripts/album-explorer-browser-smoke.mjs",
     "test:timeline-artwork-browser": "node scripts/timeline-artwork-browser-smoke.mjs",
-    "test:production": "node scripts/production-smoke.mjs"
+    "test:production": "node scripts/production-smoke.mjs",
+    "check:types": "tsc --noEmit --incremental false",
+    "check": "npm test && npm run check:types",
+    "deploy": "wrangler deploy --config dist/server/wrangler.json"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
@@ -83,7 +87,6 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
     "@cloudflare/workers-types": "4.20260515.1",
-    "@openai/sites-vite-plugin": "0.2.0",
     "@tailwindcss/postcss": "4.2.1",
     "@types/d3-geo": "^3.1.1",
     "@types/node": "22.19.19",

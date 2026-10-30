@@ -19,7 +19,7 @@ function importFixture(name) {
 await test('imports a Spotify playlist export by Track URI', () => {
   const [track] = importFixture('spotify');
   assert.deepEqual(track, {
-    ...exactTrack, spotifyTrackId: exactTrack.id, method: 'exact track',
+    ...exactTrack, album: 'Surf', spotifyTrackId: exactTrack.id, method: 'exact track',
     genreSource: 'Songs for Self exact-track enrichment', genreConfidence: 'medium',
     timeSource: 'Songs for Self exact-track enrichment', timeConfidence: 'medium',
     geographySource: 'Songs for Self exact-track enrichment', geographyConfidence: 'medium',

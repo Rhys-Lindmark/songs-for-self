@@ -1,11 +1,14 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { Check, Clock3, Download, ExternalLink, FileMusic, LoaderCircle, LockKeyhole, Map, Sparkles, Trash2, Upload } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Check, Clock3, Download, ExternalLink, FileMusic, LoaderCircle, LockKeyhole, Map, Music2, Sparkles, Trash2, Upload } from 'lucide-react';
 import { GenreSpaceMap, type GenreSpacePayload } from '@/components/genre-space-map';
 import { PublicAssetDownload } from '@/components/public-asset-download';
 import { SpotifyPlaylistImport } from '@/components/spotify-playlist-import';
-import { aggregatePlaces, aggregateTimeline, analyzePlaylistRows, parseCsv, type AnalyzedTrack, type GlobalArtistGenreIndex, type Lookup } from '@/lib/playlist-analyzer';
+import { AlbumCloud } from '@/components/album-cloud';
+import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
+import { AlbumArtwork } from '@/components/album-artwork';
+import { aggregatePlaces, analyzePlaylistRows, parseCsv, type AnalyzedTrack, type GlobalArtistGenreIndex, type Lookup } from '@/lib/playlist-analyzer';
 import { loadPublicJson } from '@/lib/public-json-cache';
 import { enrichedPlaylistFileName, serializeEnrichedPlaylist } from '@/lib/playlist-export';
 import { buildVisitorGenreSpace, type VisitorGenreSpaceResult } from '@/lib/visitor-genre-space';
@@ -14,16 +17,16 @@ import { parseSpotifyAccountData, type SpotifyAccountPlaylist } from '@/lib/spot
 import { clearStoredPlaylistAnalysis, loadStoredPlaylistAnalysis, makeStoredPlaylistAnalysis, saveStoredPlaylistAnalysis, type StoredPlaylistAnalysis } from '@/lib/playlist-analysis-store';
 
 const genreOrder = ['Classical', 'Experimental', 'Country', 'Electronic', 'Modern Folk', 'Hip-hop', 'Jazz', 'Pop', 'R&B, Soul & Blues', 'Rock', 'World', 'Traditional Folk', 'Other'] as const;
-const colors: Record<string, string> = { Classical: '#d39a00', Experimental: '#8d5f99', Country: '#ad712f', Electronic: '#168e80', 'Modern Folk': '#7b8d4a', 'Hip-hop': '#df7625', Jazz: '#d85643', Pop: '#c53b8d', 'R&B, Soul & Blues': '#a84c63', Rock: '#6c60dc', World: '#548b46', 'Traditional Folk': '#907b45', Other: '#66706b' };
 type LayerStatus = 'idle' | 'loading' | 'ready' | 'failed';
 
 export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClientId?: string }) {
+  const exploreHeading = useRef<HTMLHeadingElement>(null);
   const [fileName, setFileName] = useState('');
   const [tracks, setTracks] = useState<AnalyzedTrack[]>([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [worldPath, setWorldPath] = useState('');
-  const [view, setView] = useState<'space' | 'time' | 'map'>('space');
+  const [view, setView] = useState<'albums' | 'space' | 'time' | 'map'>('albums');
   const [genreSpace, setGenreSpace] = useState<VisitorGenreSpaceResult | null>(null);
   const [importSession, setImportSession] = useState(0);
   const [accountPlaylists, setAccountPlaylists] = useState<SpotifyAccountPlaylist[]>([]);
@@ -34,11 +37,37 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
   const [spaceStatus, setSpaceStatus] = useState<LayerStatus>('idle');
   const [mapError, setMapError] = useState('');
   const [spaceError, setSpaceError] = useState('');
-  const timeline = useMemo(() => aggregateTimeline(tracks), [tracks]);
+  const [selectedAlbum, setSelectedAlbum] = useState<AlbumMark | null>(null);
+  const albumMarks = useMemo(() => {
+    const byTrack = new globalThis.Map((genreSpace?.payload.points ?? []).filter((point) => point.spotifyTrackId).map((point) => [point.spotifyTrackId, point]));
+    return tracks.map((track, index): AlbumMark => {
+      const point = byTrack.get(track.spotifyTrackId);
+      const albumId = track.spotifyAlbumId || point?.spotifyAlbumId;
+      return {
+        id: `import-${index}`, title: track.track, artists: track.artist, album: track.album || point?.album || '',
+        spotifyTrackId: track.spotifyTrackId, spotifyAlbumId: albumId,
+        coverUrl: track.coverUrl || point?.coverUrl || (albumId ? genreSpace?.payload.albums[albumId]?.coverUrl : null),
+        genre: track.genre, year: track.year, count: 1,
+      };
+    });
+  }, [tracks, genreSpace]);
+  const genreCounts = useMemo(() => Object.fromEntries(genreOrder.map((genre) => [genre, tracks.filter((track) => track.genre === genre).length])), [tracks]);
+  const timeRange = useMemo(() => {
+    const years = tracks.flatMap((track) => track.year ? [track.year] : []);
+    const min = years.length && Math.min(...years) < 1900 ? 1200 : 1900;
+    return { min, max: 2026, ticks: min === 1200 ? [1200, 1600, 1800, 1900, 2000, 2026] : [1900, 1925, 1950, 1975, 2000, 2026] };
+  }, [tracks]);
   const places = useMemo(() => aggregatePlaces(tracks), [tracks]);
   const dated = tracks.filter((track) => track.year).length;
   const mapped = tracks.filter((track) => track.x !== null && track.y !== null).length;
   const classified = tracks.filter((track) => track.genre !== 'Other').length;
+  const previewSource = fileName.match(/^spotify-preview-[A-Za-z0-9]+-(\d+)-of-(\d+)\.csv$/);
+
+  useEffect(() => {
+    if (!tracks.length) return;
+    exploreHeading.current?.focus({ preventScroll: true });
+    exploreHeading.current?.scrollIntoView({ block: 'start', behavior: 'auto' });
+  }, [tracks]);
 
   useEffect(() => {
     let cancelled = false;
@@ -84,7 +113,8 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
   const presentAnalysis = useCallback((analyzed: AnalyzedTrack[], sourceName: string) => {
     setFileName(sourceName);
     setTracks(analyzed);
-    setView('time');
+    setView('albums');
+    setSelectedAlbum(null);
     setResumeSnapshot(null);
     loadDeepViews(analyzed);
   }, [loadDeepViews]);
@@ -159,7 +189,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
 
   function downloadEnrichedPlaylist() {
     if (!tracks.length || !genreSpace) return;
-    const url = URL.createObjectURL(new Blob([serializeEnrichedPlaylist(tracks, genreSpace.placements)], { type: 'text/csv;charset=utf-8' }));
+    const url = URL.createObjectURL(new Blob([serializeEnrichedPlaylist(tracks.map((track, index) => ({ ...track, album: albumMarks[index].album, spotifyAlbumId: albumMarks[index].spotifyAlbumId, coverUrl: albumMarks[index].coverUrl })), genreSpace.placements)], { type: 'text/csv;charset=utf-8' }));
     const anchor = document.createElement('a');
     anchor.href = url;
     anchor.download = enrichedPlaylistFileName(fileName);
@@ -173,7 +203,8 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     setWorldPath('');
     setFileName('');
     setError('');
-    setView('space');
+    setView('albums');
+    setSelectedAlbum(null);
     setMapStatus('idle');
     setSpaceStatus('idle');
     setMapError('');
@@ -188,8 +219,9 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
   }
 
   return <section id="your-playlist" tabIndex={-1} className="border-t border-[#17221e]/15 bg-[#ece6d8] px-4 py-10 outline-none sm:px-5 sm:py-12 md:px-10 md:py-16">
-    <div className="grid gap-8 lg:grid-cols-[minmax(260px,.65fr)_minmax(0,1.35fr)]">
-      <div>
+    <div className={tracks.length ? "grid gap-8" : "grid gap-8 lg:grid-cols-[minmax(260px,.65fr)_minmax(0,1.35fr)]"}>
+      <details open={!tracks.length}>
+        <summary className={tracks.length ? "min-h-11 cursor-pointer py-3 text-sm text-[#17221e]/65" : "hidden"}>Change playlist</summary>
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a64831]">Analyze your playlist</p>
         <h2 className="mt-3 max-w-md font-serif text-[2.25rem] leading-[.95] tracking-tight sm:text-4xl md:text-6xl">What does <em className="font-normal">your</em> music look like?</h2>
         <p className="mt-5 max-w-lg text-sm leading-relaxed text-[#17221e]/65">Paste any public Spotify playlist for a quick preview—or copy every track from Spotify Desktop for the complete atlas. CSV and account-data imports work without an account connection.</p>
@@ -222,21 +254,20 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
           {loading && <p className="mt-3 text-sm text-[#17221e]/60">Reading and enriching your playlist in this browser…</p>}
         </div>
         {error && <p role="alert" className="mt-4 text-sm text-[#a33826]">{error}</p>}
-      </div>
+      </details>
 
       <div className="min-w-0">
         {!tracks.length ? <div className="grid min-h-64 place-items-center border border-dashed border-[#17221e]/25 bg-white/20 p-5 text-center sm:min-h-80 sm:p-8"><div><FileMusic className="mx-auto size-8 text-[#b45238]" /><p className="mt-4 font-serif text-2xl">Your playlist atlas will appear here.</p><p className="mt-2 text-sm text-[#17221e]/50">Paste a playlist link, copy its tracks from Spotify Desktop, or choose a file.</p></div></div> : <>
-          <ImportPipeline tracks={tracks} classified={classified} dated={dated} mapped={mapped} genreSpace={genreSpace} spaceStatus={spaceStatus} />
-          <div className="grid grid-cols-2 border border-[#17221e]/15 bg-white/25 sm:grid-cols-4">
-            <UploadMetric value={tracks.length} label="tracks read" />
-            <UploadMetric value={dated} label="placed in time" />
-            <UploadMetric value={mapped} label="placed on map" />
-            <UploadMetric value={genreSpace?.payload.summary.tracks ?? 0} label={spaceStatus === 'failed' ? 'genre space retry needed' : spaceStatus === 'ready' ? 'placed in genre space' : 'genre space loading'} />
+          <div className="mb-8 text-center">
+            <h2 ref={exploreHeading} tabIndex={-1} className="font-serif text-4xl tracking-tight outline-none sm:text-5xl">Explore your music</h2>
+            <p className="mt-3 break-words text-sm text-[#17221e]/55">{tracks.length.toLocaleString()} tracks · {fileName}</p>
+            {previewSource && <output className="mt-3 block text-sm text-[#a64831]">Spotify public preview: {Number(previewSource[1]).toLocaleString()} of {Number(previewSource[2]).toLocaleString()} tracks. Use Change playlist to import the complete playlist.</output>}
           </div>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div aria-label="Choose uploaded playlist visualization" className="grid grid-cols-3 rounded-2xl bg-[#17221e]/8 p-1 sm:flex sm:w-fit sm:rounded-full">
-              <UploadViewButton active={view === 'space'} onClick={() => setView('space')} icon={<Sparkles className="size-4" />} label="Genre space" />
+            <div aria-label="Choose uploaded playlist visualization" className="grid grid-cols-2 rounded-2xl bg-[#17221e]/8 p-1 sm:flex sm:w-fit sm:rounded-full">
+              <UploadViewButton active={view === 'albums'} onClick={() => { setView('albums'); setSelectedAlbum(null); }} icon={<Music2 className="size-4" />} label="Albums" />
               <UploadViewButton active={view === 'time'} onClick={() => setView('time')} icon={<Clock3 className="size-4" />} label="Time" />
+              <UploadViewButton active={view === 'space'} onClick={() => setView('space')} icon={<Sparkles className="size-4" />} label="Genre space" />
               <UploadViewButton active={view === 'map'} onClick={() => setView('map')} icon={<Map className="size-4" />} label="Geography" />
             </div>
             <div className="grid gap-2 min-[390px]:flex">
@@ -244,6 +275,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
               <button onClick={clearImportedPlaylist} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs font-medium text-[#17221e]/60 hover:bg-white/35"><Trash2 className="size-4" /> Clear playlist</button>
             </div>
           </div>
+          {view === 'albums' && <div className="mt-7"><AlbumCloud marks={albumMarks} onSelect={setSelectedAlbum} /></div>}
           {view === 'space' && (spaceStatus === 'idle' || spaceStatus === 'loading') && <div className="mt-4 grid min-h-64 place-items-center border border-dashed border-[#17221e]/25 bg-white/20 p-6 text-center"><div><LoaderCircle className="mx-auto size-7 animate-spin text-[#b45238] motion-reduce:animate-none" /><p className="mt-3 text-sm text-[#17221e]/55">Loading the deeper genre-space layer…</p><p className="mt-1 text-xs text-[#17221e]/40">Time and geography stay available while this larger layer loads.</p></div></div>}
           {view === 'space' && spaceStatus === 'failed' && <LayerFailure title="Genre space couldn’t load." detail={spaceError} onRetry={() => loadGenreSpaceLayer(tracks)} />}
           {view === 'space' && genreSpace && genreSpace.payload.points.length > 0 && <div className="mt-4">
@@ -251,24 +283,30 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
             <p className="mt-3 text-xs leading-relaxed text-[#17221e]/50">{genreSpace.exactTracks} exact song coordinates · {genreSpace.artistCentroids} artist-membership centroids · {genreSpace.familyFallbacks} genre-family fallbacks. Artist and family placements are labeled estimates, not measured track-audio similarity.</p>
           </div>}
           {view === 'space' && genreSpace && genreSpace.payload.points.length === 0 && <div className="mt-4 border border-dashed border-[#17221e]/25 bg-white/20 p-6 text-center"><p className="font-serif text-2xl">No genre-space placements yet.</p><p className="mt-2 text-sm text-[#17221e]/55">Add Spotify track IDs, recognizable artists, or genre fields to the CSV. Unresolved rows remain visible below.</p></div>}
-          {view === 'time' && <div className="mt-4 border border-[#17221e]/15 bg-white/25 p-3 sm:p-4">
-            <div className="mb-3 flex justify-between gap-3 font-mono text-[9px] uppercase tracking-[0.1em] text-[#17221e]/45"><span>Genre through time</span><span>1900 — 2026</span></div>
-            <p className="mb-3 flex justify-between font-mono text-[8px] uppercase tracking-[0.08em] text-[#17221e]/45 sm:hidden"><span>Genres stay pinned</span><span>Swipe →</span></p>
-            {/* A focusable overflow region lets keyboard users pan the timeline with arrow keys. */}
-            {/* oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-            <section tabIndex={0} aria-label="Uploaded playlist genre timeline. Swipe or scroll horizontally to move through time." className="overflow-x-auto overscroll-x-contain focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b45238]">
-            <div className="min-w-[620px] space-y-2 sm:min-w-0">{genreOrder.map((genre) => {
-              const points = timeline.filter((point) => point.genre === genre && point.year >= 1900);
-              const count = tracks.filter((track) => track.genre === genre).length;
-              return <div key={genre} className="grid grid-cols-[105px_1fr] items-center gap-3"><span className="sticky left-0 z-10 truncate bg-[#f4f0e7] py-1 text-xs">{genre} <small className="text-[#17221e]/40">{count}</small></span><div className="relative h-8 overflow-hidden bg-[#17221e]/[0.035]">{points.map((point) => <i key={point.year} title={`${genre}, ${point.year}: ${point.count}`} className="absolute top-1/2 block -translate-x-1/2 -translate-y-1/2 rounded-full" style={{ left: `${((point.year - 1900) / 126) * 100}%`, width: Math.min(18, 4 + Math.sqrt(point.count) * 3), height: Math.min(18, 4 + Math.sqrt(point.count) * 3), background: colors[genre], opacity: .82 }} />)}</div></div>;
-            })}</div>
-            </section>
+          {view === 'time' && <div className="mt-7 bg-[#f3efe4] p-3 sm:p-5">
+            <AlbumTimeline marks={albumMarks} genres={genreOrder} counts={genreCounts} range={timeRange} label="Uploaded playlist genre timeline. Swipe or scroll horizontally to move through time." selectedId={selectedAlbum?.id} onSelect={setSelectedAlbum} />
+            {dated < tracks.length && <p className="mt-3 text-xs text-[#17221e]/55">{(tracks.length - dated).toLocaleString()} tracks have no date yet. You can still find them in Albums.</p>}
           </div>}
+          {selectedAlbum && (view === 'time' || view === 'albums') && <aside aria-label="Selected album" className="mt-5 flex items-start gap-5 border-y border-[#17221e]/15 py-5">
+            <AlbumArtwork album={selectedAlbum.album || selectedAlbum.title} artist={selectedAlbum.artists} coverUrl={selectedAlbum.coverUrl} spotifyAlbumId={selectedAlbum.spotifyAlbumId} spotifyTrackId={selectedAlbum.spotifyTrackId} className="size-24 shrink-0" />
+            <div className="min-w-0"><h3 className="font-serif text-2xl">{selectedAlbum.album || selectedAlbum.title}</h3><p className="mt-1 text-sm text-[#17221e]/65">{selectedAlbum.artists}</p><p className="mt-2 text-xs text-[#17221e]/50">{selectedAlbum.genre}{selectedAlbum.year ? ` · ${selectedAlbum.year}` : ''} · {selectedAlbum.count} track{selectedAlbum.count === 1 ? '' : 's'}</p>
+              {(selectedAlbum.spotifyAlbumId || selectedAlbum.spotifyTrackId) && <a href={`https://open.spotify.com/${selectedAlbum.spotifyAlbumId ? 'album' : 'track'}/${selectedAlbum.spotifyAlbumId || selectedAlbum.spotifyTrackId}`} target="_blank" rel="noreferrer" className="mt-2 inline-flex min-h-11 items-center text-xs underline underline-offset-2">Open in Spotify</a>}
+            </div>
+          </aside>}
           {view === 'map' && (mapStatus === 'idle' || mapStatus === 'loading') && <div className="mt-4 grid min-h-56 place-items-center border border-dashed border-[#17221e]/25 bg-white/20 p-6 text-sm text-[#17221e]/55"><span>Loading the map layer…</span></div>}
           {view === 'map' && mapStatus === 'failed' && <LayerFailure title="Geography couldn’t load." detail={mapError} onRetry={loadMapLayer} />}
           {view === 'map' && worldPath && <div className="mt-4 overflow-hidden border border-[#17221e]/15 bg-[#dfe8dd]">
             <svg viewBox="0 0 1000 500" aria-label="Map of uploaded playlist artist origins" className="h-auto w-full"><path d={worldPath} fill="#f3efe4" stroke="#17221e" strokeOpacity="0.25" strokeWidth="0.65" />{places.map((place) => <circle key={`${place.x}-${place.y}`} cx={place.x} cy={place.y} r={Math.min(13, 3 + Math.sqrt(place.count) * 2)} fill="#b45238" fillOpacity=".72"><title>{place.label}: {place.count} tracks</title></circle>)}</svg>
           </div>}
+          <div className="mt-8">
+          <ImportPipeline tracks={tracks} classified={classified} dated={dated} mapped={mapped} genreSpace={genreSpace} spaceStatus={spaceStatus} />
+          <div className="grid grid-cols-2 border border-[#17221e]/15 bg-white/25 sm:grid-cols-4">
+            <UploadMetric value={tracks.length} label="tracks read" />
+            <UploadMetric value={dated} label="placed in time" />
+            <UploadMetric value={mapped} label="placed on map" />
+            <UploadMetric value={genreSpace?.payload.summary.tracks ?? 0} label={spaceStatus === 'failed' ? 'genre space retry needed' : spaceStatus === 'ready' ? 'placed in genre space' : 'genre space loading'} />
+          </div>
+          </div>
           {genreSpace && genreSpace.unresolved.length > 0 && <details className="mt-4 border border-[#17221e]/15 bg-white/20 p-4"><summary className="min-h-11 cursor-pointer py-2 text-sm font-medium">{genreSpace.unresolved.length} still need genre evidence</summary><p className="mt-2 text-xs leading-relaxed text-[#17221e]/55">The local evidence cascade could not identify these artists yet. They remain explicit while the shared index grows.</p><ul className="mt-3 grid gap-2">{genreSpace.unresolved.slice(0, 12).map((track, index) => <li key={`${track.track}-${track.artist}-${index}`} className="text-xs"><strong className="font-medium">{track.track}</strong><span className="text-[#17221e]/50"> · {track.artist}</span></li>)}</ul>{genreSpace.unresolved.length > 12 && <p className="mt-3 text-xs text-[#17221e]/45">Plus {(genreSpace.unresolved.length - 12).toLocaleString()} more rows.</p>}</details>}
           <p className="mt-3 text-xs leading-relaxed text-[#17221e]/50">{tracks.filter((track) => track.method === 'exact track').length} exact track matches · {tracks.filter((track) => track.method === 'artist inference').length} artist inferences · {tracks.filter((track) => track.method === 'uploaded metadata').length} rows placed from uploaded metadata</p>
         </>}

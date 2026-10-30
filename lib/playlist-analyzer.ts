@@ -4,7 +4,7 @@ export type LookupArtist = { key: string; name: string; genre: string; year: num
 export type Lookup = { tracks: LookupTrack[]; artists: LookupArtist[] };
 export type GlobalArtistGenre = { id: string; key: string; name: string; family: string; primary: string; genres: string[]; x: number; y: number; method: string; sourceUrl: string };
 export type GlobalArtistGenreIndex = { schemaVersion: number; sourceName: string; sourceUrl: string; sourceModel: string; referenceUrl: string; artists: GlobalArtistGenre[] };
-export type AnalyzedTrack = { spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
+export type AnalyzedTrack = { album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
 
 export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Lookup, globalGenreIndex?: GlobalArtistGenreIndex): AnalyzedTrack[] {
   const byId = new Map(lookup.tracks.map((track) => [track.id, track]));
@@ -18,9 +18,13 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const track = pick(row, ['track name', 'track_name', 'track', 'name', 'title']);
     const artist = pick(row, ['artist name(s)', 'artist name', 'artist_names', 'artist', 'artists']);
     const id = spotifyId(pick(row, ['spotify track id', 'spotify_track_id', 'track id', 'track uri', 'uri']));
+    const album = pick(row, ['album name', 'album_name', 'album']);
+    const albumId = pick(row, ['album id', 'spotify album id', 'spotify_album_id', 'album uri']).match(/(?:album[:/])?([A-Za-z0-9]{22})$/)?.[1];
+    const coverUrl = pick(row, ['image url', 'album image url', 'album cover url', 'cover url', 'cover_url', 'artwork url']);
+    const artwork = { ...(album ? { album } : {}), ...(albumId ? { spotifyAlbumId: albumId } : {}), ...(coverUrl ? { coverUrl } : {}) };
     const exact = byId.get(id) ?? byKey.get(trackKey(track, artist));
     if (exact) return {
-      ...exact, spotifyTrackId: exact.id, method: 'exact track' as const,
+      ...exact, ...artwork, spotifyTrackId: exact.id, method: 'exact track' as const,
       genreSource: exact.genreSource || 'Songs for Self exact-track enrichment', genreConfidence: exact.genreConfidence || 'medium',
       timeSource: exact.timeSource || 'Songs for Self exact-track enrichment', timeConfidence: exact.timeConfidence || 'medium',
       geographySource: exact.geographySource || 'Songs for Self exact-track enrichment', geographyConfidence: exact.geographyConfidence || 'medium',
@@ -37,6 +41,7 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const hasSupplied = Boolean(suppliedYear || suppliedGenre !== 'Other' || suppliedPoint);
     const inferredGenre = knownArtist?.genre ?? globalArtist?.family ?? 'Other';
     return {
+      ...artwork,
       spotifyTrackId: id || null,
       track: track || 'Untitled track', artist: artist || 'Unknown artist',
       year: suppliedYear ?? knownArtist?.year ?? null,

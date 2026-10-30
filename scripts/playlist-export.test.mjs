@@ -4,6 +4,7 @@ import { parse } from 'csv-parse/sync';
 import { enrichedPlaylistFileName, serializeEnrichedPlaylist } from '../lib/playlist-export.ts';
 
 const track = {
+  album: 'My album', spotifyAlbumId: 'ABCDEFGHIJKLMNOPQRSTUV', coverUrl: 'https://i.scdn.co/image/test-cover',
   spotifyTrackId: '1234567890123456789012', track: 'Song, "One"', artist: 'Artist A', year: 1999, genre: 'Electronic', x: 200, y: 150, city: 'London', country: 'United Kingdom', method: 'exact track',
   genreSource: 'catalog:genre', genreConfidence: 'high', timeSource: 'catalog:date', timeConfidence: 'medium', geographySource: 'catalog:place', geographyConfidence: 'medium',
 };
@@ -12,6 +13,9 @@ const placement = { index: 0, family: 'Electronic', primary: 'Trip-hop', x: 0.42
 await test('serializes auditable visitor enrichment as round-trippable CSV', () => {
   const [row] = parse(serializeEnrichedPlaylist([track], [placement]), { columns: true, skip_empty_lines: true });
   assert.equal(row.track, 'Song, "One"');
+  assert.equal(row.album, track.album);
+  assert.equal(row.spotify_album_id, track.spotifyAlbumId);
+  assert.equal(row.cover_url, track.coverUrl);
   assert.equal(row.timeline_source, 'catalog:date');
   assert.equal(row.genre_source, 'catalog:genre');
   assert.equal(row.geography_source, 'catalog:place');

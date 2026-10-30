@@ -12,6 +12,8 @@ const browser = await chromium.launch({ executablePath, headless: true });
 async function uploadPlaylist(page) {
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
   await page.locator('input[type="file"]').setInputFiles(fixture);
+  await page.getByRole('heading', { name: 'Explore your music', exact: true }).waitFor();
+  await page.getByRole('button', { name: 'Time', exact: true }).click();
   await page.getByLabel('Uploaded playlist genre timeline.', { exact: false }).waitFor();
 }
 

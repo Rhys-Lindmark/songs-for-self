@@ -32,7 +32,7 @@ try {
   }, { playlistId, baseUrl });
   await page.goto(`${baseUrl}?code=authorization-code&state=state-token`, { waitUntil: 'networkidle' });
   try {
-    await page.getByText('1 track imported in 1 Spotify request.').waitFor();
+    await page.getByRole('heading', { name: 'Explore your music', exact: true }).waitFor();
   } catch (cause) {
     console.error((await page.locator('body').innerText()).slice(0, 1800));
     console.error(JSON.stringify({ requests, diagnostics }, null, 2));

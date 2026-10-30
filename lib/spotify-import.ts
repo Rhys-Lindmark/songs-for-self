@@ -21,7 +21,7 @@ type SpotifyTrack = {
   type?: string;
   uri?: string;
   artists?: Array<{ id?: string | null; name?: string }>;
-  album?: { id?: string | null; name?: string; release_date?: string };
+  album?: { id?: string | null; name?: string; release_date?: string; images?: Array<{ url?: string }> };
 };
 
 type SpotifyPlaylistItem = {
@@ -214,6 +214,7 @@ export async function fetchSpotifyPlaylistRows(input: {
         'Artist IDs': (track.artists ?? []).map((artist) => artist.id).filter(Boolean).join('; '),
         'Album Name': track.album?.name ?? '',
         'Album ID': track.album?.id ?? '',
+        'Image URL': track.album?.images?.[0]?.url ?? '',
         'Release Date': track.album?.release_date ?? '',
         'Spotify Track ID': track.id,
         'Track URI': track.uri ?? `spotify:track:${track.id}`,

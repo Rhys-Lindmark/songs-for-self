@@ -17,8 +17,10 @@ try {
   await picker.waitFor();
   assert.equal(await picker.locator('option').count(), 3);
   await picker.selectOption('0');
+  await page.getByRole('heading', { name: 'Explore your music', exact: true }).waitFor();
+  await page.getByRole('button', { name: 'Time', exact: true }).click();
   await page.getByRole('region', { name: /Uploaded playlist genre timeline/ }).waitFor();
-  await page.getByText('Songlines sample.json', { exact: true }).waitFor();
+  assert.match(await page.getByRole('heading', { name: 'Explore your music' }).locator('..').innerText(), /Songlines sample.json/);
   assert.match(await page.locator('#your-playlist').innerText(), /1\s+tracks read/i);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 375);
   console.log('Spotify account-data playlist picker browser smoke passed.');

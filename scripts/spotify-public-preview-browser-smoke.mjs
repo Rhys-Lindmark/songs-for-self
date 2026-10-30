@@ -27,12 +27,14 @@ try {
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
   await page.getByLabel('Spotify playlist link').fill(`https://open.spotify.com/playlist/${playlistId}`);
   await page.getByRole('button', { name: 'Analyze public preview' }).click();
+  await page.getByRole('heading', { name: 'Explore your music' }).waitFor();
+  await page.getByText('Change playlist', { exact: true }).click();
   await page.getByText('Showing Spotify’s public 2-track preview of 2,111 items.', { exact: false }).waitFor();
   await page.getByText('spotify-preview-6SX8vdBpH9zDSF3N5pNlzP-2-of-2111.csv', { exact: true }).waitFor();
   assert.equal(await page.getByRole('list', { name: 'Playlist import progress' }).getByRole('listitem').count(), 6);
   await page.getByRole('button', { name: 'Advanced: connect with a Spotify developer app' }).click();
   await page.getByText('Full playlist owner import', { exact: true }).waitFor();
-  await page.getByText('http://127.0.0.1:4335/', { exact: true }).waitFor();
+  await page.getByText(`${new URL(baseUrl).origin.replace('localhost', '127.0.0.1')}/`, { exact: true }).waitFor();
   assert.equal(await page.getByText(/limited beta/i).count(), 0);
 
   await page.evaluate(() => localStorage.setItem('songs-for-self.spotify.client-id', 'browserclientid0000000000000000'));
@@ -41,6 +43,9 @@ try {
   await page.route(`https://api.spotify.com/v1/playlists/${playlistId}/items**`, async (route) => route.fulfill({ status: 403, contentType: 'application/json', body: '{}' }));
   await page.evaluate(({ playlistId, baseUrl }) => sessionStorage.setItem('songs-for-self.spotify.pending', JSON.stringify({ playlistId, clientId: 'browserclientid0000000000000000', verifier: 'v'.repeat(64), state: 'state-token', redirectUri: baseUrl })), { playlistId, baseUrl });
   await page.goto(`${baseUrl}?code=authorization-code&state=state-token`, { waitUntil: 'networkidle' });
+  await page.getByRole('heading', { name: 'Explore your music' }).waitFor();
+  await page.getByText('Spotify public preview: 2 of 2,111 tracks.', { exact: false }).waitFor();
+  await page.getByText('Change playlist', { exact: true }).click();
   await page.getByText('Spotify did not grant full owner access', { exact: false }).waitFor();
   assert.equal(await page.getByRole('button', { name: 'Preview without logging in' }).count(), 1);
   assert.equal(await page.getByRole('alert').count(), 0);

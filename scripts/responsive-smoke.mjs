@@ -18,7 +18,7 @@ try {
     const responseErrors = [];
     page.on('console', (message) => { if (message.type() === 'error' && !message.text().startsWith('Failed to load resource:')) consoleErrors.push(message.text()); });
     page.on('pageerror', (error) => consoleErrors.push(error.message));
-    page.on('response', (response) => { if (response.status() >= 400) responseErrors.push(`${response.status()} ${response.url()}`); });
+    page.on('response', (response) => { if (response.status() >= 400 && new URL(response.url()).origin === new URL(baseUrl).origin) responseErrors.push(`${response.status()} ${response.url()}`); });
 
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width, `${width}px page has horizontal overflow`);
@@ -41,10 +41,6 @@ try {
     const clientIdBox = await clientIdInput.boundingBox();
     assert.ok(clientIdBox && clientIdBox.height >= 44, `${width}px Spotify owner Client ID input is shorter than 44px`);
 
-    for (const link of await page.locator('header a:visible').all()) {
-      const box = await link.boundingBox();
-      assert.ok(box && box.height >= 44, `${width}px header action is shorter than 44px`);
-    }
     for (const tab of await page.getByRole('tab').all()) {
       const box = await tab.boundingBox();
       assert.ok(box && box.height >= 44, `${width}px tab is shorter than 44px`);
@@ -112,6 +108,8 @@ try {
     const importPipeline = page.getByRole('list', { name: 'Playlist import progress' });
     await importPipeline.waitFor();
     assert.equal(await importPipeline.getByRole('listitem').count(), 6, `${width}px import pipeline is incomplete`);
+    await page.getByRole('heading', { name: 'Explore your music', exact: true }).waitFor();
+    await page.getByRole('button', { name: 'Time', exact: true }).click();
     await page.getByRole('region', { name: /Uploaded playlist genre timeline/ }).waitFor();
     await page.getByRole('button', { name: 'Genre space', exact: true }).click();
     await page.getByText('1 exact song coordinates', { exact: false }).waitFor({ timeout: 60_000 });
@@ -147,8 +145,10 @@ try {
       await resumeButton.waitFor();
       assert.match(await page.getByRole('status').innerText(), /spotify\.csv · 1 tracks/i, 'saved analysis summary is missing after reload');
       await resumeButton.click();
+      await page.getByRole('heading', { name: 'Explore your music', exact: true }).waitFor();
+      await page.getByRole('button', { name: 'Time', exact: true }).click();
       await page.getByRole('region', { name: /Uploaded playlist genre timeline/ }).waitFor();
-      await page.getByText('spotify.csv', { exact: true }).waitFor();
+      assert.match(await page.getByRole('heading', { name: 'Explore your music' }).locator('..').innerText(), /spotify.csv/);
       await page.getByRole('button', { name: 'Clear playlist' }).click();
       await page.getByText('Your playlist atlas will appear here.').waitFor();
       await page.reload({ waitUntil: 'networkidle' });

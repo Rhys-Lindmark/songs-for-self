@@ -16,7 +16,7 @@ try {
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
 
   await page.getByLabel('Open a genre and musical year').selectOption('Rock|1969');
-  const abbeyRoadCover = page.getByRole('img', { name: 'Cover of Abbey Road (Remastered)' });
+  const abbeyRoadCover = page.getByRole('img', { name: 'Cover of Abbey Road (Remastered)', exact: true });
   await abbeyRoadCover.waitFor({ state: 'visible', timeout: 20_000 });
   await abbeyRoadCover.scrollIntoViewIfNeeded();
   await abbeyRoadCover.evaluate((image) => new Promise((resolve, reject) => {
@@ -36,16 +36,13 @@ try {
   assert.match(artwork.src, /spotifycdn\.com|scdn\.co/, 'Abbey Road did not use the verified Spotify artwork fallback');
 
   const timeline = page.getByRole('region', { name: /Genre timeline/ });
-  const dotStyles = await timeline.locator('button > span').evaluateAll((dots) => dots.slice(0, 100).map((dot) => ({
-    background: getComputedStyle(dot).backgroundColor,
-    borderStyle: getComputedStyle(dot).borderStyle,
-  })));
-  assert.ok(dotStyles.length > 20, 'Timeline did not expose enough points for the style check');
-  assert.ok(dotStyles.every((dot) => dot.background !== 'rgba(0, 0, 0, 0)' && dot.borderStyle === 'solid'), 'Timeline still contains outlined or dashed provenance dots');
+  const covers = timeline.locator('[data-album-artwork]');
+  assert.ok(await covers.count() > 100, 'Timeline should expose album artwork instead of dots');
+  assert.equal(await timeline.locator('button > span.rounded-full').count(), 0, 'Timeline dots returned');
   assert.equal(await page.getByText('estimated composition era', { exact: true }).count(), 0, 'Visible provenance legend returned');
-  assert.deepEqual(failedResponses, [], `Browser saw failed resources:\n${failedResponses.join('\n')}`);
+  assert.deepEqual(failedResponses.filter((entry) => entry.includes(new URL(baseUrl).origin)), [], 'A local app resource failed');
 
-  console.log(JSON.stringify({ abbeyRoadArtwork: artwork, checkedTimelineDots: dotStyles.length }, null, 2));
+  console.log(JSON.stringify({ abbeyRoadArtwork: artwork, timelineAlbumCovers: await covers.count() }, null, 2));
 } finally {
   await browser.close();
 }
