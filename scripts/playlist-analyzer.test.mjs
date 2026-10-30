@@ -140,3 +140,9 @@ await test('retains precise supplied evidence even when an exact track match win
   assert.equal(track.composer, 'Charley Patton');
   assert.equal(track.method, 'exact track');
 });
+
+await test('accepts JSON artist ID arrays and Spotify artist URIs or URLs', () => {
+  const [track] = analyzePlaylistRows([{ Artist: 'Unknown ID-only artist', 'Artist IDs': '["spotify:artist:abcdefghijklmnopqrstUV", "https://open.spotify.com/artist/abcdefghijklmnopqrstUV"]' }], { tracks: [], artists: [] }, globalGenreIndex);
+  assert.deepEqual(track.artistIds, ['abcdefghijklmnopqrstUV']);
+  assert.equal(track.genreSpacePrimary, 'spanish folk');
+});

@@ -21,7 +21,7 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const album = pick(row, ['album name', 'album_name', 'album']);
     const albumId = pick(row, ['album id', 'spotify album id', 'spotify_album_id', 'album uri']).match(/(?:album[:/])?([A-Za-z0-9]{22})$/)?.[1];
     const coverUrl = pick(row, ['image url', 'album image url', 'album cover url', 'cover url', 'cover_url', 'artwork url']);
-    const artistIds = pick(row, ['artist ids', 'artist id', 'spotify artist ids', 'spotify_artist_ids']).split(/[;,]/).map((value) => value.trim()).filter(Boolean);
+    const artistIds = [...new Set(genreLabels(pick(row, ['artist ids', 'artist id', 'spotify artist ids', 'spotify_artist_ids'])).map((value) => value.match(/(?:artist[:/])([A-Za-z0-9]{22})/)?.[1] || value.trim()))];
     const suppliedGenres = genreLabels(pick(row, ['supplied genres', 'artist genres', 'genres', 'genre', 'genre primary', 'every noise reference genres']));
     const originalYear = parseYear(pick(row, ['original year', 'original release year', 'original release date', 'composition year', 'recording year']));
     const composer = pick(row, ['composer', 'composer name', 'composer(s)']);
