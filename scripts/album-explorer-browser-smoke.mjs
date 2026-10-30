@@ -71,9 +71,10 @@ try {
     await map.waitFor();
     await map.focus();
     await page.keyboard.press('Home');
-    await page.locator('#your-playlist aside [data-album-artwork]').scrollIntoViewIfNeeded();
-    await page.locator('#your-playlist aside img').waitFor();
-    await page.reload({ waitUntil: 'networkidle' });
+    const mapDetail = page.locator('#your-playlist').getByRole('complementary', { name: 'Selected genre-space track', exact: true });
+    await mapDetail.locator('[data-album-artwork]').scrollIntoViewIfNeeded();
+    await mapDetail.locator('img').waitFor();
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await page.getByRole('button', { name: 'Resume atlas' }).click();
     await page.getByRole('heading', { name: 'Explore your music' }).waitFor();
     assert.equal(await page.getByRole('button', { name: 'Albums', exact: true }).getAttribute('aria-pressed'), 'true');
