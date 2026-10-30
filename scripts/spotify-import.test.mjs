@@ -9,7 +9,7 @@ const moduleUrl = `data:text/javascript;base64,${Buffer.from(compiled).toString(
 const spotify = await import(moduleUrl);
 const playlistId = '3QNxR8qUDQd8e5KyNsOZgx';
 
-test('parses Spotify playlist URLs, URIs, and IDs without accepting lookalike hosts', () => {
+await test('parses Spotify playlist URLs, URIs, and IDs without accepting lookalike hosts', () => {
   assert.equal(spotify.parseSpotifyPlaylistId(`https://open.spotify.com/playlist/${playlistId}?si=abc`), playlistId);
   assert.equal(spotify.parseSpotifyPlaylistId(`spotify:playlist:${playlistId}`), playlistId);
   assert.equal(spotify.parseSpotifyPlaylistId(playlistId), playlistId);
@@ -17,18 +17,18 @@ test('parses Spotify playlist URLs, URIs, and IDs without accepting lookalike ho
   assert.equal(spotify.parseSpotifyPlaylistId('not a playlist'), null);
 });
 
-test('accepts plausible public Spotify client IDs without accepting arbitrary text', () => {
+await test('accepts plausible public Spotify client IDs without accepting arbitrary text', () => {
   assert.equal(spotify.normalizeSpotifyClientId(' 0123456789abcdef0123456789abcdef '), '0123456789abcdef0123456789abcdef');
   assert.equal(spotify.normalizeSpotifyClientId('too-short'), null);
   assert.equal(spotify.normalizeSpotifyClientId('contains spaces and punctuation!'), null);
 });
 
-test('uses an exact production redirect and converts localhost to Spotify-supported loopback IP', () => {
+await test('uses an exact production redirect and converts localhost to Spotify-supported loopback IP', () => {
   assert.equal(spotify.spotifyRedirectUri({ origin: 'https://ai.rhyslindmark.com', pathname: '/music' }), 'https://ai.rhyslindmark.com/music');
   assert.equal(spotify.spotifyRedirectUri({ origin: 'http://localhost:4335', pathname: '/' }), 'http://127.0.0.1:4335/');
 });
 
-test('builds a PKCE authorization URL with the minimum read scopes', async () => {
+await test('builds a PKCE authorization URL with the minimum read scopes', async () => {
   const url = new URL(await spotify.createSpotifyAuthorization({
     clientId: 'client-id', redirectUri: 'https://example.com/music', state: 'state-token', verifier: 'v'.repeat(64), subtle: crypto.subtle,
   }));
@@ -39,7 +39,7 @@ test('builds a PKCE authorization URL with the minimum read scopes', async () =>
   assert.equal(url.searchParams.get('scope'), 'playlist-read-private playlist-read-collaborative');
 });
 
-test('imports both 2026 item and legacy track response shapes across pages', async () => {
+await test('imports both 2026 item and legacy track response shapes across pages', async () => {
   const calls = [];
   const pages = [
     { total: 3, next: 'next', items: [fixture('first', 'item'), fixture('second', 'track')] },
@@ -61,7 +61,7 @@ test('imports both 2026 item and legacy track response shapes across pages', asy
   assert.match(calls[1].url, /offset=2/);
 });
 
-test('fetches known remaining pages with bounded overlap and preserves playlist order', async () => {
+await test('fetches known remaining pages with bounded overlap and preserves playlist order', async () => {
   let inFlight = 0;
   let maxInFlight = 0;
   const delays = new Map([[0, 1], [50, 30], [100, 5], [150, 15]]);
@@ -87,7 +87,7 @@ test('fetches known remaining pages with bounded overlap and preserves playlist 
   assert.deepEqual(result.rows.map((row) => row['Track Name']), ['page-0', 'page-50', 'page-100', 'page-150']);
 });
 
-test('retries a rate-limited page and explains playlist plus development-app access', async () => {
+await test('retries a rate-limited page and explains playlist plus development-app access', async () => {
   let attempts = 0;
   const waits = [];
   const result = await spotify.fetchSpotifyPlaylistRows({
@@ -103,7 +103,7 @@ test('retries a rate-limited page and explains playlist plus development-app acc
   await assert.rejects(() => spotify.fetchSpotifyPlaylistRows({ playlistId, accessToken: 'token', fetcher: async () => new Response('{}', { status: 403 }) }), /app owner or an allowlisted development tester/);
 });
 
-test('stops retrying when Spotify keeps returning 429', async () => {
+await test('stops retrying when Spotify keeps returning 429', async () => {
   let attempts = 0;
   await assert.rejects(() => spotify.fetchSpotifyPlaylistRows({
     playlistId, accessToken: 'token', wait: async () => {},
@@ -112,7 +112,7 @@ test('stops retrying when Spotify keeps returning 429', async () => {
   assert.equal(attempts, 5);
 });
 
-test('Spotify import distinguishes exhausted developer quota from a temporary rate limit', async () => {
+await test('Spotify import distinguishes exhausted developer quota from a temporary rate limit', async () => {
   let attempts = 0;
   await assert.rejects(() => spotify.fetchSpotifyPlaylistRows({
     playlistId, accessToken: 'token', wait: async () => {},
@@ -133,3 +133,11 @@ function fixture(name, key) {
 }
 
 function idFor(value) { return value.padEnd(22, '0').slice(0, 22); }
+
+await test('preserves album artist separately from track artists for album coverage', async () => {
+  const item = fixture('soundtrack-song', 'item');
+  item.item.album.artists = [{ name: 'Various Artists' }];
+  const result = await spotify.fetchSpotifyPlaylistRows({ playlistId, accessToken: 'token', fetcher: async () => new Response(JSON.stringify({ total: 1, next: null, items: [item] }), { status: 200 }) });
+  assert.equal(result.rows[0]['Album Artist'], 'Various Artists');
+  assert.equal(result.rows[0]['Artist Name(s)'], 'Artist');
+});

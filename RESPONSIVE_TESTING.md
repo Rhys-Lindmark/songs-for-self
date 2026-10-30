@@ -29,3 +29,5 @@ On macOS, the runner uses the standard Google Chrome application when present. E
 After deployment, run `npm run test:production` to verify the custom domain, release markers, removed coverage cards, social assets, favicon, and V3 CSV. Override the target with `SFS_PRODUCTION_URL` when testing another domain.
 
 Music coverage: `npm run test:music-coverage-browser` verifies the fixed score, Classical composer separation, historical reissues, all three area arrangements, missing/covered filters, keyboard selection, mobile overflow, and browser resume. Set `SFS_BASE_URL` to the preview or production URL.
+
+Acclaimed albums: `npm run test:acclaimed-albums-browser` verifies the 500-album score, remasters, duplicate songs, artist/compilation/live safeguards, covered/missing/source filters, keyboard selection, pagination, resume, load failure/retry, and overflow at1280/320. Set `SFS_BASE_URL` for a preview or the live site.

@@ -36,12 +36,13 @@ await test('download filenames are stable and filesystem-safe', () => {
 });
 
 await test('coverage evidence survives an enriched CSV download and reimport', () => {
-  const source = { ...track, spotifyTrackId: null, artistIds: ['abcdefghijklmnopqrstUV'], suppliedGenres: ['delta blues'], originalYear: 1929, composer: 'Charley Patton' };
+  const source = { ...track, spotifyTrackId: null, artistIds: ['abcdefghijklmnopqrstUV'], suppliedGenres: ['delta blues'], originalYear: 1929, composer: 'Charley Patton', albumArtist: 'Album Artist' };
   const rows = parse(serializeEnrichedPlaylist([source], []), { columns: true, skip_empty_lines: true });
   const [restored] = analyzePlaylistRows(rows, { tracks: [], artists: [] });
   assert.deepEqual(restored.artistIds, source.artistIds);
   assert.deepEqual(restored.suppliedGenres, source.suppliedGenres);
   assert.equal(restored.originalYear, source.originalYear);
   assert.equal(restored.composer, source.composer);
+  assert.equal(restored.albumArtist, source.albumArtist);
   assert.equal(restored.year, source.year);
 });

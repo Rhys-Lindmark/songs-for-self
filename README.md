@@ -6,6 +6,8 @@ A music atlas with album covers, genre timelines, geography, and browser-local S
 
 Uploaded playlists receive a coverage score across a fixed map of 1,000 genre, era, and composer areas. One supported track covers an area; unmatched tracks stay visible. Browse covered and missing areas from Time, Genre space, or Geography. See [the map and scoring rules](MUSIC_MAP.md).
 
+A separate score tracks how many of a fixed 500 critically acclaimed albums appear in the playlist. One matching song covers an album once; each entry shows its critic/list sources. See [the album list and matching rules](ACCLAIMED_ALBUMS.md).
+
 ## Start locally
 
 Use Node 24.

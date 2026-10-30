@@ -7,6 +7,7 @@ import { PublicAssetDownload } from '@/components/public-asset-download';
 import { SpotifyPlaylistImport } from '@/components/spotify-playlist-import';
 import { AlbumCloud } from '@/components/album-cloud';
 import { MusicCoverage } from '@/components/music-coverage';
+import { AcclaimedAlbums } from '@/components/acclaimed-albums';
 import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import { AlbumArtwork } from '@/components/album-artwork';
 import { RECORDED_TIMELINE_RANGE } from '@/lib/timeline-scale';
@@ -273,6 +274,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
             </div>
           </div>
           <MusicCoverage tracks={tracks} view={view} />
+          <AcclaimedAlbums tracks={tracks} />
           {view === 'albums' && <div className="mt-7"><AlbumCloud marks={albumMarks} onSelect={setSelectedAlbum} /></div>}
           {view === 'space' && (spaceStatus === 'idle' || spaceStatus === 'loading') && <div className="mt-4 grid min-h-64 place-items-center border border-dashed border-[#17221e]/25 bg-white/20 p-6 text-center"><div><LoaderCircle className="mx-auto size-7 animate-spin text-[#b45238] motion-reduce:animate-none" /><p className="mt-3 text-sm text-[#17221e]/55">Loading the deeper genre-space layer…</p><p className="mt-1 text-xs text-[#17221e]/40">Time and geography stay available while this larger layer loads.</p></div></div>}
           {view === 'space' && spaceStatus === 'failed' && <LayerFailure title="Genre space couldn’t load." detail={spaceError} onRetry={() => loadGenreSpaceLayer(tracks)} />}

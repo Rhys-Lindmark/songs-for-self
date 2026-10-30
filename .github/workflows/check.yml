@@ -30,12 +30,14 @@ jobs:
           cache: npm
       - run: npm ci --no-audit --no-fund
       - run: npm run data:music-map && git diff --exit-code --stat -- public/music-map.json
+      - run: npm run data:acclaimed-albums && git diff --exit-code --stat -- public/acclaimed-albums.json
       - run: npm run check
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - name: Verify playlist and music map in desktop and mobile browsers
         env:
           SFS_BASE_URL: ${{ inputs.live_url || 'http://127.0.0.1:4329' }}
+          SFS_ACCLAIMED_SCREENSHOT: ${{ runner.temp }}/acclaimed-albums.png
           SFS_COVERAGE_SCREENSHOT: ${{ runner.temp }}/music-coverage.png
         run: |
           if [ "$SFS_BASE_URL" = "http://127.0.0.1:4329" ]; then
@@ -48,6 +50,7 @@ jobs:
             done
             curl -fsS "$SFS_BASE_URL" > /dev/null
           fi
+          npm run test:acclaimed-albums-browser
           npm run test:music-coverage-browser
           npm run test:album-explorer-browser
           npm run test:responsive
@@ -57,6 +60,7 @@ jobs:
         with:
           name: music-browser-evidence
           path: |
+            ${{ runner.temp }}/acclaimed-albums.png
             ${{ runner.temp }}/music-coverage.png
             ${{ runner.temp }}/music-preview.log
           if-no-files-found: ignore

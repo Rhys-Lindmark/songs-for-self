@@ -4,7 +4,7 @@ export type LookupArtist = { key: string; name: string; genre: string; year: num
 export type Lookup = { tracks: LookupTrack[]; artists: LookupArtist[] };
 export type GlobalArtistGenre = { id: string; key: string; name: string; family: string; primary: string; genres: string[]; x: number; y: number; method: string; sourceUrl: string };
 export type GlobalArtistGenreIndex = { schemaVersion: number; sourceName: string; sourceUrl: string; sourceModel: string; referenceUrl: string; artists: GlobalArtistGenre[] };
-export type AnalyzedTrack = { artistIds?: string[]; suppliedGenres?: string[]; originalYear?: number | null; composer?: string; album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
+export type AnalyzedTrack = { albumArtist?: string; artistIds?: string[]; suppliedGenres?: string[]; originalYear?: number | null; composer?: string; album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
 
 export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Lookup, globalGenreIndex?: GlobalArtistGenreIndex): AnalyzedTrack[] {
   const byId = new Map(lookup.tracks.map((track) => [track.id, track]));
@@ -19,14 +19,15 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const artist = pick(row, ['artist name(s)', 'artist name', 'artist_names', 'artist', 'artists']);
     const id = spotifyId(pick(row, ['spotify track id', 'spotify_track_id', 'track id', 'track uri', 'uri']));
     const album = pick(row, ['album name', 'album_name', 'album']);
-    const albumId = pick(row, ['album id', 'spotify album id', 'spotify_album_id', 'album uri']).match(/(?:album[:/])?([A-Za-z0-9]{22})$/)?.[1];
+    const albumArtist = pick(row, ['album artist', 'album artists', 'album artist(s)', 'album_artist']);
+    const albumId = pick(row, ['album id', 'spotify album id', 'spotify_album_id', 'album uri']).match(/(?:album[:/])?([A-Za-z0-9]{22})(?:[?#].*)?$/)?.[1];
     const coverUrl = pick(row, ['image url', 'album image url', 'album cover url', 'cover url', 'cover_url', 'artwork url']);
     const artistIds = [...new Set(genreLabels(pick(row, ['artist ids', 'artist id', 'spotify artist ids', 'spotify_artist_ids'])).map((value) => value.match(/(?:artist[:/])([A-Za-z0-9]{22})/)?.[1] || value.trim()))];
     const suppliedGenres = genreLabels(pick(row, ['supplied genres', 'artist genres', 'genres', 'genre', 'genre primary', 'every noise reference genres']));
     const originalYear = parseYear(pick(row, ['original year', 'original release year', 'original release date', 'composition year', 'recording year']));
     const composer = pick(row, ['composer', 'composer name', 'composer(s)']);
     const coverageMetadata = { ...(artistIds.length ? { artistIds } : {}), ...(suppliedGenres.length ? { suppliedGenres } : {}), ...(originalYear ? { originalYear } : {}), ...(composer ? { composer } : {}) };
-    const artwork = { ...(album ? { album } : {}), ...(albumId ? { spotifyAlbumId: albumId } : {}), ...(coverUrl ? { coverUrl } : {}) };
+    const artwork = { ...(albumArtist ? { albumArtist } : {}), ...(album ? { album } : {}), ...(albumId ? { spotifyAlbumId: albumId } : {}), ...(coverUrl ? { coverUrl } : {}) };
     const exact = byId.get(id) ?? byKey.get(trackKey(track, artist));
     if (exact) return {
       ...exact, ...artwork, ...coverageMetadata, spotifyTrackId: exact.id, method: 'exact track' as const,

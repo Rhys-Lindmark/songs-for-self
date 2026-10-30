@@ -146,3 +146,10 @@ await test('accepts JSON artist ID arrays and Spotify artist URIs or URLs', () =
   assert.deepEqual(track.artistIds, ['abcdefghijklmnopqrstUV']);
   assert.equal(track.genreSpacePrimary, 'spanish folk');
 });
+
+await test('retains album artist and album URL identity independently of the track artist', () => {
+  const [track] = analyzePlaylistRows([{ Track: 'A soundtrack song', Artist: 'Guest performer', Album: 'Soundtrack', 'Album Artist': 'Various Artists', 'Album URI': 'https://open.spotify.com/album/ABCDEFGHIJKLMNOPQRSTUV?si=example' }], { tracks: [], artists: [] });
+  assert.equal(track.albumArtist, 'Various Artists');
+  assert.equal(track.artist, 'Guest performer');
+  assert.equal(track.spotifyAlbumId, 'ABCDEFGHIJKLMNOPQRSTUV');
+});
