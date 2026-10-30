@@ -8,6 +8,7 @@ import { SpotifyPlaylistImport } from '@/components/spotify-playlist-import';
 import { AlbumCloud } from '@/components/album-cloud';
 import { MusicCoverage } from '@/components/music-coverage';
 import { AcclaimedAlbums } from '@/components/acclaimed-albums';
+import { PlaylistGenreProfile } from '@/components/playlist-genre-profile';
 import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import { AlbumArtwork } from '@/components/album-artwork';
 import { RECORDED_TIMELINE_RANGE } from '@/lib/timeline-scale';
@@ -273,6 +274,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
               <button onClick={clearImportedPlaylist} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs font-medium text-[#17221e]/60 hover:bg-white/35"><Trash2 className="size-4" /> Clear playlist</button>
             </div>
           </div>
+          <PlaylistGenreProfile tracks={tracks} placements={genreSpace?.placements} />
           <MusicCoverage tracks={tracks} view={view} />
           <AcclaimedAlbums tracks={tracks} />
           {view === 'albums' && <div className="mt-7"><AlbumCloud marks={albumMarks} onSelect={setSelectedAlbum} /></div>}

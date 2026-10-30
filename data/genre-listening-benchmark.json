@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "name": "Luminate 2025 U.S. on-demand audio",
+  "geography": "United States",
+  "period": "2025 full year",
+  "unit": "Share of on-demand audio streams (%)",
+  "sourceUrl": "https://view.ceros.com/luminate-data/luminate-year-end-music-report-2025-1/p/1",
+  "chartUrl": "https://media.ceros.com/luminate-data/images/2026/01/12/0b7ed16bc520348258ba20fbcc5b8bc9/us-share-of-total-volume-by-format-and-g.png",
+  "taxonomyUrl": "https://support.luminatedata.com/portal/en/kb/articles/luminate-genres",
+  "publishedShareTotal": 83.4,
+  "unlistedShareRemainder": 16.6,
+  "buckets": [
+    { "id": "rnb-hip-hop", "label": "R&B/Hip-Hop", "share": 24.9 },
+    { "id": "rock", "label": "Rock", "share": 18.6 },
+    { "id": "pop", "label": "Pop", "share": 11.9 },
+    { "id": "country", "label": "Country", "share": 8.7 },
+    { "id": "latin", "label": "Latin", "share": 8.6 },
+    { "id": "dance-electronic", "label": "Dance/Electronic", "share": 3.7 },
+    { "id": "world", "label": "World Music", "share": 2.2 },
+    { "id": "christian-gospel", "label": "Christian/Gospel", "share": 2.1 },
+    { "id": "children", "label": "Children's", "share": 1.1 },
+    { "id": "jazz", "label": "Jazz", "share": 0.8 },
+    { "id": "classical", "label": "Classical", "share": 0.8 }
+  ],
+  "notes": [
+    "Values are transcribed from the On-Demand Audio Streams column, not the albums-plus-TEA-plus-SEA column.",
+    "The eleven selected genres sum to 83.4%. The rounded 16.6% remainder includes categories not listed in this table; shares are not renormalized.",
+    "These are U.S. streaming market shares, not shares of listeners or listener percentiles. Playlist rows are compared with source plays as an approximate composition index.",
+    "The project uses an editorial crosswalk to the report categories. The report's World category includes K-pop; the separate Luminate CONNECT taxonomy should not silently replace it.",
+    "Broad R&B, Soul & Blues and World families remain ambiguous without specific genre evidence. Blues and other unreported categories receive no invented baseline.",
+    "Country may include explicit Folk or Bluegrass under the documented Billboard taxonomy. Broad Modern Folk or Traditional Folk alone is not sufficient."
+  ]
+}

@@ -37,6 +37,7 @@ jobs:
       - name: Verify playlist and music map in desktop and mobile browsers
         env:
           SFS_BASE_URL: ${{ inputs.live_url || 'http://127.0.0.1:4329' }}
+          SFS_PROFILE_SCREENSHOT: ${{ runner.temp }}/genre-profile.png
           SFS_ACCLAIMED_SCREENSHOT: ${{ runner.temp }}/acclaimed-albums.png
           SFS_COVERAGE_SCREENSHOT: ${{ runner.temp }}/music-coverage.png
         run: |
@@ -50,6 +51,7 @@ jobs:
             done
             curl -fsS "$SFS_BASE_URL" > /dev/null
           fi
+          npm run test:genre-profile-browser
           npm run test:acclaimed-albums-browser
           npm run test:music-coverage-browser
           npm run test:album-explorer-browser
@@ -60,6 +62,7 @@ jobs:
         with:
           name: music-browser-evidence
           path: |
+            ${{ runner.temp }}/genre-profile.png
             ${{ runner.temp }}/acclaimed-albums.png
             ${{ runner.temp }}/music-coverage.png
             ${{ runner.temp }}/music-preview.log

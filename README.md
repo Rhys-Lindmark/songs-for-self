@@ -62,3 +62,5 @@ Visitor playlists and OAuth tokens are never committed. Imports and saved analys
 - [Spotify import contract](SPOTIFY_IMPORT.md)
 - [Dataset versioning](DATA_VERSIONING.md)
 - [Responsive and accessibility checks](RESPONSIVE_TESTING.md)
+
+- [Playlist genre profile and listening benchmark](GENRE_PROFILE.md)
