@@ -15,10 +15,16 @@ try {
     await page.route('https://covers.example/**', (route) => route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#346753"/></svg>' }));
     // The descriptive profile must remain usable when the optional detailed map cannot load.
     if (width === 320) await page.route('**/genre-space-data.json', (route) => route.fulfill({ status: 503, body: 'Temporarily unavailable' }));
-    await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
+    await page.goto(baseUrl, { waitUntil: 'networkidle' });
     await page.locator('input[type="file"]').setInputFiles({ name: 'genre-profile-fixture.csv', mimeType: 'text/csv', buffer: Buffer.from(csv) });
     const section = page.getByRole('region', { name: 'Playlist genre profile', exact: true });
-    await section.getByRole('heading', { name: 'Your top genres', exact: true }).waitFor();
+    try {
+      await section.getByRole('heading', { name: 'Your top genres', exact: true }).waitFor();
+    } catch (cause) {
+      console.error(JSON.stringify({ width, url: page.url(), errors, alerts: await page.getByRole('alert').allTextContents(), body: (await page.locator('body').innerText()).slice(-7000) }));
+      if (process.env.SFS_PROFILE_SCREENSHOT) await page.screenshot({ path: process.env.SFS_PROFILE_SCREENSHOT, fullPage: true });
+      throw cause;
+    }
     const list = section.getByRole('list', { name: 'Top playlist genres', exact: true });
     assert.equal(await list.getByRole('listitem').count(), 4, 'Show only observed broad genres');
     assert.match(await list.getByRole('listitem').first().innerText(), /Jazz.*40\.0%/s);
