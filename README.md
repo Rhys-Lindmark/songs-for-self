@@ -4,6 +4,8 @@
 
 A music atlas with album covers, genre timelines, geography, and browser-local Spotify/CSV imports.
 
+Uploaded playlists receive a coverage score across a fixed map of 1,000 genre, era, and composer areas. One supported track covers an area; unmatched tracks stay visible. Browse covered and missing areas from Time, Genre space, or Geography. See [the map and scoring rules](MUSIC_MAP.md).
+
 ## Start locally
 
 Use Node 24.

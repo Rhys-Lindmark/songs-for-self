@@ -27,3 +27,5 @@ On macOS, the runner uses the standard Google Chrome application when present. E
 ## Production HTTP smoke check
 
 After deployment, run `npm run test:production` to verify the custom domain, release markers, removed coverage cards, social assets, favicon, and V3 CSV. Override the target with `SFS_PRODUCTION_URL` when testing another domain.
+
+Music coverage: `npm run test:music-coverage-browser` verifies the fixed score, Classical composer separation, historical reissues, all three area arrangements, missing/covered filters, keyboard selection, mobile overflow, and browser resume. Set `SFS_BASE_URL` to the preview or production URL.

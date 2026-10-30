@@ -126,3 +126,17 @@ await test('maps representative detailed labels into requested top-level familie
   assert.equal(classifyGenre('contemporary folk singer-songwriter'), 'Modern Folk');
   assert.equal(classifyGenre('unknown uncategorized'), 'Other');
 });
+
+await test('retains precise supplied evidence even when an exact track match wins broad enrichment', () => {
+  const [track] = analyzePlaylistRows([{
+    'Track URI': 'spotify:track:1234567890123456789012',
+    'Artist IDs': 'abcdefghijklmnopqrstUV',
+    Genres: '["delta blues", "country blues"]',
+    'Original Year': '1929', Composer: 'Charley Patton',
+  }], lookup, globalGenreIndex);
+  assert.deepEqual(track.suppliedGenres, ['delta blues', 'country blues']);
+  assert.deepEqual(track.artistIds, ['abcdefghijklmnopqrstUV']);
+  assert.equal(track.originalYear, 1929);
+  assert.equal(track.composer, 'Charley Patton');
+  assert.equal(track.method, 'exact track');
+});

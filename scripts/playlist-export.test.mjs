@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { parse } from 'csv-parse/sync';
+import { analyzePlaylistRows } from '../lib/playlist-analyzer.ts';
 import { enrichedPlaylistFileName, serializeEnrichedPlaylist } from '../lib/playlist-export.ts';
 
 const track = {
@@ -32,4 +33,15 @@ await test('unresolved genre-space rows remain explicit in the export', () => {
 await test('download filenames are stable and filesystem-safe', () => {
   assert.equal(enrichedPlaylistFileName('My Playlist (August).CSV'), 'My-Playlist-August-songs-for-self-enriched.csv');
   assert.equal(enrichedPlaylistFileName('...'), 'playlist-songs-for-self-enriched.csv');
+});
+
+await test('coverage evidence survives an enriched CSV download and reimport', () => {
+  const source = { ...track, spotifyTrackId: null, artistIds: ['abcdefghijklmnopqrstUV'], suppliedGenres: ['delta blues'], originalYear: 1929, composer: 'Charley Patton' };
+  const rows = parse(serializeEnrichedPlaylist([source], []), { columns: true, skip_empty_lines: true });
+  const [restored] = analyzePlaylistRows(rows, { tracks: [], artists: [] });
+  assert.deepEqual(restored.artistIds, source.artistIds);
+  assert.deepEqual(restored.suppliedGenres, source.suppliedGenres);
+  assert.equal(restored.originalYear, source.originalYear);
+  assert.equal(restored.composer, source.composer);
+  assert.equal(restored.year, source.year);
 });

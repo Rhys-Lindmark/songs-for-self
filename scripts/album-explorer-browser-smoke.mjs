@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { chromium } from 'playwright';
 
 const baseUrl = process.env.SFS_BASE_URL || 'http://localhost:4329';
@@ -14,7 +14,8 @@ rows.push(['Unknown recording', 'Unknown performer', 'Missing cover', '', '', '1
 const csv = ['Track Name,Artist Name(s),Album Name,Album ID,Spotify Track ID,Release Year,Image URL', ...rows.map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(','))].join('\n');
 // Explicit fixture artwork isolates UI behavior from third-party image availability.
 const image = '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><rect width="300" height="300" fill="#214e43"/><text x="150" y="150" text-anchor="middle" fill="white">Test cover</text></svg>';
-const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+const macChrome = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || (existsSync(macChrome) ? macChrome : undefined), headless: true });
 try {
   for (const width of [1280, 320]) {
     const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });

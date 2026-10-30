@@ -4,7 +4,7 @@ export type LookupArtist = { key: string; name: string; genre: string; year: num
 export type Lookup = { tracks: LookupTrack[]; artists: LookupArtist[] };
 export type GlobalArtistGenre = { id: string; key: string; name: string; family: string; primary: string; genres: string[]; x: number; y: number; method: string; sourceUrl: string };
 export type GlobalArtistGenreIndex = { schemaVersion: number; sourceName: string; sourceUrl: string; sourceModel: string; referenceUrl: string; artists: GlobalArtistGenre[] };
-export type AnalyzedTrack = { album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
+export type AnalyzedTrack = { artistIds?: string[]; suppliedGenres?: string[]; originalYear?: number | null; composer?: string; album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
 
 export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Lookup, globalGenreIndex?: GlobalArtistGenreIndex): AnalyzedTrack[] {
   const byId = new Map(lookup.tracks.map((track) => [track.id, track]));
@@ -21,18 +21,22 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const album = pick(row, ['album name', 'album_name', 'album']);
     const albumId = pick(row, ['album id', 'spotify album id', 'spotify_album_id', 'album uri']).match(/(?:album[:/])?([A-Za-z0-9]{22})$/)?.[1];
     const coverUrl = pick(row, ['image url', 'album image url', 'album cover url', 'cover url', 'cover_url', 'artwork url']);
+    const artistIds = pick(row, ['artist ids', 'artist id', 'spotify artist ids', 'spotify_artist_ids']).split(/[;,]/).map((value) => value.trim()).filter(Boolean);
+    const suppliedGenres = genreLabels(pick(row, ['supplied genres', 'artist genres', 'genres', 'genre', 'genre primary', 'every noise reference genres']));
+    const originalYear = parseYear(pick(row, ['original year', 'original release year', 'original release date', 'composition year', 'recording year']));
+    const composer = pick(row, ['composer', 'composer name', 'composer(s)']);
+    const coverageMetadata = { ...(artistIds.length ? { artistIds } : {}), ...(suppliedGenres.length ? { suppliedGenres } : {}), ...(originalYear ? { originalYear } : {}), ...(composer ? { composer } : {}) };
     const artwork = { ...(album ? { album } : {}), ...(albumId ? { spotifyAlbumId: albumId } : {}), ...(coverUrl ? { coverUrl } : {}) };
     const exact = byId.get(id) ?? byKey.get(trackKey(track, artist));
     if (exact) return {
-      ...exact, ...artwork, spotifyTrackId: exact.id, method: 'exact track' as const,
+      ...exact, ...artwork, ...coverageMetadata, spotifyTrackId: exact.id, method: 'exact track' as const,
       genreSource: exact.genreSource || 'Songs for Self exact-track enrichment', genreConfidence: exact.genreConfidence || 'medium',
       timeSource: exact.timeSource || 'Songs for Self exact-track enrichment', timeConfidence: exact.timeConfidence || 'medium',
       geographySource: exact.geographySource || 'Songs for Self exact-track enrichment', geographyConfidence: exact.geographyConfidence || 'medium',
     };
     const knownArtist = byArtist.get(normalize(String(artist).split(/[;,]/)[0]));
-    const spotifyArtistIds = pick(row, ['artist ids', 'artist id', 'spotify artist ids', 'spotify_artist_ids']).split(/[;,]/).map((value) => value.trim()).filter(Boolean);
-    const globalArtist = spotifyArtistIds.map((artistId) => globalById.get(artistId)).find(Boolean) ?? globalByName.get(normalize(String(artist).split(/[;,]/)[0]));
-    const suppliedYear = parseYear(pick(row, ['release date', 'release_date', 'album release date', 'release year', 'release_year', 'year']));
+    const globalArtist = artistIds.map((artistId) => globalById.get(artistId)).find(Boolean) ?? globalByName.get(normalize(String(artist).split(/[;,]/)[0]));
+    const suppliedYear = parseYear(pick(row, ['release date', 'release_date', 'album release date', 'release year', 'release_year', 'timeline_year', 'year']));
     const suppliedGenre = classifyGenre(pick(row, ['artist genres', 'genres', 'genre', 'genre_family']));
     const latitudeText = pick(row, ['latitude', 'origin latitude', 'origin_latitude']);
     const latitude = Number(latitudeText);
@@ -41,7 +45,7 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const hasSupplied = Boolean(suppliedYear || suppliedGenre !== 'Other' || suppliedPoint);
     const inferredGenre = knownArtist?.genre ?? globalArtist?.family ?? 'Other';
     return {
-      ...artwork,
+      ...artwork, ...coverageMetadata,
       spotifyTrackId: id || null,
       track: track || 'Untitled track', artist: artist || 'Unknown artist',
       year: suppliedYear ?? knownArtist?.year ?? null,
@@ -142,3 +146,12 @@ function trackKey(track: string, artist: string) { return `${normalize(track)}|$
 function spotifyId(value: string) { const match = value.match(/(?:track[:/])([A-Za-z0-9]{22})/); return match?.[1] ?? value.trim(); }
 function parseYear(value: string) { const match = value.match(/(?:1[2-9]|20)\d{2}/); const year = match ? Number(match[0]) : null; return year && year <= new Date().getFullYear() ? year : null; }
 function project(latitude: number, longitude: number) { return { x: 8 + ((longitude + 180) / 360) * 984, y: 8 + ((90 - latitude) / 180) * 484 }; }
+
+function genreLabels(value: string): string[] {
+  if (!value.trim()) return [];
+  try {
+    const parsed: unknown = JSON.parse(value);
+    if (Array.isArray(parsed)) return parsed.filter((genre): genre is string => typeof genre === 'string' && Boolean(genre.trim())).map((genre) => genre.trim());
+  } catch { /* Common CSV exports use a delimited list rather than JSON. */ }
+  return value.split(/[;,|]/).map((genre) => genre.trim()).filter(Boolean);
+}

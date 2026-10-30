@@ -5,6 +5,11 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      live_url:
+        description: Optional existing site URL for live browser verification
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -24,5 +29,35 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --no-audit --no-fund
+      - run: npm run data:music-map && git diff --exit-code -- public/music-map.json
       - run: npm run check
       - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Verify playlist and music map in desktop and mobile browsers
+        env:
+          SFS_BASE_URL: ${{ inputs.live_url || 'http://127.0.0.1:4329' }}
+          SFS_COVERAGE_SCREENSHOT: ${{ runner.temp }}/music-coverage.png
+        run: |
+          if [ "$SFS_BASE_URL" = "http://127.0.0.1:4329" ]; then
+            npm run start -- --port 4329 --ip 127.0.0.1 --compatibility-date 2026-05-22 > "$RUNNER_TEMP/music-preview.log" 2>&1 &
+            preview_pid=$!
+            trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+            for attempt in {1..60}; do
+              if curl -fsS "$SFS_BASE_URL" > /dev/null; then break; fi
+              sleep 1
+            done
+            curl -fsS "$SFS_BASE_URL" > /dev/null
+          fi
+          npm run test:music-coverage-browser
+          npm run test:album-explorer-browser
+          npm run test:responsive
+          npm run test:accessibility
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: ${{ always() }}
+        with:
+          name: music-browser-evidence
+          path: |
+            ${{ runner.temp }}/music-coverage.png
+            ${{ runner.temp }}/music-preview.log
+          if-no-files-found: ignore
+          retention-days: 7

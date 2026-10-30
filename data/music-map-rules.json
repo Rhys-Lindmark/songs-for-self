@@ -1,0 +1,1542 @@
+{
+  "version": "1.0.0",
+  "targetAreas": 1000,
+  "periods": [
+    {
+      "id": "medieval",
+      "label": "Medieval",
+      "startYear": 1100,
+      "endYear": 1399,
+      "aliases": [
+        "medieval",
+        "medieval music",
+        "gregorian chant"
+      ]
+    },
+    {
+      "id": "renaissance",
+      "label": "Renaissance",
+      "startYear": 1400,
+      "endYear": 1599,
+      "aliases": [
+        "renaissance",
+        "renaissance music",
+        "early polyphony"
+      ]
+    },
+    {
+      "id": "baroque",
+      "label": "Baroque",
+      "startYear": 1600,
+      "endYear": 1759,
+      "aliases": [
+        "baroque",
+        "baroque music"
+      ]
+    },
+    {
+      "id": "classical",
+      "label": "Classical period",
+      "startYear": 1750,
+      "endYear": 1829,
+      "aliases": [
+        "classical era",
+        "classical period",
+        "viennese classical"
+      ]
+    },
+    {
+      "id": "romantic",
+      "label": "Romantic",
+      "startYear": 1800,
+      "endYear": 1919,
+      "aliases": [
+        "romantic",
+        "romantic music",
+        "romantic classical",
+        "late romantic era"
+      ]
+    },
+    {
+      "id": "modern",
+      "label": "Modern classical",
+      "startYear": 1890,
+      "endYear": 1979,
+      "aliases": [
+        "modern classical",
+        "impressionism",
+        "impressionist",
+        "expressionism",
+        "serialism",
+        "neoclassicism"
+      ]
+    },
+    {
+      "id": "contemporary",
+      "label": "Contemporary classical",
+      "startYear": 1950,
+      "endYear": 2026,
+      "aliases": [
+        "contemporary classical",
+        "contemporary classical music",
+        "minimalism",
+        "post minimalism",
+        "post-minimalism"
+      ]
+    }
+  ],
+  "composers": [
+    {
+      "period": "medieval",
+      "name": "Hildegard von Bingen",
+      "aliases": [
+        "Hildegard von Bingen",
+        "Hildegard"
+      ]
+    },
+    {
+      "period": "medieval",
+      "name": "Pérotin",
+      "aliases": [
+        "Pérotin",
+        "Perotin"
+      ]
+    },
+    {
+      "period": "medieval",
+      "name": "Guillaume de Machaut",
+      "aliases": [
+        "Guillaume de Machaut",
+        "Machaut"
+      ]
+    },
+    {
+      "period": "renaissance",
+      "name": "Guillaume Dufay",
+      "aliases": [
+        "Guillaume Dufay",
+        "Guillaume Du Fay"
+      ]
+    },
+    {
+      "period": "renaissance",
+      "name": "Josquin des Prez",
+      "aliases": [
+        "Josquin des Prez",
+        "Josquin"
+      ]
+    },
+    {
+      "period": "renaissance",
+      "name": "Giovanni Pierluigi da Palestrina",
+      "aliases": [
+        "Giovanni Pierluigi da Palestrina",
+        "Palestrina"
+      ]
+    },
+    {
+      "period": "renaissance",
+      "name": "Thomas Tallis",
+      "aliases": [
+        "Thomas Tallis",
+        "Tallis"
+      ]
+    },
+    {
+      "period": "renaissance",
+      "name": "William Byrd",
+      "aliases": [
+        "William Byrd"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Claudio Monteverdi",
+      "aliases": [
+        "Claudio Monteverdi",
+        "Monteverdi"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Heinrich Schütz",
+      "aliases": [
+        "Heinrich Schütz",
+        "Heinrich Schutz"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Arcangelo Corelli",
+      "aliases": [
+        "Arcangelo Corelli",
+        "Corelli"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Henry Purcell",
+      "aliases": [
+        "Henry Purcell",
+        "Purcell"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "François Couperin",
+      "aliases": [
+        "François Couperin",
+        "Francois Couperin"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Georg Philipp Telemann",
+      "aliases": [
+        "Georg Philipp Telemann",
+        "Telemann"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Johann Sebastian Bach",
+      "aliases": [
+        "Johann Sebastian Bach",
+        "J. S. Bach",
+        "J.S. Bach",
+        "Bach"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "George Frideric Handel",
+      "aliases": [
+        "George Frideric Handel",
+        "Georg Friedrich Händel",
+        "Georg Friedrich Handel",
+        "Handel",
+        "Händel"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Antonio Vivaldi",
+      "aliases": [
+        "Antonio Vivaldi",
+        "Vivaldi"
+      ]
+    },
+    {
+      "period": "baroque",
+      "name": "Domenico Scarlatti",
+      "aliases": [
+        "Domenico Scarlatti"
+      ]
+    },
+    {
+      "period": "classical",
+      "name": "Joseph Haydn",
+      "aliases": [
+        "Joseph Haydn",
+        "Franz Joseph Haydn",
+        "Haydn"
+      ]
+    },
+    {
+      "period": "classical",
+      "name": "Wolfgang Amadeus Mozart",
+      "aliases": [
+        "Wolfgang Amadeus Mozart",
+        "Mozart"
+      ]
+    },
+    {
+      "period": "classical",
+      "name": "Ludwig van Beethoven",
+      "aliases": [
+        "Ludwig van Beethoven",
+        "Beethoven"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Franz Schubert",
+      "aliases": [
+        "Franz Schubert",
+        "Schubert"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Frédéric Chopin",
+      "aliases": [
+        "Frédéric Chopin",
+        "Frederic Chopin",
+        "Chopin"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Robert Schumann",
+      "aliases": [
+        "Robert Schumann"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Felix Mendelssohn",
+      "aliases": [
+        "Felix Mendelssohn",
+        "Felix Mendelssohn Bartholdy",
+        "Mendelssohn"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Franz Liszt",
+      "aliases": [
+        "Franz Liszt",
+        "Liszt"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Johannes Brahms",
+      "aliases": [
+        "Johannes Brahms",
+        "Brahms"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Richard Wagner",
+      "aliases": [
+        "Richard Wagner",
+        "Wagner"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Giuseppe Verdi",
+      "aliases": [
+        "Giuseppe Verdi",
+        "Verdi"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Pyotr Ilyich Tchaikovsky",
+      "aliases": [
+        "Pyotr Ilyich Tchaikovsky",
+        "Peter Ilyich Tchaikovsky",
+        "Tchaikovsky"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Antonín Dvořák",
+      "aliases": [
+        "Antonín Dvořák",
+        "Antonin Dvorak",
+        "Dvorak"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Edvard Grieg",
+      "aliases": [
+        "Edvard Grieg",
+        "Grieg"
+      ]
+    },
+    {
+      "period": "romantic",
+      "name": "Sergei Rachmaninoff",
+      "aliases": [
+        "Sergei Rachmaninoff",
+        "Sergey Rachmaninov",
+        "Rachmaninoff",
+        "Rachmaninov"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Claude Debussy",
+      "aliases": [
+        "Claude Debussy",
+        "Debussy"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Maurice Ravel",
+      "aliases": [
+        "Maurice Ravel",
+        "Ravel"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Erik Satie",
+      "aliases": [
+        "Erik Satie",
+        "Satie"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Igor Stravinsky",
+      "aliases": [
+        "Igor Stravinsky",
+        "Stravinsky"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Béla Bartók",
+      "aliases": [
+        "Béla Bartók",
+        "Bela Bartok",
+        "Bartok"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Sergei Prokofiev",
+      "aliases": [
+        "Sergei Prokofiev",
+        "Sergey Prokofiev",
+        "Prokofiev"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Dmitri Shostakovich",
+      "aliases": [
+        "Dmitri Shostakovich",
+        "Shostakovich"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Arnold Schoenberg",
+      "aliases": [
+        "Arnold Schoenberg",
+        "Arnold Schönberg",
+        "Schoenberg"
+      ]
+    },
+    {
+      "period": "modern",
+      "name": "Jean Sibelius",
+      "aliases": [
+        "Jean Sibelius",
+        "Sibelius"
+      ]
+    },
+    {
+      "period": "contemporary",
+      "name": "Philip Glass",
+      "aliases": [
+        "Philip Glass"
+      ]
+    }
+  ],
+  "earlyRecorded": [
+    {
+      "genre": "Delta blues",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "delta blues",
+        "deep delta blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Delta blues",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "delta blues",
+        "deep delta blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Delta blues",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "delta blues",
+        "deep delta blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Country blues",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "Country blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Country blues",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "Country blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Country blues",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Country blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Classic female blues",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "classic female blues",
+        "classic blues",
+        "vaudeville blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Classic female blues",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "classic female blues",
+        "classic blues",
+        "vaudeville blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Piedmont blues",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "Piedmont blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Piedmont blues",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "Piedmont blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Piedmont blues",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Piedmont blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Texas blues",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "texas blues",
+        "acoustic texas blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Texas blues",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "texas blues",
+        "acoustic texas blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Texas blues",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "texas blues",
+        "acoustic texas blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Chicago blues",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "Chicago blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Chicago blues",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Chicago blues"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Jazz",
+      "startYear": 1910,
+      "endYear": 1919,
+      "aliases": [
+        "jazz",
+        "early jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Jazz",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "jazz",
+        "early jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Jazz",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "jazz",
+        "early jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Jazz",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "jazz",
+        "early jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Ragtime",
+      "startYear": 1900,
+      "endYear": 1909,
+      "aliases": [
+        "Ragtime"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Ragtime",
+      "startYear": 1910,
+      "endYear": 1919,
+      "aliases": [
+        "Ragtime"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Dixieland",
+      "startYear": 1910,
+      "endYear": 1919,
+      "aliases": [
+        "dixieland",
+        "new orleans jazz",
+        "traditional jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Dixieland",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "dixieland",
+        "new orleans jazz",
+        "traditional jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Dixieland",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "dixieland",
+        "new orleans jazz",
+        "traditional jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Dixieland",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "dixieland",
+        "new orleans jazz",
+        "traditional jazz"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Swing",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "swing",
+        "big band",
+        "swing music"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Swing",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "swing",
+        "big band",
+        "swing music"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Bebop",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "bebop",
+        "bop"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Old-time",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "old time",
+        "old-time",
+        "old time music",
+        "string band"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Old-time",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "old time",
+        "old-time",
+        "old time music",
+        "string band"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Old-time",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "old time",
+        "old-time",
+        "old time music",
+        "string band"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Country",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "country",
+        "early country"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Country",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "country",
+        "early country"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Country",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "country",
+        "early country"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Western swing",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "Western swing"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Western swing",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Western swing"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Bluegrass",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Bluegrass"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Gospel",
+      "startYear": 1900,
+      "endYear": 1909,
+      "aliases": [
+        "gospel",
+        "black gospel",
+        "traditional gospel"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Gospel",
+      "startYear": 1910,
+      "endYear": 1919,
+      "aliases": [
+        "gospel",
+        "black gospel",
+        "traditional gospel"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Gospel",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "gospel",
+        "black gospel",
+        "traditional gospel"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Gospel",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "gospel",
+        "black gospel",
+        "traditional gospel"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Gospel",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "gospel",
+        "black gospel",
+        "traditional gospel"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Spirituals",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "spiritual",
+        "spirituals"
+      ],
+      "region": "United States"
+    },
+    {
+      "genre": "Tango",
+      "startYear": 1900,
+      "endYear": 1909,
+      "aliases": [
+        "Tango"
+      ],
+      "region": "Argentina"
+    },
+    {
+      "genre": "Tango",
+      "startYear": 1910,
+      "endYear": 1919,
+      "aliases": [
+        "Tango"
+      ],
+      "region": "Argentina"
+    },
+    {
+      "genre": "Tango",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "Tango"
+      ],
+      "region": "Argentina"
+    },
+    {
+      "genre": "Tango",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "Tango"
+      ],
+      "region": "Argentina"
+    },
+    {
+      "genre": "Tango",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Tango"
+      ],
+      "region": "Argentina"
+    },
+    {
+      "genre": "Samba",
+      "startYear": 1910,
+      "endYear": 1919,
+      "aliases": [
+        "Samba"
+      ],
+      "region": "Brazil"
+    },
+    {
+      "genre": "Samba",
+      "startYear": 1920,
+      "endYear": 1929,
+      "aliases": [
+        "Samba"
+      ],
+      "region": "Brazil"
+    },
+    {
+      "genre": "Samba",
+      "startYear": 1930,
+      "endYear": 1939,
+      "aliases": [
+        "Samba"
+      ],
+      "region": "Brazil"
+    },
+    {
+      "genre": "Samba",
+      "startYear": 1940,
+      "endYear": 1945,
+      "aliases": [
+        "Samba"
+      ],
+      "region": "Brazil"
+    },
+    {
+      "genre": "Fado",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "fado"
+      ],
+      "region": "Portugal"
+    },
+    {
+      "genre": "Rebetiko",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "rebetiko",
+        "rebetika"
+      ],
+      "region": "Greece"
+    },
+    {
+      "genre": "Chanson",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "chanson",
+        "french chanson"
+      ],
+      "region": "France"
+    },
+    {
+      "genre": "Son cubano",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "son cubano",
+        "son"
+      ],
+      "region": "Cuba"
+    },
+    {
+      "genre": "Flamenco",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "flamenco"
+      ],
+      "region": "Spain"
+    },
+    {
+      "genre": "Qawwali",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "qawwali"
+      ],
+      "region": "South Asia"
+    },
+    {
+      "genre": "Hindustani classical",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "hindustani",
+        "hindustani classical",
+        "hindustani classical music",
+        "indian classical"
+      ],
+      "region": "India"
+    },
+    {
+      "genre": "Carnatic",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "carnatic",
+        "carnatic music"
+      ],
+      "region": "India"
+    },
+    {
+      "genre": "Gamelan",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "gamelan"
+      ],
+      "region": "Indonesia"
+    },
+    {
+      "genre": "Chinese opera",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "chinese opera",
+        "peking opera"
+      ],
+      "region": "China"
+    },
+    {
+      "genre": "Klezmer",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "klezmer"
+      ],
+      "region": "Eastern Europe"
+    },
+    {
+      "genre": "Hawaiian music",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "hawaiian",
+        "hawaiian music"
+      ],
+      "region": "Hawaii"
+    },
+    {
+      "genre": "Kora",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "kora"
+      ],
+      "region": "West Africa"
+    },
+    {
+      "genre": "Bolero",
+      "startYear": 1920,
+      "endYear": 1945,
+      "aliases": [
+        "bolero"
+      ],
+      "region": "Cuba"
+    },
+    {
+      "genre": "Corrido",
+      "startYear": 1910,
+      "endYear": 1945,
+      "aliases": [
+        "corrido"
+      ],
+      "region": "Mexico"
+    },
+    {
+      "genre": "Ranchera",
+      "startYear": 1920,
+      "endYear": 1945,
+      "aliases": [
+        "ranchera"
+      ],
+      "region": "Mexico"
+    },
+    {
+      "genre": "Calypso",
+      "startYear": 1910,
+      "endYear": 1945,
+      "aliases": [
+        "calypso"
+      ],
+      "region": "Trinidad and Tobago"
+    },
+    {
+      "genre": "Mento",
+      "startYear": 1920,
+      "endYear": 1945,
+      "aliases": [
+        "mento"
+      ],
+      "region": "Jamaica"
+    },
+    {
+      "genre": "Morna",
+      "startYear": 1900,
+      "endYear": 1945,
+      "aliases": [
+        "morna"
+      ],
+      "region": "Cape Verde"
+    },
+    {
+      "genre": "Highlife",
+      "startYear": 1920,
+      "endYear": 1945,
+      "aliases": [
+        "highlife"
+      ],
+      "region": "Ghana"
+    }
+  ],
+  "modernSplits": {
+    "rock": [
+      [
+        1950,
+        1959
+      ],
+      [
+        1960,
+        1969
+      ],
+      [
+        1970,
+        1979
+      ],
+      [
+        1980,
+        1989
+      ],
+      [
+        1990,
+        1999
+      ],
+      [
+        2000,
+        2009
+      ],
+      [
+        2010,
+        2026
+      ]
+    ],
+    "jazz": [
+      [
+        1946,
+        1969
+      ],
+      [
+        1970,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "hip hop": [
+      [
+        1973,
+        1989
+      ],
+      [
+        1990,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "soul": [
+      [
+        1955,
+        1969
+      ],
+      [
+        1970,
+        1989
+      ],
+      [
+        1990,
+        2026
+      ]
+    ],
+    "electronica": [
+      [
+        1946,
+        1979
+      ],
+      [
+        1980,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "country": [
+      [
+        1946,
+        1969
+      ],
+      [
+        1970,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "pop": [
+      [
+        1946,
+        1969
+      ],
+      [
+        1970,
+        1989
+      ],
+      [
+        1990,
+        2009
+      ],
+      [
+        2010,
+        2026
+      ]
+    ],
+    "punk": [
+      [
+        1970,
+        1989
+      ],
+      [
+        1990,
+        2009
+      ],
+      [
+        2010,
+        2026
+      ]
+    ],
+    "house": [
+      [
+        1980,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "techno": [
+      [
+        1980,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "reggae": [
+      [
+        1960,
+        1979
+      ],
+      [
+        1980,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ],
+    "blues": [
+      [
+        1946,
+        1969
+      ],
+      [
+        1970,
+        1999
+      ],
+      [
+        2000,
+        2026
+      ]
+    ]
+  },
+  "aliases": {
+    "hip-hop": "hip hop",
+    "hip hop rap": "hip hop",
+    "hip-hop/rap": "hip hop",
+    "rapping": "rap",
+    "rhythm & blues": "rhythm and blues",
+    "r&b": "rhythm and blues",
+    "r and b": "rhythm and blues",
+    "rnb": "rhythm and blues",
+    "pop music": "pop",
+    "rock music": "rock",
+    "jazz music": "jazz",
+    "electronic music": "electronica",
+    "electronic": "electronica",
+    "hip hop music": "hip hop",
+    "house music": "house",
+    "country music": "country",
+    "punk rock": "punk",
+    "heavy metal": "metal",
+    "synth pop": "synthpop",
+    "singer songwriter": "singer-songwriter",
+    "traditional folk music": "traditional folk",
+    "folk music": "folk",
+    "classical music": "classical",
+    "baroque music": "baroque",
+    "romantic music": "romantic",
+    "delta blues": "delta blues"
+  },
+  "historicalArtists": [
+    {
+      "name": "Robert Johnson",
+      "genre": "Delta blues",
+      "year": 1936,
+      "aliases": [
+        "Robert Johnson"
+      ]
+    },
+    {
+      "name": "Charley Patton",
+      "genre": "Delta blues",
+      "year": 1929,
+      "aliases": [
+        "Charley Patton",
+        "Charlie Patton"
+      ]
+    },
+    {
+      "name": "Tommy Johnson",
+      "genre": "Delta blues",
+      "year": 1928,
+      "aliases": [
+        "Tommy Johnson"
+      ]
+    },
+    {
+      "name": "Ma Rainey",
+      "genre": "Classic female blues",
+      "year": 1925,
+      "aliases": [
+        "Ma Rainey",
+        "Gertrude Ma Rainey"
+      ]
+    },
+    {
+      "name": "Bessie Smith",
+      "genre": "Classic female blues",
+      "year": 1927,
+      "aliases": [
+        "Bessie Smith"
+      ]
+    },
+    {
+      "name": "Blind Lemon Jefferson",
+      "genre": "Texas blues",
+      "year": 1927,
+      "aliases": [
+        "Blind Lemon Jefferson"
+      ]
+    },
+    {
+      "name": "Blind Blake",
+      "genre": "Piedmont blues",
+      "year": 1927,
+      "aliases": [
+        "Blind Blake"
+      ]
+    },
+    {
+      "name": "Jimmie Rodgers",
+      "genre": "Country",
+      "year": 1928,
+      "aliases": [
+        "Jimmie Rodgers"
+      ]
+    },
+    {
+      "name": "King Oliver",
+      "genre": "Dixieland",
+      "year": 1923,
+      "aliases": [
+        "King Oliver",
+        "Joe King Oliver"
+      ]
+    },
+    {
+      "name": "Jelly Roll Morton",
+      "genre": "Jazz",
+      "year": 1926,
+      "aliases": [
+        "Jelly Roll Morton"
+      ]
+    }
+  ],
+  "mandatoryModern": [
+    "afrobeat",
+    "afrobeats",
+    "amapiano",
+    "highlife",
+    "soukous",
+    "mbalax",
+    "ethio-jazz",
+    "afropop",
+    "desert blues",
+    "bongo flava",
+    "taarab",
+    "rai",
+    "gnawa",
+    "shaabi",
+    "arab pop",
+    "dabke",
+    "k-pop",
+    "j-pop",
+    "mandopop",
+    "cantopop",
+    "opm",
+    "thai pop",
+    "v-pop",
+    "indonesian pop",
+    "dangdut",
+    "keroncong",
+    "gamelan",
+    "hindustani classical",
+    "carnatic",
+    "qawwali",
+    "ghazal",
+    "bhangra",
+    "filmi",
+    "bollywood",
+    "nepali pop",
+    "pakistani pop",
+    "reggaeton",
+    "salsa",
+    "cumbia",
+    "merengue",
+    "bachata",
+    "son cubano",
+    "samba",
+    "bossa nova",
+    "mpb",
+    "pagode",
+    "sertanejo",
+    "forro",
+    "tropicalia",
+    "corrido",
+    "ranchera",
+    "mariachi",
+    "tango",
+    "nuevo tango",
+    "flamenco",
+    "fado",
+    "rebetiko",
+    "klezmer",
+    "balkan brass",
+    "polka",
+    "celtic",
+    "irish folk",
+    "scottish folk",
+    "bluegrass",
+    "appalachian folk",
+    "navajo",
+    "powwow",
+    "aboriginal",
+    "maori",
+    "reggae",
+    "ska",
+    "dub",
+    "calypso",
+    "soca",
+    "dancehall",
+    "mento",
+    "morna",
+    "funa",
+    "traditional folk",
+    "world",
+    "world fusion",
+    "delta blues"
+  ]
+}
