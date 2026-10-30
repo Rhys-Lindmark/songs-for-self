@@ -56,6 +56,28 @@ npm run data:upload
 npm run data:manifest
 ```
 
-Read `DATA_VERSIONING.md` before a dataset release. Preserve all four coverage denominators at 7,582 available tracks, 7,733 total playlist positions, and 151 unavailable positions unless an explicit data-model change is intended. Check all generated hashes and run the full tests.
+Read `DATA_VERSIONING.md` before a dataset release. The available-track contract is:
+
+```text
+availableTracks = genrePlacements = timelinePlacements = mapPlacements = 7,582
+```
+ Preserve all four coverage denominators at 7,582 available tracks, 7,733 total playlist positions, and 151 unavailable positions unless an explicit data-model change is intended. Check all generated hashes and run the full tests.
 
 Avoid `npm run data:enrich` for routine fixes: it rebuilds from raw data and can replace later reviewed fields until the complete enrichment chain is reapplied. Preserve private visitor files and OAuth tokens outside the repository.
+
+## Release artifacts
+
+`data/dataset-manifest.json` records the dataset version, coverage, and hashes; `public/dataset-manifest.json` is its published copy. Regeneration must keep these artifacts in sync:
+
+- `data/songs-for-self.enriched.csv`
+- `data/viz-data.json`
+- `data/viz-summary.json`
+- `public/timeline-data.json`
+- `public/geography-data.json`
+- `public/world-outline.json`
+- `public/genre-space-data.json`
+- `data/every-noise-reference-2023.json`
+- `data/every-noise-artist-memberships.json`
+- `data/every-noise-family-review.csv`
+- `data/us-state-coordinate-cache.json`
+- `public/upload-lookup.json`

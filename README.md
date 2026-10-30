@@ -50,3 +50,11 @@ The canonical reference playlist is `data/songs-for-self.enriched.csv`. Generate
 Use `data/genre-overrides.json` and `data/geography-overrides.json` for reviewed corrections, with source evidence. Do not edit generated files or rerun raw enrichment casually. See [DATA_VERSIONING.md](DATA_VERSIONING.md) and the [runbook](RUNBOOK.md).
 
 Visitor playlists and OAuth tokens are never committed. Imports and saved analyses remain in the visitor's browser. The reference playlist and public enrichment metadata are intentionally published; third-party metadata and artwork retain their respective rights.
+
+## Project contracts
+
+- [Shared agent instructions](AGENTS.md)
+- [Deployment and data runbook](RUNBOOK.md)
+- [Spotify import contract](SPOTIFY_IMPORT.md)
+- [Dataset versioning](DATA_VERSIONING.md)
+- [Responsive and accessibility checks](RESPONSIVE_TESTING.md)

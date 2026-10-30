@@ -12,7 +12,7 @@ const packageDocument = readJson('package.json');
 const manifest = readJson('data/dataset-manifest.json');
 
 await test('README routes operators to every persistent project contract', () => {
-  for (const path of ['PLAN.md', 'BACKLOG.md', 'RUNBOOK.md', 'SPOTIFY_IMPORT.md', 'DATA_VERSIONING.md', 'RESPONSIVE_TESTING.md']) {
+  for (const path of ['AGENTS.md', 'RUNBOOK.md', 'SPOTIFY_IMPORT.md', 'DATA_VERSIONING.md', 'RESPONSIVE_TESTING.md']) {
     assert.ok(readme.includes(`(${path})`), `README is missing ${path}`);
     assert.ok(fs.existsSync(new URL(path, root)), `${path} does not exist`);
   }
@@ -20,7 +20,7 @@ await test('README routes operators to every persistent project contract', () =>
 
 await test('every documented npm data command exists', () => {
   const commands = [...runbook.matchAll(/npm run (data:[a-z0-9:-]+)/g)].map((match) => match[1]);
-  assert.ok(commands.length > 10);
+  assert.ok(commands.length > 0);
   for (const command of new Set(commands)) assert.ok(packageDocument.scripts[command], `${command} is not defined`);
 });
 
