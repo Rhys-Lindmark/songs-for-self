@@ -25,13 +25,14 @@ import { clearStoredPlaylistAnalysis, loadStoredPlaylistAnalysis, makeStoredPlay
 const genreOrder = ['Classical', 'Experimental', 'Country', 'Electronic', 'Modern Folk', 'Hip-hop', 'Jazz', 'Pop', 'R&B, Soul & Blues', 'Rock', 'World', 'Traditional Folk', 'Other'] as const;
 type LayerStatus = 'idle' | 'loading' | 'ready' | 'failed';
 
-export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClientId?: string }) {
+export function PlaylistUploadAnalyzer({ spotifyClientId = '', onAnalysisChange }: { spotifyClientId?: string; onAnalysisChange?: (active: boolean) => void }) {
   const exploreHeading = useRef<HTMLHeadingElement>(null);
   const [fileName, setFileName] = useState('');
   const [importKind, setImportKind] = useState('playlist');
   const [historyProgress, setHistoryProgress] = useState('');
   const [listeningHistory, setListeningHistory] = useState<ListeningHistorySummary>();
-  const [tracks, setTracks] = useState<AnalyzedTrack[]>([]);
+  const [tracks, updateTracks] = useState<AnalyzedTrack[]>([]);
+  const setTracks = useCallback((next: AnalyzedTrack[]) => { updateTracks(next); onAnalysisChange?.(next.length > 0); }, [onAnalysisChange]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [worldPath, setWorldPath] = useState('');
@@ -123,7 +124,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     setSelectedAlbum(null);
     setResumeSnapshot(null);
     loadDeepViews(analyzed);
-  }, [loadDeepViews]);
+  }, [loadDeepViews, setTracks]);
 
   const analyzeRows = useCallback(async (rows: Record<string, string>[], sourceName: string, history?: ListeningHistorySummary) => {
     setLoading(true);
@@ -154,7 +155,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     } finally {
       setLoading(false);
     }
-  }, [presentAnalysis]);
+  }, [presentAnalysis, setTracks]);
 
   function resumeStoredAnalysis() {
     if (!resumeSnapshot) return;

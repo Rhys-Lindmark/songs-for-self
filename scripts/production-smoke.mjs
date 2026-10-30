@@ -18,6 +18,9 @@ const expectedOther = manifest.coverage.otherTracks.toLocaleString('en-US');
 for (const expected of ['<title>Songs for Self — A personal atlas of listening</title>', '7,582', expectedOther, 'Spotify playlist link', `${assetBase}/og.png`, `${assetBase}/favicon.svg`]) {
   assert.ok(html.includes(expected), `Missing production marker: ${expected}`);
 }
+assert.match(html, /Music map explored/, 'Default music-map score is missing');
+assert.match(html, /Critically acclaimed albums/, 'Default500-album score is missing');
+assert.match(html, /Your top 10 genres/, 'Default top10 genres are missing');
 assert.match(html, /Import the full copied playlist/, 'Missing complete-playlist import action');
 for (const removed of ['AVAILABLE PLAYLIST TRACKS', 'TRACKS PLACED IN TIME', 'available songs arranged across musical time', 'zoomable map of musical neighborhoods', 'A personal atlas of listening</p>', 'Download V3 CSV', 'Open playlist']) {
   assert.ok(!html.includes(removed), `Removed UI returned: ${removed}`);

@@ -31,12 +31,14 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run data:music-map && git diff --exit-code --stat -- public/music-map.json
       - run: npm run data:acclaimed-albums && git diff --exit-code --stat -- public/acclaimed-albums.json
+      - run: npm run data:reference-exploration && git diff --exit-code --stat -- data/reference-exploration.json public/reference-exploration.json
       - run: npm run check
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - name: Verify playlist and music map in desktop and mobile browsers
         env:
           SFS_BASE_URL: ${{ inputs.live_url || 'http://127.0.0.1:4329' }}
+          SFS_REFERENCE_SCREENSHOT: ${{ runner.temp }}/reference-exploration.png
           SFS_PERF_OUTPUT: ${{ runner.temp }}/timeline-performance.json
           SFS_PERF_SCREENSHOT: ${{ runner.temp }}/timeline-performance.png
           SFS_HISTORY_SCREENSHOT: ${{ runner.temp }}/listening-history.png
@@ -54,6 +56,7 @@ jobs:
             done
             curl -fsS "$SFS_BASE_URL" > /dev/null
           fi
+          npm run test:reference-exploration-browser
           npm run test:timeline-performance-browser
           npm run test:listening-history-browser
           npm run test:spotify-account-data-browser
@@ -68,6 +71,7 @@ jobs:
         with:
           name: music-browser-evidence
           path: |
+            ${{ runner.temp }}/reference-exploration.png
             ${{ runner.temp }}/timeline-performance.json
             ${{ runner.temp }}/timeline-performance.png
             ${{ runner.temp }}/listening-history.png

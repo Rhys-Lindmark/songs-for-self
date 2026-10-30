@@ -66,3 +66,5 @@ Visitor playlists and OAuth tokens are never committed. Imports and saved analys
 - [Playlist genre profile and listening benchmark](GENRE_PROFILE.md)
 - [Account listening-history import](LISTENING_HISTORY.md)
 - [Artwork performance and measurements](PERFORMANCE.md)
+
+The default Songs for Self collection shows its music-map score, acclaimed-album coverage and top genres before any import. Its compact summary is precomputed with `npm run data:reference-exploration`; detailed filters load a public snapshot only when opened. Importing or resuming a personal playlist/history replaces the default summary, and clearing it restores the default.

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Map, Music2, Search, Sparkles } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ReferenceExploration } from '@/components/reference-exploration';
 import { PlaylistUploadAnalyzer } from '@/components/playlist-upload-analyzer';
 import { PublicAssetDownload } from '@/components/public-asset-download';
 import { GenreSpaceMap, type GenreSpacePayload } from '@/components/genre-space-map';
@@ -37,6 +38,7 @@ type TimelinePayload = { timeline: TimelinePoint[]; historicalPeriods: { period:
 type SelectedTimeline = { point: TimelinePoint; markId?: string };
 
 export default function Home() {
+  const [hasImportedAnalysis, setHasImportedAnalysis] = useState(false);
   const [activeTab, setActiveTab] = useState('genre');
   const [timelineData, setTimelineData] = useState<TimelinePayload | null>(null);
   const [geographyData, setGeographyData] = useState<GeographyPayload | null>(null);
@@ -117,7 +119,8 @@ export default function Home() {
       <a href="#your-playlist" className="skip-link">Skip to playlist tools</a>
       <h1 className="sr-only">Songs for Self</h1>
 
-      <PlaylistUploadAnalyzer spotifyClientId={process.env.SPOTIFY_CLIENT_ID ?? process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID ?? ''} />
+      {!hasImportedAnalysis && <ReferenceExploration />}
+      <PlaylistUploadAnalyzer onAnalysisChange={setHasImportedAnalysis} spotifyClientId={process.env.SPOTIFY_CLIENT_ID ?? process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID ?? ''} />
 
       <Tabs value={activeTab} onValueChange={(value) => { setActiveTab(value); setQuery(''); }} className="gap-0">
         <div className="flex flex-col gap-3 border-b border-[#17221e]/15 px-4 py-4 sm:px-5 md:flex-row md:items-center md:justify-between md:px-10">

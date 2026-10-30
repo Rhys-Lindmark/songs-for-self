@@ -3,15 +3,17 @@
 import { useEffect, useId, useMemo, useState, type KeyboardEvent } from 'react';
 import { loadPublicJson } from '@/lib/public-json-cache';
 import { publicAssetUrl } from '@/lib/public-asset-url';
-import { scoreMusicCoverage, type MusicMapCatalog, type MusicArea } from '@/lib/music-coverage';
+import { scoreMusicCoverage, type MusicMapCatalog, type MusicArea, type CoverageResult } from '@/lib/music-coverage';
 import type { AnalyzedTrack, GlobalArtistGenreIndex } from '@/lib/playlist-analyzer';
 import type { GenreSpacePayload } from '@/components/genre-space-map';
 
 type MapView = 'albums' | 'time' | 'space' | 'map';
 type Sources = { catalog: MusicMapCatalog; artistIndex?: GlobalArtistGenreIndex; atlas?: GenreSpacePayload };
 
-export function MusicCoverage({ tracks, view }: { tracks: AnalyzedTrack[]; view: MapView }) {
-  const [sources, setSources] = useState<Sources | null>(null);
+export type MusicCoverageSnapshot = { catalog: MusicMapCatalog; result: CoverageResult };
+
+export function MusicCoverage({ tracks, view, snapshot, showSummary = true, defaultExpanded = false }: { tracks: AnalyzedTrack[]; view: MapView; snapshot?: MusicCoverageSnapshot; showSummary?: boolean; defaultExpanded?: boolean }) {
+  const [sources, setSources] = useState<Sources | null>(snapshot ? { catalog: snapshot.catalog } : null);
   const [error, setError] = useState('');
   const [attempt, setAttempt] = useState(0);
   const [query, setQuery] = useState('');
@@ -20,6 +22,7 @@ export function MusicCoverage({ tracks, view }: { tracks: AnalyzedTrack[]; view:
   const [selectedId, setSelectedId] = useState('');
   const mapId = useId();
   useEffect(() => {
+    if (snapshot) return;
     let cancelled = false;
     Promise.allSettled([
       loadPublicJson<MusicMapCatalog>('music-map.json'),
@@ -30,8 +33,8 @@ export function MusicCoverage({ tracks, view }: { tracks: AnalyzedTrack[]; view:
       if (!cancelled) setSources({ catalog: catalog.value, artistIndex: artistIndex.status === 'fulfilled' ? artistIndex.value : undefined, atlas: atlas.status === 'fulfilled' ? atlas.value : undefined });
     }).catch(() => { if (!cancelled) setError('The exploration map could not load. Your playlist views are still available.'); });
     return () => { cancelled = true; };
-  }, [attempt]);
-  const result = useMemo(() => sources ? scoreMusicCoverage(tracks, sources.catalog, sources) : null, [tracks, sources]);
+  }, [attempt, snapshot]);
+  const result = useMemo(() => snapshot?.result ?? (sources ? scoreMusicCoverage(tracks, sources.catalog, sources) : null), [tracks, sources, snapshot]);
   const matchesByArea = useMemo(() => {
     const grouped = new Map<string, NonNullable<typeof result>['matches']>();
     for (const match of result?.matches ?? []) {
@@ -69,14 +72,14 @@ export function MusicCoverage({ tracks, view }: { tracks: AnalyzedTrack[]; view:
   if (error) return <div className="mt-7 border-y border-[#17221e]/15 py-5"><output className="block text-sm">{error}</output><button type="button" onClick={() => { setError(''); setAttempt(attempt + 1); }} className="mt-2 min-h-11 rounded-full border border-[#17221e]/25 px-4 text-sm">Retry exploration map</button></div>;
   if (!sources || !result) return <output className="mt-7 block text-center text-sm text-[#17221e]/60">Matching your playlist to the exploration map…</output>;
   return <section aria-label="Music map exploration" className="my-7 border-y border-[#17221e]/15 py-6">
-    <div className="text-center" aria-live="polite">
+    {showSummary && <div className="text-center" aria-live="polite">
       <h3 className="font-serif text-2xl sm:text-3xl">You&apos;ve explored {result.percent.toFixed(1)}% of the music map</h3>
       <p className="mt-2 text-sm text-[#17221e]/65">{result.covered.toLocaleString()} of {result.total.toLocaleString()} areas · {result.matches.length.toLocaleString()} of {tracks.length.toLocaleString()} tracks matched</p>
       <progress aria-label="Music map coverage" value={result.covered} max={result.total} className="mt-3 h-1.5 w-full max-w-sm accent-[#346753]" />
       <p className="mt-2 text-xs text-[#17221e]/50">Map {sources.catalog.version} · coverage estimated from playlist metadata</p>
-    </div>
-    {(!sources.artistIndex || !sources.atlas) && <p className="mt-3 text-center text-xs text-[#17221e]/65">Some matching metadata is unavailable; this score may be incomplete. <button type="button" onClick={() => setAttempt(attempt + 1)} className="min-h-11 underline underline-offset-2">Retry matching metadata</button></p>}
-    <details className="mt-4">
+    </div>}
+    {!snapshot && (!sources.artistIndex || !sources.atlas) && <p className="mt-3 text-center text-xs text-[#17221e]/65">Some matching metadata is unavailable; this score may be incomplete. <button type="button" onClick={() => setAttempt(attempt + 1)} className="min-h-11 underline underline-offset-2">Retry matching metadata</button></p>}
+    <details open={defaultExpanded} className="mt-4">
       <summary className="min-h-11 cursor-pointer py-3 text-sm">Explore covered and missing areas</summary>
       <p className="mb-3 text-xs leading-relaxed text-[#17221e]/60">One pixel per area. Green is covered; pale is still unexplored. Switch Time, Genre space, or Geography above to arrange the same areas by era, genre, or region.</p>
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_160px_180px]">

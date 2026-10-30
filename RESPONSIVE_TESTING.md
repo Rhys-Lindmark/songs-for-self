@@ -37,3 +37,5 @@ Genre profile: `npm run test:genre-profile-browser` verifies broad and detailed 
 Listening history: `npm run test:listening-history-browser` checks split extended-history files, overlap/exclusion counts, play-weighted versus unique-track genres, album coverage, all map views, sanitized local checkpoint storage, resume, clear, standard-history fallback, and overflow at 1280/320. The existing account-data playlist picker browser check also runs in CI.
 
 Timeline performance: `npm run test:timeline-performance-browser` verifies small loaded artwork, shared observers, viewport rendering, reference-catalog lookup avoidance, historical expansion, keyboard selection, selected large art and mobile panning. CDP/long-task/network metrics and screenshots are retained by CI. See [Performance](PERFORMANCE.md).
+
+Default exploration: `npm run test:reference-exploration-browser` verifies all three summaries without an import, initial payload deferral, area arrangements, album filters, switching to an uploaded playlist, restoring the reference collection after clear, retry, and overflow at 1280/320.

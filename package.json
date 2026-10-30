@@ -67,7 +67,9 @@
     "test:genre-profile-browser": "node scripts/genre-profile-browser-smoke.mjs",
     "test:listening-history-browser": "node scripts/listening-history-browser-smoke.mjs",
     "test:timeline-performance-browser": "node scripts/timeline-performance-browser-smoke.mjs",
-    "data:album-thumbnails": "node scripts/build-album-thumbnails.mjs"
+    "data:album-thumbnails": "node scripts/build-album-thumbnails.mjs",
+    "data:reference-exploration": "node scripts/build-reference-exploration.mjs",
+    "test:reference-exploration-browser": "node scripts/reference-exploration-browser-smoke.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

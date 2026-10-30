@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+import { parse } from 'csv-parse/sync';
+import { analyzePlaylistRows } from '../lib/playlist-analyzer.ts';
+import { buildVisitorGenreSpace } from '../lib/visitor-genre-space.ts';
+import { buildGenreProfile } from '../lib/genre-profile.ts';
+import { scoreMusicCoverage } from '../lib/music-coverage.ts';
+import { scoreAcclaimedAlbums } from '../lib/acclaimed-albums.ts';
+const read=(path)=>JSON.parse(fs.readFileSync(path,'utf8'));
+const rows=parse(fs.readFileSync('data/songs-for-self.enriched.csv','utf8'),{columns:true,skip_empty_lines:true}).filter(row=>row.spotify_track_id);
+const lookup=read('public/upload-lookup.json');
+const tracks=analyzePlaylistRows(rows,lookup);
+// Keep the reviewed per-position family, including repeated recordings, as the canonical source.
+tracks.forEach((track,index)=>{track.genre=rows[index].genre_family;});
+const atlas=read('public/genre-space-data.json');
+const placements=buildVisitorGenreSpace(tracks,atlas).placements;
+const map=read('public/music-map.json');
+const albums=read('public/acclaimed-albums.json');
+const musicResult=scoreMusicCoverage(tracks,map,{atlas,artistIndex:read('public/artist-genre-index.json')});
+const albumResult=scoreAcclaimedAlbums(tracks,albums,{atlas});
+const profile=buildGenreProfile(tracks,read('data/genre-listening-benchmark.json'),placements);
+const summary={version:1,name:'Songs for Self',tracks:tracks.length,music:{version:map.version,covered:musicResult.covered,total:musicResult.total,percent:musicResult.percent},albums:{version:albums.version,covered:albumResult.covered,total:albumResult.total,percent:albumResult.percent},profile};
+const keys=['spotifyTrackId','track','artist','album','spotifyAlbumId','coverUrl','genre','year','x','y','city','country','method','genreSource','genreConfidence','timeSource','timeConfidence','geographySource','geographyConfidence'];
+const displayTracks=tracks.map(track=>Object.fromEntries(keys.filter(key=>track[key]!==undefined).map(key=>[key,track[key]])));
+const details={version:1,tracks:displayTracks,music:{catalog:{version:map.version,areas:map.areas},result:musicResult},albums:{catalog:albums,result:albumResult}};
+fs.writeFileSync('data/reference-exploration.json',JSON.stringify(summary)+'\n');
+fs.writeFileSync('public/reference-exploration.json',JSON.stringify(details)+'\n');
+console.log(JSON.stringify({tracks:tracks.length,music:summary.music,albums:summary.albums,profileTop:profile.broad.slice(0,3),summaryBytes:fs.statSync('data/reference-exploration.json').size,detailsBytes:fs.statSync('public/reference-exploration.json').size},null,2));

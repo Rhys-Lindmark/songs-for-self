@@ -1,21 +1,21 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { buildGenreProfile, type GenreListeningBenchmark } from '@/lib/genre-profile';
+import { buildGenreProfile, type GenreListeningBenchmark, type GenreProfile } from '@/lib/genre-profile';
 import benchmarkData from '@/data/genre-listening-benchmark.json';
 import type { AnalyzedTrack } from '@/lib/playlist-analyzer';
 import type { VisitorGenrePlacement } from '@/lib/visitor-genre-space';
 
 const benchmark = benchmarkData as GenreListeningBenchmark;
 
-export function PlaylistGenreProfile({ tracks, placements }: { tracks: AnalyzedTrack[]; placements?: VisitorGenrePlacement[] }) {
+export function PlaylistGenreProfile({ tracks, placements, precomputed }: { tracks: AnalyzedTrack[]; placements?: VisitorGenrePlacement[]; precomputed?: GenreProfile }) {
   const [detail, setDetail] = useState('broad');
   const [basis, setBasis] = useState('plays');
   const history = tracks.length > 0 && tracks.every((track) => Boolean(track.listening));
   const weighted = history && basis === 'plays';
   const unit = weighted ? 'recorded plays' : history ? 'unique tracks' : 'playlist entries';
   const context = history ? 'your listening history' : 'this playlist';
-  const profile = useMemo(() => buildGenreProfile(tracks, benchmark, placements, weighted ? tracks.map((track) => track.listening!.plays) : undefined), [tracks, placements, weighted]);
+  const profile = useMemo(() => precomputed ?? buildGenreProfile(tracks, benchmark, placements, weighted ? tracks.map((track) => track.listening!.plays) : undefined), [tracks, placements, weighted, precomputed]);
   const ranked = detail === 'detailed' ? profile.detailed : profile.broad;
   const standout = profile.standout && profile.standout.deltaPoints >= 5 && profile.standout.ratio !== null ? profile.standout : undefined;
   const leader = profile.broad[0];
