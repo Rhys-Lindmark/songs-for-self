@@ -17,6 +17,8 @@ try {
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
 
   await page.getByLabel('Open a genre and musical year').selectOption('Rock|1969');
+  const selectedMoment = page.getByRole('complementary').filter({ hasText: 'Album memories' });
+  await selectedMoment.scrollIntoViewIfNeeded();
   const abbeyRoadCover = page.getByRole('img', { name: 'Cover of Abbey Road (Remastered)', exact: true });
   await abbeyRoadCover.waitFor({ state: 'visible', timeout: 20_000 });
   await abbeyRoadCover.scrollIntoViewIfNeeded();
@@ -59,7 +61,7 @@ try {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
   }
   const covers = timeline.locator('[data-album-artwork]');
-  assert.ok(await covers.count() > 100, 'Timeline should expose album artwork instead of dots');
+  assert.ok(await covers.count() > 0 && await covers.count() < 1500, 'Timeline should expose nearby album art without mounting the full collection');
   assert.equal(await timeline.locator('button > span.rounded-full').count(), 0, 'Timeline dots returned');
   assert.equal(await page.getByText('estimated composition era', { exact: true }).count(), 0, 'Visible provenance legend returned');
   assert.deepEqual(failedResponses.filter((entry) => entry.includes(new URL(baseUrl).origin)), [], 'A local app resource failed');

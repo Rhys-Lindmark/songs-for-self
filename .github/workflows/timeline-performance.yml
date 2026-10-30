@@ -32,6 +32,11 @@ jobs:
           SFS_PERF_OUTPUT: ${{ runner.temp }}/timeline-performance.json
           SFS_PERF_SCREENSHOT: ${{ runner.temp }}/timeline-performance.png
         run: node scripts/timeline-performance-browser-smoke.mjs
+      - name: Verify selected full artwork and timeline controls
+        if: ${{ inputs.enforce_performance }}
+        env:
+          SFS_BASE_URL: ${{ inputs.url }}
+        run: npm run test:timeline-artwork-browser
       - name: Prepare small artwork catalog
         if: ${{ inputs.prepare_catalog }}
         run: node scripts/build-album-thumbnails.mjs
