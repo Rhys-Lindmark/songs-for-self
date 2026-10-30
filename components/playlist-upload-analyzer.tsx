@@ -8,6 +8,7 @@ import { SpotifyPlaylistImport } from '@/components/spotify-playlist-import';
 import { AlbumCloud } from '@/components/album-cloud';
 import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import { AlbumArtwork } from '@/components/album-artwork';
+import { RECORDED_TIMELINE_RANGE } from '@/lib/timeline-scale';
 import { aggregatePlaces, analyzePlaylistRows, parseCsv, type AnalyzedTrack, type GlobalArtistGenreIndex, type Lookup } from '@/lib/playlist-analyzer';
 import { loadPublicJson } from '@/lib/public-json-cache';
 import { enrichedPlaylistFileName, serializeEnrichedPlaylist } from '@/lib/playlist-export';
@@ -52,11 +53,6 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     });
   }, [tracks, genreSpace]);
   const genreCounts = useMemo(() => Object.fromEntries(genreOrder.map((genre) => [genre, tracks.filter((track) => track.genre === genre).length])), [tracks]);
-  const timeRange = useMemo(() => {
-    const years = tracks.flatMap((track) => track.year ? [track.year] : []);
-    const min = years.length && Math.min(...years) < 1900 ? 1200 : 1900;
-    return { min, max: 2026, ticks: min === 1200 ? [1200, 1600, 1800, 1900, 2000, 2026] : [1900, 1925, 1950, 1975, 2000, 2026] };
-  }, [tracks]);
   const places = useMemo(() => aggregatePlaces(tracks), [tracks]);
   const dated = tracks.filter((track) => track.year).length;
   const mapped = tracks.filter((track) => track.x !== null && track.y !== null).length;
@@ -284,7 +280,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
           </div>}
           {view === 'space' && genreSpace && genreSpace.payload.points.length === 0 && <div className="mt-4 border border-dashed border-[#17221e]/25 bg-white/20 p-6 text-center"><p className="font-serif text-2xl">No genre-space placements yet.</p><p className="mt-2 text-sm text-[#17221e]/55">Add Spotify track IDs, recognizable artists, or genre fields to the CSV. Unresolved rows remain visible below.</p></div>}
           {view === 'time' && <div className="mt-7 bg-[#f3efe4] p-3 sm:p-5">
-            <AlbumTimeline marks={albumMarks} genres={genreOrder} counts={genreCounts} range={timeRange} label="Uploaded playlist genre timeline. Swipe or scroll horizontally to move through time." selectedId={selectedAlbum?.id} onSelect={setSelectedAlbum} />
+            <AlbumTimeline marks={albumMarks} genres={genreOrder} counts={genreCounts} range={RECORDED_TIMELINE_RANGE} label="Uploaded playlist genre timeline. Swipe or scroll horizontally to move through time." selectedId={selectedAlbum?.id} onSelect={setSelectedAlbum} />
             {dated < tracks.length && <p className="mt-3 text-xs text-[#17221e]/55">{(tracks.length - dated).toLocaleString()} tracks have no date yet. You can still find them in Albums.</p>}
           </div>}
           {selectedAlbum && (view === 'time' || view === 'albums') && <aside aria-label="Selected album" className="mt-5 flex items-start gap-5 border-y border-[#17221e]/15 py-5">

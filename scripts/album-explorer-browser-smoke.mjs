@@ -7,6 +7,7 @@ const lookup = JSON.parse(readFileSync(new URL('../public/upload-lookup.json', i
 const atlas = JSON.parse(readFileSync(new URL('../public/genre-space-data.json', import.meta.url)));
 const families = ['Rock', 'Jazz', 'Electronic', 'World', 'Hip-hop', 'Pop'];
 const chosen = families.map((family) => atlas.points.find((point) => point.family === family && point.spotifyAlbumId));
+chosen.push(atlas.points.find((point) => point.family === 'Classical' && point.spotifyAlbumId && lookup.tracks.some((track) => track.id === point.id && track.year < 1900)));
 const rows = chosen.map((point, index) => [point.title, point.artists, point.album, point.spotifyAlbumId, point.id, lookup.tracks.find((track) => track.id === point.id)?.year || 2000, `https://covers.example/album-${index}.svg`]);
 rows.push([...rows[0]]);
 rows.push(['Unknown recording', 'Unknown performer', 'Missing cover', '', '', '1999', '']);
@@ -18,6 +19,7 @@ try {
   for (const width of [1280, 320]) {
     const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
     const page = await context.newPage();
+    page.setDefaultTimeout(20_000);
     const errors = [];
     page.on('pageerror', (error) => errors.push(error.message));
     await page.route('https://covers.example/**', (route) => route.fulfill({ contentType: 'image/svg+xml', body: image }));
@@ -29,7 +31,7 @@ try {
     await page.getByRole('heading', { name: 'Explore your music', exact: true }).waitFor();
     assert.equal(await page.getByRole('button', { name: 'Albums', exact: true }).getAttribute('aria-pressed'), 'true');
     const collection = page.getByRole('region', { name: /Your album collection/ });
-    assert.equal(await collection.getByRole('button').count(), 7, 'Albums should group repeated tracks without losing missing covers');
+    assert.equal(await collection.getByRole('button').count(), 8, 'Albums should group repeated tracks without losing missing covers');
     await page.waitForFunction(() => [...document.querySelectorAll('[aria-label^="Your album collection"] img')].filter((image) => image.complete && image.naturalWidth > 0).length >= 4);
     const named = collection.getByRole('button', { name: new RegExp(rows[0][2].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) });
     await named.click();
@@ -45,8 +47,21 @@ try {
     await page.getByRole('button', { name: 'Time', exact: true }).click();
     const timeline = page.getByRole('region', { name: /Uploaded playlist genre timeline/ });
     await timeline.waitFor();
-    assert.equal(await timeline.locator('[data-album-artwork]').count(), 7);
-    await timeline.locator('[data-album-artwork]').first().click();
+    assert.equal(await timeline.locator('[data-album-artwork]:visible').count(), 7);
+    assert.match(await timeline.locator(':scope > div > div').first().innerText(), /1900/);
+    const classicalToggle = timeline.getByRole('button', { name: 'Show Classical before 1900' });
+    assert.equal(await classicalToggle.getAttribute('aria-expanded'), 'false');
+    await classicalToggle.click();
+    const history = timeline.getByRole('region', { name: 'Classical before 1900', exact: true });
+    await history.waitFor();
+    assert.equal(await history.locator('[data-album-artwork]').count(), 1);
+    await history.getByRole('button').first().focus();
+    await page.keyboard.press('Enter');
+    await detail.waitFor();
+    assert.match(await detail.innerText(), new RegExp(rows[6][2].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    await timeline.getByRole('button', { name: 'Hide Classical before 1900' }).click();
+    await history.waitFor({ state: 'hidden' });
+    await timeline.locator('[data-album-artwork]:visible').first().click();
     await detail.waitFor();
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     await page.getByRole('button', { name: 'Genre space', exact: true }).click();

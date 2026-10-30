@@ -9,6 +9,7 @@ const browser = await chromium.launch({ executablePath, headless: true });
 
 try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+  page.setDefaultTimeout(20_000);
   const failedResponses = [];
   page.on('response', (response) => {
     if (response.status() >= 400) failedResponses.push(`${response.status()} ${response.url()}`);
@@ -36,6 +37,27 @@ try {
   assert.match(artwork.src, /spotifycdn\.com|scdn\.co/, 'Abbey Road did not use the verified Spotify artwork fallback');
 
   const timeline = page.getByRole('region', { name: /Genre timeline/ });
+  for (const width of [1280, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    const axis = timeline.locator(':scope > div > div').first();
+    assert.match(await axis.innerText(), /1900/);
+    assert.doesNotMatch(await axis.innerText(), /1200|1400|1600|1800/);
+    const toggle = timeline.getByRole('button', { name: 'Show Classical before 1900' });
+    assert.equal(await toggle.getAttribute('aria-expanded'), 'false');
+    await toggle.focus();
+    await page.keyboard.press('Enter');
+    const history = timeline.getByRole('region', { name: 'Classical before 1900', exact: true });
+    await history.waitFor();
+    assert.match(await history.innerText(), /1200/);
+    assert.ok(await history.getByRole('button').count() > 0, 'Earlier Classical albums should be available');
+    const album = history.getByRole('button').first();
+    await album.focus();
+    await page.keyboard.press('Enter');
+    assert.equal(await album.getAttribute('aria-pressed'), 'true');
+    await timeline.getByRole('button', { name: 'Hide Classical before 1900' }).click();
+    await history.waitFor({ state: 'hidden' });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+  }
   const covers = timeline.locator('[data-album-artwork]');
   assert.ok(await covers.count() > 100, 'Timeline should expose album artwork instead of dots');
   assert.equal(await timeline.locator('button > span.rounded-full').count(), 0, 'Timeline dots returned');

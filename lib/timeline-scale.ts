@@ -19,3 +19,5 @@ export function timelinePercent(year: number, range: TimelineRange): number {
 export function timelineLeft(year: number, range: TimelineRange): string {
   return `${timelinePercent(year, range)}%`;
 }
+
+export const RECORDED_TIMELINE_RANGE = { min: 1900, max: 2026, ticks: [1900, 1925, 1950, 1975, 2000, 2026] };

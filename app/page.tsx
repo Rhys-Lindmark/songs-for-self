@@ -10,12 +10,9 @@ import { GeographyMap, type GeographyPayload } from '@/components/geography-map'
 import { publicAssetUrl } from '@/lib/public-asset-url';
 import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import summary from '@/data/viz-summary.json';
+import { RECORDED_TIMELINE_RANGE } from '@/lib/timeline-scale';
 
 const genreOrder = ['Classical', 'Experimental', 'Country', 'Electronic', 'Modern Folk', 'Hip-hop', 'Jazz', 'Pop', 'R&B, Soul & Blues', 'Rock', 'World', 'Traditional Folk', 'Other'] as const;
-const timelineRanges = [
-  { label: 'All musical time', min: 1200, max: 2026, ticks: [1200, 1400, 1600, 1800, 1900, 2000, 2026] },
-  { label: 'Recorded era', min: 1900, max: 2026, ticks: [1900, 1925, 1950, 1975, 2000, 2026] },
-];
 type TimelineAlbum = {
   name: string;
   artists: string;
@@ -44,10 +41,9 @@ export default function Home() {
   const [geographyData, setGeographyData] = useState<GeographyPayload | null>(null);
   const [genreSpaceData, setGenreSpaceData] = useState<GenreSpacePayload | null>(null);
   const [dataError, setDataError] = useState('');
-  const [zoom, setZoom] = useState(0);
   const [query, setQuery] = useState('');
   const [selectedTimeline, setSelectedTimeline] = useState<SelectedTimeline | null>(null);
-  const range = timelineRanges[zoom];
+  const range = RECORDED_TIMELINE_RANGE;
 
   useEffect(() => {
     const controller = new AbortController();
@@ -135,10 +131,6 @@ export default function Home() {
                 <h2 className="mt-2 font-serif text-[2rem] leading-[.95] tracking-tight sm:text-4xl md:text-5xl">A listening life, in musical time.</h2>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#17221e]/60">Every available track is placed in time. Classical works sit near the composer&apos;s active period instead of the modern recording date.</p>
               </div>
-              <label className="flex min-h-11 w-full flex-col gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[#17221e]/60 md:min-w-64 md:w-auto">
-                Timeline detail <span className="text-[#17221e]">{range.label}</span>
-                <input aria-label="Timeline detail" type="range" min="0" max="1" value={zoom} onChange={(event) => setZoom(Number(event.target.value))} className="accent-[#b45238]" />
-              </label>
             </div>
 
             {!timelineData && !dataError && <output className="mb-6 block text-sm text-[#17221e]/55">Loading the musical timeline…</output>}
