@@ -1,0 +1,44 @@
+name: Timeline performance measurement
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        type: string
+        default: https://ai.rhyslindmark.com/music
+      prepare_catalog:
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Measure deployed timeline
+        env:
+          SFS_BASE_URL: ${{ inputs.url }}
+          SFS_PERF_BASELINE: '1'
+          SFS_PERF_OUTPUT: ${{ runner.temp }}/timeline-performance.json
+          SFS_PERF_SCREENSHOT: ${{ runner.temp }}/timeline-performance.png
+        run: node scripts/timeline-performance-browser-smoke.mjs
+      - name: Prepare small artwork catalog
+        if: ${{ inputs.prepare_catalog }}
+        run: node scripts/build-album-thumbnails.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: ${{ always() }}
+        with:
+          name: timeline-performance
+          path: |
+            ${{ runner.temp }}/timeline-performance.json
+            ${{ runner.temp }}/timeline-performance.png
+            public/album-thumbnails.json
+          if-no-files-found: ignore
+          retention-days: 7
