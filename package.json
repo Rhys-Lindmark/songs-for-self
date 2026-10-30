@@ -65,7 +65,9 @@
     "check": "npm test && npm run check:types",
     "deploy": "wrangler deploy --config dist/server/wrangler.json",
     "test:genre-profile-browser": "node scripts/genre-profile-browser-smoke.mjs",
-    "test:listening-history-browser": "node scripts/listening-history-browser-smoke.mjs"
+    "test:listening-history-browser": "node scripts/listening-history-browser-smoke.mjs",
+    "test:timeline-performance-browser": "node scripts/timeline-performance-browser-smoke.mjs",
+    "data:album-thumbnails": "node scripts/build-album-thumbnails.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

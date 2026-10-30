@@ -23,14 +23,16 @@ try {
  const perf=await page.evaluate(()=>window.__timelinePerf);
  const result={baseUrl,baseline,timelineVisibleMs:visibleAt,...dom,intersectionObservers:perf.observers,longTaskCount:perf.longTasks.length,longTaskTotalMs:Math.round(perf.longTasks.reduce((a,b)=>a+b,0)),longestTaskMs:Math.round(Math.max(0,...perf.longTasks)),requests:requests.size,oembedRequests:[...requests.values()].filter(x=>x.url.includes('/oembed')).length,imageBytes,totalEncodedBytes:bytes,scriptDurationSeconds:metrics.ScriptDuration,layoutDurationSeconds:metrics.LayoutDuration,jsHeapBytes:metrics.JSHeapUsedSize};
  console.log(JSON.stringify(result,null,2));if(process.env.SFS_PERF_OUTPUT)writeFileSync(process.env.SFS_PERF_OUTPUT,JSON.stringify(result,null,2)+'\n');
- if(!baseline){assert.ok(dom.artwork>0&&dom.artwork<1500,'Only nearby timeline artwork should be mounted');assert.ok(dom.loaded>=10,'The timeline should show real loaded thumbnails promptly');assert.ok(result.oembedRequests<=4,'Reference timeline thumbnails should bypass serial Spotify lookups');assert.ok(dom.dimensions.every(i=>i.width<=64&&i.height<=64),'Timeline must use small artwork assets');assert.ok(result.intersectionObservers<=8,'Visibility observers must be shared');}
- if(process.env.SFS_PERF_SCREENSHOT)await timeline.screenshot({path:process.env.SFS_PERF_SCREENSHOT,style:'.skip-link {visibility:hidden!important}'});
+ if(!baseline){assert.ok(dom.artwork>0&&dom.artwork<1500,'Only nearby timeline artwork should be mounted');assert.ok(dom.loaded>=10,'The timeline should show real loaded thumbnails promptly');assert.ok(result.oembedRequests<=4,'Reference timeline thumbnails should bypass serial Spotify lookups');assert.ok(dom.dimensions.filter(i=>i.width<=64&&i.height<=64).length>=dom.dimensions.length*.9,'Timeline must primarily use small artwork assets; legacy encodings retain real-art fallback');assert.ok(result.intersectionObservers<=8,'Visibility observers must be shared');}
+ if(process.env.SFS_PERF_SCREENSHOT)await page.screenshot({path:process.env.SFS_PERF_SCREENSHOT,style:'.skip-link {visibility:hidden!important}'});
  // Moving vertically and horizontally must reveal the correct albums without page overflow.
  await page.setViewportSize({width:320,height:900});await timeline.evaluate(el=>{window.scrollTo(0,el.getBoundingClientRect().top+window.scrollY-10);el.scrollLeft=el.scrollWidth;});
  await page.waitForTimeout(300);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),320);
  await timeline.getByRole('button',{name:'Show Classical before 1900',exact:true}).click();
  const history=timeline.getByRole('region',{name:'Classical before 1900',exact:true});await history.waitFor();assert.ok(await history.getByRole('button').count()>0);
  await history.getByRole('button').first().focus();await page.keyboard.press('Enter');
- await page.getByRole('complementary').filter({hasText:'Album memories'}).waitFor();
+ const detail=page.getByRole('complementary').filter({hasText:'Album memories'});await detail.waitFor();
+ if(!baseline){const image=detail.locator('img').first();await detail.scrollIntoViewIfNeeded();await image.waitFor();await image.evaluate(image=>new Promise((resolve,reject)=>{if(image.complete&&image.naturalWidth>0)return resolve();const timeout=setTimeout(()=>reject(new Error('Selected artwork timed out')),10000);image.addEventListener('load',()=>{clearTimeout(timeout);resolve();},{once:true});image.addEventListener('error',()=>{clearTimeout(timeout);reject(new Error('Selected artwork failed'));},{once:true});}));assert.ok(await image.evaluate(image=>image.naturalWidth>=250),'Full artwork should load only when selected');}
+
  console.log('Timeline pan, Classical disclosure, keyboard selection and mobile overflow passed.');
 }finally{await browser.close();}

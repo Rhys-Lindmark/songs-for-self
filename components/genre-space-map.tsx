@@ -291,7 +291,7 @@ export function GenreSpaceMap({ data, query, scopeLabel = 'playlist tracks' }: {
     <aside aria-label="Selected genre-space track" className="flex min-h-64 min-w-0 flex-col p-5">
       <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-[#a64831]">{normalizedQuery ? `${matches.length.toLocaleString()} search matches` : `${activeFamily || 'All families'} · ${visiblePoints.length.toLocaleString()} tracks`}</p>
       {selected ? <div className="mt-3">
-        <div className="mb-4"><AlbumArtwork album={selected.album || selected.title} artist={selected.artists} coverUrl={selected.coverUrl || (selected.spotifyAlbumId ? data.albums[selected.spotifyAlbumId]?.coverUrl : null)} spotifyAlbumId={selected.spotifyAlbumId} spotifyTrackId={selected.spotifyTrackId || selected.id} className="w-full max-w-60" /></div>
+        <div className="mb-4"><AlbumArtwork resolution="full" album={selected.album || selected.title} artist={selected.artists} coverUrl={selected.coverUrl || (selected.spotifyAlbumId ? data.albums[selected.spotifyAlbumId]?.coverUrl : null)} spotifyAlbumId={selected.spotifyAlbumId} spotifyTrackId={selected.spotifyTrackId || selected.id} className="w-full max-w-60" /></div>
         <h3 className="font-serif text-3xl leading-tight">{selected.title}</h3>
         <p className="mt-1 text-sm text-[#17221e]/65">{selected.artists}</p>
         {selected.album && <p className="mt-1 text-xs text-[#17221e]/50">{selected.album}</p>}

@@ -5,6 +5,9 @@ on:
       url:
         type: string
         default: https://ai.rhyslindmark.com/music
+      enforce_performance:
+        type: boolean
+        default: false
       prepare_catalog:
         type: boolean
         default: false
@@ -25,7 +28,7 @@ jobs:
       - name: Measure deployed timeline
         env:
           SFS_BASE_URL: ${{ inputs.url }}
-          SFS_PERF_BASELINE: '1'
+          SFS_PERF_BASELINE: ${{ inputs.enforce_performance && '0' || '1' }}
           SFS_PERF_OUTPUT: ${{ runner.temp }}/timeline-performance.json
           SFS_PERF_SCREENSHOT: ${{ runner.temp }}/timeline-performance.png
         run: node scripts/timeline-performance-browser-smoke.mjs

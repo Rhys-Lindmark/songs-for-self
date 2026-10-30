@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Map, Music2, Search, Sparkles } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlaylistUploadAnalyzer } from '@/components/playlist-upload-analyzer';
@@ -8,6 +8,7 @@ import { PublicAssetDownload } from '@/components/public-asset-download';
 import { GenreSpaceMap, type GenreSpacePayload } from '@/components/genre-space-map';
 import { GeographyMap, type GeographyPayload } from '@/components/geography-map';
 import { publicAssetUrl } from '@/lib/public-asset-url';
+import { AlbumArtwork } from '@/components/album-artwork';
 import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import summary from '@/data/viz-summary.json';
 import { RECORDED_TIMELINE_RANGE } from '@/lib/timeline-scale';
@@ -102,6 +103,15 @@ export default function Home() {
     [timelineData, visibleGenres],
   );
 
+  const timelineMarks = useMemo(() => (timelineData?.timeline ?? []).flatMap((point) => point.albums.map((album, index): AlbumMark => ({
+    id: `${point.genre}|${point.year}|${index}`, title: album.name, album: album.name, artists: album.artists,
+    genre: point.genre, year: point.year, count: album.count, spotifyAlbumId: album.spotifyAlbumId, coverUrl: album.coverUrl,
+  }))), [timelineData]);
+  const selectTimelineAlbum = useCallback((mark: AlbumMark) => {
+    const point = timelineData?.timeline.find((point) => point.genre === mark.genre && point.year === mark.year);
+    if (point) setSelectedTimeline({ point, markId: mark.id });
+  }, [timelineData]);
+
   return (
     <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f3efe4] text-[#17221e] focus:outline-none">
       <a href="#your-playlist" className="skip-link">Skip to playlist tools</a>
@@ -149,13 +159,7 @@ export default function Home() {
               </label>
             </div>
 
-            <AlbumTimeline marks={(timelineData?.timeline ?? []).flatMap((point) => point.albums.map((album, index): AlbumMark => ({
-              id: `${point.genre}|${point.year}|${index}`, title: album.name, album: album.name, artists: album.artists,
-              genre: point.genre, year: point.year, count: album.count, spotifyAlbumId: album.spotifyAlbumId, coverUrl: album.coverUrl,
-            })))} genres={visibleGenres} counts={summary.genreCounts} range={range} selectedId={selectedTimeline?.markId} label="Genre timeline. Swipe or scroll horizontally to move through musical time." onSelect={(mark) => {
-              const point = timelineData?.timeline.find((point) => point.genre === mark.genre && point.year === mark.year);
-              if (point) setSelectedTimeline({ point, markId: mark.id });
-            }} />
+            <AlbumTimeline marks={timelineMarks} genres={visibleGenres} counts={summary.genreCounts} range={range} selectedId={selectedTimeline?.markId} label="Genre timeline. Swipe or scroll horizontally to move through musical time." onSelect={selectTimelineAlbum} />
             {selectedTimeline && <TimelineDetail selection={selectedTimeline} />}
           </section>
         </TabsContent>
@@ -239,50 +243,8 @@ function TimelineDetail({ selection }: { selection: SelectedTimeline }) {
 }
 
 function AlbumMemory({ album }: { album: TimelineAlbum }) {
-  const [imageFailed, setImageFailed] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [coverUrl, setCoverUrl] = useState(album.coverUrl);
-
-  useEffect(() => {
-    if (coverUrl || !album.spotifyAlbumId) return;
-    const controller = new AbortController();
-    const albumUrl = `https://open.spotify.com/album/${album.spotifyAlbumId}`;
-    void fetch(`https://open.spotify.com/oembed?url=${encodeURIComponent(albumUrl)}`, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error(`Spotify artwork lookup returned ${response.status}.`);
-        return response.json() as Promise<{ thumbnail_url?: string }>;
-      })
-      .then(({ thumbnail_url: thumbnailUrl }) => {
-        if (!thumbnailUrl) throw new Error('Spotify artwork lookup did not return a thumbnail.');
-        const imageUrl = new URL(thumbnailUrl);
-        const trustedHost = imageUrl.hostname === 'i.scdn.co' || imageUrl.hostname.endsWith('.spotifycdn.com');
-        if (imageUrl.protocol !== 'https:' || !trustedHost) throw new Error('Spotify artwork lookup returned an unexpected image host.');
-        setCoverUrl(imageUrl.toString());
-      })
-      .catch((cause) => {
-        if (!(cause instanceof DOMException && cause.name === 'AbortError')) setImageFailed(true);
-      });
-    return () => controller.abort();
-  }, [album.spotifyAlbumId, coverUrl]);
-
-  const handleImageError = () => {
-    setImageLoaded(false);
-    if (coverUrl === album.coverUrl && album.spotifyAlbumId) {
-      setCoverUrl(null);
-      return;
-    }
-    setImageFailed(true);
-  };
-
   const content = <>
-    <div className="relative aspect-square overflow-hidden rounded-sm border border-[#17221e]/10 bg-[#e7e0d2]">
-      {!imageLoaded && <span className="absolute inset-0 grid place-items-center px-3 text-center font-serif text-sm leading-tight text-[#17221e]/50"><span><Music2 aria-hidden="true" className="mx-auto mb-2 size-5" />{album.name}</span></span>}
-      {coverUrl && !imageFailed
-        // Cover Art Archive and verified Spotify fallback images are remote and lazy.
-        // oxlint-disable-next-line next/no-img-element
-        ? <img src={coverUrl} alt={`Cover of ${album.name}`} loading="lazy" onLoad={() => setImageLoaded(true)} onError={handleImageError} className={`relative z-[1] h-full w-full object-cover transition-opacity ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} />
-        : null}
-    </div>
+    <AlbumArtwork album={album.name} coverUrl={album.coverUrl} spotifyAlbumId={album.spotifyAlbumId} resolution="full" className="w-full rounded-sm border border-[#17221e]/10" />
     <span className="mt-2 block truncate text-xs font-medium" title={album.name}>{album.name}</span>
     <span className="mt-0.5 block truncate text-[10px] text-[#17221e]/50" title={album.artists}>{album.artists} · {album.count}</span>
   </>;

@@ -65,3 +65,4 @@ Visitor playlists and OAuth tokens are never committed. Imports and saved analys
 
 - [Playlist genre profile and listening benchmark](GENRE_PROFILE.md)
 - [Account listening-history import](LISTENING_HISTORY.md)
+- [Artwork performance and measurements](PERFORMANCE.md)

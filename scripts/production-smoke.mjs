@@ -28,6 +28,7 @@ const assets = [
   `${assetBase}/favicon.svg`,
   `${assetBase}/songs-for-self-v3.csv`,
   `${assetBase}/timeline-data.json`,
+  `${assetBase}/album-thumbnails.json`,
   `${assetBase}/geography-data.json`,
   `${assetBase}/world-outline.json`,
   `${assetBase}/genre-space-data.json`,
