@@ -129,3 +129,16 @@ await test('specific supplied genres remain visible even outside the broad-famil
   assert.equal(result.detailed[0].label, 'Children'); assert.equal(result.detailed[0].share, 50);
   assert.equal(result.aligned, 1); assert.equal(result.comparisons[0].id, 'children');
 });
+
+await test('history play weights change composition without expanding unique-track arrays', () => {
+  const rows = [track('Jazz'), track('Rock'), track()];
+  const weighted = buildGenreProfile(rows, benchmark, [], [8, 3, 1]);
+  assert.equal(weighted.total, 12); assert.equal(weighted.broad[0].count, 8);
+  assert.ok(Math.abs(weighted.broad[0].share - 66.6666666667) < 1e-8);
+  assert.equal(weighted.unclassified, 1); assert.equal(weighted.aligned, 11);
+  assert.equal(buildGenreProfile(rows, benchmark).total, 3);
+  assert.equal(buildGenreProfile(rows, benchmark, [], [0, 0, 0]).broad.length, 0);
+  for (const weights of [[1], [1, -1, 1], [1, Infinity, 1], [1, NaN, 1], [Number.MAX_VALUE, Number.MAX_VALUE, 1]]) {
+    assert.throws(() => buildGenreProfile(rows, benchmark, [], weights), /weights/);
+  }
+});

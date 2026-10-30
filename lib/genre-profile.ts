@@ -24,8 +24,10 @@ const detailAliases: Record<string, string> = {
 const directBroadBuckets: Record<string, string> = { Classical: 'classical', Country: 'country', Electronic: 'dance-electronic', 'Hip-hop': 'rnb-hip-hop', Jazz: 'jazz', Pop: 'pop', Rock: 'rock' };
 
 /** A descriptive playlist-row profile, plus a conservative crosswalk to published market shares. */
-export function buildGenreProfile(tracks: AnalyzedTrack[], benchmark: GenreListeningBenchmark, placements: VisitorGenrePlacement[] = []): GenreProfile {
-  const total = tracks.length;
+export function buildGenreProfile(tracks: AnalyzedTrack[], benchmark: GenreListeningBenchmark, placements: VisitorGenrePlacement[] = [], weights?: number[]): GenreProfile {
+  if (weights && (weights.length !== tracks.length || weights.some((value) => !Number.isFinite(value) || value < 0))) throw new Error('Genre weights must be finite, nonnegative and aligned with the tracks.');
+  const total = weights ? weights.reduce((sum, value) => sum + value, 0) : tracks.length;
+  if (!Number.isFinite(total)) throw new Error('Genre weights exceed the supported total.');
   const byPlacement = new Map(placements.map((placement) => [placement.index, placement]));
   const broadCounts = new Map<string, { label: string; count: number }>();
   const detailCounts = new Map<string, { label: string; count: number }>();
@@ -34,22 +36,24 @@ export function buildGenreProfile(tracks: AnalyzedTrack[], benchmark: GenreListe
   let classified = 0;
   let aligned = 0;
   tracks.forEach((track, index) => {
+    const weight = weights?.[index] ?? 1;
+    if (weight === 0) return;
     const placement = byPlacement.get(index);
     const detail = primaryDetailedGenre(track, placement);
     const fromPlacement = placement && !isSyntheticPlacement(placement) ? broadFamily(placement.family) : undefined;
     const broad = broadFamily(track.genre) || fromPlacement || (detail ? inferBroad(detail) : undefined);
     if (broad) {
-      classified += 1;
-      increment(broadCounts, key(broad), broad);
+      classified += weight;
+      increment(broadCounts, key(broad), broad, weight);
     }
     const label = detail || broad;
-    if (label) increment(detailCounts, key(label), label);
+    if (label) increment(detailCounts, key(label), label, weight);
     // Fine evidence can override the broad crosswalk (e.g. Latin pop, K-pop, Christian rock, or explicit Blues).
     const fineBucket = detail ? benchmarkBucket(detail) : undefined;
     const cohort = fineBucket === null ? undefined : fineBucket || (broad ? directBroadBuckets[broad] : undefined);
     if (cohort && buckets.has(cohort)) {
-      aligned += 1;
-      comparisonCounts.set(cohort, (comparisonCounts.get(cohort) || 0) + 1);
+      aligned += weight;
+      comparisonCounts.set(cohort, (comparisonCounts.get(cohort) || 0) + weight);
     }
   });
   const rank = (counts: Map<string, { label: string; count: number }>): GenreRank[] => [...counts].map(([id, row]) => ({ id, ...row, share: total ? row.count / total * 100 : 0 })).sort(compareRanks).slice(0, 10);
@@ -120,6 +124,6 @@ function benchmarkBucket(label: string): string | null | undefined {
   if (/\b(?:electronic|electronica|edm|house|techno|trance|dubstep|drum and bass|idm)\b/u.test(genre)) return 'dance-electronic';
   return undefined;
 }
-function increment(map: Map<string, { label: string; count: number }>, id: string, label: string): void { const row = map.get(id); if (row) row.count += 1; else map.set(id, { label, count: 1 }); }
+function increment(map: Map<string, { label: string; count: number }>, id: string, label: string, weight: number): void { const row = map.get(id); if (row) row.count += weight; else map.set(id, { label, count: weight }); }
 function compareRanks(a: GenreRank, b: GenreRank): number { return b.count - a.count || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0); }
 function key(value: string): string { return String(value || '').normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/['’ʼ]/gu, '').replace(/&/gu, ' and ').replace(/[^\p{L}\p{N}]+/gu, ' ').trim(); }

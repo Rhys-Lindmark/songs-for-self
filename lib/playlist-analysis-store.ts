@@ -1,3 +1,4 @@
+import type { ListeningHistorySummary } from '@/lib/spotify-listening-history';
 import type { AnalyzedTrack } from '@/lib/playlist-analyzer';
 
 const DATABASE_NAME = 'songs-for-self-browser-data';
@@ -10,10 +11,11 @@ export type StoredPlaylistAnalysis = {
   sourceName: string;
   savedAt: number;
   tracks: AnalyzedTrack[];
+  listeningHistory?: ListeningHistorySummary;
 };
 
-export function makeStoredPlaylistAnalysis(sourceName: string, tracks: AnalyzedTrack[], savedAt = Date.now()): StoredPlaylistAnalysis {
-  return { version: PLAYLIST_ANALYSIS_SCHEMA_VERSION, sourceName, savedAt, tracks };
+export function makeStoredPlaylistAnalysis(sourceName: string, tracks: AnalyzedTrack[], savedAt = Date.now(), listeningHistory?: ListeningHistorySummary): StoredPlaylistAnalysis {
+  return { version: PLAYLIST_ANALYSIS_SCHEMA_VERSION, sourceName, savedAt, tracks, ...(listeningHistory ? { listeningHistory } : {}) };
 }
 
 export function isStoredPlaylistAnalysis(value: unknown): value is StoredPlaylistAnalysis {
@@ -26,7 +28,8 @@ export function isStoredPlaylistAnalysis(value: unknown): value is StoredPlaylis
     && Number.isFinite(candidate.savedAt)
     && Array.isArray(candidate.tracks)
     && candidate.tracks.length > 0
-    && candidate.tracks.every(isAnalyzedTrack);
+    && candidate.tracks.every(isAnalyzedTrack)
+    && (candidate.listeningHistory === undefined || isHistorySummary(candidate.listeningHistory, candidate.tracks));
 }
 
 export async function loadStoredPlaylistAnalysis(): Promise<StoredPlaylistAnalysis | null> {
@@ -75,7 +78,12 @@ function isAnalyzedTrack(value: unknown): value is AnalyzedTrack {
     && typeof track.method === 'string'
     && typeof track.genreSource === 'string'
     && typeof track.timeSource === 'string'
-    && typeof track.geographySource === 'string';
+    && typeof track.geographySource === 'string'
+    && (track.listening === undefined || (track.listening !== null && typeof track.listening === 'object' && Number.isSafeInteger(track.listening.plays) && track.listening.plays > 0
+      && Number.isSafeInteger(track.listening.msPlayed) && track.listening.msPlayed > 0
+      && typeof track.listening.firstPlayedAt === 'string' && typeof track.listening.lastPlayedAt === 'string'
+      && Number.isFinite(Date.parse(track.listening.firstPlayedAt)) && Number.isFinite(Date.parse(track.listening.lastPlayedAt))
+      && Date.parse(track.listening.firstPlayedAt) <= Date.parse(track.listening.lastPlayedAt)));
 }
 
 function openDatabase(): Promise<IDBDatabase> {
@@ -104,4 +112,17 @@ function transactionComplete(transaction: IDBTransaction): Promise<void> {
     transaction.onerror = () => reject(transaction.error ?? new Error('Browser storage transaction failed.'));
     transaction.onabort = () => reject(transaction.error ?? new Error('Browser storage transaction was aborted.'));
   });
+}
+
+function isHistorySummary(summary: ListeningHistorySummary, tracks: AnalyzedTrack[]): boolean {
+  if (!summary || summary.kind !== 'spotify-listening-history' || !['extended', 'standard'].includes(summary.format)
+    || typeof summary.firstPlayedAt !== 'string' || typeof summary.lastPlayedAt !== 'string'
+    || !Number.isFinite(Date.parse(summary.firstPlayedAt)) || !Number.isFinite(Date.parse(summary.lastPlayedAt))
+    || Date.parse(summary.firstPlayedAt) > Date.parse(summary.lastPlayedAt)) return false;
+  for (const value of [summary.files, summary.events, summary.uniqueTracks, summary.totalMsPlayed, summary.duplicates, summary.skippedNonMusic, summary.skippedInvalid, summary.skippedZeroDuration]) {
+    if (!Number.isSafeInteger(value) || value < 0) return false;
+  }
+  return summary.files > 0 && summary.uniqueTracks === tracks.length && tracks.every((track) => Boolean(track.listening))
+    && summary.events === tracks.reduce((sum, track) => sum + (track.listening?.plays || 0), 0)
+    && summary.totalMsPlayed === tracks.reduce((sum, track) => sum + (track.listening?.msPlayed || 0), 0);
 }

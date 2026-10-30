@@ -21,3 +21,15 @@ await test('rejects stale, empty, and structurally incomplete checkpoints', () =
   assert.equal(isStoredPlaylistAnalysis({ version: 1, sourceName: 'empty.csv', savedAt: Date.now(), tracks: [] }), false);
   assert.equal(isStoredPlaylistAnalysis({ version: 1, sourceName: 'broken.csv', savedAt: Date.now(), tracks: [{ track: 'Broken' }] }), false);
 });
+
+await test('history summary and compact per-song statistics resume with backward-compatible checkpoints', () => {
+  const listening = {plays:8,msPlayed:1200000,firstPlayedAt:'2010-01-01T00:00:00.000Z',lastPlayedAt:'2026-10-30T00:00:00.000Z'};
+  const history = {kind:'spotify-listening-history',format:'extended',files:2,events:8,uniqueTracks:1,totalMsPlayed:1200000,firstPlayedAt:listening.firstPlayedAt,lastPlayedAt:listening.lastPlayedAt,duplicates:1,skippedNonMusic:2,skippedInvalid:0,skippedZeroDuration:1};
+  const snapshot = makeStoredPlaylistAnalysis('History', [{...track,listening}], Date.now(), history);
+  assert.equal(isStoredPlaylistAnalysis(snapshot), true);
+  assert.deepEqual(snapshot.listeningHistory, history);
+  assert.equal(isStoredPlaylistAnalysis({...snapshot,listeningHistory:{...history,events:9}}), false);
+  assert.equal(isStoredPlaylistAnalysis({...snapshot,listeningHistory:{...history,totalMsPlayed:1}}), false);
+  assert.equal(isStoredPlaylistAnalysis({...snapshot,tracks:[{...track,listening:null}]}), false);
+  assert.equal(isStoredPlaylistAnalysis({...snapshot,tracks:[{...track,listening:{...listening,plays:Infinity}}]}), false);
+});

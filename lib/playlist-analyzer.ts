@@ -4,7 +4,8 @@ export type LookupArtist = { key: string; name: string; genre: string; year: num
 export type Lookup = { tracks: LookupTrack[]; artists: LookupArtist[] };
 export type GlobalArtistGenre = { id: string; key: string; name: string; family: string; primary: string; genres: string[]; x: number; y: number; method: string; sourceUrl: string };
 export type GlobalArtistGenreIndex = { schemaVersion: number; sourceName: string; sourceUrl: string; sourceModel: string; referenceUrl: string; artists: GlobalArtistGenre[] };
-export type AnalyzedTrack = { albumArtist?: string; artistIds?: string[]; suppliedGenres?: string[]; originalYear?: number | null; composer?: string; album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
+export type ListeningTrackStats = { plays: number; msPlayed: number; firstPlayedAt: string; lastPlayedAt: string };
+export type AnalyzedTrack = { listening?: ListeningTrackStats; albumArtist?: string; artistIds?: string[]; suppliedGenres?: string[]; originalYear?: number | null; composer?: string; album?: string; spotifyAlbumId?: string | null; coverUrl?: string | null; spotifyTrackId: string | null; track: string; artist: string; year: number | null; genre: string; genreSpaceX?: number | null; genreSpaceY?: number | null; genreSpacePrimary?: string; genreSpaceGenres?: string[]; x: number | null; y: number | null; city: string; country: string; method: 'exact track' | 'artist inference' | 'uploaded metadata' | 'fallback'; genreSource: string; genreConfidence: PlacementConfidence; timeSource: string; timeConfidence: PlacementConfidence; geographySource: string; geographyConfidence: PlacementConfidence };
 
 export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Lookup, globalGenreIndex?: GlobalArtistGenreIndex): AnalyzedTrack[] {
   const byId = new Map(lookup.tracks.map((track) => [track.id, track]));
@@ -26,7 +27,8 @@ export function analyzePlaylistRows(rows: Record<string, string>[], lookup: Look
     const suppliedGenres = genreLabels(pick(row, ['supplied genres', 'artist genres', 'genres', 'genre', 'genre primary', 'every noise reference genres']));
     const originalYear = parseYear(pick(row, ['original year', 'original release year', 'original release date', 'composition year', 'recording year']));
     const composer = pick(row, ['composer', 'composer name', 'composer(s)']);
-    const coverageMetadata = { ...(artistIds.length ? { artistIds } : {}), ...(suppliedGenres.length ? { suppliedGenres } : {}), ...(originalYear ? { originalYear } : {}), ...(composer ? { composer } : {}) };
+    const listening = parseListeningStats(row);
+    const coverageMetadata = { ...(listening ? { listening } : {}), ...(artistIds.length ? { artistIds } : {}), ...(suppliedGenres.length ? { suppliedGenres } : {}), ...(originalYear ? { originalYear } : {}), ...(composer ? { composer } : {}) };
     const artwork = { ...(albumArtist ? { albumArtist } : {}), ...(album ? { album } : {}), ...(albumId ? { spotifyAlbumId: albumId } : {}), ...(coverUrl ? { coverUrl } : {}) };
     const exact = byId.get(id) ?? byKey.get(trackKey(track, artist));
     if (exact) return {
@@ -155,4 +157,15 @@ function genreLabels(value: string): string[] {
     if (Array.isArray(parsed)) return parsed.filter((genre): genre is string => typeof genre === 'string' && Boolean(genre.trim())).map((genre) => genre.trim());
   } catch { /* Common CSV exports use a delimited list rather than JSON. */ }
   return value.split(/[;,|]/).map((genre) => genre.trim()).filter(Boolean);
+}
+
+function parseListeningStats(row: Record<string, string>): ListeningTrackStats | undefined {
+  const plays = Number(pick(row, ['history plays']));
+  const msPlayed = Number(pick(row, ['history ms played']));
+  const firstPlayedAt = pick(row, ['history first played']);
+  const lastPlayedAt = pick(row, ['history last played']);
+  if (!Number.isSafeInteger(plays) || plays < 1 || !Number.isSafeInteger(msPlayed) || msPlayed < 1
+    || !firstPlayedAt || !lastPlayedAt || !Number.isFinite(Date.parse(firstPlayedAt))
+    || !Number.isFinite(Date.parse(lastPlayedAt)) || Date.parse(firstPlayedAt) > Date.parse(lastPlayedAt)) return undefined;
+  return { plays, msPlayed, firstPlayedAt, lastPlayedAt };
 }

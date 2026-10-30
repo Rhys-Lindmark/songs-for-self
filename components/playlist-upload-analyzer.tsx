@@ -8,6 +8,8 @@ import { SpotifyPlaylistImport } from '@/components/spotify-playlist-import';
 import { AlbumCloud } from '@/components/album-cloud';
 import { MusicCoverage } from '@/components/music-coverage';
 import { AcclaimedAlbums } from '@/components/acclaimed-albums';
+import { ListeningHistoryOverview } from '@/components/listening-history-summary';
+import { createSpotifyHistoryAccumulator, addSpotifyHistoryFile, finishSpotifyHistory, disposeSpotifyHistoryAccumulator, SPOTIFY_HISTORY_LIMITS, type ListeningHistorySummary } from '@/lib/spotify-listening-history';
 import { PlaylistGenreProfile } from '@/components/playlist-genre-profile';
 import { AlbumTimeline, type AlbumMark } from '@/components/album-timeline';
 import { AlbumArtwork } from '@/components/album-artwork';
@@ -26,6 +28,9 @@ type LayerStatus = 'idle' | 'loading' | 'ready' | 'failed';
 export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClientId?: string }) {
   const exploreHeading = useRef<HTMLHeadingElement>(null);
   const [fileName, setFileName] = useState('');
+  const [importKind, setImportKind] = useState('playlist');
+  const [historyProgress, setHistoryProgress] = useState('');
+  const [listeningHistory, setListeningHistory] = useState<ListeningHistorySummary>();
   const [tracks, setTracks] = useState<AnalyzedTrack[]>([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -109,7 +114,9 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     loadGenreSpaceLayer(analyzed);
   }, [loadGenreSpaceLayer, loadMapLayer]);
 
-  const presentAnalysis = useCallback((analyzed: AnalyzedTrack[], sourceName: string) => {
+  const presentAnalysis = useCallback((analyzed: AnalyzedTrack[], sourceName: string, history?: ListeningHistorySummary) => {
+    setListeningHistory(history);
+    setImportKind(history ? 'history' : 'playlist');
     setFileName(sourceName);
     setTracks(analyzed);
     setView('albums');
@@ -118,7 +125,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     loadDeepViews(analyzed);
   }, [loadDeepViews]);
 
-  const analyzeRows = useCallback(async (rows: Record<string, string>[], sourceName: string) => {
+  const analyzeRows = useCallback(async (rows: Record<string, string>[], sourceName: string, history?: ListeningHistorySummary) => {
     setLoading(true);
     setError('');
     setMapStatus('idle');
@@ -135,9 +142,9 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
       ]);
       if (!rows.length) throw new Error('No playlist tracks were found.');
       const analyzed = analyzePlaylistRows(rows, lookup, globalGenreIndex);
-      presentAnalysis(analyzed, sourceName);
-      const snapshot = makeStoredPlaylistAnalysis(sourceName, analyzed);
-      void saveStoredPlaylistAnalysis(snapshot).then(() => setStorageStatus('saved')).catch(() => setStorageStatus('unavailable'));
+      presentAnalysis(analyzed, sourceName, history);
+      const snapshot = makeStoredPlaylistAnalysis(sourceName, analyzed, Date.now(), history);
+      await saveStoredPlaylistAnalysis(snapshot).then(() => setStorageStatus('saved')).catch(() => setStorageStatus('unavailable'));
     } catch (cause) {
       setTracks([]);
       setGenreSpace(null);
@@ -152,7 +159,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
   function resumeStoredAnalysis() {
     if (!resumeSnapshot) return;
     setError('');
-    presentAnalysis(resumeSnapshot.tracks, resumeSnapshot.sourceName);
+    presentAnalysis(resumeSnapshot.tracks, resumeSnapshot.sourceName, resumeSnapshot.listeningHistory);
     setStorageStatus('saved');
   }
 
@@ -162,11 +169,44 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
     void clearStoredPlaylistAnalysis().catch(() => setStorageStatus('unavailable'));
   }
 
+  async function handleHistoryFiles(files: File[], firstText?: string) {
+    if (!files.length) return;
+    setLoading(true); setError(''); setHistoryProgress('Reading listening history…');
+    let accumulator: ReturnType<typeof createSpotifyHistoryAccumulator> | undefined;
+    try {
+      if (files.length > SPOTIFY_HISTORY_LIMITS.maxFiles || files.some((file) => file.size > SPOTIFY_HISTORY_LIMITS.maxFileBytes) || files.reduce((sum, file) => sum + file.size, 0) > SPOTIFY_HISTORY_LIMITS.maxBatchBytes) throw new Error('Choose up to 200 history JSON files, at most 50 MiB each and 250 MiB total. No data was imported.');
+      if (files.some((file) => !file.name.toLowerCase().endsWith('.json'))) throw new Error('Extract the Spotify download, then choose its music history JSON files. ZIP archives and playlist CSV files are not history files.');
+      accumulator = createSpotifyHistoryAccumulator();
+      for (let index = 0; index < files.length; index += 1) {
+        setHistoryProgress(`Reading history file ${index + 1} of ${files.length}…`);
+        await new Promise<void>((resolve) => window.setTimeout(resolve, 0));
+        addSpotifyHistoryFile(accumulator, index === 0 && firstText !== undefined ? firstText : await files[index].text());
+      }
+      const result = finishSpotifyHistory(accumulator);
+      setHistoryProgress('Matching unique songs to the music map…');
+      await new Promise<void>((resolve) => window.setTimeout(resolve, 0));
+      setAccountPlaylists([]); setAccountDataFileName('');
+      await analyzeRows(result.rows, `Spotify listening history (${result.summary.files} files)`, result.summary);
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : 'Those history files could not be read.');
+    } finally { if (accumulator) disposeSpotifyHistoryAccumulator(accumulator); setLoading(false); setHistoryProgress(''); }
+  }
+
+  async function handleFiles(selected: FileList | null) {
+    const files = Array.from(selected || []);
+    if (!files.length) return;
+    if (importKind === 'history' || files.length > 1) await handleHistoryFiles(files);
+    else await handleFile(files[0]);
+  }
+
   async function handleFile(file?: File) {
     if (!file) return;
     if (file.name.toLowerCase().endsWith('.json') || file.type === 'application/json') {
+      if (file.size > SPOTIFY_HISTORY_LIMITS.maxFileBytes) { setError('Choose a JSON file at most 50 MiB. Extract and select the individual history files from the download.'); return; }
       try {
-        const playlists = parseSpotifyAccountData(await file.text());
+        const text = await file.text();
+        if (text.trimStart().startsWith('[')) { await handleHistoryFiles([file], text); return; }
+        const playlists = parseSpotifyAccountData(text);
         setAccountPlaylists(playlists);
         setAccountDataFileName(file.name);
         setFileName(file.name);
@@ -198,6 +238,8 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
 
   function clearImportedPlaylist() {
     setTracks([]);
+    setListeningHistory(undefined);
+    setHistoryProgress('');
     setGenreSpace(null);
     setWorldPath('');
     setFileName('');
@@ -219,7 +261,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
 
   return <section id="your-playlist" tabIndex={-1} className="border-t border-[#17221e]/15 bg-[#ece6d8] px-4 py-10 outline-none sm:px-5 sm:py-12 md:px-10 md:py-16">
     <div className={tracks.length ? "grid gap-8" : "grid gap-8 lg:grid-cols-[minmax(260px,.65fr)_minmax(0,1.35fr)]"}>
-      <details open={!tracks.length}>
+      <details open={!tracks.length || Boolean(error)}>
         <summary className={tracks.length ? "min-h-11 cursor-pointer py-3 text-sm text-[#17221e]/65" : "hidden"}>Change playlist</summary>
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a64831]">Analyze your playlist</p>
         <h2 className="mt-3 max-w-md font-serif text-[2.25rem] leading-[.95] tracking-tight sm:text-4xl md:text-6xl">What does <em className="font-normal">your</em> music look like?</h2>
@@ -232,10 +274,15 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
           <div className="mt-3 flex flex-wrap gap-2"><button type="button" onClick={resumeStoredAnalysis} className="min-h-11 rounded-full bg-[#17221e] px-4 text-xs font-medium text-[#f3efe4]">Resume atlas</button><button type="button" onClick={forgetStoredAnalysis} className="min-h-11 rounded-full px-4 text-xs text-[#17221e]/60 underline underline-offset-2">Forget saved analysis</button></div>
         </output>}
         {storageStatus === 'unavailable' && <p className="mt-3 text-xs leading-relaxed text-[#a33826]">This browser is blocking local checkpoint storage. The atlas still works now, but it cannot resume after a reload.</p>}
+        <label className="mt-4 flex flex-wrap items-center gap-3 text-xs text-[#17221e]/65">Analyze<select aria-label="Data to analyze" value={importKind} onChange={(event) => setImportKind(event.target.value)} disabled={loading} className="min-h-11 rounded-full border border-[#17221e]/20 bg-[#f3efe4] px-4 text-sm"><option value="playlist">A playlist</option><option value="history">Listening history</option></select></label>
+        {importKind === 'history' && <div className="mt-3 text-xs leading-relaxed text-[#17221e]/65">
+          <p><a href="https://www.spotify.com/account/privacy/" target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center underline underline-offset-2">Request your Spotify history</a>: select <strong className="font-medium">Extended Streaming History</strong> for your account&apos;s lifetime.</p>
+          <p>Extract the download, then select all its music history JSON files together (such as Streaming_History_Audio_*.json). Standard StreamingHistory*.json files also work, with less detail. Import a new complete selection to replace an earlier analysis.</p>
+        </div>}
         <div className="mt-3 grid gap-3 min-[390px]:flex min-[390px]:flex-wrap">
           <label className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-full bg-[#17221e] px-5 py-3 text-sm font-medium text-[#f3efe4] hover:opacity-85">
-            <Upload className="size-4" /> {loading ? 'Analyzing…' : 'Choose CSV or Spotify JSON'}
-            <input className="sr-only" type="file" accept=".csv,.json,text/csv,application/json" disabled={loading} onChange={(event) => void handleFile(event.target.files?.[0])} />
+            <Upload className="size-4" /> {loading ? 'Analyzing…' : importKind === 'history' ? 'Choose history JSON files' : 'Choose CSV or Spotify JSON'}
+            <input className="sr-only" type="file" multiple accept={importKind === 'history' ? '.json,application/json' : '.csv,.json,text/csv,application/json'} disabled={loading} onChange={(event) => { void handleFiles(event.target.files); event.target.value = ''; }} />
           </label>
           <PublicAssetDownload fileName="playlist-upload-template.csv" className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#17221e]/25 px-5 py-3 text-sm font-medium hover:bg-white/35">CSV template</PublicAssetDownload>
         </div>
@@ -250,7 +297,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
         </div>}
         <div aria-live="polite">
           {fileName && <p className="mt-5 flex min-w-0 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.1em]"><FileMusic className="size-4 shrink-0 text-[#b45238]" /> <span className="min-w-0 break-all">{fileName}</span></p>}
-          {loading && <p className="mt-3 text-sm text-[#17221e]/60">Reading and enriching your playlist in this browser…</p>}
+          {loading && <p className="mt-3 text-sm text-[#17221e]/60">{historyProgress || 'Reading and enriching your playlist in this browser…'}</p>}
         </div>
         {error && <p role="alert" className="mt-4 text-sm text-[#a33826]">{error}</p>}
       </details>
@@ -259,7 +306,7 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
         {!tracks.length ? <div className="grid min-h-64 place-items-center border border-dashed border-[#17221e]/25 bg-white/20 p-5 text-center sm:min-h-80 sm:p-8"><div><FileMusic className="mx-auto size-8 text-[#b45238]" /><p className="mt-4 font-serif text-2xl">Your playlist atlas will appear here.</p><p className="mt-2 text-sm text-[#17221e]/50">Paste a playlist link, copy its tracks from Spotify Desktop, or choose a file.</p></div></div> : <>
           <div className="mb-8 text-center">
             <h2 ref={exploreHeading} tabIndex={-1} className="font-serif text-4xl tracking-tight outline-none sm:text-5xl">Explore your music</h2>
-            <p className="mt-3 break-words text-sm text-[#17221e]/55">{tracks.length.toLocaleString()} tracks · {fileName}</p>
+            <p className="mt-3 break-words text-sm text-[#17221e]/55">{tracks.length.toLocaleString()} {listeningHistory ? 'unique tracks' : 'tracks'} · {fileName}</p>
             {previewSource && <output className="mt-3 block text-sm text-[#a64831]">Spotify public preview: {Number(previewSource[1]).toLocaleString()} of {Number(previewSource[2]).toLocaleString()} tracks. Use Change playlist to import the complete playlist.</output>}
           </div>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -271,9 +318,10 @@ export function PlaylistUploadAnalyzer({ spotifyClientId = '' }: { spotifyClient
             </div>
             <div className="grid gap-2 min-[390px]:flex">
               <button disabled={!genreSpace} onClick={downloadEnrichedPlaylist} title={!genreSpace ? 'Available after the genre-space layer loads' : undefined} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#17221e]/25 px-4 py-2.5 text-xs font-medium hover:bg-white/35 disabled:cursor-not-allowed disabled:opacity-50"><Download className="size-4" /> {spaceStatus === 'failed' ? 'Retry genre space to download' : genreSpace ? 'Download enriched CSV' : 'Preparing enriched download…'}</button>
-              <button onClick={clearImportedPlaylist} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs font-medium text-[#17221e]/60 hover:bg-white/35"><Trash2 className="size-4" /> Clear playlist</button>
+              <button disabled={loading} onClick={clearImportedPlaylist} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-4 py-2.5 text-xs font-medium text-[#17221e]/60 hover:bg-white/35"><Trash2 className="size-4" /> Clear playlist</button>
             </div>
           </div>
+          {listeningHistory && <ListeningHistoryOverview history={listeningHistory} />}
           <PlaylistGenreProfile tracks={tracks} placements={genreSpace?.placements} />
           <MusicCoverage tracks={tracks} view={view} />
           <AcclaimedAlbums tracks={tracks} />

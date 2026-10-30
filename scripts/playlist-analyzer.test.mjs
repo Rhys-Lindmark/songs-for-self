@@ -153,3 +153,16 @@ await test('retains album artist and album URL identity independently of the tra
   assert.equal(track.artist, 'Guest performer');
   assert.equal(track.spotifyAlbumId, 'ABCDEFGHIJKLMNOPQRSTUV');
 });
+
+await test('history aggregation metadata survives enrichment and does not become a recording year', () => {
+  const stats = { 'History Plays': '8', 'History Ms Played': '1200000', 'History First Played': '2010-01-01T12:00:00.000Z', 'History Last Played': '2026-10-30T12:00:00.000Z' };
+  const [unknown] = analyzePlaylistRows([{ 'Track Name': 'Never Catalogued', Artist: 'Never Catalogued Artist', ...stats }], {tracks:[],artists:[]});
+  assert.deepEqual(unknown.listening, {plays:8,msPlayed:1200000,firstPlayedAt:stats['History First Played'],lastPlayedAt:stats['History Last Played']});
+  assert.equal(unknown.year, null);
+  const [exact] = analyzePlaylistRows([{ 'Track URI':'spotify:track:1234567890123456789012', ...stats }], lookup);
+  assert.equal(exact.listening.plays, 8); assert.equal(exact.year, 2013);
+  for (const invalid of [{ 'History Plays': '-1' }, { 'History Ms Played': 'NaN' }, { 'History First Played': 'not a date' }, { 'History First Played': '2027-01-01T00:00:00Z' }]) {
+    const [row] = analyzePlaylistRows([{...stats,...invalid}], {tracks:[],artists:[]});
+    assert.equal(row.listening, undefined);
+  }
+});

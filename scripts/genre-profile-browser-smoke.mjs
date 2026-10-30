@@ -30,7 +30,7 @@ try {
     assert.match(await list.getByRole('listitem').first().innerText(), /Jazz.*40\.0%/s);
     assert.match(await section.innerText(), /Jazz stands out in this playlist\./);
     assert.match(await section.innerText(), /approximately 50× the U\.S\. streaming share/);
-    assert.match(await section.innerText(), /1 entry has no broad genre classification/);
+    assert.match(await section.innerText(), /1 has no broad genre classification/);
     const detail = section.getByLabel('Genre profile detail', { exact: true });
     await detail.selectOption('detailed');
     await section.getByRole('heading', { name: 'Your top 10 genres', exact: true }).waitFor();
@@ -45,7 +45,7 @@ try {
     assert.match(await section.innerText(), /19 of 20 playlist entries align/);
     assert.match(await section.innerText(), /83\.4% of U\.S\. streams/);
     assert.match(await section.innerText(), /including repeat entries/);
-    assert.match(await section.innerText(), /listener percentiles require individual listening histories/);
+    assert.match(await section.innerText(), /listener percentiles require histories from other listeners/);
     assert.match(await section.getByRole('link', { name: 'Luminate · U.S. FY 2025 benchmark', exact: true }).getAttribute('href'), /luminate-data/);
     if (width === 1280 && process.env.SFS_PROFILE_SCREENSHOT) await section.screenshot({ path: process.env.SFS_PROFILE_SCREENSHOT, style: '.skip-link { visibility: hidden !important; }' });
     for (const view of ['Time', 'Genre space', 'Geography']) {

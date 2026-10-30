@@ -58,3 +58,7 @@ Tests cover source values and the 83.4% sum, the twenty-row Jazz example, repeat
 ```sh
 node --test scripts/genre-profile.test.mjs
 ```
+
+## Listening history weights
+
+The optional fourth argument to `buildGenreProfile` is a track-aligned array of finite nonnegative weights. The history interface supplies aggregated play counts by default, or omits weights for unique-track breadth. Unknown and unaligned tracks keep their weights in the denominator; zero-weight rows are omitted. Invalid or overflowing weights are rejected. The UI labels the source and units, and distinguishes recorded positive-duration events (including short skips) from the report’s stream-counting rules.

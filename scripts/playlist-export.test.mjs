@@ -46,3 +46,10 @@ await test('coverage evidence survives an enriched CSV download and reimport', (
   assert.equal(restored.albumArtist, source.albumArtist);
   assert.equal(restored.year, source.year);
 });
+
+await test('aggregated listening statistics survive a CSV download and reimport', () => {
+  const listening = { plays: 27, msPlayed: 1234567, firstPlayedAt: '2010-01-01T00:00:00.000Z', lastPlayedAt: '2026-10-30T00:00:00.000Z' };
+  const rows = parse(serializeEnrichedPlaylist([{...track,listening}], []), {columns:true});
+  const [restored] = analyzePlaylistRows(rows, {tracks:[],artists:[]});
+  assert.deepEqual(restored.listening, listening); assert.equal(restored.year, 1999);
+});

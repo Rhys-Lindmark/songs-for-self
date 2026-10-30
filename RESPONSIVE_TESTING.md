@@ -33,3 +33,5 @@ Music coverage: `npm run test:music-coverage-browser` verifies the fixed score, 
 Acclaimed albums: `npm run test:acclaimed-albums-browser` verifies the 500-album score, remasters, duplicate songs, artist/compilation/live safeguards, covered/missing/source filters, keyboard selection, pagination, resume, load failure/retry, and overflow at1280/320. Set `SFS_BASE_URL` for a preview or the live site.
 
 Genre profile: `npm run test:genre-profile-browser` verifies broad and detailed top genres, all-row shares, the sourced listening comparison, all three views, resume, mobile overflow, and optional genre-map failure isolation at 1280/320. Set `SFS_BASE_URL` for a preview or the live site.
+
+Listening history: `npm run test:listening-history-browser` checks split extended-history files, overlap/exclusion counts, play-weighted versus unique-track genres, album coverage, all map views, sanitized local checkpoint storage, resume, clear, standard-history fallback, and overflow at 1280/320. The existing account-data playlist picker browser check also runs in CI.
