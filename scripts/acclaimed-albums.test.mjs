@@ -191,3 +191,10 @@ await test('explicit soundtrack album artists outrank a reference point track gu
   const result = scoreAcclaimedAlbums([track({ spotifyTrackId: 'reference-track', album: 'A Soundtrack', albumArtist: 'Various Artists', artist: 'A Featured Singer' })], custom, { atlas: atlas({ album: 'A Soundtrack', artists: 'A Featured Singer' }) });
   assert.equal(result.covered, 1);
 });
+
+await test('the fixed catalog recognizes verified ordinary-text aliases for symbolic album titles', () => {
+  const albums = JSON.parse(fs.readFileSync(new URL('../public/acclaimed-albums.json', import.meta.url), 'utf8'));
+  const result = scoreAcclaimedAlbums([track({ artist: 'Prince', album: 'Sign O’ the Times (2017 Remaster)' })], albums);
+  assert.equal(result.covered, 1);
+  assert.equal(result.matches[0].albumId, 'mbid-90718403-7634-3786-84bf-2053a7bd4f4c');
+});

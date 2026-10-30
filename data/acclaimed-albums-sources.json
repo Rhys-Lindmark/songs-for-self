@@ -20120,6 +20120,17 @@
         "Ziggy Stardust"
       ],
       "reason": "Established short title, scoped to this album."
+    },
+    {
+      "artist": "Prince",
+      "title": "Sign “☮︎” the Times",
+      "titleAliases": [
+        "Sign \"O\" the Times",
+        "Sign of the Times",
+        "Sign o’ the Times"
+      ],
+      "sourceUrl": "https://musicbrainz.org/release-group/90718403-7634-3786-84bf-2053a7bd4f4c/aliases",
+      "reason": "Exact title aliases verified from MusicBrainz core metadata on 2026-10-30; scoped to this album."
     }
   ]
 }

@@ -23,6 +23,8 @@ try {
     const errors = []; page.on('pageerror', (error) => errors.push(error.message));
     await page.route('https://covers.example/**', (route) => route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#346753"/></svg>' }));
     await page.route('https://coverartarchive.org/**', (route) => route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#346753"/></svg>' }));
+    await page.route('https://open.spotify.com/oembed**', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify({ thumbnail_url: 'https://i.scdn.co/image/acclaimed-fixture' }) }));
+    await page.route('https://i.scdn.co/**', (route) => route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#346753"/></svg>' }));
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
     await page.locator('input[type="file"]').setInputFiles({ name: 'acclaimed-albums-fixture.csv', mimeType: 'text/csv', buffer: Buffer.from(csv) });
     const section = page.getByRole('region', { name: 'Acclaimed album exploration', exact: true });
@@ -64,7 +66,7 @@ try {
     assert.match(await section.innerText(), /Missing album fixture/);
     assert.match(await section.innerText(), /Compilation fixture/);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
-    await page.reload({ waitUntil: 'networkidle' });
+    await page.reload({ waitUntil: 'domcontentloaded' });
     await page.getByRole('button', { name: 'Resume atlas', exact: true }).click();
     await score.waitFor();
     assert.deepEqual(errors, []);
